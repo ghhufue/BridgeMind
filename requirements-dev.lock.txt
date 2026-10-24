@@ -1,0 +1,13 @@
+absl-py==2.5.1
+attrs==26.1.0
+colorama==0.4.6
+iniconfig==2.3.1
+ml_collections==1.1.0
+numpy==2.5.4
+open-spiel==2.0.2
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.1.1
+PyYAML==6.0.3
+scipy==1.18.1

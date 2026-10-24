@@ -1,0 +1,106 @@
+SolveBoard, hand 1: solutions 3 OK, solutions 2 OK
+--------------------------------------------------
+            QJ6
+            K652
+            J85
+            T98
+AT942                   873
+AQ4                     J97
+32                      AT764
+KJ3                     Q4
+            K5
+            T83
+            KQ9
+            A7652
+
+solutions == 3
+
+  card suit   rank   equals score 
+     0 D      5             5     
+     1 D      8             5     
+     2 D      J             5     
+     3 C      T      98     5     
+     4 S      6             5     
+     5 S      Q      J      5     
+     6 H      2             4     
+     7 H      6      5      4     
+     8 H      K             4     
+
+solutions == 2
+
+  card suit   rank   equals score 
+     0 D      5             5     
+     1 D      8             5     
+     2 D      J             5     
+     3 C      T      98     5     
+     4 S      6             5     
+     5 S      Q      J      5     
+
+SolveBoard, hand 2: solutions 3 OK, solutions 2 OK
+--------------------------------------------------
+            AK96
+            KQ8
+            A98
+            K63
+87                      QJT5432
+A62                     T
+QJT4                    6
+AT75                    QJ82
+            -
+            J97543
+            K7532
+            94
+
+solutions == 3
+
+  card suit   rank   equals score 
+     0 C      2             4     
+     1 C      8             4     
+     2 C      Q      J      4     
+     3 H      T             3     
+     4 D      6             3     
+     5 S      Q      JT     3     
+     6 S      5      432    2     
+
+solutions == 2
+
+  card suit   rank   equals score 
+     0 C      2             4     
+     1 C      8             4     
+     2 C      Q      J      4     
+
+SolveBoard, hand 3: solutions 3 OK, solutions 2 OK
+--------------------------------------------------
+            73
+            QJT
+            AQ54
+            T752
+AKJ9842                 QT6
+K                       876
+T8                      KJ9
+J93                     AQ84
+            5
+            A95432
+            7632
+            K6
+
+solutions == 3
+
+  card suit   rank   equals score 
+     0 H      A             3     
+     1 D      3      2      3     
+     2 D      7      6      3     
+     3 S      5             3     
+     4 H      5      432    2     
+     5 H      9             2     
+     6 C      6             1     
+     7 C      K             1     
+
+solutions == 2
+
+  card suit   rank   equals score 
+     0 H      A             3     
+     1 D      3      2      3     
+     2 D      7      6      3     
+     3 S      5             3     
+

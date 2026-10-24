@@ -1,0 +1,11 @@
+/.build/
+/.tools/
+/.venv/
+/.pytest_cache/
+**/__pycache__/
+*.egg-info/
+/.vscode/
+/data/
+/runs/
+/models/
+

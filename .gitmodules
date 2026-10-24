@@ -1,0 +1,6 @@
+[submodule "third_party/dds"]
+	path = third_party/dds
+	url = https://github.com/dds-bridge/dds.git
+[submodule "third_party/open_spiel"]
+	path = third_party/open_spiel
+	url = https://github.com/google-deepmind/open_spiel.git

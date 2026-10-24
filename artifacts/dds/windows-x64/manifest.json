@@ -1,0 +1,41 @@
+{
+  "source": "https://github.com/dds-bridge/dds",
+  "tag": "v3.1.0",
+  "commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+  "built_at_utc": "2026-10-24T19:30:58.3325511Z",
+  "platform": "windows-x64",
+  "configuration": "opt",
+  "compiler": "MSVC 14.44.35207",
+  "bazel": "9.1.0",
+  "bazelisk": "1.29.0",
+  "source_modified": false,
+  "test_targets_passed": 6,
+  "files": [
+    {
+      "name": "dds.dll",
+      "bytes": 842752,
+      "sha256": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951"
+    },
+    {
+      "name": "dds.lib",
+      "bytes": 15492,
+      "sha256": "6e0d52977726a8772a7bab73dd18d301a26b3d224bab358831bb6139f30a8e25"
+    },
+    {
+      "name": "calc_dd_table.exe",
+      "bytes": 834560,
+      "sha256": "37d36738c018e1da7ab95f11695f4cf62fdbcae9b9c5a1acaac179c6a89384a3"
+    },
+    {
+      "name": "solve_board.exe",
+      "bytes": 770560,
+      "sha256": "2bc69ec7e8857f61dfc374e6b2c571821598aeb5526121bba2d9eb60a50c9d79"
+    },
+    {
+      "name": "LICENSE",
+      "bytes": 11619,
+      "sha256": "c674454cf9df8249567963b1be89a2dd6ecfcc6629dcf4c35b9320837dcea45c"
+    }
+  ],
+  "test_cases_passed": 28
+}

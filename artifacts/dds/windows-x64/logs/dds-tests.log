@@ -1,0 +1,123 @@
+WARNING: Running Bazel server needs to be killed, because the following startup options are different:
+  - Only in old server: -Dbazel.windows_unix_root=C:\Users\yht\AppData\Local\Microsoft\WindowsApps\bash.exe --host_jvm_args=-Dbazel.windows_unix_root=C:\Users\yht\AppData\Local\Microsoft\WindowsApps\bash.exe
+  - Only in new server: -Dbazel.windows_unix_root=D:/Git/bin/bash.exe --host_jvm_args=-Dbazel.windows_unix_root=D:/Git/bin/bash.exe
+Starting local Bazel server (9.1.0) and connecting to it...
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: library/tests/solve_board ... (3 packages)
+Analyzing: 6 targets (3 packages loaded)
+Analyzing: 6 targets (7 packages loaded, 6 targets configured)
+Analyzing: 6 targets (7 packages loaded, 6 targets configured)
+
+Analyzing: 6 targets (91 packages loaded, 143 targets configured)
+
+INFO: Analyzed 6 targets (137 packages loaded, 3840 targets configured).
+[108 / 183] Compiling googletest/src/gtest-death-test.cc; 0s local ... (8 actions running)
+INFO: From Compiling googlemock/src/gmock_main.cc:
+gmock_main.cc
+INFO: From Compiling googlemock/src/gmock-cardinalities.cc:
+gmock-cardinalities.cc
+INFO: From Compiling googlemock/src/gmock.cc:
+gmock.cc
+INFO: From Compiling googlemock/src/gmock-internal-utils.cc:
+gmock-internal-utils.cc
+[132 / 183] Compiling googletest/src/gtest-death-test.cc; 1s local ... (8 actions running)
+INFO: From Compiling library/tests/system/context_equivalence_test.cpp:
+context_equivalence_test.cpp
+INFO: From Compiling googletest/src/gtest-death-test.cc:
+gtest-death-test.cc
+INFO: From Compiling library/tests/system/worker_context_reuse_test.cpp:
+worker_context_reuse_test.cpp
+INFO: From Compiling googlemock/src/gmock-matchers.cc:
+gmock-matchers.cc
+INFO: From Compiling googletest/src/gtest-typed-test.cc:
+gtest-typed-test.cc
+max_threads_equivalence_test.cpp
+INFO: From Compiling library/tests/system/max_threads_equivalence_test.cpp:
+[138 / 183] Compiling googletest/src/gtest.cc; 2s local ... (8 actions, 7 running)
+solver_if.cpp
+INFO: From Compiling library/src/solver_if.cpp:
+INFO: From Compiling library/tests/dds_c_api_test.cpp:
+dds_c_api_test.cpp
+INFO: From Compiling googletest/src/gtest.cc:
+gtest.cc
+INFO: From Compiling library/src/solver_context_adapter.cpp:
+solver_context_adapter.cpp
+INFO: From Compiling library/tests/solve_board/trick_three_bug.cpp:
+trick_three_bug.cpp
+gtest-test-part.cc
+INFO: From Compiling googletest/src/gtest-test-part.cc:
+INFO: From Compiling googletest/src/gtest-printers.cc:
+gtest-printers.cc
+[147 / 183] Compiling googlemock/src/gmock-spec-builders.cc; 1s local ... (8 actions, 7 running)
+INFO: From Compiling library/src/quick_tricks.cpp:
+quick_tricks.cpp
+INFO: From Compiling googlemock/src/gmock-spec-builders.cc:
+gmock-spec-builders.cc
+INFO: From Compiling library/src/solve_board.cpp:
+solve_board.cpp
+INFO: From Compiling library/src/pbn.cpp:
+pbn.cpp
+INFO: From Compiling googletest/src/gtest-matchers.cc:
+gtest-matchers.cc
+INFO: From Compiling googletest/src/gtest-filepath.cc:
+gtest-filepath.cc
+INFO: From Compiling googletest/src/gtest-assertion-result.cc:
+gtest-assertion-result.cc
+INFO: From Compiling library/src/par.cpp:
+par.cpp
+INFO: From Compiling library/tests/system/concurrency_validation_test.cpp:
+concurrency_validation_test.cpp
+[156 / 183] Compiling googletest/src/gtest-port.cc; 1s local ... (8 actions, 7 running)
+INFO: From Compiling googletest/src/gtest-port.cc:
+gtest-port.cc
+INFO: From Compiling library/src/play_analyser.cpp:
+play_analyser.cpp
+INFO: From Compiling library/src/later_tricks.cpp:
+later_tricks.cpp
+INFO: From Linking library/tests/system/context_equivalence_test.exe:
+  ���ڴ����� bazel-out\x64_windows-opt\bin\library\tests\system\context_equivalence_test.lib �Ͷ��� bazel-out\x64_windows-opt\bin\library\tests\system\context_equivalence_test.exp
+INFO: From Compiling library/src/dump.cpp:
+dump.cpp
+INFO: From Compiling library/src/dealer_par.cpp:
+dealer_par.cpp
+INFO: From Linking library/tests/dds_c_api_test.exe:
+  ���ڴ����� bazel-out\x64_windows-opt\bin\library\tests\dds_c_api_test.lib �Ͷ��� bazel-out\x64_windows-opt\bin\library\tests\dds_c_api_test.exp
+INFO: From Compiling library/src/dds_api.cpp:
+dds_api.cpp
+INFO: From Compiling library/src/init.cpp:
+init.cpp
+INFO: From Compiling library/src/calc_par.cpp:
+calc_par.cpp
+INFO: From Compiling library/src/dds.cpp:
+dds.cpp
+INFO: From Compiling library/src/calc_dd_table.cpp:
+calc_dd_table.cpp
+INFO: From Compiling library/src/ab_search.cpp:
+ab_search.cpp
+INFO: From Compiling library/src/calc_tables.cpp:
+calc_tables.cpp
+[175 / 185] 1 / 6 tests; Testing //library/tests/system:context_equivalence_test; 0s local ... (2 actions, 1 running)
+INFO: From Linking library/tests/system/max_threads_equivalence_test.exe:
+  ���ڴ����� bazel-out\x64_windows-opt\bin\library\tests\system\max_threads_equivalence_test.lib �Ͷ��� bazel-out\x64_windows-opt\bin\library\tests\system\max_threads_equivalence_test.exp
+INFO: From Linking library/tests/system/worker_context_reuse_test.exe:
+INFO: From Linking library/tests/solve_board/solve_board_test.exe:
+  ���ڴ����� bazel-out\x64_windows-opt\bin\library\tests\system\worker_context_reuse_test.lib �Ͷ��� bazel-out\x64_windows-opt\bin\library\tests\system\worker_context_reuse_test.exp
+  ���ڴ����� bazel-out\x64_windows-opt\bin\library\tests\solve_board\solve_board_test.lib �Ͷ��� bazel-out\x64_windows-opt\bin\library\tests\solve_board\solve_board_test.exp
+INFO: From Linking library/tests/system/concurrency_validation_test.exe:
+  ���ڴ����� bazel-out\x64_windows-opt\bin\library\tests\system\concurrency_validation_test.lib �Ͷ��� bazel-out\x64_windows-opt\bin\library\tests\system\concurrency_validation_test.exp
+[188 / 189] 6 / 6 tests; Testing //library/tests/system:worker_context_reuse_test; 0s local
+INFO: Found 6 test targets...
+INFO: Elapsed time: 12.812s, Critical Path: 4.77s
+INFO: 94 processes: 95 action cache hit, 39 internal, 55 local.
+INFO: Build completed successfully, 94 total actions
+//library/tests:dds_c_api_test                                           PASSED in 0.2s
+//library/tests/solve_board:solve_board_test                             PASSED in 0.1s
+//library/tests/system:concurrency_validation_test                       PASSED in 0.2s
+//library/tests/system:context_equivalence_test                          PASSED in 1.2s
+//library/tests/system:max_threads_equivalence_test                      PASSED in 0.7s
+//library/tests/system:worker_context_reuse_test                         PASSED in 0.8s
+
+Executed 6 out of 6 tests: 6 tests pass.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.53" timestamp="2026-10-24T19:30:21.287" name="AllTests">
+  <testsuite name="MaxThreadsEquivalence" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.53" timestamp="2026-10-24T19:30:21.287">
+    <testcase name="CalcDDtableNMatchesAuto" file="library/tests/system/max_threads_equivalence_test.cpp" line="50" status="run" result="completed" time="0.293" timestamp="2026-10-24T19:30:21.287" classname="MaxThreadsEquivalence" />
+    <testcase name="SolveAllBoardsBinNMatchesAuto" file="library/tests/system/max_threads_equivalence_test.cpp" line="71" status="run" result="completed" time="0.13" timestamp="2026-10-24T19:30:21.581" classname="MaxThreadsEquivalence" />
+    <testcase name="InitializeStaticMemoryThenSolve" file="library/tests/system/max_threads_equivalence_test.cpp" line="117" status="run" result="completed" time="0.053" timestamp="2026-10-24T19:30:21.711" classname="MaxThreadsEquivalence" />
+    <testcase name="DeprecatedSetMaxThreadsAliasStillWorks" file="library/tests/system/max_threads_equivalence_test.cpp" line="126" status="run" result="completed" time="0.052" timestamp="2026-10-24T19:30:21.765" classname="MaxThreadsEquivalence" />
+  </testsuite>
+</testsuites>

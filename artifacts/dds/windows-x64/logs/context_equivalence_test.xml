@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" time="0.972" timestamp="2026-10-24T19:30:20.256" name="AllTests">
+  <testsuite name="SystemContextEquivalence" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.972" timestamp="2026-10-24T19:30:20.256">
+    <testcase name="LegacyVsContextReturnCode" file="library/tests/system/context_equivalence_test.cpp" line="58" status="run" result="completed" time="0." timestamp="2026-10-24T19:30:20.256" classname="SystemContextEquivalence" />
+    <testcase name="CalcDDTableContextVsNonContext" file="library/tests/system/context_equivalence_test.cpp" line="77" status="run" result="completed" time="0.366" timestamp="2026-10-24T19:30:20.257" classname="SystemContextEquivalence" />
+    <testcase name="CalcDDTableContextReuse" file="library/tests/system/context_equivalence_test.cpp" line="101" status="run" result="completed" time="0.363" timestamp="2026-10-24T19:30:20.623" classname="SystemContextEquivalence" />
+    <testcase name="CalcParContextVsNonContext" file="library/tests/system/context_equivalence_test.cpp" line="123" status="run" result="completed" time="0.242" timestamp="2026-10-24T19:30:20.986" classname="SystemContextEquivalence" />
+  </testsuite>
+</testsuites>
