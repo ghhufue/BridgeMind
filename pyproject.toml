@@ -12,9 +12,11 @@ dependencies = []
 [project.optional-dependencies]
 dev = ["pytest>=8"]
 bridge = ["open-spiel==2.0.2"]
+train = ["open-spiel==2.0.2", "numpy>=2", "torch>=2.7"]
 
 [project.scripts]
 bridgemind-dds = "bridgemind.dds.server:main"
+bridgemind-train = "bridgemind.training.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

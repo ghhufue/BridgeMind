@@ -1,6 +1,19 @@
 # BridgeMind
 
-当前已实现独立的 DDS v3.1.0 求解服务、Python 客户端，以及使用 OpenSpiel 规则和外部 DDS 结算的叫牌环境。尚未包含策略模型或训练器。
+当前已实现独立的 DDS v3.1.0 求解服务、Python 客户端、OpenSpiel 叫牌环境，以及 PyTorch 监督学习和 PPO 自对弈训练。训练包含历史对手池、双室 IMP 评估、断点续训与模型推理接口。出牌策略尚未训练。
+
+## 叫牌训练
+
+已有环境和数据可直接运行：
+
+```powershell
+.\.venv\Scripts\python.exe -m bridgemind.training train-sl --run runs/sl-main --init data/baselines/brl-sl.pt --steps 1000
+.\.venv\Scripts\python.exe -m bridgemind.training train-ppo --run runs/ppo-main --init runs/sl-main/last.pt --updates 100
+```
+
+已准备 10 万训练牌表、1 万验证牌表、2 万测试牌表，以及约 110 万条监督叫牌决策。完整安装、数据重建、训练和评估命令见 [训练说明](docs/training.md)，已跑实验与效果限制见 [验证记录](docs/training-validation.md)。本轮短训练证明流程可运行，尚不能证明模型棋力提升。
+
+本地 Git 使用 `main`，DDS 与 OpenSpiel 源码作为固定提交的子模块管理。克隆后使用 `git submodule update --init` 取得源码；数据、模型、训练输出和虚拟环境不提交到 Git。当前没有配置远端仓库。
 
 ## Windows 快速运行
 
@@ -24,7 +37,7 @@
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-当前 35 项测试通过。小规模性能测试及验证范围见 `docs/dds-validation.md`。可重跑同一组随机牌的端到端基准：
+DDS 与环境的验证范围见 `docs/dds-validation.md`；训练验证见 `docs/training-validation.md`。可重跑同一组随机牌的端到端基准：
 
 ```powershell
 .\.venv\Scripts\python.exe examples/solver_benchmark.py --boards 32 --workers 1 4
@@ -37,7 +50,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e '.[dev,bridge]'
 ```
 
-生产适配层只依赖 Python 标准库；`dev` 安装 pytest，`bridge` 安装固定版本的 OpenSpiel 2.0.2。当前环境的依赖快照见 `requirements-dev.lock.txt`。OpenSpiel 通过 PyPI 的 Windows wheel 安装，未从本地稀疏检出编译；其包版本与本地源码提交分别记录，不将二者视为相同构建。
+DDS 适配层只依赖 Python 标准库；`dev` 安装 pytest，`bridge` 安装固定版本的 OpenSpiel 2.0.2，`train` 安装 PyTorch、NumPy 和 OpenSpiel。当前环境的依赖快照见 `requirements-dev.lock.txt`。OpenSpiel 通过 PyPI 的 Windows wheel 安装，未从本地稀疏检出编译；其包版本与本地源码提交分别记录，不将二者视为相同构建。
 
 ## 使用 Python 接口
 
@@ -88,14 +101,17 @@ observation = env.observation()
 env.apply_call("1NT")   # 也可使用局部动作编号 0..37
 ```
 
-环境的局部叫牌编号是 P=0、X=1、XX=2、1C=3 至 7NT=37。它内部转换到 OpenSpiel 编号，不直接向策略暴露完整状态。`observation()` 提供当前玩家的原生观察向量、公开叫牌历史、合法叫牌编号及状态版本。原生观察向量不承诺与 brl/Pgx 编码兼容。
+环境的局部叫牌编号是 P=0、X=1、XX=2、1C=3 至 7NT=37。它内部转换到 OpenSpiel 编号，不直接向策略暴露完整状态。`observation()` 提供本人手牌、庄家与局况、原生观察向量、公开叫牌历史、合法叫牌编号及状态版本。原生观察向量不承诺与 brl/Pgx 编码兼容；训练模块单独重建 480 维输入，处理本机 wheel 的非北家历史位置问题。
 
 `is_terminal()` 表示叫牌训练回合结束；`result()` 返回外部 DDS 结算后的原始分数，未转为 IMP。底层 OpenSpiel 此时可能刚进入出牌阶段；不能将本适配器当作完整出牌环境。四家不叫直接返回零分。可关闭 `prefetch`，只在确定定约后提交牌表。
+
+离线训练可传入 `BridgeBiddingEnv(None, deal, table=table)`，直接用已校验的完整牌表结算；结果标记为 `precomputed`，原始来源由数据 manifest 记录。没有预计算表时继续使用外部求解器。
 
 ## 验证与目录
 
 - `src/bridgemind/dds/`：模型与校验、原生绑定、调度、协议、客户端、服务入口。
 - `src/bridgemind/engine/`：外部 DDS 叫牌环境、独立计分。
+- `src/bridgemind/training/`：数据、编码、PyTorch 模型、SL/PPO、对手池、评估与推理。
 - `tests/`：原生样例、独立小残局枚举、并发与协议、任务边界、OpenSpiel 交叉验证。
 - `artifacts/dds/windows-x64/`：已编译的 DLL、导入库和上游示例。
 - `third_party/`：保持上游原样的源码与许可证。

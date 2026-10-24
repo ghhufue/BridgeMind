@@ -1,0 +1,223 @@
+{
+  "generated_utc": "2026-10-24T20:29:48.786444+00:00",
+  "purpose": "Bidding training pipeline pilot; no established playing-strength improvement",
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "memory_mib": 12227,
+    "driver": "610.88",
+    "torch": "2.11.0+cu128"
+  },
+  "tests": {
+    "passed": 58,
+    "full_suite_seconds": 9.09,
+    "resume_equivalence": "CPU uninterrupted vs resumed PPO parameters bitwise equal"
+  },
+  "data": {
+    "source": "https://huggingface.co/datasets/sotetsuk/dds_dataset",
+    "source_sha256": "186bb2833befd4a2354bd8eda9b42795ff2669177a23e998870d7a8ef65b3dca",
+    "seed": 42,
+    "sizes": {
+      "train": 100000,
+      "valid": 10000,
+      "test": 20000
+    },
+    "latest_dds_verified_boards": 32,
+    "label_origin": "public precomputed Pgx DDS; not all recomputed with 3.1.0"
+  },
+  "sources": {
+    "assets": {
+      "dds_results_2.5M.npy": {
+        "url": "https://huggingface.co/datasets/sotetsuk/dds_dataset/resolve/main/dds_results_2.5M.npy",
+        "sha256": "186bb2833befd4a2354bd8eda9b42795ff2669177a23e998870d7a8ef65b3dca"
+      },
+      "openspiel-train.txt": {
+        "url": "https://storage.googleapis.com/openspiel-data/bridge/train.txt",
+        "sha256": "59b0fb726b8887271a51f97af6e4bab425a54c0b712bf83e544df5ede95d4bbb"
+      },
+      "openspiel-valid.txt": {
+        "url": "https://storage.googleapis.com/openspiel-data/bridge/valid.txt",
+        "sha256": "682a1543bb27fcbd1d8aeba6cfd7bbc81bd5efe568d152d2f0ad436ce4febed8"
+      },
+      "openspiel-test.txt": {
+        "url": "https://storage.googleapis.com/openspiel-data/bridge/test.txt",
+        "sha256": "41ee45364d71ec2608c474eda52d3c8d4302c6ca46cb23bcbaf66a8ac6386352"
+      },
+      "openspiel-README.txt": {
+        "url": "https://storage.googleapis.com/openspiel-data/bridge/README.txt",
+        "sha256": "51aa62f10deb7104a71342ed75a046e7c51a465180ba81770cc52190cdab5a03"
+      }
+    },
+    "baseline": {
+      "source": "https://raw.githubusercontent.com/harukaki/brl/fdd958ff8adcb44844d70ea2e233bed18d5a7b70/bridge_models/model-sl.pkl",
+      "source_commit": "fdd958ff8adcb44844d70ea2e233bed18d5a7b70",
+      "source_git_blob": "78cadbe49fa44bda1ec8dd79895f9d84fc418c13",
+      "source_sha256": "e4174daffd3711f73925a7031ce18dda9b5b7c61e52eb74f325aa1e7d5302ee8",
+      "license": "Apache-2.0",
+      "conversion_max_abs_error": 0.000244140625,
+      "kind": "public_sl"
+    }
+  },
+  "split_audit": "All six local board collections disjoint by ownership SHA256; test unused for tuning/evaluation",
+  "supervised": {
+    "run": "runs/sl-pilot",
+    "steps": 300,
+    "train_boards": 100000,
+    "train_states": 1106954,
+    "batch_size": 1024,
+    "initial_validation": {
+      "nll": 0.20747854560613632,
+      "accuracy": 0.92431640625,
+      "states": 8192,
+      "sampling": "fixed_seed_with_replacement",
+      "seed": 714
+    },
+    "final_validation": {
+      "nll": 0.18582557328045368,
+      "accuracy": 0.931884765625,
+      "states": 8192,
+      "sampling": "fixed_seed_with_replacement",
+      "seed": 714
+    },
+    "checkpoint_metadata": {
+      "kind": "sl",
+      "step": 300,
+      "config": {
+        "train": "2f45aa78b322ffe5539e7eab8ea3d7db1dde0f2a3b160a11b5b96bac8aaf1831",
+        "valid": "9076eb00eb1cdec17901b43e670b2d0fa98594bb92adecb4fda57a741aedd08c",
+        "seed": 42,
+        "lr": 0.0001,
+        "batch_size": 1024,
+        "cpu_threads": 1,
+        "eval_states": 8192,
+        "eval_every": 50
+      },
+      "provenance": {
+        "git_commit": "0e762957aece15589d677a979573cc90a0e57984",
+        "git_dirty": true,
+        "python": "3.13.10",
+        "torch": "2.11.0+cu128",
+        "numpy": "2.5.4",
+        "open_spiel": "2.0.2"
+      }
+    },
+    "duplicate_vs_public_sl": {
+      "boards": 1024,
+      "mean_imps": 0.0595703125,
+      "standard_error": 0.1253407737739513,
+      "bootstrap_95_ci": [
+        -0.181640625,
+        0.30078125
+      ],
+      "wins": 123,
+      "ties": 788,
+      "losses": 113,
+      "seed": 714,
+      "action_selection": "greedy",
+      "evaluation_model": "double_dummy",
+      "model_sha256": "d77085b51d57f05cbb3b750bc4b75d1e41739722e40e6d4cfea57a5962e1614a",
+      "model_kind": "sl",
+      "boards_sha256": "a038a39dc4201cb742d19be565009b66454bb6fe99bdba43b4544bc8de7a2934",
+      "opponent_sha256": "c051499a9ffdd25a01a3e2b6eadda433da6e00b8fbf8069f833aef99bda63300"
+    }
+  },
+  "ppo": {
+    "run": "runs/ppo-pilot",
+    "updates": 10,
+    "boards_per_update": 128,
+    "board_pairs": 1280,
+    "transitions": 13474,
+    "resumed_after_update": 8,
+    "checkpoint_metadata": {
+      "kind": "ppo",
+      "step": 10,
+      "config": {
+        "train": "2324cf9529be871770d00491c514a6f100bdfc074a220f4b349ff152da1205f7",
+        "valid": "a038a39dc4201cb742d19be565009b66454bb6fe99bdba43b4544bc8de7a2934",
+        "seed": 42,
+        "lr": 1e-05,
+        "boards_per_update": 128,
+        "epochs": 4,
+        "minibatch_size": 1024,
+        "entropy_coef": 0.001,
+        "snapshot_every": 2,
+        "pool_capacity": 8,
+        "eval_every": 4,
+        "eval_boards": 256,
+        "cpu_threads": 1
+      },
+      "provenance": {
+        "git_commit": "0e762957aece15589d677a979573cc90a0e57984",
+        "git_dirty": true,
+        "python": "3.13.10",
+        "torch": "2.11.0+cu128",
+        "numpy": "2.5.4",
+        "open_spiel": "2.0.2"
+      },
+      "history": [
+        "snapshot-00000000.pt",
+        "snapshot-00000002.pt",
+        "snapshot-00000004.pt",
+        "snapshot-00000006.pt",
+        "snapshot-00000008.pt",
+        "snapshot-00000010.pt"
+      ]
+    },
+    "duplicate_vs_supervised": {
+      "boards": 1024,
+      "mean_imps": -0.052734375,
+      "standard_error": 0.08266906141503468,
+      "bootstrap_95_ci": [
+        -0.2177734375,
+        0.1083984375
+      ],
+      "wins": 57,
+      "ties": 910,
+      "losses": 57,
+      "seed": 714,
+      "action_selection": "greedy",
+      "evaluation_model": "double_dummy",
+      "model_sha256": "d3828a3b89452bcb7f648841f483dbb9ad74ebcb6109a88b05dd8c4ab7c1f689",
+      "model_kind": "ppo",
+      "boards_sha256": "a038a39dc4201cb742d19be565009b66454bb6fe99bdba43b4544bc8de7a2934",
+      "opponent_sha256": "d77085b51d57f05cbb3b750bc4b75d1e41739722e40e6d4cfea57a5962e1614a"
+    },
+    "rollout_seconds_mean": 0.46130948999925747,
+    "gradient_update_seconds_mean": 0.10430884999950649
+  },
+  "self_validation": {
+    "boards": 512,
+    "mean_imps": 0.0,
+    "standard_error": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "wins": 0,
+    "ties": 512,
+    "losses": 0,
+    "seed": 714,
+    "action_selection": "greedy",
+    "evaluation_model": "double_dummy",
+    "model_sha256": "c051499a9ffdd25a01a3e2b6eadda433da6e00b8fbf8069f833aef99bda63300",
+    "model_kind": "public_sl",
+    "boards_sha256": "a038a39dc4201cb742d19be565009b66454bb6fe99bdba43b4544bc8de7a2934",
+    "opponent_sha256": "c051499a9ffdd25a01a3e2b6eadda433da6e00b8fbf8069f833aef99bda63300"
+  },
+  "independent_dds_generation": {
+    "generated": 16,
+    "split": [
+      8,
+      4,
+      4
+    ],
+    "workers": 2,
+    "solver_version": "3.1.0"
+  },
+  "limitations": [
+    "Only bidding trained; DDS assumes perfect full-information card play",
+    "Small pilot with one seed; no convergence or strongest-AI claim",
+    "Neither duplicate evaluation confidence interval establishes an improvement",
+    "Public table source only spot-checked on 32 boards with DDS 3.1.0",
+    "Local split audit does not verify the public pretrained model training history"
+  ]
+}

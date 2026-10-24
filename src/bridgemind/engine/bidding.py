@@ -3,7 +3,7 @@
 import copy
 import uuid
 
-from bridgemind.dds import Deal, SolverError, SolverWaitTimeout
+from bridgemind.dds import Deal, TableResult, SolverError, SolverWaitTimeout
 from bridgemind.dds.models import RANKS, SEATS, STRAINS
 from .scoring import Contract, score_contract
 
@@ -26,7 +26,7 @@ class BridgeBiddingEnv:
     auction completion; the underlying OpenSpiel state would enter card play.
     """
 
-    def __init__(self, solver, deal, *, dealer="N", vulnerable=(False, False), prefetch=True):
+    def __init__(self, solver, deal, *, dealer="N", vulnerable=(False, False), prefetch=True, table=None):
         try:
             import pyspiel
         except ImportError as error:
@@ -39,11 +39,14 @@ class BridgeBiddingEnv:
         self.vulnerable = tuple(vulnerable)
         self.prefetch = prefetch
         self._submission = None
-        self.reset(deal)
+        self.reset(deal, table=table)
 
-    def reset(self, deal):
+    def reset(self, deal, *, table=None):
         self.close()
         self._deal = Deal.from_dict(deal)
+        self._table = table if isinstance(table, TableResult) else TableResult.from_dict(table) if table is not None else None
+        if self._table is not None and (len(self._table.tricks) != 5 or any(len(r) != 4 or any(type(v) is not int or not 0 <= v <= 13 for v in r) for r in self._table.tricks)):
+            raise ValueError("Invalid precomputed table")
         self._board_id = uuid.uuid4().hex
         index = SEATS.index(self.dealer)
         self._game = self._pyspiel.load_game("bridge", {
@@ -55,7 +58,7 @@ class BridgeBiddingEnv:
         self._first_bidder = {}
         self._contract = None
         self._settled = None
-        if self.prefetch:
+        if self.prefetch and self._table is None:
             self._submit_table()
         return self.observation()
 
@@ -77,6 +80,8 @@ class BridgeBiddingEnv:
             raise ValueError("Auction is terminal")
         player = self._state.current_player()
         return {"state_id": f"{self._board_id}:{len(self._auction)}", "player": SEATS[player],
+                "hand": list(self._deal.hands[SEATS[player]]), "dealer": self.dealer,
+                "vulnerable": list(self.vulnerable),
                 "tensor": list(self._state.observation_tensor(player)),
                 "legal_call_ids": self.legal_call_ids(), "auction": copy.deepcopy(self._auction)}
 
@@ -109,13 +114,17 @@ class BridgeBiddingEnv:
             self._settled = {"contract": None, "declarer_tricks": None,
                              "returns": [0, 0, 0, 0], "evaluation_model": "passed_out"}
         else:
-            if self._submission is None:
-                self._submit_table()
-            job_id = self._submission["job_id"]
-            snapshot = self._solver.wait(job_id, wait_timeout_ms)
-            if not snapshot["complete"]:
-                raise SolverWaitTimeout(job_id)
-            item = snapshot["items"][0]
+            if self._table is not None:
+                item = {"status": "succeeded", "state_id": self._board_id,
+                        "result": self._table.to_dict(), "solver_version": "precomputed", "solver_commit": None}
+            else:
+                if self._submission is None:
+                    self._submit_table()
+                job_id = self._submission["job_id"]
+                snapshot = self._solver.wait(job_id, wait_timeout_ms)
+                if not snapshot["complete"]:
+                    raise SolverWaitTimeout(job_id)
+                item = snapshot["items"][0]
             if item["status"] != "succeeded":
                 raise SolverError.from_dict(item["error"])
             if item["state_id"] != self._board_id:

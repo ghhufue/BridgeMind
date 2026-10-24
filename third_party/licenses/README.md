@@ -1,0 +1,7 @@
+# Training references and attribution
+
+- **brl**: Haruka Kita and Sotetsu Koyamada. Repository: https://github.com/harukaki/brl, pinned commit `fdd958ff8adcb44844d70ea2e233bed18d5a7b70`. The MLP layout and observation compatibility follow this implementation. Public `bridge_models/model-sl.pkl` is downloaded into ignored `data/` and converted to a PyTorch checkpoint. See the accompanying original [Apache-2.0 license](brl-LICENSE.txt). BridgeMind's training loop, Torch model and checkpoint converter are new implementations, with source attribution retained.
+- **Pgx / DDS dataset**: https://github.com/sotetsuk/pgx and https://huggingface.co/datasets/sotetsuk/dds_dataset. The public dataset card declares Apache-2.0. Packed deal/table representation is described by https://github.com/sotetsuk/make-dds-dataset. BridgeMind independently reads that data format; no claim is made that the generator repository has a particular license.
+- **OpenSpiel**: https://github.com/google-deepmind/open_spiel. Rule engine and supervised trajectory format. Source and license remain in the `third_party/open_spiel` submodule. WBridge5 trajectories and their README are downloaded from https://storage.googleapis.com/openspiel-data/bridge/; data is not included in this Git repository. The source README identifies Yves Costel as WBridge5's developer, SAYC conventions, North dealer, neither vulnerable.
+
+Generated training data and model files are excluded from Git. Source URLs, fixed hashes and conversion provenance are recorded in `data/sources.json` after `fetch`.
