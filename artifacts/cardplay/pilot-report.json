@@ -1,0 +1,328 @@
+{
+  "verified_date": "2026-10-25",
+  "provenance": {
+    "git_commit": "2c13d0b7d3fbb460ab47e749cadc3927ba1aee13",
+    "git_dirty": true,
+    "python": "3.13.10",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4",
+    "open_spiel": "2.0.2"
+  },
+  "model_parameters": 3414023,
+  "datasets": {
+    "train": {
+      "boards": 1000,
+      "states": 52000,
+      "fingerprint": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee",
+      "source_sha256": "59b0fb726b8887271a51f97af6e4bab425a54c0b712bf83e544df5ede95d4bbb",
+      "full_replay_and_encoded_prefix_check": true,
+      "bidding_split_subset": true,
+      "verification_seconds": 13.990969800000016
+    },
+    "valid": {
+      "boards": 128,
+      "states": 6656,
+      "fingerprint": "af30af8f8be5d1a29074c7ec6e0cfbe0b44f057339c1993af7ad8692bf88be72",
+      "source_sha256": "682a1543bb27fcbd1d8aeba6cfd7bbc81bd5efe568d152d2f0ad436ce4febed8",
+      "full_replay_and_encoded_prefix_check": true,
+      "bidding_split_subset": true,
+      "verification_seconds": 1.8068547999999964
+    },
+    "test": {
+      "boards": 128,
+      "states": 6656,
+      "fingerprint": "74d06f9327c520d8117b9b8ea2f4f7211583a9b309bab48ac19b59dceaf96c2c",
+      "source_sha256": "41ee45364d71ec2608c474eda52d3c8d4302c6ca46cb23bcbaf66a8ac6386352",
+      "full_replay_and_encoded_prefix_check": true,
+      "bidding_split_subset": true,
+      "verification_seconds": 1.8108014000000026
+    }
+  },
+  "runs": {
+    "play-sl-pilot": {
+      "last_sha256": "6580792221e8001e20640b729541d8b2c7a090539de50c6025ff289eff0a1efa",
+      "best_sha256": "11f23c31087d2129baf957b460d758d51557c4a4a54fbb492b2943dab4b84282",
+      "config": {
+        "d_model": 256,
+        "layers": 4,
+        "heads": 8
+      },
+      "metadata": {
+        "kind": "play_sl",
+        "config": {
+          "train": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee",
+          "valid": "af30af8f8be5d1a29074c7ec6e0cfbe0b44f057339c1993af7ad8692bf88be72",
+          "seed": 42,
+          "lr": 0.0001,
+          "cpu_threads": 1,
+          "eval_every": 25,
+          "batch_size": 64,
+          "eval_states": 512,
+          "belief_coef": 0.2,
+          "value_coef": 0.1
+        },
+        "step": 100,
+        "provenance": {
+          "git_commit": "2c13d0b7d3fbb460ab47e749cadc3927ba1aee13",
+          "git_dirty": true,
+          "python": "3.13.10",
+          "torch": "2.11.0+cu128",
+          "numpy": "2.5.4",
+          "open_spiel": "2.0.2"
+        },
+        "best_nll": 1.1050882264971733
+      },
+      "best_metadata": {
+        "kind": "play_sl",
+        "step": 75,
+        "validation": {
+          "states": 512,
+          "nll": 1.1050882264971733,
+          "accuracy": 0.515625,
+          "belief_nll": 0.856306162427741,
+          "value_mse": 0.0032690262305550277,
+          "seed": 714,
+          "sampling": "fixed_seed_with_replacement"
+        }
+      }
+    },
+    "play-distill-pilot": {
+      "last_sha256": "4ed01306c54f4acfb22c4baa5e48ed4c2e86989abe3056668a9d9061654ccf44",
+      "best_sha256": "bcf9a643357631c66e56511632db5992327d8625d3b93e2febab03eee54f2b52",
+      "config": {
+        "d_model": 256,
+        "layers": 4,
+        "heads": 8
+      },
+      "metadata": {
+        "kind": "play_distill",
+        "config": {
+          "train": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee",
+          "valid": "af30af8f8be5d1a29074c7ec6e0cfbe0b44f057339c1993af7ad8692bf88be72",
+          "seed": 42,
+          "lr": 0.0001,
+          "cpu_threads": 1,
+          "eval_every": 1,
+          "batch_size": 8,
+          "eval_states": 128,
+          "belief_coef": 0.2,
+          "value_coef": 0.1,
+          "samples": 2,
+          "min_ply": 40,
+          "temperature": 50.0
+        },
+        "step": 3,
+        "provenance": {
+          "git_commit": "2c13d0b7d3fbb460ab47e749cadc3927ba1aee13",
+          "git_dirty": true,
+          "python": "3.13.10",
+          "torch": "2.11.0+cu128",
+          "numpy": "2.5.4",
+          "open_spiel": "2.0.2"
+        },
+        "best_nll": 1.1625719666481018,
+        "search_rng": {
+          "bit_generator": "PCG64",
+          "state": {
+            "state": 205975934144590472307340940251729633361,
+            "inc": 205080502827844227894501898450840030981
+          },
+          "has_uint32": 0,
+          "uinteger": 0
+        },
+        "teacher_solver": {
+          "schema_version": 1,
+          "solver_version": "3.1.0",
+          "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+          "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+          "service_instance_id": "12e6eec52c3d426d8920ea85d2cb77bc",
+          "process_id": 33888,
+          "operations": [
+            "table",
+            "position"
+          ],
+          "worker_count": 2,
+          "max_batch_items": 256,
+          "tt_default_mb": 64,
+          "tt_max_mb": 128,
+          "max_queued_tasks": 1024,
+          "hard_cancellation": false
+        }
+      },
+      "best_metadata": {
+        "kind": "play_distill",
+        "step": 2,
+        "validation": {
+          "states": 128,
+          "nll": 1.1625719666481018,
+          "accuracy": 0.515625,
+          "belief_nll": 0.8569201271567989,
+          "value_mse": 0.003290187451057136,
+          "seed": 714,
+          "sampling": "fixed_seed_with_replacement"
+        }
+      }
+    },
+    "play-ppo-pilot": {
+      "last_sha256": "0cd6cb7f585ba2b6cc190e1c9d64ded8208c24e967088f457dd121a73d4d8ce9",
+      "best_sha256": "abb41f71bffe87c0325950450354de9de1de41cbd58d6824b2a6666cfbe2fd3b",
+      "config": {
+        "d_model": 256,
+        "layers": 4,
+        "heads": 8
+      },
+      "metadata": {
+        "kind": "play_ppo",
+        "config": {
+          "train": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee",
+          "valid": "af30af8f8be5d1a29074c7ec6e0cfbe0b44f057339c1993af7ad8692bf88be72",
+          "seed": 42,
+          "lr": 1e-05,
+          "cpu_threads": 1,
+          "eval_every": 1,
+          "boards_per_update": 8,
+          "epochs": 2,
+          "minibatch_size": 128,
+          "entropy_coef": 0.001,
+          "belief_coef": 0.05,
+          "snapshot_every": 1,
+          "pool_capacity": 8,
+          "eval_boards": 16
+        },
+        "step": 3,
+        "provenance": {
+          "git_commit": "2c13d0b7d3fbb460ab47e749cadc3927ba1aee13",
+          "git_dirty": true,
+          "python": "3.13.10",
+          "torch": "2.11.0+cu128",
+          "numpy": "2.5.4",
+          "open_spiel": "2.0.2"
+        },
+        "history": [
+          "snapshot-00000000.pt",
+          "snapshot-00000001.pt",
+          "snapshot-00000002.pt",
+          "snapshot-00000003.pt"
+        ],
+        "best_mean_imps": 2.3125
+      },
+      "best_metadata": {
+        "kind": "play_ppo",
+        "step": 3,
+        "validation": {
+          "boards": 16,
+          "mean_imps": 2.3125,
+          "bootstrap_95_ci": [
+            0.4375,
+            4.5
+          ],
+          "standard_error": 1.0828925385281774,
+          "wins": 6,
+          "ties": 8,
+          "losses": 2,
+          "imps": [
+            3,
+            -2,
+            5,
+            0,
+            10,
+            0,
+            -2,
+            0,
+            0,
+            10,
+            0,
+            0,
+            0,
+            11,
+            2,
+            0
+          ],
+          "raw_differences": [
+            100,
+            -50,
+            200,
+            0,
+            480,
+            0,
+            -50,
+            0,
+            0,
+            470,
+            0,
+            0,
+            0,
+            500,
+            50,
+            0
+          ],
+          "current_as_declarer_tricks": [
+            8,
+            7,
+            9,
+            10,
+            10,
+            10,
+            8,
+            7,
+            8,
+            10,
+            10,
+            7,
+            9,
+            11,
+            7,
+            6
+          ],
+          "opponent_as_declarer_tricks": [
+            6,
+            8,
+            8,
+            10,
+            8,
+            10,
+            9,
+            7,
+            8,
+            9,
+            10,
+            7,
+            9,
+            10,
+            6,
+            6
+          ],
+          "board_ids": [
+            "ad7bbbb3816dcba3d95659f4322d5b45f2c48d515e2aaa541caec7c5fd8c2571",
+            "900659973d66558641462fb05244ed63141e6fde77ad038cab0b55f83526ecc6",
+            "eaa8f3bbc243391640a9359bb0a6205a8365f52ef5be2ef6037811daae87b727",
+            "5af1ead766a42d818ff9e92739e0c378508cfa8666d36f809312ef3c490a2d45",
+            "90490eeff770284d38b361e4030d51fc972e609126572ee45ec01e6d4f50716c",
+            "bc506461c6cd63df62a4f0ca7bb764bb0830f0401829d4af300f345e2c0d17d0",
+            "2c185017d3c28e72dddd22dd48b69cdb1e04dd2d924670d899e1c4ee065682cf",
+            "a8528b7a334b7150ca849ba0dad8d0f71b53d73f42f99f125a2b0b1af3f5e73d",
+            "b190d0da82bfced1a2b5a229ea56de637639c3e0e9ada0aec52c30001ab518c2",
+            "a07d7e9e52ce0db61c425221ac0778891bf6f8e901b0d336ed17de783e0a428b",
+            "632d8ea123b138118c23615eb1a4ed2d72de44a3d4159b23139ad43a2a56608f",
+            "c755401fbf1220ed44f4b053ceae0861b1636692539caf686088e54422dddbb9",
+            "2620bdea13fd0b15cb658c45d8f54b9094bff222b2b45a92f18c1d56b629c5fa",
+            "80d62613534fb3158229d53075d2a128fcddd3a4fa6b9b02430af3e1b785b7d0",
+            "d6190c97f0fd153b5b0551a38f1a616fa2ea9ddb71de24ca4d1e7541f340347d",
+            "1e93932a90f4b0eb17a9c2d47f36da66d295cdd7adda364244b99e4f709ca61a"
+          ],
+          "seed": 714,
+          "action_selection": "greedy_for_neural",
+          "evaluation_model": "played_out",
+          "contract_source": "fixed_recorded_auction"
+        }
+      }
+    }
+  },
+  "disjoint": true,
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest -q",
+    "passed": 81,
+    "cardplay_passed": 23,
+    "seconds": 14.8
+  }
+}

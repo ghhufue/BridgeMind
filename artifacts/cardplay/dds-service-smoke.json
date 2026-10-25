@@ -1,0 +1,41 @@
+{
+  "service": {
+    "schema_version": 1,
+    "solver_version": "3.1.0",
+    "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+    "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+    "service_instance_id": "12e6eec52c3d426d8920ea85d2cb77bc",
+    "process_id": 33888,
+    "operations": [
+      "table",
+      "position"
+    ],
+    "worker_count": 2,
+    "max_batch_items": 256,
+    "tt_default_mb": 64,
+    "tt_max_mb": 128,
+    "max_queued_tasks": 1024,
+    "hard_cancellation": false
+  },
+  "stats": {
+    "coalesced": 35,
+    "submitted": 286,
+    "succeeded": 286,
+    "native_calls": 251,
+    "cache_hits": 0,
+    "queued": 0,
+    "running": 0,
+    "retained_jobs": 143,
+    "cache_entries": 251,
+    "cache_serialized_bytes": 128461,
+    "closed": false,
+    "queue_ms_p95": 0.16340000001946464,
+    "queue_ms_p99": 0.2748000042629428,
+    "solve_ms_p95": 19.382800004677847,
+    "latency_sample_count": 286
+  },
+  "distill_steps": 3,
+  "distill_resumed_after": 2,
+  "search_eval_boards": 2,
+  "hybrid_eval_boards": 1
+}

@@ -1,0 +1,341 @@
+{
+  "board_id": "eebe361df027efcc32c46fdbb9cbca87eec2c0e12eeb71b3bf4c9555435efc59",
+  "auction": [
+    {
+      "seat": "S",
+      "call": "P"
+    },
+    {
+      "seat": "W",
+      "call": "1S"
+    },
+    {
+      "seat": "N",
+      "call": "X"
+    },
+    {
+      "seat": "E",
+      "call": "1NT"
+    },
+    {
+      "seat": "S",
+      "call": "P"
+    },
+    {
+      "seat": "W",
+      "call": "2S"
+    },
+    {
+      "seat": "N",
+      "call": "3H"
+    },
+    {
+      "seat": "E",
+      "call": "P"
+    },
+    {
+      "seat": "S",
+      "call": "P"
+    },
+    {
+      "seat": "W",
+      "call": "3S"
+    },
+    {
+      "seat": "N",
+      "call": "P"
+    },
+    {
+      "seat": "E",
+      "call": "P"
+    },
+    {
+      "seat": "S",
+      "call": "P"
+    }
+  ],
+  "play": [
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "C3"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "CA"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "C6"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "C2"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "D3"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "D2"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "DQ"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "DA"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "HA"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "H2"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "H4"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "H3"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "S5"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "S4"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "SJ"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "S3"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "H5"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "HQ"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "H8"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "H7"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "C7"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "S6"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "C8"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "C5"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "S2"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "ST"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "S9"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "S7"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "D4"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "DT"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "DJ"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "D5"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "D7"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "D8"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "D6"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "HT"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "H6"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "C4"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "H9"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "SQ"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "SA"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "HK"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "CK"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "CQ"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "S8"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "DK"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "C9"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "CJ"
+    },
+    {
+      "controller": "W",
+      "seat": "W",
+      "card": "SK"
+    },
+    {
+      "controller": "N",
+      "seat": "N",
+      "card": "HJ"
+    },
+    {
+      "controller": "W",
+      "seat": "E",
+      "card": "D9"
+    },
+    {
+      "controller": "S",
+      "seat": "S",
+      "card": "CT"
+    }
+  ],
+  "result": {
+    "contract": {
+      "level": 3,
+      "strain": "S",
+      "declarer": "W",
+      "double_status": 0
+    },
+    "declarer_tricks": 8,
+    "tricks": [
+      5,
+      8
+    ],
+    "returns": [
+      50,
+      -50,
+      50,
+      -50
+    ],
+    "evaluation_model": "played_out"
+  },
+  "bidding_model_sha256": "d77085b51d57f05cbb3b750bc4b75d1e41739722e40e6d4cfea57a5962e1614a",
+  "play_model_sha256": "11f23c31087d2129baf957b460d758d51557c4a4a54fbb492b2943dab4b84282"
+}

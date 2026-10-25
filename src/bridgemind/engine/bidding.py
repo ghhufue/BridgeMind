@@ -147,3 +147,11 @@ class BridgeBiddingEnv:
                 pass
             self._submission = None
 
+    def start_play(self, *, system_id=0):
+        """Continue this complete auction into actual, information-restricted card play."""
+        if not self.is_terminal():
+            raise ValueError("Complete the auction before starting card play")
+        from .play import BridgePlayEnv
+        return BridgePlayEnv(self._deal, auction=self._auction, dealer=self.dealer, vulnerable=self.vulnerable,
+                             system_id=system_id)
+

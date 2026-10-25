@@ -1,6 +1,6 @@
 # BridgeMind
 
-当前已实现独立的 DDS v3.1.0 求解服务、Python 客户端、OpenSpiel 叫牌环境，以及 PyTorch 监督学习和 PPO 自对弈训练。训练包含历史对手池、双室 IMP 评估、断点续训与模型推理接口。出牌策略尚未训练。
+当前已实现独立的 DDS v3.1.0 求解服务、Python 客户端、完整叫牌与出牌环境，以及 PyTorch 监督学习和 PPO 自对弈训练。出牌包含动态历史 Transformer、隐藏牌推断、受约束采样 DDS 搜索和搜索蒸馏。叫牌与出牌均已跑通短训练、断点续训和双室 IMP 评估，尚未证明棋力提升。
 
 接手项目请先读 [项目交接与当前进度](docs/HANDOFF.md)。完整文档入口及维护约定见 [docs 文档索引](docs/README.md)。
 
@@ -16,6 +16,18 @@
 已准备 10 万训练牌表、1 万验证牌表、2 万测试牌表，以及约 110 万条监督叫牌决策。完整安装、数据重建、训练和评估命令见 [训练说明](docs/training.md)，已跑实验与效果限制见 [验证记录](docs/training-validation.md)。本轮短训练证明流程可运行，尚不能证明模型棋力提升。
 
 本地 Git 使用 `main`，DDS 与 OpenSpiel 源码作为固定提交的子模块管理。克隆后使用 `git submodule update --init` 取得源码；数据、模型、训练输出和虚拟环境不提交到 Git。当前没有配置远端仓库。
+
+## 出牌训练与完整对局
+
+本机已准备出牌训练 1,000 副，验证和测试各 128 副。已有环境和数据可直接运行：
+
+```powershell
+.\.venv\Scripts\python.exe -m bridgemind.cardplay train-sl --run runs/play-sl-main --steps 1000 --device cuda
+.\.venv\Scripts\python.exe -m bridgemind.cardplay train-ppo --run runs/play-ppo-main --init runs/play-sl-main/best.pt --updates 100 --device cuda
+.\.venv\Scripts\python.exe -m bridgemind.cardplay demo --bidding-model runs/sl-pilot/last.pt --model runs/play-sl-pilot/best.pt --output runs/full-game-demo.json --device cuda
+```
+
+完整数据准备、采样搜索、蒸馏、评估和推理接口见 [出牌说明](docs/cardplay.md)，正确性与短实验结论见 [出牌验证](docs/cardplay-validation.md)。策略只接收当时可见信息；庄家控制明手，首攻后才公开明手，终局由实际出牌结算。
 
 ## Windows 快速运行
 
@@ -114,6 +126,7 @@ env.apply_call("1NT")   # 也可使用局部动作编号 0..37
 - `src/bridgemind/dds/`：模型与校验、原生绑定、调度、协议、客户端、服务入口。
 - `src/bridgemind/engine/`：外部 DDS 叫牌环境、独立计分。
 - `src/bridgemind/training/`：数据、编码、PyTorch 模型、SL/PPO、对手池、评估与推理。
+- `src/bridgemind/cardplay/`：出牌历史 Transformer、归属推断、约束采样与 DDS 搜索、SL/蒸馏/PPO 和真实出牌评估。
 - `tests/`：原生样例、独立小残局枚举、并发与协议、任务边界、OpenSpiel 交叉验证。
 - `artifacts/dds/windows-x64/`：已编译的 DLL、导入库和上游示例。
 - `third_party/`：保持上游原样的源码与许可证。

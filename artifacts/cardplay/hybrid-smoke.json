@@ -1,0 +1,56 @@
+{
+  "boards": 1,
+  "mean_imps": 9.0,
+  "bootstrap_95_ci": [
+    9.0,
+    9.0
+  ],
+  "standard_error": null,
+  "wins": 1,
+  "ties": 0,
+  "losses": 0,
+  "imps": [
+    9
+  ],
+  "raw_differences": [
+    390
+  ],
+  "current_as_declarer_tricks": [
+    9
+  ],
+  "opponent_as_declarer_tricks": [
+    4
+  ],
+  "board_ids": [
+    "ad7bbbb3816dcba3d95659f4322d5b45f2c48d515e2aaa541caec7c5fd8c2571"
+  ],
+  "seed": 714,
+  "action_selection": "greedy_for_neural",
+  "evaluation_model": "played_out",
+  "contract_source": "fixed_recorded_auction",
+  "seconds": 0.8469194999997853,
+  "policy": "hybrid",
+  "opponent": "random",
+  "batch_size": 16,
+  "dataset_fingerprint": "af30af8f8be5d1a29074c7ec6e0cfbe0b44f057339c1993af7ad8692bf88be72",
+  "model_sha256": "11f23c31087d2129baf957b460d758d51557c4a4a54fbb492b2943dab4b84282",
+  "solver": {
+    "schema_version": 1,
+    "solver_version": "3.1.0",
+    "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+    "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+    "service_instance_id": "12e6eec52c3d426d8920ea85d2cb77bc",
+    "process_id": 33888,
+    "operations": [
+      "table",
+      "position"
+    ],
+    "worker_count": 2,
+    "max_batch_items": 256,
+    "tt_default_mb": 64,
+    "tt_max_mb": 128,
+    "max_queued_tasks": 1024,
+    "hard_cancellation": false
+  },
+  "samples_per_search": 2
+}
