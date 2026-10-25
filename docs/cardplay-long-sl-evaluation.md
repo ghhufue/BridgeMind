@@ -37,15 +37,35 @@
 
 ## 条件扩展：另外两个训练种子与新确认牌
 
-通过门槛后，已启动种子 43、44 的训练，保存 [replication/protocol.json](../artifacts/cardplay-long-sl-20261025/replication/protocol.json)：
+通过门槛后，种子 43、44 的训练与所有确认对战均已完成，流水线于北京时间 **18:27:14** 正常结束，stderr 为空。固定配置保存在 [replication/protocol.json](../artifacts/cardplay-long-sl-20261025/replication/protocol.json)：
 
 - 分别从此前对应种子的 SL best 初始化，匹配原训练的 52,928 次更新、批量 64、学习率 3e-5、每 1,000 步验证 8,192 条，按 NLL 选 best。
 - 两任务并行使用同一 RTX 5070，匹配更新量而非墙钟时间；运行目录为 `runs/cardplay-long-sl-replicas-v1/sl-{43,44}/`。
-- 自动流水线先等待两者达到目标、冻结三个种子的候选，再在另一组 2,048 副完全不同的确认牌上，对各自起点、同一旧 PPO、随机策略共做 9 组双室评估。
+- 自动流水线在两者达到目标后冻结三个种子的候选，已在另一组 2,048 副完全不同的确认牌上，对各自起点、同一旧 PPO、随机策略完成全部 9 组双室评估。
 - 确认集合：`data/cardplay-long-sl-confirm-v1/`；排除原训练/验证/旧报告牌和第一阶段 2,048 副牌。与下面的搜索面板也无交集，审计见 [replication/data-audit.json](../artifacts/cardplay-long-sl-20261025/replication/data-audit.json)。
-- 结果按训练种子与相同牌局列分别 bootstrap，不能把 3×2,048 个比较当作 6,144 个互不相关的新发牌。当前实际进度以 `runs/cardplay-long-sl-replicas-v1/status.json` 为准。
+- 结果按训练种子与相同牌局列分别 bootstrap，不能把 3×2,048 个比较当作 6,144 个互不相关的新发牌。完成状态在 `runs/cardplay-long-sl-replicas-v1/status.json` 和归档的 `replication/completion.json`。
 
-流水线结束会写入 `replication/frozen-models.json`、每组原始对战和 `replication/report.json`。本节不预告尚未完成的多种子结论，也没有启动新 PPO。
+候选仍只按验证 NLL 选择：种子 42 为第 50,000 步，种子 43、44 均为第 52,928 步；各自验证模仿准确率为 69.79%、69.38%、69.37%。权重哈希见 [replication/frozen-models.json](../artifacts/cardplay-long-sl-20261025/replication/frozen-models.json)。
+
+新确认面板上，各种子的平均 IMP/副：
+
+| 训练种子 | 对各自训练起点 SL | 对同一旧 PPO | 对随机 |
+|---:|---:|---:|---:|
+| 42 | +5.0254 | +5.0381 | +5.9160 |
+| 43 | +4.2598 | +4.7915 | +5.4048 |
+| 44 | +4.7622 | +4.8477 | +5.3364 |
+
+同时重采样种子与公共发牌列，5,000 次 bootstrap 后：
+
+| 比较 | 三种子平均 IMP/副 | 95% 区间 |
+|---|---:|---|
+| 对各自训练起点 SL | **+4.6825** | **[+4.2719, +5.0659]** |
+| 对同一旧 PPO | **+4.8924** | **[+4.6634, +5.1227]** |
+| 对随机 | +5.5524 | [+5.2373, +5.9097] |
+
+三个种子均在全部对手上获得正的平均收益，支持长训 SL 相对旧基线的提升可复现。训练种子仅三个，不足以精确估计所有训练随机性的分布；发牌来源仍是固定记录叫牌、北家发牌、双方无局，不能据此判断人类等级或对强桥牌引擎的排名。确认面板也已使用，后续调参或选模需要另留独立牌。
+
+完整的 9 组逐副对战与聚合统计见 [replication/report.json](../artifacts/cardplay-long-sl-20261025/replication/report.json)。本轮没有扩展 PPO。
 
 ## 搜索对照：额外独立 32 副牌
 

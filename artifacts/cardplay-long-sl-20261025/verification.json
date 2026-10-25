@@ -9,5 +9,6 @@
   "frozen_model_hashes_verified": true,
   "primary_gate_passed": true,
   "search_neural_self_tie": true,
-  "replication_confirmation": "running; see runs/cardplay-long-sl-replicas-v1/status.json; not yet a completed result"
+  "replication_confirmation": "completed; all 9 result files and seed/board bootstrap statistics verified",
+  "replication_model_hashes_verified": true
 }

@@ -1,0 +1,47 @@
+{
+  "models": {
+    "42": {
+      "path": "runs/play-sl-long-20261025/best.pt",
+      "sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "selected_step": 50000,
+      "validation": {
+        "states": 8192,
+        "nll": 0.734033809043467,
+        "accuracy": 0.6978759765625,
+        "belief_nll": 0.7047359774866147,
+        "value_mse": 0.001115849919642642,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      }
+    },
+    "43": {
+      "path": "runs/cardplay-long-sl-replicas-v1/sl-43/best.pt",
+      "sha256": "30a30e923e705335bce9f1a652236878fdf91078e267596712ed80fc94eb42ad",
+      "selected_step": 52928,
+      "validation": {
+        "states": 8192,
+        "nll": 0.7466087741777301,
+        "accuracy": 0.69384765625,
+        "belief_nll": 0.7007135293685396,
+        "value_mse": 0.001103695615711331,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      }
+    },
+    "44": {
+      "path": "runs/cardplay-long-sl-replicas-v1/sl-44/best.pt",
+      "sha256": "f43cdf93c5b65d716bad9598bff15c41061808381669f3e78b64f5f5238bdd34",
+      "selected_step": 52928,
+      "validation": {
+        "states": 8192,
+        "nll": 0.7471513140480965,
+        "accuracy": 0.6937255859375,
+        "belief_nll": 0.700470581071564,
+        "value_mse": 0.0011744796852326544,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      }
+    }
+  },
+  "protocol_sha256": "377d2bf969e1513771e3acaca55abd0fe151e47fd50d9cbe0fd9842217561782"
+}
