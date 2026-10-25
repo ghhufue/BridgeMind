@@ -105,7 +105,9 @@ def prepare_dataset(source, destination, *, allowed_ids, max_boards, shard_state
 
 
 class PlayData:
-    def __init__(self, directory):
+    def __init__(self, directory, *, cache_bytes=1024**3):
+        if type(cache_bytes) is not int or cache_bytes < 1:
+            raise ValueError("Positive shard cache byte budget required")
         self.directory = Path(directory)
         self.manifest = json.loads((self.directory / "manifest.json").read_text())
         if self.manifest["schema_version"] != 1 or self.manifest["encoding"] != ENCODING_VERSION:
@@ -117,6 +119,7 @@ class PlayData:
         if len(np.unique(self.ids)) != len(self.ids) or len(self.ids) != self.manifest["boards"]:
             raise ValueError("Invalid or duplicate board IDs")
         self.cache = OrderedDict()
+        self.cache_bytes, self.cached_bytes = cache_bytes, 0
         self.games = None
 
     def row(self, index):
@@ -126,8 +129,11 @@ class PlayData:
         if shard not in self.cache:
             with np.load(self.directory / self.manifest["shards"][shard]["path"], allow_pickle=False) as arrays:
                 self.cache[shard] = {key: arrays[key] for key in arrays.files}
-            while len(self.cache) > 4:
-                self.cache.popitem(last=False)
+            self.cached_bytes += sum(a.nbytes for a in self.cache[shard].values())
+            # Keep the requested shard even when it alone exceeds the budget.
+            while len(self.cache) > 1 and self.cached_bytes > self.cache_bytes:
+                _, evicted = self.cache.popitem(last=False)
+                self.cached_bytes -= sum(a.nbytes for a in evicted.values())
         self.cache.move_to_end(shard)
         data = self.cache[shard]
         local = int(index - (self.ends[shard-1] if shard else 0))

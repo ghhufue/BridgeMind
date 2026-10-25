@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "name": "cardplay-expanded-v1",
+  "date": "2026-10-25",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "data_boards": {
+    "train": 10000,
+    "valid": 1024,
+    "test": 1024
+  },
+  "sl": {
+    "steps": 1000,
+    "batch_size": 64,
+    "eval_every": 100,
+    "eval_states": 4096
+  },
+  "ppo": {
+    "updates": 30,
+    "boards_per_update": 32,
+    "epochs": 2,
+    "eval_every": 5,
+    "eval_boards": 128,
+    "snapshot_every": 5
+  },
+  "sl_init": "runs/play-sl-pilot/best.pt",
+  "selection": {
+    "sl": "minimum validation imitation NLL",
+    "ppo": "maximum validation IMP vs own SL anchor"
+  },
+  "evaluation": {
+    "split": "test",
+    "boards": 1024,
+    "seed": 20261025,
+    "batch_size": 32,
+    "primary": "PPO best vs own SL best, mean IMP across three training seeds",
+    "secondary_opponents": [
+      "random",
+      "previous PPO pilot"
+    ],
+    "policy": "greedy neural; actual 52-card paired play; fixed recorded auction",
+    "rules": "Freeze all six candidates before any test evaluation; no test-based model selection or retraining"
+  }
+}

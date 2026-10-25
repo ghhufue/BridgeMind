@@ -64,6 +64,8 @@ with SolverClient(port=18765) as solver:
 
 本机已生成训练 1,000 副 / 52,000 条，验证和测试各 128 副 / 6,656 条。`data/` 和模型文件均被 Git 忽略，克隆项目后需要重建。
 
+扩大实验另建 `data/cardplay-expanded-v1/`，训练 10,000 副、验证和测试各 1,024 副，未覆盖 pilot。三随机种子训练、冻结检查点与独立对战流程见 [扩大实验记录](cardplay-expanded-experiment.md)。分片缓存默认按每实例 1 GiB 数组预算管理，可通过 `PlayData(path, cache_bytes=...)` 调整。
+
 ## 模型与监督训练
 
 编码版本 `play_tokens_v1`。序列由摘要 token、52 个牌状态 token、完整叫牌事件和当前出牌前缀组成。座位固定以最终庄家为参照，事件包含类型、动作、座位、阶段内顺序和牌的可见状态；另有 52 维元信息和体系 embedding。叫牌最多 319 次，超长拒绝而不截断。批次按最长序列补齐，用 padding mask 屏蔽。

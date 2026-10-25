@@ -1,0 +1,23 @@
+{
+  "disjoint": true,
+  "datasets": {
+    "train": {
+      "boards": 10000,
+      "states": 520000,
+      "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a",
+      "bidding_split_subset": true
+    },
+    "valid": {
+      "boards": 1024,
+      "states": 53248,
+      "fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+      "bidding_split_subset": true
+    },
+    "test": {
+      "boards": 1024,
+      "states": 53248,
+      "fingerprint": "aa1fffae1403d5a375a39868e0219f49ace0c9ff2656d56a3bcfe436319f31fc",
+      "bidding_split_subset": true
+    }
+  }
+}

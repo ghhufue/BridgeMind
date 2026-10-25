@@ -1,0 +1,22 @@
+{
+  "software": {
+    "git_commit": "9f79ef2afac80807431fbe6c46abd6c82f4bac4a",
+    "git_dirty": true,
+    "python": "3.13.10",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4",
+    "open_spiel": "2.0.2"
+  },
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "gpu_memory_bytes": 12820480000,
+  "training_device": "cuda",
+  "cpu_threads": 1,
+  "precision": "float32; no AMP",
+  "matmul_allow_tf32": false,
+  "cudnn_allow_tf32": true,
+  "note": "Three stochastic training seeds share the same pilot SL initialization. GPU runs are not guaranteed bitwise reproducible across hardware.",
+  "phase_seconds": {
+    "train": 480.9,
+    "independent_evaluation": 379.8
+  }
+}

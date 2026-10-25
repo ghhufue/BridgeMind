@@ -1,0 +1,10 @@
+{
+  "path": "runs/play-sl-pilot/best.pt",
+  "sha256": "11f23c31087d2129baf957b460d758d51557c4a4a54fbb492b2943dab4b84282",
+  "shared_initialization_for_seeds": [
+    42,
+    43,
+    44
+  ],
+  "training_randomness": "minibatch draws and stochastic PPO rollouts"
+}

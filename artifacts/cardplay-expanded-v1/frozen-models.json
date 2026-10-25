@@ -1,0 +1,45 @@
+{
+  "protocol_sha256": "414cc963e7e22318db8ad13d61e065f5b06627d1d5c6e09437792aef8e16d5bf",
+  "models": {
+    "sl-42": {
+      "path": "runs/cardplay-expanded-v1/sl-42/best.pt",
+      "sha256": "c6997c8bad08272466b93a1a96111001385d45f8734166e2e1db8c3298d70167",
+      "selected_step": 1000,
+      "last_step": 1000
+    },
+    "ppo-42": {
+      "path": "runs/cardplay-expanded-v1/ppo-42/best.pt",
+      "sha256": "accd7418e7fa38f4a65e1d79ac3e8a88b9946c59a3858c8bc97dc725aa39713d",
+      "selected_step": 20,
+      "last_step": 30
+    },
+    "sl-43": {
+      "path": "runs/cardplay-expanded-v1/sl-43/best.pt",
+      "sha256": "65016473d42d1b9a0c1beea03f6a4a2020c32b4311556b4402a97ce007c107f4",
+      "selected_step": 1000,
+      "last_step": 1000
+    },
+    "ppo-43": {
+      "path": "runs/cardplay-expanded-v1/ppo-43/best.pt",
+      "sha256": "2259cc8b79971632ef89cbfb335dcbe5e2ad793681a18c019ef80c899604bbe8",
+      "selected_step": 5,
+      "last_step": 30
+    },
+    "sl-44": {
+      "path": "runs/cardplay-expanded-v1/sl-44/best.pt",
+      "sha256": "c2564ff646b12fcf019d5cded7f0c004e963cbc4dba08c4d1e7cdcab181a2daa",
+      "selected_step": 900,
+      "last_step": 1000
+    },
+    "ppo-44": {
+      "path": "runs/cardplay-expanded-v1/ppo-44/best.pt",
+      "sha256": "4791268ba60f7c91e5261915e5673964a5424a1417e49cc0639ab525c57f4173",
+      "selected_step": 10,
+      "last_step": 30
+    }
+  },
+  "previous_ppo": {
+    "path": "runs/play-ppo-pilot/last.pt",
+    "sha256": "0cd6cb7f585ba2b6cc190e1c9d64ded8208c24e967088f457dd121a73d4d8ce9"
+  }
+}

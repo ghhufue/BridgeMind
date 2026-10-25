@@ -228,6 +228,27 @@ def test_supervised_play_optimizer_learns_and_handles_zero_unknown_cards(play_da
     assert metrics["belief_loss"] == 0 and np.isfinite(metrics["loss"])
 
 
+def test_shard_cache_budget_preserves_samples_and_rng(play_datasets, tmp_path, deal):
+    from bridgemind.training.data import deal_from_ownership
+    alternate = deal_from_ownership(PlayData(play_datasets[1]).load_games()[0]["owners"])
+    source = tmp_path/"two-games.txt"
+    source.write_text(_raw_trajectory(deal)+_raw_trajectory(alternate), encoding="utf-8")
+    destination = tmp_path/"two-shards"
+    prepare_dataset(source, destination, allowed_ids=np.concatenate([PlayData(p).ids for p in play_datasets]),
+                    max_boards=2, shard_states=52)
+    tiny, full = PlayData(destination, cache_bytes=1), PlayData(destination)
+    a, b = np.random.default_rng(14), np.random.default_rng(14)
+    for _ in range(3):
+        left, right = tiny.sample(40, a), full.sample(40, b)
+        for x, y in zip(left, right):
+            for key in x["encoded"]:
+                np.testing.assert_array_equal(x["encoded"][key], y["encoded"][key])
+            assert x["action"] == y["action"] and x["ply"] == y["ply"]
+    assert a.bit_generator.state == b.bit_generator.state
+    assert len(tiny.cache) == 1 and len(full.cache) == 2
+    assert tiny.cached_bytes == sum(v.nbytes for shard in tiny.cache.values() for v in shard.values())
+
+
 def test_distillation_rejects_signed_or_nonfinite_targets(play_datasets):
     from bridgemind.cardplay.optim import supervised_update
     data = PlayData(play_datasets[0])

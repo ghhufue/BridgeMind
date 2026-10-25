@@ -1,0 +1,477 @@
+{
+  "protocol": {
+    "schema_version": 1,
+    "name": "cardplay-expanded-v1",
+    "date": "2026-10-25",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "data_boards": {
+      "train": 10000,
+      "valid": 1024,
+      "test": 1024
+    },
+    "sl": {
+      "steps": 1000,
+      "batch_size": 64,
+      "eval_every": 100,
+      "eval_states": 4096
+    },
+    "ppo": {
+      "updates": 30,
+      "boards_per_update": 32,
+      "epochs": 2,
+      "eval_every": 5,
+      "eval_boards": 128,
+      "snapshot_every": 5
+    },
+    "sl_init": "runs/play-sl-pilot/best.pt",
+    "selection": {
+      "sl": "minimum validation imitation NLL",
+      "ppo": "maximum validation IMP vs own SL anchor"
+    },
+    "evaluation": {
+      "split": "test",
+      "boards": 1024,
+      "seed": 20261025,
+      "batch_size": 32,
+      "primary": "PPO best vs own SL best, mean IMP across three training seeds",
+      "secondary_opponents": [
+        "random",
+        "previous PPO pilot"
+      ],
+      "policy": "greedy neural; actual 52-card paired play; fixed recorded auction",
+      "rules": "Freeze all six candidates before any test evaluation; no test-based model selection or retraining"
+    }
+  },
+  "provenance": {
+    "git_commit": "9f79ef2afac80807431fbe6c46abd6c82f4bac4a",
+    "git_dirty": true,
+    "python": "3.13.10",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4",
+    "open_spiel": "2.0.2"
+  },
+  "data_audit": {
+    "disjoint": true,
+    "datasets": {
+      "train": {
+        "boards": 10000,
+        "states": 520000,
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a",
+        "bidding_split_subset": true
+      },
+      "valid": {
+        "boards": 1024,
+        "states": 53248,
+        "fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+        "bidding_split_subset": true
+      },
+      "test": {
+        "boards": 1024,
+        "states": 53248,
+        "fingerprint": "aa1fffae1403d5a375a39868e0219f49ace0c9ff2656d56a3bcfe436319f31fc",
+        "bidding_split_subset": true
+      }
+    }
+  },
+  "frozen_models": {
+    "protocol_sha256": "414cc963e7e22318db8ad13d61e065f5b06627d1d5c6e09437792aef8e16d5bf",
+    "models": {
+      "sl-42": {
+        "path": "runs/cardplay-expanded-v1/sl-42/best.pt",
+        "sha256": "c6997c8bad08272466b93a1a96111001385d45f8734166e2e1db8c3298d70167",
+        "selected_step": 1000,
+        "last_step": 1000
+      },
+      "ppo-42": {
+        "path": "runs/cardplay-expanded-v1/ppo-42/best.pt",
+        "sha256": "accd7418e7fa38f4a65e1d79ac3e8a88b9946c59a3858c8bc97dc725aa39713d",
+        "selected_step": 20,
+        "last_step": 30
+      },
+      "sl-43": {
+        "path": "runs/cardplay-expanded-v1/sl-43/best.pt",
+        "sha256": "65016473d42d1b9a0c1beea03f6a4a2020c32b4311556b4402a97ce007c107f4",
+        "selected_step": 1000,
+        "last_step": 1000
+      },
+      "ppo-43": {
+        "path": "runs/cardplay-expanded-v1/ppo-43/best.pt",
+        "sha256": "2259cc8b79971632ef89cbfb335dcbe5e2ad793681a18c019ef80c899604bbe8",
+        "selected_step": 5,
+        "last_step": 30
+      },
+      "sl-44": {
+        "path": "runs/cardplay-expanded-v1/sl-44/best.pt",
+        "sha256": "c2564ff646b12fcf019d5cded7f0c004e963cbc4dba08c4d1e7cdcab181a2daa",
+        "selected_step": 900,
+        "last_step": 1000
+      },
+      "ppo-44": {
+        "path": "runs/cardplay-expanded-v1/ppo-44/best.pt",
+        "sha256": "4791268ba60f7c91e5261915e5673964a5424a1417e49cc0639ab525c57f4173",
+        "selected_step": 10,
+        "last_step": 30
+      }
+    },
+    "previous_ppo": {
+      "path": "runs/play-ppo-pilot/last.pt",
+      "sha256": "0cd6cb7f585ba2b6cc190e1c9d64ded8208c24e967088f457dd121a73d4d8ce9"
+    }
+  },
+  "training": {
+    "42": {
+      "sl_initial_validation": {
+        "states": 4096,
+        "nll": 1.0737650245428085,
+        "accuracy": 0.514404296875,
+        "belief_nll": 0.8293339390917613,
+        "value_mse": 0.002662156703081564,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      },
+      "sl_best_validation": {
+        "states": 4096,
+        "nll": 1.0358102126047015,
+        "accuracy": 0.56005859375,
+        "belief_nll": 0.7198215307625758,
+        "value_mse": 0.0016576454345340608,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      },
+      "sl_selected_step": 1000,
+      "ppo_selected_update": 20
+    },
+    "43": {
+      "sl_initial_validation": {
+        "states": 4096,
+        "nll": 1.0737650245428085,
+        "accuracy": 0.514404296875,
+        "belief_nll": 0.8293339390917613,
+        "value_mse": 0.002662156703081564,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      },
+      "sl_best_validation": {
+        "states": 4096,
+        "nll": 1.036976421251893,
+        "accuracy": 0.557373046875,
+        "belief_nll": 0.7155708419142018,
+        "value_mse": 0.0016668235639372142,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      },
+      "sl_selected_step": 1000,
+      "ppo_selected_update": 5
+    },
+    "44": {
+      "sl_initial_validation": {
+        "states": 4096,
+        "nll": 1.0737650245428085,
+        "accuracy": 0.514404296875,
+        "belief_nll": 0.8293339390917613,
+        "value_mse": 0.002662156703081564,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      },
+      "sl_best_validation": {
+        "states": 4096,
+        "nll": 1.0377348391339183,
+        "accuracy": 0.549072265625,
+        "belief_nll": 0.715620512276765,
+        "value_mse": 0.0016980602085823193,
+        "seed": 714,
+        "sampling": "fixed_seed_with_replacement"
+      },
+      "sl_selected_step": 900,
+      "ppo_selected_update": 10
+    }
+  },
+  "workload": {
+    "sl_decision_draws": 192000,
+    "ppo_paired_board_draws": 2880,
+    "ppo_played_rooms": 5760,
+    "ppo_on_policy_transitions": 149760,
+    "note": "Training draws may repeat boards; test uses 1024 distinct boards shared across matchups",
+    "test_paired_matchups": 15360,
+    "test_played_rooms": 30720
+  },
+  "results": {
+    "sl-42-vs-random": {
+      "boards": 1024,
+      "mean_imps": 0.4736328125,
+      "bootstrap_95_ci": [
+        0.1093505859375,
+        0.8349853515624999
+      ],
+      "wins": 436,
+      "ties": 235,
+      "losses": 353,
+      "seconds": 17.75629909999998,
+      "mean_declarer_trick_gain": 0.138671875
+    },
+    "sl-42-vs-previous-ppo": {
+      "boards": 1024,
+      "mean_imps": -0.650390625,
+      "bootstrap_95_ci": [
+        -0.9814697265625,
+        -0.3192626953125004
+      ],
+      "wins": 348,
+      "ties": 247,
+      "losses": 429,
+      "seconds": 28.120202600000084,
+      "mean_declarer_trick_gain": -0.24609375
+    },
+    "sl-43-vs-random": {
+      "boards": 1024,
+      "mean_imps": 0.638671875,
+      "bootstrap_95_ci": [
+        0.2714111328125,
+        0.9932373046874996
+      ],
+      "wins": 446,
+      "ties": 219,
+      "losses": 359,
+      "seconds": 17.98360700000012,
+      "mean_declarer_trick_gain": 0.2119140625
+    },
+    "sl-43-vs-previous-ppo": {
+      "boards": 1024,
+      "mean_imps": -0.4951171875,
+      "bootstrap_95_ci": [
+        -0.8350341796875,
+        -0.1455078125
+      ],
+      "wins": 359,
+      "ties": 256,
+      "losses": 409,
+      "seconds": 27.44997999999987,
+      "mean_declarer_trick_gain": -0.15234375
+    },
+    "sl-44-vs-random": {
+      "boards": 1024,
+      "mean_imps": -0.0322265625,
+      "bootstrap_95_ci": [
+        -0.382861328125,
+        0.32231445312499973
+      ],
+      "wins": 404,
+      "ties": 231,
+      "losses": 389,
+      "seconds": 18.038954699999977,
+      "mean_declarer_trick_gain": 0.009765625
+    },
+    "sl-44-vs-previous-ppo": {
+      "boards": 1024,
+      "mean_imps": -0.5693359375,
+      "bootstrap_95_ci": [
+        -0.917041015625,
+        -0.23518066406250093
+      ],
+      "wins": 350,
+      "ties": 230,
+      "losses": 444,
+      "seconds": 26.92455710000013,
+      "mean_declarer_trick_gain": -0.189453125
+    },
+    "ppo-42-vs-random": {
+      "boards": 1024,
+      "mean_imps": 0.751953125,
+      "bootstrap_95_ci": [
+        0.388623046875,
+        1.0791748046874996
+      ],
+      "wins": 460,
+      "ties": 223,
+      "losses": 341,
+      "seconds": 17.254099199999928,
+      "mean_declarer_trick_gain": 0.2578125
+    },
+    "ppo-42-vs-previous-ppo": {
+      "boards": 1024,
+      "mean_imps": -0.44140625,
+      "bootstrap_95_ci": [
+        -0.7861328125,
+        -0.0829345703125004
+      ],
+      "wins": 348,
+      "ties": 259,
+      "losses": 417,
+      "seconds": 28.275426199999856,
+      "mean_declarer_trick_gain": -0.2119140625
+    },
+    "ppo-42-vs-own-sl": {
+      "boards": 1024,
+      "mean_imps": 0.103515625,
+      "bootstrap_95_ci": [
+        -0.1816650390625,
+        0.3994140625
+      ],
+      "wins": 331,
+      "ties": 381,
+      "losses": 312,
+      "seconds": 27.473982799999703,
+      "mean_declarer_trick_gain": 0.0390625
+    },
+    "ppo-43-vs-random": {
+      "boards": 1024,
+      "mean_imps": 0.572265625,
+      "bootstrap_95_ci": [
+        0.2128662109375,
+        0.9189453125
+      ],
+      "wins": 437,
+      "ties": 240,
+      "losses": 347,
+      "seconds": 17.101873699999942,
+      "mean_declarer_trick_gain": 0.2158203125
+    },
+    "ppo-43-vs-previous-ppo": {
+      "boards": 1024,
+      "mean_imps": -0.34375,
+      "bootstrap_95_ci": [
+        -0.6845947265625,
+        0.0029541015624998668
+      ],
+      "wins": 377,
+      "ties": 238,
+      "losses": 409,
+      "seconds": 27.63881399999991,
+      "mean_declarer_trick_gain": -0.1103515625
+    },
+    "ppo-43-vs-own-sl": {
+      "boards": 1024,
+      "mean_imps": -0.0126953125,
+      "bootstrap_95_ci": [
+        -0.2353759765625,
+        0.2197265625
+      ],
+      "wins": 234,
+      "ties": 534,
+      "losses": 256,
+      "seconds": 27.623005399999784,
+      "mean_declarer_trick_gain": -0.0419921875
+    },
+    "ppo-44-vs-random": {
+      "boards": 1024,
+      "mean_imps": 0.1728515625,
+      "bootstrap_95_ci": [
+        -0.1943603515625,
+        0.5401367187499995
+      ],
+      "wins": 407,
+      "ties": 223,
+      "losses": 394,
+      "seconds": 17.267796699999963,
+      "mean_declarer_trick_gain": 0.044921875
+    },
+    "ppo-44-vs-previous-ppo": {
+      "boards": 1024,
+      "mean_imps": -0.21875,
+      "bootstrap_95_ci": [
+        -0.5683837890625,
+        0.11721191406249987
+      ],
+      "wins": 374,
+      "ties": 249,
+      "losses": 401,
+      "seconds": 27.406861700000263,
+      "mean_declarer_trick_gain": -0.13671875
+    },
+    "ppo-44-vs-own-sl": {
+      "boards": 1024,
+      "mean_imps": -0.115234375,
+      "bootstrap_95_ci": [
+        -0.3974853515625,
+        0.1669921875
+      ],
+      "wins": 312,
+      "ties": 374,
+      "losses": 338,
+      "seconds": 28.0123751000001,
+      "mean_declarer_trick_gain": -0.0478515625
+    }
+  },
+  "primary": {
+    "mean_imps": -0.008138020833333334,
+    "per_seed_mean_imps": [
+      0.103515625,
+      -0.0126953125,
+      -0.115234375
+    ],
+    "seed_and_board_bootstrap_95_ci": [
+      -0.23210449218749998,
+      0.22266438802083321
+    ],
+    "training_seeds": 3,
+    "distinct_boards": 1024,
+    "method": "Resample training seeds and shared board columns independently; 5000 draws; only three seeds"
+  },
+  "secondary": {
+    "sl-vs-random": {
+      "mean_imps": 0.3600260416666667,
+      "per_seed_mean_imps": [
+        0.4736328125,
+        0.638671875,
+        -0.0322265625
+      ],
+      "seed_and_board_bootstrap_95_ci": [
+        -0.08791503906249999,
+        0.7741129557291663
+      ],
+      "training_seeds": 3,
+      "distinct_boards": 1024,
+      "method": "Resample training seeds and shared board columns independently; 5000 draws; only three seeds"
+    },
+    "sl-vs-previous-ppo": {
+      "mean_imps": -0.5716145833333334,
+      "per_seed_mean_imps": [
+        -0.650390625,
+        -0.4951171875,
+        -0.5693359375
+      ],
+      "seed_and_board_bootstrap_95_ci": [
+        -0.8711100260416667,
+        -0.27861328125000046
+      ],
+      "training_seeds": 3,
+      "distinct_boards": 1024,
+      "method": "Resample training seeds and shared board columns independently; 5000 draws; only three seeds"
+    },
+    "ppo-vs-random": {
+      "mean_imps": 0.4990234375,
+      "per_seed_mean_imps": [
+        0.751953125,
+        0.572265625,
+        0.1728515625
+      ],
+      "seed_and_board_bootstrap_95_ci": [
+        0.10537109375000003,
+        0.8724121093749998
+      ],
+      "training_seeds": 3,
+      "distinct_boards": 1024,
+      "method": "Resample training seeds and shared board columns independently; 5000 draws; only three seeds"
+    },
+    "ppo-vs-previous-ppo": {
+      "mean_imps": -0.3346354166666667,
+      "per_seed_mean_imps": [
+        -0.44140625,
+        -0.34375,
+        -0.21875
+      ],
+      "seed_and_board_bootstrap_95_ci": [
+        -0.6451904296875,
+        -0.0234375
+      ],
+      "training_seeds": 3,
+      "distinct_boards": 1024,
+      "method": "Resample training seeds and shared board columns independently; 5000 draws; only three seeds"
+    }
+  },
+  "secondary_note": "Exploratory; no multiple-comparison adjustment"
+}

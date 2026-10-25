@@ -1,0 +1,6 @@
+{
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "passed": 82,
+  "seconds": 15.64,
+  "date": "2026-10-25"
+}

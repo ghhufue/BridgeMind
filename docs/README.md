@@ -9,6 +9,7 @@
 | [training-validation.md](training-validation.md) | 叫牌训练实现轮次的测试、短实验和效果边界 |
 | [cardplay.md](cardplay.md) | 完整出牌环境、Transformer、约束 DDS 搜索、数据、SL/蒸馏/PPO 和推理 |
 | [cardplay-validation.md](cardplay-validation.md) | 出牌信息隔离、数据重放、续训与短实验验证 |
+| [cardplay-expanded-experiment.md](cardplay-expanded-experiment.md) | 万副出牌训练、三随机种子、冻结选模与独立千副对战协议和结果 |
 | [dds-interface-design.md](dds-interface-design.md) | DDS 独立服务的接口与调度设计 |
 | [dds-validation.md](dds-validation.md) | DDS 封装轮次的正确性、并发验证与小样本吞吐 |
 | [DDS 构建说明](../artifacts/dds/windows-x64/README.md) | Windows 原生库构建和产物来源 |

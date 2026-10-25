@@ -1,0 +1,14 @@
+{
+  "small_20MiB": {
+    "first_10_batches_seconds": 3.6318709000001945,
+    "next_10_batches_seconds": 3.603694399999995,
+    "cached_bytes": 20662528,
+    "cached_shards": 4
+  },
+  "default_1GiB": {
+    "first_10_batches_seconds": 0.73310749999996,
+    "next_10_batches_seconds": 0.0033972999999605236,
+    "cached_bytes": 654034148,
+    "cached_shards": 127
+  }
+}
