@@ -1,0 +1,24 @@
+{
+  "name": "cardplay-long-sl-holdout-v1",
+  "date": "2026-10-25",
+  "candidate": "50,000-step SL checkpoint selected by validation NLL before this experiment",
+  "boards": 2048,
+  "evaluation_seed": 20261026,
+  "batch_size": 32,
+  "primary_opponents": [
+    "initial-sl",
+    "old-ppo"
+  ],
+  "secondary_opponent": "random",
+  "selection": "No model selection or retraining based on these holdout results",
+  "test_exclusion": "All existing cardplay splits, bidding training/validation splits, bidding board libraries and historical evaluation board IDs",
+  "inference": "Greedy neural; paired rooms; same recorded auction and actual 52-card play",
+  "gate": "Continue to training-seed replication only if both primary 97.5% board-bootstrap lower bounds exceed zero (Bonferroni-style correction for two primary comparisons)",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20261026,
+    "unit": "distinct full deal"
+  },
+  "if_gate_passes": "Replicate two additional training seeds with the same 52,928 update budget, learning rate and validation-only checkpoint selection; confirm on a separate fresh holdout before search comparison",
+  "if_gate_fails": "Do not expand PPO or automatically train replicas; analyse imitation targets, seed sensitivity and validation-versus-play gap"
+}

@@ -1,6 +1,6 @@
 # BridgeMind
 
-当前已实现独立的 DDS v3.1.0 求解服务、Python 客户端、完整叫牌与出牌环境，以及 PyTorch 监督学习和 PPO 自对弈训练。出牌包含动态历史 Transformer、隐藏牌推断、受约束采样 DDS 搜索和搜索蒸馏。叫牌与出牌均已跑通短训练、断点续训和双室 IMP 评估，尚未证明棋力提升。
+当前已实现独立的 DDS v3.1.0 求解服务、Python 客户端、完整叫牌与出牌环境，以及 PyTorch 监督学习和 PPO 自对弈训练。出牌包含动态历史 Transformer、隐藏牌推断、受约束采样 DDS 搜索和搜索蒸馏。20 分钟 SL 首次在全新 2,048 副牌上明显优于旧模型，多训练种子的确认正在推进，详见 [长训 SL 评估](docs/cardplay-long-sl-evaluation.md)。
 
 接手项目请先读 [项目交接与当前进度](docs/HANDOFF.md)。完整文档入口及维护约定见 [docs 文档索引](docs/README.md)。
 

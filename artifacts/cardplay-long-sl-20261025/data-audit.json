@@ -1,0 +1,9 @@
+{
+  "boards": 2048,
+  "states": 106496,
+  "source_sha256": "41ee45364d71ec2608c474eda52d3c8d4302c6ca46cb23bcbaf66a8ac6386352",
+  "fingerprint": "4ede7ab865c7d4b1050e5841a305e9793a29d5def6f203714c26eb3c37b0c13a",
+  "excluded_intersection": 0,
+  "eligible_ids": 8976,
+  "board_ids_sha256": "37a56a02388885ba8a668016ff5a99d69fe15a487dcac9ddd00bde6fe8c4353c"
+}

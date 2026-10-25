@@ -10,6 +10,7 @@
 | [cardplay.md](cardplay.md) | 完整出牌环境、Transformer、约束 DDS 搜索、数据、SL/蒸馏/PPO 和推理 |
 | [cardplay-validation.md](cardplay-validation.md) | 出牌信息隔离、数据重放、续训与短实验验证 |
 | [cardplay-expanded-experiment.md](cardplay-expanded-experiment.md) | 万副出牌训练、三随机种子、冻结选模与独立千副对战协议和结果 |
+| [cardplay-long-sl-evaluation.md](cardplay-long-sl-evaluation.md) | 20 分钟 SL、全新 2,048 副对战、条件种子确认和独立搜索对照 |
 | [dds-interface-design.md](dds-interface-design.md) | DDS 独立服务的接口与调度设计 |
 | [dds-validation.md](dds-validation.md) | DDS 封装轮次的正确性、并发验证与小样本吞吐 |
 | [DDS 构建说明](../artifacts/dds/windows-x64/README.md) | Windows 原生库构建和产物来源 |

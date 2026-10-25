@@ -1,0 +1,33 @@
+{
+  "training_seeds": [
+    43,
+    44
+  ],
+  "steps_per_seed": 52928,
+  "batch_size": 64,
+  "lr": 3e-05,
+  "eval_every": 1000,
+  "eval_states": 8192,
+  "selection": "validation NLL only",
+  "confirmation_boards": 2048,
+  "confirmation_seed": 20261027,
+  "search_boards": 32,
+  "search_samples": 8,
+  "search_variants": [
+    "neural self-play",
+    "uniform DDS vs neural",
+    "learned hybrid vs neural"
+  ],
+  "search_selection": "Original seed-42 best only; no test-based replica selection",
+  "gate_report_sha256": "8fb25738e3668b9da76978356cda14011e48d7744d55c0d41bb0232f6195c433",
+  "initial_models": {
+    "43": {
+      "path": "runs/cardplay-expanded-v1/sl-43/best.pt",
+      "sha256": "65016473d42d1b9a0c1beea03f6a4a2020c32b4311556b4402a97ce007c107f4"
+    },
+    "44": {
+      "path": "runs/cardplay-expanded-v1/sl-44/best.pt",
+      "sha256": "c2564ff646b12fcf019d5cded7f0c004e963cbc4dba08c4d1e7cdcab181a2daa"
+    }
+  }
+}

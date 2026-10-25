@@ -1,0 +1,94 @@
+{
+  "protocol": {
+    "name": "cardplay-long-sl-holdout-v1",
+    "date": "2026-10-25",
+    "candidate": "50,000-step SL checkpoint selected by validation NLL before this experiment",
+    "boards": 2048,
+    "evaluation_seed": 20261026,
+    "batch_size": 32,
+    "primary_opponents": [
+      "initial-sl",
+      "old-ppo"
+    ],
+    "secondary_opponent": "random",
+    "selection": "No model selection or retraining based on these holdout results",
+    "test_exclusion": "All existing cardplay splits, bidding training/validation splits, bidding board libraries and historical evaluation board IDs",
+    "inference": "Greedy neural; paired rooms; same recorded auction and actual 52-card play",
+    "gate": "Continue to training-seed replication only if both primary 97.5% board-bootstrap lower bounds exceed zero (Bonferroni-style correction for two primary comparisons)",
+    "bootstrap": {
+      "draws": 10000,
+      "seed": 20261026,
+      "unit": "distinct full deal"
+    },
+    "if_gate_passes": "Replicate two additional training seeds with the same 52,928 update budget, learning rate and validation-only checkpoint selection; confirm on a separate fresh holdout before search comparison",
+    "if_gate_fails": "Do not expand PPO or automatically train replicas; analyse imitation targets, seed sensitivity and validation-versus-play gap"
+  },
+  "provenance": {
+    "git_commit": "d834a3c5207655dadd1bbd008de594e59c1e9d4a",
+    "git_dirty": true,
+    "python": "3.13.10",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4",
+    "open_spiel": "2.0.2"
+  },
+  "results": {
+    "initial-sl": {
+      "boards": 2048,
+      "mean_imps": 5.09228515625,
+      "bootstrap_95_ci": [
+        4.86961669921875,
+        5.32325439453125
+      ],
+      "wins": 1613,
+      "ties": 266,
+      "losses": 169,
+      "seconds": 54.1924004,
+      "bootstrap_97_5_ci": [
+        4.826165771484375,
+        5.35205078125
+      ],
+      "mean_declarer_trick_difference": 1.8212890625
+    },
+    "old-ppo": {
+      "boards": 2048,
+      "mean_imps": 5.32373046875,
+      "bootstrap_95_ci": [
+        5.0854248046875,
+        5.54737548828125
+      ],
+      "wins": 1661,
+      "ties": 240,
+      "losses": 147,
+      "seconds": 54.54981479999992,
+      "bootstrap_97_5_ci": [
+        5.06005859375,
+        5.578125
+      ],
+      "mean_declarer_trick_difference": 1.98046875
+    },
+    "random": {
+      "boards": 2048,
+      "mean_imps": 5.71337890625,
+      "bootstrap_95_ci": [
+        5.48779296875,
+        5.9399658203125
+      ],
+      "wins": 1692,
+      "ties": 231,
+      "losses": 125,
+      "seconds": 34.09777280000003,
+      "bootstrap_97_5_ci": [
+        5.462890625,
+        5.95556640625
+      ],
+      "mean_declarer_trick_difference": 2.2080078125
+    }
+  },
+  "gate_passed": true,
+  "decision": "Replicate two additional training seeds with the same 52,928 update budget, learning rate and validation-only checkpoint selection; confirm on a separate fresh holdout before search comparison",
+  "limits": [
+    "One trained candidate seed; board intervals do not measure training-seed uncertainty",
+    "Fixed recorded auction, North dealer, neither side vulnerable; no bidding improvement claim",
+    "This holdout is now consumed; future model tuning needs a separate final holdout"
+  ]
+}

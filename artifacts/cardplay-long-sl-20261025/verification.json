@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-25",
+  "pytest": {
+    "command": ".venv/Scripts/python.exe -m pytest -q",
+    "passed": 88,
+    "seconds": 17.13
+  },
+  "gate_report_hash_stable_on_rerun": true,
+  "frozen_model_hashes_verified": true,
+  "primary_gate_passed": true,
+  "search_neural_self_tie": true,
+  "replication_confirmation": "running; see runs/cardplay-long-sl-replicas-v1/status.json; not yet a completed result"
+}

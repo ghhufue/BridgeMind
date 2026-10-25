@@ -1,0 +1,19 @@
+{
+  "mutually_disjoint": true,
+  "datasets": {
+    "cardplay-long-sl-confirm-v1": {
+      "boards": 2048,
+      "states": 106496,
+      "fingerprint": "ef2314015ce95236e7f5637ad6b52862bc840259a9fa6053c5f4cf07ae3de8f4",
+      "excluded_intersection": 0,
+      "source_sha256": "41ee45364d71ec2608c474eda52d3c8d4302c6ca46cb23bcbaf66a8ac6386352"
+    },
+    "cardplay-long-sl-search-v1": {
+      "boards": 32,
+      "states": 1664,
+      "fingerprint": "1d9153971ba63aa3094e308b3e2feafb2e23a6779d53e144f92e40314d6978fc",
+      "excluded_intersection": 0,
+      "source_sha256": "41ee45364d71ec2608c474eda52d3c8d4302c6ca46cb23bcbaf66a8ac6386352"
+    }
+  }
+}

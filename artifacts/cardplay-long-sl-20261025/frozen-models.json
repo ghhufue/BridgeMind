@@ -1,0 +1,35 @@
+{
+  "protocol_sha256": "0d8b5d904ef4a89d17a2edf375e960ffc520499c52d72e169c54260ecbef633b",
+  "models": {
+    "candidate": {
+      "path": "runs/play-sl-long-20261025/best.pt",
+      "sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "step": 50000,
+      "config": {
+        "d_model": 256,
+        "layers": 4,
+        "heads": 8
+      }
+    },
+    "initial-sl": {
+      "path": "runs/cardplay-expanded-v1/sl-42/best.pt",
+      "sha256": "c6997c8bad08272466b93a1a96111001385d45f8734166e2e1db8c3298d70167",
+      "step": 1000,
+      "config": {
+        "d_model": 256,
+        "layers": 4,
+        "heads": 8
+      }
+    },
+    "old-ppo": {
+      "path": "runs/play-ppo-pilot/last.pt",
+      "sha256": "0cd6cb7f585ba2b6cc190e1c9d64ded8208c24e967088f457dd121a73d4d8ce9",
+      "step": 3,
+      "config": {
+        "d_model": 256,
+        "layers": 4,
+        "heads": 8
+      }
+    }
+  }
+}

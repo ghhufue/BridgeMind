@@ -1,0 +1,138 @@
+{
+  "boards": 32,
+  "samples": 8,
+  "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+  "dataset_fingerprint": "1d9153971ba63aa3094e308b3e2feafb2e23a6779d53e144f92e40314d6978fc",
+  "results": {
+    "neural-self": {
+      "boards": 32,
+      "mean_imps": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "standard_error": 0.0,
+      "wins": 0,
+      "ties": 32,
+      "losses": 0,
+      "seed": 20261028,
+      "action_selection": "greedy_for_neural",
+      "evaluation_model": "played_out",
+      "contract_source": "fixed_recorded_auction",
+      "variant": "neural-self",
+      "seconds": 57.76025780000009,
+      "latency": {
+        "decisions": 1664,
+        "mean_ms": 17.21729302884625,
+        "p95_ms": 32.33730500002139,
+        "nonforced_decisions": 1333,
+        "nonforced_mean_ms": 17.185125581395774,
+        "timing": "unbatched end-to-end, including sampling, RPC and device synchronization; replicas train concurrently"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "1d9153971ba63aa3094e308b3e2feafb2e23a6779d53e144f92e40314d6978fc",
+      "neural_action_selection": "greedy",
+      "samples_per_nonforced_search": 0
+    },
+    "uniform-dds": {
+      "boards": 32,
+      "mean_imps": 7.28125,
+      "bootstrap_95_ci": [
+        5.5625,
+        8.96875
+      ],
+      "standard_error": 0.884720630910156,
+      "wins": 27,
+      "ties": 4,
+      "losses": 1,
+      "seed": 20261028,
+      "action_selection": "greedy_for_neural",
+      "evaluation_model": "played_out",
+      "contract_source": "fixed_recorded_auction",
+      "variant": "uniform-dds",
+      "seconds": 48.19693890000008,
+      "latency": {
+        "decisions": 1664,
+        "mean_ms": 11.022668389416005,
+        "p95_ms": 36.464700000033176,
+        "nonforced_decisions": 1340,
+        "nonforced_mean_ms": 13.687482313427758,
+        "timing": "unbatched end-to-end, including sampling, RPC and device synchronization; replicas train concurrently"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "1d9153971ba63aa3094e308b3e2feafb2e23a6779d53e144f92e40314d6978fc",
+      "neural_action_selection": "greedy",
+      "samples_per_nonforced_search": 8
+    },
+    "learned-hybrid": {
+      "boards": 32,
+      "mean_imps": 7.125,
+      "bootstrap_95_ci": [
+        5.40546875,
+        8.71875
+      ],
+      "standard_error": 0.8864458755742397,
+      "wins": 29,
+      "ties": 2,
+      "losses": 1,
+      "seed": 20261028,
+      "action_selection": "greedy_for_neural",
+      "evaluation_model": "played_out",
+      "contract_source": "fixed_recorded_auction",
+      "variant": "learned-hybrid",
+      "seconds": 83.90178240000023,
+      "latency": {
+        "decisions": 1664,
+        "mean_ms": 32.944631610575655,
+        "p95_ms": 61.448075000248515,
+        "nonforced_decisions": 1356,
+        "nonforced_mean_ms": 35.816384070792544,
+        "timing": "unbatched end-to-end, including sampling, RPC and device synchronization; replicas train concurrently"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "1d9153971ba63aa3094e308b3e2feafb2e23a6779d53e144f92e40314d6978fc",
+      "neural_action_selection": "greedy",
+      "samples_per_nonforced_search": 8
+    }
+  },
+  "limits": [
+    "32-board exploratory panel; no hyperparameter or model selection",
+    "Uniform/learned PIMC optimize sampled raw score, not exact imperfect-information value",
+    "Latency measured while two neural training jobs run on the same GPU"
+  ],
+  "solver": {
+    "schema_version": 1,
+    "solver_version": "3.1.0",
+    "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+    "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+    "service_instance_id": "86fab9bf84644cdf8aade6492bf780cc",
+    "process_id": 4588,
+    "operations": [
+      "table",
+      "position"
+    ],
+    "worker_count": 4,
+    "max_batch_items": 256,
+    "tt_default_mb": 64,
+    "tt_max_mb": 128,
+    "max_queued_tasks": 1024,
+    "hard_cancellation": false
+  },
+  "solver_stats": {
+    "submitted": 21568,
+    "succeeded": 21490,
+    "native_calls": 18805,
+    "coalesced": 2685,
+    "cache_hits": 78,
+    "queued": 0,
+    "running": 0,
+    "retained_jobs": 2696,
+    "cache_entries": 18805,
+    "cache_serialized_bytes": 9152802,
+    "closed": false,
+    "queue_ms_p95": 1.4006999999764957,
+    "queue_ms_p99": 2.510700000129873,
+    "solve_ms_p95": 1.6246999998656975,
+    "latency_sample_count": 2048
+  }
+}
