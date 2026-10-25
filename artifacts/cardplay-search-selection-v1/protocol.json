@@ -1,0 +1,66 @@
+{
+  "name": "cardplay-search-selection-v1",
+  "date": "2026-10-25",
+  "configs": [
+    {
+      "id": "neural",
+      "kind": "neural",
+      "samples": 0
+    },
+    {
+      "id": "uniform-8",
+      "kind": "uniform",
+      "samples": 8
+    },
+    {
+      "id": "uniform-16",
+      "kind": "uniform",
+      "samples": 16
+    },
+    {
+      "id": "uniform-32",
+      "kind": "uniform",
+      "samples": 32
+    },
+    {
+      "id": "hybrid-8",
+      "kind": "hybrid",
+      "samples": 8
+    },
+    {
+      "id": "hybrid-16",
+      "kind": "hybrid",
+      "samples": 16
+    },
+    {
+      "id": "hybrid-32",
+      "kind": "hybrid",
+      "samples": 32
+    }
+  ],
+  "model_selection": "Lowest validation NLL among the three long-SL frozen checkpoints; no test-based seed choice",
+  "validation_boards": 128,
+  "validation_seed": 20261030,
+  "selection": {
+    "mean_budget_ms": 100.0,
+    "p95_budget_ms": 250.0,
+    "tie_band_imps": 0.25
+  },
+  "selection_rule": "Filter by nonforced latency budgets; among positive search means within 0.25 IMP of best, choose lowest mean nonforced latency. Otherwise retain neural",
+  "confirmation_boards": 1024,
+  "confirmation_seed": 20261031,
+  "confirmation": "Freeze one configuration before test; compare only that configuration to the fixed neural baseline",
+  "runtime": {
+    "device": "cuda",
+    "cpu_threads": 1,
+    "DDS_workers": 4,
+    "fresh_DDS_service_per_trial": true,
+    "NN_batch": 1,
+    "inference": "greedy neural",
+    "NN_warmup": "3 forwards on a validation board outside the tuning panel; excluded from timing",
+    "no_concurrent_training": true,
+    "search_utility": "expected sampled raw duplicate score"
+  },
+  "uncertainty": "2000 full-deal bootstrap draws; validation intervals are exploratory after configuration selection",
+  "limits": "Single frozen SL seed and fixed recorded auction; no strength rating against humans or full WBridge5 engine"
+}

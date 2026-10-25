@@ -74,7 +74,7 @@ git submodule status
 .\.venv\Scripts\python.exe -m bridgemind.training audit
 ```
 
-最近完整回归 **88 项通过**（既有 58 项、出牌 25 项、历史发牌排除 5 项），包含缓存预算下采样/随机状态一致性及时间到期保存恢复。出牌实现轮次曾逐条重放核对原始 65,312 条编码和标签；扩大后的 626,496 条在导入时完成合法性及终局计分检查，三个集合的完整发牌 ID 互不重叠。历史记录见 [出牌验证](cardplay-validation.md) 和 [训练验证](training-validation.md)。
+最近完整回归 **96 项通过**（既有 58 项、出牌 25 项、历史发牌排除 5 项、时延选型 8 项），包含缓存预算下采样/随机状态一致性、时间到期保存恢复及选型预算/回退检查。出牌实现轮次曾逐条重放核对原始 65,312 条编码和标签；扩大后的 626,496 条在导入时完成合法性及终局计分检查，三个集合的完整发牌 ID 互不重叠。历史记录见 [出牌验证](cardplay-validation.md) 和 [训练验证](training-validation.md)。
 
 已有环境：Python **3.13.10**，OpenSpiel **2.0.2**，PyTorch **2.11.0+cu128**，NumPy **2.5.4**；GPU 为 RTX 5070、约 12 GB，CUDA 当前可用。完整依赖快照为 `requirements-dev.lock.txt`。新建环境的方法见 [training.md](training.md#环境)；已有 `.venv` 可以直接使用。
 
@@ -192,6 +192,9 @@ DDS 与 OpenSpiel 是固定提交的子模块。`git submodule update --init` �
 | `artifacts/cardplay-long-sl-20261025/` | 长训完成记录、冻结模型、历史排除审计、第一阶段 2,048 副独立对战；`replication/` 保存后续协议、确认和搜索对照 |
 | `runs/cardplay-long-sl-replicas-v1/` | 种子 43、44 各 52,928 步复现及 9 组确认已完成；2026-10-25 18:27:14 正常结束，`status.json` 为 completed |
 | `data/cardplay-long-sl-{holdout,confirm,search}-v1/` | 互不重叠的新留出 2,048 / 2,048 / 32 副；已使用或已预留，后续评估必须排除 |
+| `runs/cardplay-search-selection-v1/` | 7 个搜索配置的验证选型及后续独立确认 worker，先查看 `status.json`；已有进程时不要重复启动 |
+| `artifacts/cardplay-search-selection-v1/` | 固定时延预算/取舍规则、SL 基线、数据隔离和逐配置结果；最终以 `selected-configuration.json` 和 `report.json` 为准 |
+| `data/cardplay-search-selection-v1/` | 本轮新预留 1,024 副独立测试牌，排除了所有旧数据/已用或预留面板；后续实验也必须排除 |
 
 检查点包含优化器、随机状态、配置、数据指纹和软件/Git 元数据。`--steps`、`--updates` 是**累计目标**。恢复时使用 `--resume`，不要再给 `--init`，训练配置和数据需匹配。
 
@@ -232,6 +235,9 @@ DDS 与 OpenSpiel 是固定提交的子模块。`git submodule update --init` �
 - SL/蒸馏价值目标为实际本方分数/7600；PPO 初次清零价值输出层，再使用双室 IMP/24，全部当前策略动作共享同一配对收益。固定记录叫牌，尚未联合优化叫牌和出牌。
 
 ### 当前实验边界
+
+- 已启动 [搜索/时延选型](cardplay-search-selection.md)：固定验证 NLL 最低的长训 SL，在 128 副验证牌上比较纯网络与均匀/引导采样各 8/16/32 样本，再按预定时延预算和 0.25 IMP 取舍区间选一个配置，冻结后仅在全新 1,024 副牌上确认。运行状态看 `runs/cardplay-search-selection-v1/status.json`，尚不提前给出最终结论；没有启动新训练或 PPO。当前完整回归为 96 项通过。
+- 7 个验证配置已全部完成，冻结选择为 hybrid-8：验证 +8.1094 IMP/副，非强制动作平均 21.41 ms、95 分位 56.62 ms。独立确认正在自动运行，结束后写入 `artifacts/cardplay-search-selection-v1/confirmation-hybrid-8.json` 和 `report.json`；不能把验证分数当作最终测试结果，后续继续时先检查状态。
 
 - 最新事实见 [长训 SL 评估](cardplay-long-sl-evaluation.md)：第 50,000 步 best 在全新 2,048 副牌上对本次起点 +5.0923、对旧 PPO +5.3237、对随机 +5.7134 IMP/副，两个主要比较均通过预先固定的 97.5% bootstrap 下界门槛。只证明这个训练种子胜过本项目旧模型，尚未证明超过 WBridge5 或人类等级。
 - 种子 43/44 均完成 52,928 步，所有 9 组确认对战已完成。新的 2,048 副确认牌上，三个种子平均对各自起点 +4.6825 IMP/副，按种子和发牌 bootstrap 的 95% 区间 [+4.2719, +5.0659]；对旧 PPO +4.8924，区间 [+4.6634, +5.1227]。三个种子的提升方向一致，支持长训 SL 的增益可复现；完整记录见 `artifacts/cardplay-long-sl-20261025/replication/report.json`。

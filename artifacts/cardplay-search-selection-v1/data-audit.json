@@ -1,0 +1,11 @@
+{
+  "eligible_before_import": 4848,
+  "holdout_boards": 1024,
+  "holdout_states": 53248,
+  "holdout_fingerprint": "e082b38702045d3f535db192773259f86260fc812100ab44bd733054d8cc537f",
+  "validation_boards": 128,
+  "validation_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+  "holdout_excluded_intersection": 0,
+  "holdout_validation_intersection": 0,
+  "holdout_ids_sha256": "4bfe76e6e4380913fb5072c64c43e7c0fb3dfed14b91adec91d3fd5cbcdd15c4"
+}

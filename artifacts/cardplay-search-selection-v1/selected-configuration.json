@@ -1,0 +1,40 @@
+{
+  "config": {
+    "id": "hybrid-8",
+    "kind": "hybrid",
+    "samples": 8
+  },
+  "validation_mean_imps": 8.109375,
+  "validation_nonforced_latency": {
+    "count": 5392,
+    "mean_ms": 21.414717340489954,
+    "p50_ms": 15.123700000913232,
+    "p95_ms": 56.61549500146064,
+    "max_ms": 665.9643999992113
+  },
+  "eligible_config_ids": [
+    "hybrid-32",
+    "uniform-16",
+    "hybrid-16",
+    "hybrid-8",
+    "uniform-8",
+    "uniform-32"
+  ],
+  "reason": "Fastest eligible search variant within the predeclared mean-IMP tie band",
+  "rule": {
+    "mean_budget_ms": 100.0,
+    "p95_budget_ms": 250.0,
+    "tie_band_imps": 0.25
+  },
+  "protocol_sha256": "45dd49b5fd8053ad4f859edfddab5808413ed22bf001adb2b3ebca8d13373579",
+  "baseline_sha256": "55f91fb82c92fd62937aa6866aff5818b710f0f1c19401d350a9f87eb4bae73d",
+  "validation_result_sha256": {
+    "neural": "3c7cc90da472add0e2e453fb9bc9dbaa53a20386e6a1aa51f473a63d4f141a13",
+    "hybrid-32": "a6e451d936acb52cb0e0d46ee9059643cf98cdf0568ff55f064082fc93278ce5",
+    "uniform-16": "917ce60300ff0ad143a437749ec7e937ab0cafa8636bea181d049fd7ec687bdf",
+    "hybrid-16": "7536322b08f8819ee2a573d24ec68cd24bdeb406a7e4f56c0943c452d666bc30",
+    "hybrid-8": "030d4b3abddd9674324c916e0bd28de05e80477c702565cff9d2d7b8c2eb24cd",
+    "uniform-8": "e754f81e748d4000f16ac4dbaccf1e8c0501a3dc1cd21732c85e3a5975a7380d",
+    "uniform-32": "4b3dc61e3e061423eaf3d292e663063d39ed3b49559d15fce499fda25b83215c"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-25",
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest -q",
+    "passed": 96,
+    "seconds": 17.68,
+    "before_GPU_benchmark": true
+  },
+  "frozen_model_and_library_hashes_verified": true,
+  "new_holdout_boards": 1024,
+  "holdout_prior_or_validation_intersection": 0,
+  "state": "Validation grid complete; hybrid-8 frozen; independent 1024-board confirmation running",
+  "all_validation_trial_hashes_verified": true,
+  "selected_configuration": {
+    "id": "hybrid-8",
+    "kind": "hybrid",
+    "samples": 8
+  }
+}

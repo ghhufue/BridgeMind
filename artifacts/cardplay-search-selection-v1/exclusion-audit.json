@@ -1,0 +1,274 @@
+{
+  "distinct_excluded_ids": 245168,
+  "sources": {
+    "data/cardplay/test/board-ids.npy": {
+      "ids": 128,
+      "sha256": "d35aaa726a6b444a0f1814e41a3bc957f7f559249827c17de04ad2e28859d0a9"
+    },
+    "data/cardplay/train/board-ids.npy": {
+      "ids": 1000,
+      "sha256": "705e887bec8ea96275fb0768ca4091d21f6d35fc432d02f5710c1ac5d441c6eb"
+    },
+    "data/cardplay/valid/board-ids.npy": {
+      "ids": 128,
+      "sha256": "9af2937fdefd55aaae3f301c955db9c62988ab7d632cbd3cb86f3879fb5ea5d2"
+    },
+    "data/cardplay-expanded-v1/test/board-ids.npy": {
+      "ids": 1024,
+      "sha256": "b9a8ee6b9067e0d8abd79c7d1c468e4be451489d2f9d3e1b9636ce529308b3a9"
+    },
+    "data/cardplay-expanded-v1/train/board-ids.npy": {
+      "ids": 10000,
+      "sha256": "19716d7327ca8319b6c5b34207da3db2561c2f52b4540fd89a6403e07c855e40"
+    },
+    "data/cardplay-expanded-v1/valid/board-ids.npy": {
+      "ids": 1024,
+      "sha256": "7dc6c386fd9cdc46bf5f416ccc926a3405af9f9e0309960ef6181fee753c9916"
+    },
+    "data/cardplay-long-sl-confirm-v1/board-ids.npy": {
+      "ids": 2048,
+      "sha256": "ce32e2a471010c67f20b30b2fab8e75e205083465e4a56af035758f938ab1c3e"
+    },
+    "data/cardplay-long-sl-holdout-v1/board-ids.npy": {
+      "ids": 2048,
+      "sha256": "37a56a02388885ba8a668016ff5a99d69fe15a487dcac9ddd00bde6fe8c4353c"
+    },
+    "data/cardplay-long-sl-search-v1/board-ids.npy": {
+      "ids": 32,
+      "sha256": "7d7f9170ace77066654ce8103d204b339b0a9b3c231d0d6db2775ef6273ae4e9"
+    },
+    "data/supervised/train/board-ids.npy": {
+      "ids": 100000,
+      "sha256": "7e5c59c57c2518974f4ef5e08ad406c3202798773b90b16a5be130463cea6897"
+    },
+    "data/supervised/valid/board-ids.npy": {
+      "ids": 10000,
+      "sha256": "3224ff4ec054bab51cda7a774ae27330849510e7a0752831d2ac011a33438be9"
+    },
+    "data/boards/test.npz": {
+      "ids": 20000,
+      "sha256": "fdcebbb2f494a14632307e271979f1b4d590bc8e774b53c4a664b4fba0492ca6"
+    },
+    "data/boards/train.npz": {
+      "ids": 100000,
+      "sha256": "2324cf9529be871770d00491c514a6f100bdfc074a220f4b349ff152da1205f7"
+    },
+    "data/boards/valid.npz": {
+      "ids": 10000,
+      "sha256": "a038a39dc4201cb742d19be565009b66454bb6fe99bdba43b4544bc8de7a2934"
+    },
+    "data/dds-smoke/test.npz": {
+      "ids": 4,
+      "sha256": "2056777f13a74f90f2872013957d06edf756d8605f66da84f16161af9333857d"
+    },
+    "data/dds-smoke/train.npz": {
+      "ids": 8,
+      "sha256": "37f5cbe0429976908bc616e2c971abbb7550e20b83b8e662ed0a2c497e5ce92c"
+    },
+    "data/dds-smoke/valid.npz": {
+      "ids": 4,
+      "sha256": "dc4572d06d5eecf0f3d2b93c5f04ead0d5c6cdbc9f58be92e524c6f83d0805ee"
+    },
+    "artifacts/cardplay-long-sl-20261025/holdout-board-ids.npy": {
+      "ids": 2048,
+      "sha256": "37a56a02388885ba8a668016ff5a99d69fe15a487dcac9ddd00bde6fe8c4353c"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/cardplay-long-sl-confirm-v1-board-ids.npy": {
+      "ids": 2048,
+      "sha256": "ce32e2a471010c67f20b30b2fab8e75e205083465e4a56af035758f938ab1c3e"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/cardplay-long-sl-search-v1-board-ids.npy": {
+      "ids": 32,
+      "sha256": "7d7f9170ace77066654ce8103d204b339b0a9b3c231d0d6db2775ef6273ae4e9"
+    },
+    "artifacts/cardplay/dds-smoke.json": {
+      "ids": 2,
+      "sha256": "17f9f3c42524fd71848a37925c94ce92483831cf9c0c2fa52d091b13826ca6af"
+    },
+    "artifacts/cardplay/hybrid-smoke.json": {
+      "ids": 1,
+      "sha256": "e3992314629a15dceb6cb49b88ea4b4c9dd65463db78cb65ff693be2afc4f9d2"
+    },
+    "artifacts/cardplay/pilot-report.json": {
+      "ids": 16,
+      "sha256": "02c7819fa92116b96e1b2acc3040d3f463432afd24122972febbff900311a14a"
+    },
+    "artifacts/cardplay/ppo-vs-anchor.json": {
+      "ids": 64,
+      "sha256": "b8e56d5fa6d9cdb76865a1a646d6db6d81882520f7754640d3115c8df7a72d9f"
+    },
+    "artifacts/cardplay/sl-self-validation.json": {
+      "ids": 16,
+      "sha256": "d731c92cd07f3a5f197629817b19e3e943c729e498c2c76a6f855cb1c554cf73"
+    },
+    "artifacts/cardplay/sl-vs-random.json": {
+      "ids": 64,
+      "sha256": "391566b4dd14d61e2ae7d182fe0c1e62fa81beca12d1688ab70c590631c094a6"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-42-vs-own-sl.json": {
+      "ids": 1024,
+      "sha256": "620aa17016783292243c7f4b653d0f736eddc9efeaf488221f405fbb2b4108fe"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-42-vs-previous-ppo.json": {
+      "ids": 1024,
+      "sha256": "29adbcc5c18aab7d5b13229e6a27de29dad9c9b0f64e8f5d21473d7373a6ca0d"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-42-vs-random.json": {
+      "ids": 1024,
+      "sha256": "b41f2e74947aef5c6080bd6cdd37ad7e46569282739a6a4a87ffe479fc833a63"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-43-vs-own-sl.json": {
+      "ids": 1024,
+      "sha256": "e0e81b91a0e6bd36e7b4e8c211f055b29093f1c65cf2c5dba2b94394e275907b"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-43-vs-previous-ppo.json": {
+      "ids": 1024,
+      "sha256": "b28dcd4734bf17834233e5529b9818398d8557422c8a9f96ae61e3667e07704a"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-43-vs-random.json": {
+      "ids": 1024,
+      "sha256": "23b0382eae414153c475353349aced76167180e474ccba38758ae5ced7807b49"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-44-vs-own-sl.json": {
+      "ids": 1024,
+      "sha256": "f3db6d3d10a1fa1ca4072fb1a076e4b20bc59881f40b710703f1495922faf89a"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-44-vs-previous-ppo.json": {
+      "ids": 1024,
+      "sha256": "5fe5e35b32d5892fe0555da06d718dfd2016d91fc23346c8908a01d2b8f69a73"
+    },
+    "artifacts/cardplay-expanded-v1/ppo-44-vs-random.json": {
+      "ids": 1024,
+      "sha256": "32752d99b955a043aa391672bb670430512ded8e4430ca5ac594c146ec902db5"
+    },
+    "artifacts/cardplay-expanded-v1/sl-42-vs-previous-ppo.json": {
+      "ids": 1024,
+      "sha256": "d69c1cd81f13059c66933a5b49f952ec95c7b2dcdb84affd777eefbf065b3cfb"
+    },
+    "artifacts/cardplay-expanded-v1/sl-42-vs-random.json": {
+      "ids": 1024,
+      "sha256": "3a801168901f5cc3c5b4d406c96c92a025615fd584d869e9caaa862a94f4d7db"
+    },
+    "artifacts/cardplay-expanded-v1/sl-43-vs-previous-ppo.json": {
+      "ids": 1024,
+      "sha256": "52fbe6986788699f456c370360753a347d9c0d0f19c79242f7dba4b5dcd50180"
+    },
+    "artifacts/cardplay-expanded-v1/sl-43-vs-random.json": {
+      "ids": 1024,
+      "sha256": "94d7bcdeff4f093078f4f99f7dd472800a33d0434b95aee50da64bd5b100d5ec"
+    },
+    "artifacts/cardplay-expanded-v1/sl-44-vs-previous-ppo.json": {
+      "ids": 1024,
+      "sha256": "7aafd39daacc81b020f7d4535668be7fd1723b30cd19b54e4a55803bdf0c13bc"
+    },
+    "artifacts/cardplay-expanded-v1/sl-44-vs-random.json": {
+      "ids": 1024,
+      "sha256": "7e759d76fffefc98798b9d6f45ac03912658f8f002c25cc034dc552611694862"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/search-learned-hybrid.json": {
+      "ids": 32,
+      "sha256": "f46c8c235953de23b5c1a180187bc7effa576fc346496832b68d4c0c509aa4d5"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/search-neural-self.json": {
+      "ids": 32,
+      "sha256": "184a3034bb4280921f4ab9ad61e62dc07ff631637449947df41a168a0b3b93d3"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/search-uniform-dds.json": {
+      "ids": 32,
+      "sha256": "b09402564af9349920d981cb58482a74e5a19a6144b505bc88e265ee7bea920f"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-42-vs-initial-sl.json": {
+      "ids": 2048,
+      "sha256": "b1d770f8defe79cb296c2606097139fba922b50680af37964baa321f72cba4cb"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-42-vs-old-ppo.json": {
+      "ids": 2048,
+      "sha256": "6d7995d9b4984bee351079f8d744cc4b98127bdcb1898b0d97aa6c7f34fb5395"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-42-vs-random.json": {
+      "ids": 2048,
+      "sha256": "f9589cb33d16138d4aeb72983830b5399c86c8598a734c88db81bfb8ff3f06d4"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-43-vs-initial-sl.json": {
+      "ids": 2048,
+      "sha256": "4075b1360c5734a5b9f11979cef3952182be21040e4dbf9eb22e3116edf1def9"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-43-vs-old-ppo.json": {
+      "ids": 2048,
+      "sha256": "09a191918ef1a9c55be9e0be293d659f1bc097762258ff218c5d655b3ad31081"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-43-vs-random.json": {
+      "ids": 2048,
+      "sha256": "9f9d22d08eaef369735f9399e3a2138a72e1380200a7ad7d432de0364d64f2f3"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-44-vs-initial-sl.json": {
+      "ids": 2048,
+      "sha256": "70b60558a36ae38411dbc9aaba5f2cef1c9876f0eee1b5f8961c4caaefc4e33d"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-44-vs-old-ppo.json": {
+      "ids": 2048,
+      "sha256": "f51d6f5bdf66897b4bd8af25ba6696f92b22f101c7773354f986df168e85560b"
+    },
+    "artifacts/cardplay-long-sl-20261025/replication/sl-44-vs-random.json": {
+      "ids": 2048,
+      "sha256": "9ffd81d1392cd7c4bdd28f02b4e0877e4dafea140a44fc8f9c49b527696972ee"
+    },
+    "artifacts/cardplay-long-sl-20261025/vs-initial-sl.json": {
+      "ids": 2048,
+      "sha256": "46b710423f13fab359ddf9fa3f62c20cc2a67de87e9ff0fcac8eea5c61554d8c"
+    },
+    "artifacts/cardplay-long-sl-20261025/vs-old-ppo.json": {
+      "ids": 2048,
+      "sha256": "a2a626298052678de4f5162e99100c71e8a74fbcd94b9497e2e41319b27bb816"
+    },
+    "artifacts/cardplay-long-sl-20261025/vs-random.json": {
+      "ids": 2048,
+      "sha256": "7f75c3407e926d316b80567847a0baccd9d0d7bb7d93846b6016211fc9a2b3f4"
+    },
+    "artifacts/training/baseline-self-validation.json": {
+      "ids": 512,
+      "sha256": "385142be21e03b25fdea7347dd9340524b1334ae89f47508919fc9ea5497d2dd"
+    },
+    "artifacts/training/ppo-duplicate-validation.json": {
+      "ids": 1024,
+      "sha256": "847a6efd0137839ca51d2c9d5fb62f2cafe2f439ee560829f300c098835cce9c"
+    },
+    "artifacts/training/sl-duplicate-validation.json": {
+      "ids": 1024,
+      "sha256": "3083d86cfe93733a792e999b8c20fe3f7791fc375c8fba29dc44b12a60e4ce19"
+    },
+    "runs/baseline-self-validation.json": {
+      "ids": 512,
+      "sha256": "385142be21e03b25fdea7347dd9340524b1334ae89f47508919fc9ea5497d2dd"
+    },
+    "runs/play-dds-validation.json": {
+      "ids": 2,
+      "sha256": "17f9f3c42524fd71848a37925c94ce92483831cf9c0c2fa52d091b13826ca6af"
+    },
+    "runs/play-hybrid-validation.json": {
+      "ids": 1,
+      "sha256": "e3992314629a15dceb6cb49b88ea4b4c9dd65463db78cb65ff693be2afc4f9d2"
+    },
+    "runs/play-ppo-pilot/duplicate-vs-anchor.json": {
+      "ids": 64,
+      "sha256": "b8e56d5fa6d9cdb76865a1a646d6db6d81882520f7754640d3115c8df7a72d9f"
+    },
+    "runs/play-sl-pilot/duplicate-vs-random.json": {
+      "ids": 64,
+      "sha256": "391566b4dd14d61e2ae7d182fe0c1e62fa81beca12d1688ab70c590631c094a6"
+    },
+    "runs/play-sl-pilot/self-validation.json": {
+      "ids": 16,
+      "sha256": "d731c92cd07f3a5f197629817b19e3e943c729e498c2c76a6f855cb1c554cf73"
+    },
+    "runs/ppo-pilot/duplicate-vs-sl.json": {
+      "ids": 1024,
+      "sha256": "847a6efd0137839ca51d2c9d5fb62f2cafe2f439ee560829f300c098835cce9c"
+    },
+    "runs/sl-pilot/duplicate-validation.json": {
+      "ids": 1024,
+      "sha256": "3083d86cfe93733a792e999b8c20fe3f7791fc375c8fba29dc44b12a60e4ce19"
+    }
+  },
+  "excluded_ids_sha256": "a653e21a92512d7259270a434b5dd573a3bbc6e90ca3900ae73d7385b7f34028"
+}

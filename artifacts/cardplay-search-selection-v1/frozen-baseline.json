@@ -1,0 +1,25 @@
+{
+  "seed": "42",
+  "model": {
+    "path": "runs/play-sl-long-20261025/best.pt",
+    "sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+    "selected_step": 50000,
+    "validation": {
+      "states": 8192,
+      "nll": 0.734033809043467,
+      "accuracy": 0.6978759765625,
+      "belief_nll": 0.7047359774866147,
+      "value_mse": 0.001115849919642642,
+      "seed": 714,
+      "sampling": "fixed_seed_with_replacement"
+    }
+  },
+  "protocol_sha256": "45dd49b5fd8053ad4f859edfddab5808413ed22bf001adb2b3ebca8d13373579",
+  "implementation_sha256": {
+    "benchmark.py": "3b01bf175219b7afc8c8b3d81d5380d295d278e7e81573c30ebbdd90a6840894",
+    "sampling.py": "249b0729f06041c95d3e6e78d595ec1a2cb953e958019ccaa357841e99f6c897",
+    "search.py": "8d49cbcf12467843a9335faa7c7d709c75430c74aebfcbe1adf55f2abb945ed0",
+    "policy.py": "be2d1d883a3c4f86166274af05791b4a5abb943c8adc0bf4b04f6c0aebc86cb0"
+  },
+  "validation_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9"
+}
