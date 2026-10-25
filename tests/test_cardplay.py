@@ -313,6 +313,26 @@ def play_solver_port():
             thread.join(timeout=5)
 
 
+def test_supervised_wall_clock_budget_saves_and_can_resume(play_datasets, tmp_path):
+    import json
+    from bridgemind.cardplay.__main__ import parser
+    from bridgemind.cardplay.runner import train_supervised
+    train, valid = play_datasets
+    run = tmp_path/"timed"
+    common = ["train-sl", "--run", str(run), "--train", str(train), "--valid", str(valid),
+              "--device", "cpu", "--d-model", "32", "--layers", "1", "--heads", "4",
+              "--batch-size", "8", "--eval-states", "8", "--eval-every", "10000"]
+    train_supervised(parser().parse_args([*common, "--steps", "100000", "--max-seconds", "1"]))
+    events = [json.loads(line) for line in (run/"metrics.jsonl").read_text().splitlines()]
+    assert events[-1]["event"] == "time_budget_reached"
+    step = events[-1]["step"]
+    assert 0 < step < 100000
+    _, metadata = load_model(run/"last.pt")
+    assert metadata["step"] == step and (run/"best.pt").is_file()
+    train_supervised(parser().parse_args([*common, "--steps", str(step+1), "--resume"]))
+    assert load_model(run/"last.pt")[1]["step"] == step+1
+
+
 @pytest.mark.parametrize("command", ["train-sl", "train-ppo", "distill"])
 def test_play_training_resume_matches_continuous_run(play_datasets, tmp_path, command, request):
     from bridgemind.cardplay.__main__ import parser

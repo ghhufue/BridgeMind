@@ -181,6 +181,7 @@ def parser():
             p.add_argument("--eval-boards", type=positive, default=32)
         else:
             p.add_argument("--steps", type=positive, default=1000)
+            p.add_argument("--max-seconds", type=positive, help="Stop gracefully after this invocation's wall-clock budget")
             p.add_argument("--batch-size", type=positive, default=64)
             p.add_argument("--eval-states", type=positive, default=1024)
             p.add_argument("--value-coef", type=float, default=.1)

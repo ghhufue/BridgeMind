@@ -78,6 +78,28 @@ with SolverClient(port=18765) as solver:
 
 SL 损失为策略交叉熵 + 0.2×归属交叉熵 + 0.1×价值 MSE；价值目标为实际终局本方原始分数 / 7600。`best.pt` 按固定验证决策的 NLL 选择，`last.pt` 包含优化器、随机状态、配置和数据指纹，可续训。NLL 改善不等于棋力提升。
 
+## 按时长运行 SL
+
+`train-sl` 和 `distill` 支持 `--max-seconds`，例如 `--steps 1000000 --max-seconds 1200`：以步数和本次调用的墙钟时间中先到的限制结束。到时完成当前更新、执行最终验证并保存 `last.pt` / `best.pt` 后正常退出，可能因验证和保存略超出预算。时间预算不属于学习配置，恢复时可重新指定，旧检查点仍兼容。
+
+本机于 2026-10-25 13:41:53（北京时间）启动了约 20 分钟的出牌 SL：
+
+- 目录：`runs/play-sl-long-20261025/`；实际状态以 `status.json` 为准。
+- 从 `runs/cardplay-expanded-v1/sl-42/best.pt` 初始化，使用扩大实验的 10,000 副训练牌和 1,024 副验证牌；不读取测试牌。
+- RTX 5070，种子 42，批量 64，学习率 3e-5；每 1,000 步在固定抽样的 8,192 条验证决策上评估，按 NLL 保存 best。
+- 独立后台进程，预计约 14:01:53 保存退出；日志在 `stdout.log`、`stderr.log`、`metrics.jsonl`，结束后写入 `report.json`。
+
+通用 worker 运行/恢复方式：
+
+```powershell
+# 新试验选新的 --run 目录；下面已有的运行目录不能重复启动。
+.\.venv\Scripts\python.exe examples/cardplay_long_sl.py --run runs/play-sl-long-new --seconds 1200
+# 确认上次进程已停止后，才恢复对应目录；这会再训练最多 20 分钟。
+.\.venv\Scripts\python.exe examples/cardplay_long_sl.py --run runs/play-sl-long-20261025 --seconds 1200 --resume
+```
+
+恢复检查使用实际 worker PID，避免 Windows 虚拟环境启动器 PID 与训练进程不同导致误判。worker 状态和报告均保留在被 Git 忽略的运行目录中。训练完成不等于棋力改善，后续仍需验证对战和新的独立留出评估。
+
 ## 搜索蒸馏与 PPO
 
 ```powershell

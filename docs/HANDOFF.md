@@ -188,6 +188,7 @@ DDS 与 OpenSpiel 是固定提交的子模块。`git submodule update --init` �
 | `data/cardplay-expanded-v1/{train,valid,test}/` | 扩大到 10,000 / 1,024 / 1,024 副；共 626,496 条，独立目录保留 pilot 数据 |
 | `runs/cardplay-expanded-v1/{sl,ppo}-{42,43,44}/` | 三个训练随机种子；每种子 1,000 步 SL、30 次 PPO，按验证选 best |
 | `artifacts/cardplay-expanded-v1/` | 固定协议、数据审计、初始化与冻结模型哈希、训练指标和独立对战记录 |
+| `runs/play-sl-long-20261025/` | 2026-10-25 13:41:53 北京时间启动的 20 分钟 SL；10,000 副训练、lr=3e-5、batch=64，从扩大实验 sl-42 best 初始化。状态看 `status.json`，日志/检查点/完成报告在同目录 |
 
 检查点包含优化器、随机状态、配置、数据指纹和软件/Git 元数据。`--steps`、`--updates` 是**累计目标**。恢复时使用 `--resume`，不要再给 `--init`，训练配置和数据需匹配。
 
@@ -228,6 +229,8 @@ DDS 与 OpenSpiel 是固定提交的子模块。`git submodule update --init` �
 - SL/蒸馏价值目标为实际本方分数/7600；PPO 初次清零价值输出层，再使用双室 IMP/24，全部当前策略动作共享同一配对收益。固定记录叫牌，尚未联合优化叫牌和出牌。
 
 ### 当前实验边界
+
+- 已新增按墙钟时间结束的 SL/蒸馏训练与独立后台 worker，并启动 20 分钟 SL，操作与恢复见 [按时长运行 SL](cardplay.md#按时长运行-sl)。此次尚未据此给出棋力结论；最新状态和结果以运行目录为准。新增时间到期保存及恢复覆盖后，完整回归为 83 项通过。
 
 - 已完成 [扩大实验](cardplay-expanded-experiment.md)：训练 10,000 副，验证/独立测试各 1,024 副，三个种子各 1,000 步 SL + 30 次 PPO。全部候选先冻结，再完成 15 组独立对战。
 - 主结果：PPO 对各自 SL 平均 -0.008138 IMP/副，按种子与牌局 bootstrap 的 95% 区间 [-0.232104, +0.222664]。新 PPO 对旧 PPO 平均 -0.334635；没有证据支持本轮 PPO 改善或超过旧模型。完整原始报告在 `artifacts/cardplay-expanded-v1/`。本轮测试已使用，后续调参应另留独立牌。

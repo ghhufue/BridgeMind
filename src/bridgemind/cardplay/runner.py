@@ -113,6 +113,8 @@ def save(directory, model, optimizer, rng, kind, config, step, **extra):
 
 
 def train_supervised(args):
+    run_started = time.monotonic()
+    max_seconds = getattr(args, "max_seconds", None)
     kind = "play_distill" if args.command == "distill" else "play_sl"
     extra = {"batch_size": args.batch_size, "eval_states": args.eval_states,
              "belief_coef": args.belief_coef, "value_coef": args.value_coef}
@@ -157,7 +159,8 @@ def train_supervised(args):
                     targets.append(target)
             model.train()
             metrics = supervised_update(model, optimizer, rows, belief_coef=args.belief_coef, value_coef=args.value_coef, targets=targets)
-            if step % args.eval_every == 0 or step == args.steps:
+            budget_reached = max_seconds is not None and time.monotonic()-run_started >= max_seconds
+            if step % args.eval_every == 0 or step == args.steps or budget_reached:
                 validation = supervised_metrics(model, valid, count=args.eval_states)
                 if validation["nll"] < best:
                     best = validation["nll"]
@@ -166,6 +169,10 @@ def train_supervised(args):
                                  "validation": validation, "last_step_seconds": time.perf_counter()-started})
                 save(directory, model, optimizer, rng, kind, config, step, best_nll=best,
                      **({"search_rng": teacher.rng.bit_generator.state, "teacher_solver": solver.get_info()} if teacher else {}))
+            if budget_reached:
+                emit(directory, {"event": "time_budget_reached", "kind": kind, "step": step,
+                                 "max_seconds": max_seconds, "elapsed_seconds": time.monotonic()-run_started})
+                break
         return directory/"last.pt"
     finally:
         if solver:
