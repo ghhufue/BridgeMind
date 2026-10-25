@@ -1,0 +1,245 @@
+[
+  {
+    "id": "distill-pilot",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\play-distill-pilot\\best.pt",
+    "checkpoint_sha256": "bcf9a643357631c66e56511632db5992327d8625d3b93e2febab03eee54f2b52",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay\\train",
+        "fingerprint": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "hybrid-long-42-8",
+    "kind": "hybrid",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\play-sl-long-20261025\\best.pt",
+    "checkpoint_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids",
+    "samples": 8
+  },
+  {
+    "id": "lowest",
+    "kind": "lowest",
+    "policy_version": 1
+  },
+  {
+    "id": "oracle",
+    "kind": "oracle",
+    "policy_version": 1
+  },
+  {
+    "id": "ppo-expanded-42",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-expanded-v1\\ppo-42\\best.pt",
+    "checkpoint_sha256": "accd7418e7fa38f4a65e1d79ac3e8a88b9946c59a3858c8bc97dc725aa39713d",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "ppo-expanded-43",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-expanded-v1\\ppo-43\\best.pt",
+    "checkpoint_sha256": "2259cc8b79971632ef89cbfb335dcbe5e2ad793681a18c019ef80c899604bbe8",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "ppo-expanded-44",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-expanded-v1\\ppo-44\\best.pt",
+    "checkpoint_sha256": "4791268ba60f7c91e5261915e5673964a5424a1417e49cc0639ab525c57f4173",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "ppo-pilot-last",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\play-ppo-pilot\\last.pt",
+    "checkpoint_sha256": "0cd6cb7f585ba2b6cc190e1c9d64ded8208c24e967088f457dd121a73d4d8ce9",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay\\train",
+        "fingerprint": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "ppo-pilot",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\play-ppo-pilot\\best.pt",
+    "checkpoint_sha256": "abb41f71bffe87c0325950450354de9de1de41cbd58d6824b2a6666cfbe2fd3b",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay\\train",
+        "fingerprint": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "random",
+    "kind": "random",
+    "policy_version": 1
+  },
+  {
+    "id": "rule-basic",
+    "kind": "rule-basic",
+    "policy_version": 1
+  },
+  {
+    "id": "sampling-dds-32",
+    "kind": "sampling-dds",
+    "policy_version": 1,
+    "samples": 32
+  },
+  {
+    "id": "sampling-dds-8",
+    "kind": "sampling-dds",
+    "policy_version": 1,
+    "samples": 8
+  },
+  {
+    "id": "sl-expanded-42",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-expanded-v1\\sl-42\\best.pt",
+    "checkpoint_sha256": "c6997c8bad08272466b93a1a96111001385d45f8734166e2e1db8c3298d70167",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "sl-expanded-43",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-expanded-v1\\sl-43\\best.pt",
+    "checkpoint_sha256": "65016473d42d1b9a0c1beea03f6a4a2020c32b4311556b4402a97ce007c107f4",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "sl-expanded-44",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-expanded-v1\\sl-44\\best.pt",
+    "checkpoint_sha256": "c2564ff646b12fcf019d5cded7f0c004e963cbc4dba08c4d1e7cdcab181a2daa",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "sl-long-42",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\play-sl-long-20261025\\best.pt",
+    "checkpoint_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "sl-long-43",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-long-sl-replicas-v1\\sl-43\\best.pt",
+    "checkpoint_sha256": "30a30e923e705335bce9f1a652236878fdf91078e267596712ed80fc94eb42ad",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "sl-long-44",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-long-sl-replicas-v1\\sl-44\\best.pt",
+    "checkpoint_sha256": "f43cdf93c5b65d716bad9598bff15c41061808381669f3e78b64f5f5238bdd34",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "sl-pilot-last",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\play-sl-pilot\\last.pt",
+    "checkpoint_sha256": "6580792221e8001e20640b729541d8b2c7a090539de50c6025ff289eff0a1efa",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay\\train",
+        "fingerprint": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  {
+    "id": "sl-pilot",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\play-sl-pilot\\best.pt",
+    "checkpoint_sha256": "11f23c31087d2129baf957b460d758d51557c4a4a54fbb492b2943dab4b84282",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay\\train",
+        "fingerprint": "afbccf6ca4acb8342db7ea0b247406a4ecd6a79d4b1642709fe29c839032fcee"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  }
+]

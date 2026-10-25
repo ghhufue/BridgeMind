@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "id": "sl-long-42",
+  "benchmark": "cardplay-rating-v1",
+  "protocol_sha256": "cc129d87676d06b8e5b19a72e9135ad637690d79c3a64652c229986a18898e9e",
+  "opponent_sha256": "c909bd9e48a82fb57fdc71ae7bbeaca6bf31b3ddef682a851c7da6a00752c506",
+  "created_at_utc": "2026-10-25T20:07:40.320391+00:00",
+  "purpose": "tracking",
+  "score": {
+    "rating": 32.16396328429523,
+    "rating_95_ci": [
+      26.546067396071994,
+      37.19421940948362
+    ],
+    "status": "calibrated",
+    "panel_mean_imps": 0.2819010416666667,
+    "random_panel_mean_imps": -3.048828125,
+    "oracle_panel_mean_imps": 7.306640625,
+    "anchor_gap_imps": 10.35546875,
+    "anchor_gap_95_ci": [
+      9.718717447916667,
+      10.981201171874998
+    ],
+    "gain_over_random_95_ci": [
+      2.66328125,
+      3.917350260416667
+    ],
+    "boards": 128,
+    "random_replicates": 3,
+    "bootstrap_draws": 2000,
+    "bootstrap": "joint shared board columns and replicate seed rows; percentile 95%; estimated anchors included",
+    "interval_scope": "fixed policies and benchmark distribution, not training-seed or human-level uncertainty",
+    "clipped": false
+  },
+  "versus": {
+    "random": {
+      "mean_imps": 5.065104166666667,
+      "bootstrap_95_ci": [
+        4.255013020833333,
+        5.9140625
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 305,
+      "ties": 47,
+      "losses": 32,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "529a130276a58cbc29b1fcee8c6af6a7755e9d0f72b0c82ea73a5a3b73403cb6"
+    },
+    "lowest": {
+      "mean_imps": 6.0,
+      "bootstrap_95_ci": [
+        5.1560546875,
+        6.7890625
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 336,
+      "ties": 36,
+      "losses": 12,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "ef664559eb757a8a2549a89c1978aa04d9b971921e8c61c034e7502f63837343"
+    },
+    "rule-basic": {
+      "mean_imps": -1.8203125,
+      "bootstrap_95_ci": [
+        -2.8048828125,
+        -0.78125
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 114,
+      "ties": 63,
+      "losses": 207,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "867af466c8b2791e0e75680ac5ad9f751f5c1a96d9beb954d123a37f4372fc12"
+    },
+    "oracle": {
+      "mean_imps": -8.1171875,
+      "bootstrap_95_ci": [
+        -8.84375,
+        -7.390429687500001
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 0,
+      "ties": 15,
+      "losses": 369,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "c47443597828ffbd43c5c454cb124fac0571b833278d825ca2eb5eed0d585f4b"
+    }
+  },
+  "policy": {
+    "id": "sl-long-42",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\play-sl-long-20261025\\best.pt",
+    "checkpoint_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+        "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+      }
+    ],
+    "training_audit": "known_local_training_ids"
+  },
+  "limits": [
+    "Repeated tracking/model selection consumes test independence; reserve a separate confirmation suite",
+    "Oracle has privileged information; 100 is a reference, not a hard ceiling",
+    "Public pretraining history cannot be fully audited"
+  ]
+}

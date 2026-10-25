@@ -19,6 +19,8 @@
 
 ## 出牌训练与完整对局
 
+已有独立的[出牌牌力评分器](docs/cardplay-rating.md)：随机合法出牌固定0分、全知 DDS 固定100分；规则、采样 DDS 和历史模型通过同一固定面板的双室 IMP 校准评分，附95%区间。入口为 `python -m bridgemind.rating`，本机旧模型登记与新评分牌准备见 `examples/cardplay_rating_setup.py`。
+
 本机已准备出牌训练 1,000 副，验证和测试各 128 副。已有环境和数据可直接运行：
 
 ```powershell

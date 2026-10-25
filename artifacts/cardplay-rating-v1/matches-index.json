@@ -1,0 +1,152 @@
+[
+  {
+    "path": "matches\\lowest--lowest.json",
+    "file_sha256": "6b0de732de4e9a753655e5ac8486fc6d1296c483f8db823d014f2cee72279176",
+    "signature": "1cc93b5e8b44f99117396606ef195dbabca3aa7b33858c74f6814a40932a1047",
+    "records": 384
+  },
+  {
+    "path": "matches\\lowest--oracle.json",
+    "file_sha256": "c7ff16f3bce1c5dd4cf596fc4a7de6e4e03a2dc817c66e00382de83d18648268",
+    "signature": "e8b48429b39c42e07ef87f2495e63808df62def0b17ba97fb9332d776a725bb4",
+    "records": 384
+  },
+  {
+    "path": "matches\\lowest--ppo-pilot-last.json",
+    "file_sha256": "7e67907c53759eb53153ae4af550126d95df73f0715a3e9bc0cf16133b3657ba",
+    "signature": "10ca12e7989d46c3b91dec598a10f3cdee2e0bdfeef842396655961b53e5b7f8",
+    "records": 384
+  },
+  {
+    "path": "matches\\lowest--random.json",
+    "file_sha256": "de93a0e5092839a38be67af7a4463cf87671b3826e17f65114563901e433d230",
+    "signature": "0d49a46059f7817c3a58a755e16deb5bb262c992e7ad6270840f5384c3c9c1d0",
+    "records": 384
+  },
+  {
+    "path": "matches\\lowest--rule-basic.json",
+    "file_sha256": "eddcb624bc73d919b0c78834d6d434893f0f75c3949fb676a7c8e676d73744ad",
+    "signature": "bc48fabeeda2e43c96ed53f5097d934a22af089693d6c8bf001a80848d4d96a6",
+    "records": 384
+  },
+  {
+    "path": "matches\\lowest--sampling-dds-8.json",
+    "file_sha256": "426c52cd15d1d2adf32a5418d6bed9b090f9725295049bd8eb932b8dadd5ed6c",
+    "signature": "b9c995194eb03cc1beabd5a8d9461d21461f63723fea4827f40cba2df4354b1f",
+    "records": 141
+  },
+  {
+    "path": "matches\\lowest--sl-long-42.json",
+    "file_sha256": "539c81b7563a66c32a0c194ab95070d9703b26d32a7f43b13cd423148249b6d7",
+    "signature": "ef664559eb757a8a2549a89c1978aa04d9b971921e8c61c034e7502f63837343",
+    "records": 384
+  },
+  {
+    "path": "matches\\lowest--sl-pilot.json",
+    "file_sha256": "e4cb4adb51a8066cc799399a4c498ab37c488bfab615ad8cfad3fdf0a9887667",
+    "signature": "7b5686b3b1557b26cd88b720c1394a55c3762be19952c47505bb2fa545d8eb36",
+    "records": 384
+  },
+  {
+    "path": "matches\\oracle--oracle.json",
+    "file_sha256": "45ebb2e2e6ceaf62e8907d82616a0e435bdb1d6cbba5e86b75f4f6c1d70203fb",
+    "signature": "a0e0901cd45aeda7747abebbba049d0c7d984deb77ba3e45df90d1b5decca141",
+    "records": 384
+  },
+  {
+    "path": "matches\\oracle--ppo-pilot-last.json",
+    "file_sha256": "07a13d7bafacfa41da92c3af2177022ff0d5bd7b373ec1d72af48ac44cc9ddd9",
+    "signature": "2dcccedd8c3c13f28290423e4244a29c7a46a0f62e3549d728653ca28158bb49",
+    "records": 384
+  },
+  {
+    "path": "matches\\oracle--random.json",
+    "file_sha256": "f29ce4de8ced046dd47b72e6ca3b42a22e7df6e65b2dc3f3bada7130d5895f28",
+    "signature": "17d4b58ea97528b4c3082ee50008effbd10d2e05dc9bafabcd080ff1808081d2",
+    "records": 384
+  },
+  {
+    "path": "matches\\oracle--rule-basic.json",
+    "file_sha256": "beba56f23053818bbbf2cd7a1cae45638d4a7780b622fd5f62465dde60dc9282",
+    "signature": "be74cd9025c5b82ab6baff99dd2d2d213e4caa146334ee9d25abf6254a608661",
+    "records": 384
+  },
+  {
+    "path": "matches\\oracle--sampling-dds-8.json",
+    "file_sha256": "6f480e7ef9e656edbd0d623e4bfb5303e536478bb355bacba59a98f8ffe759d0",
+    "signature": "893354d7526540d5f95e9f1e73dd91049d728854554d8b6d3aea29b3884b49dc",
+    "records": 5
+  },
+  {
+    "path": "matches\\oracle--sl-long-42.json",
+    "file_sha256": "875ce46ff101f47a0557f30ac6e680063f2d813838d5a3c0904a32aaab4a3675",
+    "signature": "c47443597828ffbd43c5c454cb124fac0571b833278d825ca2eb5eed0d585f4b",
+    "records": 384
+  },
+  {
+    "path": "matches\\oracle--sl-pilot.json",
+    "file_sha256": "21bcd9703b186904db33b8a8eb481121949017120a5c90b68cb40184fdf6fc78",
+    "signature": "4b667487108029ecb2c6028f036c908c5470761afe82c1667d1572552b9614f2",
+    "records": 384
+  },
+  {
+    "path": "matches\\ppo-pilot-last--random.json",
+    "file_sha256": "16cb771f7b48a8968d50b824436898cefbbba0fe5a5a5bacda9dceb6ee8b3b40",
+    "signature": "0492b0f86cd8af95a4d05b2999416d9105a67162de869ddde431968c4be8de7f",
+    "records": 384
+  },
+  {
+    "path": "matches\\ppo-pilot-last--rule-basic.json",
+    "file_sha256": "b99e681ed78b239423cfc724a35a4ce5644f0d2566dc6700e0cb6aa04c31160b",
+    "signature": "70abbb237adb6a8e95be1403fb2f5c5d145f64891485afab6e1d8f765e812c8b",
+    "records": 384
+  },
+  {
+    "path": "matches\\random--random.json",
+    "file_sha256": "1e679cc96fd7be87736a3827b5d85a0df9c0d1c686bc084494b0cb8cbb42d963",
+    "signature": "26dadf03d6c5be5fc6a54345f30a14b87d682194c4079bdb3cc9a146cdba7f35",
+    "records": 384
+  },
+  {
+    "path": "matches\\random--rule-basic.json",
+    "file_sha256": "ad6300715e6a2f8459a4795adadac5add44fa4805a85406d6c4ddf127f0e7f71",
+    "signature": "d5d5cfc94f51939df45e41342493883a3893757f9bac1846de4f717219790036",
+    "records": 384
+  },
+  {
+    "path": "matches\\random--sampling-dds-8.json",
+    "file_sha256": "7b5005f82bc6ca49c3a20d188afd99642050a97c04b9465ec52b5f58db9e88d9",
+    "signature": "e549e0a90c1e8500a96079b4727cbab58d5a7087e72f4d13e2f3a80b781385e0",
+    "records": 94
+  },
+  {
+    "path": "matches\\random--sl-long-42.json",
+    "file_sha256": "88d8f497fe5bac4944601bab0aa4c274985d575985aea39f72ff7595b4e153e1",
+    "signature": "529a130276a58cbc29b1fcee8c6af6a7755e9d0f72b0c82ea73a5a3b73403cb6",
+    "records": 384
+  },
+  {
+    "path": "matches\\random--sl-pilot.json",
+    "file_sha256": "151828a59e3e9333b0290229578673c305c10c8328c0c2ab8fac714ef16226ba",
+    "signature": "a6a29b58cfea799979b2bfb3a5b73e720a0f34c159cf6fa932fb87933c00f946",
+    "records": 384
+  },
+  {
+    "path": "matches\\rule-basic--rule-basic.json",
+    "file_sha256": "8b9cc820bd2acb520450a2030d48382a9790777837633f067b3b019cb1c74c5f",
+    "signature": "482277a1369e920de6222d211ebd4cfdfe5bcedab7933229f069275bc16fdb6f",
+    "records": 384
+  },
+  {
+    "path": "matches\\rule-basic--sl-long-42.json",
+    "file_sha256": "5090b7950cba179b1c912b2bd7b24f9e2e944db587b109f540a70d0bc7c2ee0b",
+    "signature": "867af466c8b2791e0e75680ac5ad9f751f5c1a96d9beb954d123a37f4372fc12",
+    "records": 384
+  },
+  {
+    "path": "matches\\rule-basic--sl-pilot.json",
+    "file_sha256": "9b67af87e5f8560d65305c7c4b97fb48a48e738e56c8f5d78ae208402e477506",
+    "signature": "33f4b80f740e0de583ad25aec69f048821e63c643047d8f9bebb471642d523fa",
+    "records": 384
+  }
+]

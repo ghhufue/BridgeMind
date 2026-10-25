@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "id": "oracle",
+  "benchmark": "cardplay-rating-v1",
+  "protocol_sha256": "cc129d87676d06b8e5b19a72e9135ad637690d79c3a64652c229986a18898e9e",
+  "opponent_sha256": "1489a7051dabeeea32b529b70bdb2710ab4343c8631892004795ae60a637799a",
+  "created_at_utc": "2026-10-25T20:07:39.853633+00:00",
+  "purpose": "tracking",
+  "score": {
+    "rating": 100.0,
+    "rating_95_ci": [
+      100.0,
+      100.0
+    ],
+    "status": "calibrated",
+    "panel_mean_imps": 7.306640625,
+    "random_panel_mean_imps": -3.048828125,
+    "oracle_panel_mean_imps": 7.306640625,
+    "anchor_gap_imps": 10.35546875,
+    "anchor_gap_95_ci": [
+      9.718717447916667,
+      10.981201171874998
+    ],
+    "gain_over_random_95_ci": [
+      9.718717447916667,
+      10.981201171874998
+    ],
+    "boards": 128,
+    "random_replicates": 3,
+    "bootstrap_draws": 2000,
+    "bootstrap": "joint shared board columns and replicate seed rows; percentile 95%; estimated anchors included",
+    "interval_scope": "fixed policies and benchmark distribution, not training-seed or human-level uncertainty",
+    "clipped": false
+  },
+  "versus": {
+    "random": {
+      "mean_imps": 10.0703125,
+      "bootstrap_95_ci": [
+        9.5234375,
+        10.653645833333334
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 383,
+      "ties": 1,
+      "losses": 0,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "17d4b58ea97528b4c3082ee50008effbd10d2e05dc9bafabcd080ff1808081d2"
+    },
+    "lowest": {
+      "mean_imps": 10.2421875,
+      "bootstrap_95_ci": [
+        9.609375,
+        10.8984375
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 384,
+      "ties": 0,
+      "losses": 0,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "e8b48429b39c42e07ef87f2495e63808df62def0b17ba97fb9332d776a725bb4"
+    },
+    "rule-basic": {
+      "mean_imps": 8.9140625,
+      "bootstrap_95_ci": [
+        8.1953125,
+        9.656445312499999
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 381,
+      "ties": 3,
+      "losses": 0,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "be74cd9025c5b82ab6baff99dd2d2d213e4caa146334ee9d25abf6254a608661"
+    },
+    "oracle": {
+      "mean_imps": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 0,
+      "ties": 384,
+      "losses": 0,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "a0e0901cd45aeda7747abebbba049d0c7d984deb77ba3e45df90d1b5decca141"
+    }
+  },
+  "policy": {
+    "id": "oracle",
+    "kind": "oracle",
+    "policy_version": 1
+  },
+  "limits": [
+    "Repeated tracking/model selection consumes test independence; reserve a separate confirmation suite",
+    "Oracle has privileged information; 100 is a reference, not a hard ceiling",
+    "Public pretraining history cannot be fully audited"
+  ]
+}

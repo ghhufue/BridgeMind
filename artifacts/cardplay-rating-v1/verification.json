@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-26",
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest -q",
+    "passed": 169,
+    "seconds": 19.88
+  },
+  "benchmark": "cardplay-rating-v1",
+  "protocol_sha256": "cc129d87676d06b8e5b19a72e9135ad637690d79c3a64652c229986a18898e9e",
+  "distinct_boards": 128,
+  "random_replicates": 3,
+  "registered_opponents": 21,
+  "rated_opponents": [
+    "lowest",
+    "oracle",
+    "ppo-pilot-last",
+    "random",
+    "rule-basic",
+    "sl-long-42",
+    "sl-pilot"
+  ],
+  "completed_cached_pairs": 22,
+  "exact_zero_self_comparisons": 4,
+  "partial_cached_pairs_unrated": 3,
+  "independent_mean_and_rating_recomputation": true,
+  "cache_coordinates_and_imp_checks": true,
+  "all_checkpoint_hashes_and_declared_training_overlap_checks": true,
+  "prior_deal_intersection": 0,
+  "excluded_deals": 246192,
+  "powershell_entrypoint": {
+    "path": "scripts/rate-model.ps1",
+    "real_cached_model_run": "sl-long-42",
+    "exit_code": 0
+  },
+  "limits": [
+    "128 distinct deals, not 384 independent deals",
+    "tracking suite, north dealer and neither vulnerable",
+    "sampling DDS and other registered models remain unranked until all panel matches finish"
+  ]
+}

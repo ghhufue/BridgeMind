@@ -23,6 +23,7 @@
 | 叫牌模型 | 固定 480 维输入、四层 MLP、Actor–Critic、合法动作掩码 | `src/bridgemind/training/model.py`、`encoding.py` |
 | 数据准备 | 下载和哈希校验、公开表导入、独立 DDS 生成新表、监督轨迹导入、集合交集审计 | `src/bridgemind/training/data.py`、`offline.py`、`__main__.py` |
 | 训练和评估 | 监督学习、PPO、冻结历史对手池、双室 IMP、断点续训、推理接口 | `src/bridgemind/training/` |
+| 出牌牌力评分器 | **已实现**：随机0/全知DDS100、固定面板归一化IMP、联合bootstrap、规则/采样/模型登记、可恢复比赛和榜单；与训练快照池独立 | `src/bridgemind/rating/`；[评分器说明](cardplay-rating.md) |
 | 完整出牌环境封装 | 已实现 52 张出牌、明手控制、私有观察、逐墩与终局计分 | `engine/play.py`、`BridgeBiddingEnv.start_play()` |
 | 不完全信息出牌 AI | Transformer 策略/价值/归属头、约束采样 DDS / hybrid、SL/蒸馏/双室 PPO、恢复与评估已跑通 | `cardplay/`；[出牌说明](cardplay.md) |
 | 人机搭档适配、客户端、游戏业务服务 | **未实现** | 体系与产品技术选型待后续确定 |
@@ -224,6 +225,13 @@ DDS 与 OpenSpiel 是固定提交的子模块。`git submodule update --init` �
 
 详细命令、输入和训练语义见 [出牌说明](cardplay.md)；测试、数据重放和短实验见 [出牌验证](cardplay-validation.md)。
 
+### 出牌评分器（2026-10-26）
+
+- 已实现独立的[牌力评分器](cardplay-rating.md)：全知DDS=100、随机=0，固定四对手面板的平均IMP归一化；规则、采样DDS和历史模型通过实测评分，新登记不改变标尺。
+- 本机 `runs/cardplay-rating-v1/` 已冻结128副新牌和3个重复种子；与246,192个已知旧发牌交集为0，登记21项策略。首批7项完成：基础规则37.98、长训SL种子42为32.16、旧SL -10.88、旧PPO last -11.20、最小合法牌 -20.21，加0/100锚点；区间和范围见专题文档及 `artifacts/cardplay-rating-v1/`。采样DDS等14项未完成评分，不能预设为高分。
+- 新模型可执行 `.\scripts\rate-model.ps1 -Id <唯一版本名> -Checkpoint <冻结出牌权重> -TrainingData <训练PlayData目录>`；旧模型补测见setup脚本。登记引用现有权重，需保留独立版本文件；代码/依赖/DDS变更需新建标尺版本。
+- 本轮Python全量169项通过，另已完成真实DDS校准、逐副重算评分和PowerShell入口实跑。评分任务已结束，没有留下后台训练或评分工作；原有DDS/分析服务继续运行。
+
 ### 已落地结构
 
 - `engine/play.py`：完整出牌环境，`player` 为控制者、`to_play` 为实际出牌手；首攻后公开明手，庄家控制明手。只向策略提供该控制者可见信息，实际打完后结算。
@@ -268,6 +276,7 @@ DDS 与 OpenSpiel 是固定提交的子模块。`git submodule update --init` �
 ## 9. 接手时容易误判的事项
 
 - 当前测试通过只验证已覆盖的行为；完整出牌后端已实现，不能推导为模型棋力已达标或客户端游戏已完成。
+- 出牌评分器的100分是**全知** DDS参考；原出牌CLI的 `--policy dds` 是可见信息下的采样搜索，二者不同。新对手只追加登记，不扩展固定评分面板。日常分数不能解释为人类段位或最优能力百分比；命令与版本约束见[评分器说明](cardplay-rating.md)。
 - DDS 牌表与 `solve_position` 是全知求解；不能把真实隐藏牌传给实战策略或采样器。
 - 不要把出牌动态序列输入替换到现有叫牌 480 维检查点；二者是不同模型和编码。
 - 不要用不断查看测试集的结果进行调参；本地预训练历史与外部公开模型训练历史的可审计范围不同。
