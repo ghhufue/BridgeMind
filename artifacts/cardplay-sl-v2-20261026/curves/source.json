@@ -1,0 +1,9 @@
+{
+  "metrics_path": "D:\\code\\BridgeMind\\runs\\play-sl-v2-20261026-2h\\metrics.jsonl",
+  "metrics_sha256": "a62cf33cd7537e49cee2f9e22992cf846b75428475bb44bd7bb1de63e216b23b",
+  "training_points": 235,
+  "validation_points": 25,
+  "smoothing": "causal EMA, span=9; no validation smoothing",
+  "time_axis": "elapsed_seconds / 60; includes evaluation time",
+  "matplotlib_version": "3.11.2"
+}

@@ -1,0 +1,929 @@
+[
+  {
+    "case_id": "real-34-room0-ply15",
+    "board": {
+      "id": "256e6ee50e53100e54a9c619b232a58b2d1c77fd96514164fdeb724ae521262c",
+      "owners": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        3,
+        1,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1,
+        3,
+        3,
+        3,
+        3,
+        2,
+        0,
+        3,
+        3,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        3,
+        1,
+        3,
+        1,
+        0,
+        3,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "auction": [
+        0,
+        6,
+        0,
+        18,
+        0,
+        19,
+        0,
+        20,
+        0,
+        22,
+        0,
+        25,
+        0,
+        27,
+        0,
+        28,
+        0,
+        36,
+        0,
+        0,
+        0
+      ],
+      "dealer": "N",
+      "vulnerable": [
+        false,
+        false
+      ],
+      "system_id": 1
+    },
+    "prefix": [
+      "S8",
+      "SJ",
+      "S6",
+      "S2",
+      "D5",
+      "D3",
+      "DA",
+      "D2",
+      "H2",
+      "H3",
+      "H8",
+      "H6",
+      "D8",
+      "D4",
+      "C5"
+    ],
+    "model_card": "D7",
+    "rule_card": "DT",
+    "actual_deal_dds_best": [
+      "DT",
+      "DK"
+    ],
+    "model_top3": [
+      {
+        "card": "D7",
+        "probability": 0.7261146036492808
+      },
+      {
+        "card": "DT",
+        "probability": 0.1568849028317294
+      },
+      {
+        "card": "DK",
+        "probability": 0.11700049351898978
+      }
+    ],
+    "behavior": [
+      "declines_available_current_trick",
+      "fourth_hand"
+    ],
+    "single_move_interventions": [
+      {
+        "room": 0,
+        "ply": 15,
+        "role": "defender",
+        "original_card": "D7",
+        "alternative": "DT",
+        "source": "dds",
+        "behavior": [
+          "declines_available_current_trick",
+          "fourth_hand"
+        ],
+        "dds_original_regret": {
+          "card": "D7",
+          "future_team_tricks": 0,
+          "trick_regret": 1,
+          "team_score_regret": 1560,
+          "dds_declarer_total": 13,
+          "crosses_contract_threshold": true
+        },
+        "original_declarer_tricks": 13,
+        "patched_declarer_tricks": 12,
+        "model_team_score_gain": 1560,
+        "paired_imps_before": -17,
+        "paired_imps_after": -2,
+        "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+      }
+    ],
+    "scope": "selected regression from tracking boards; actual-deal DDS labels are not public-information optimality certificates; training on these consumes rating-board independence"
+  },
+  {
+    "case_id": "real-34-room0-ply19",
+    "board": {
+      "id": "256e6ee50e53100e54a9c619b232a58b2d1c77fd96514164fdeb724ae521262c",
+      "owners": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        3,
+        1,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        1,
+        3,
+        3,
+        3,
+        3,
+        2,
+        0,
+        3,
+        3,
+        1,
+        2,
+        2,
+        2,
+        1,
+        0,
+        3,
+        1,
+        3,
+        1,
+        0,
+        3,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "auction": [
+        0,
+        6,
+        0,
+        18,
+        0,
+        19,
+        0,
+        20,
+        0,
+        22,
+        0,
+        25,
+        0,
+        27,
+        0,
+        28,
+        0,
+        36,
+        0,
+        0,
+        0
+      ],
+      "dealer": "N",
+      "vulnerable": [
+        false,
+        false
+      ],
+      "system_id": 1
+    },
+    "prefix": [
+      "S8",
+      "SJ",
+      "S6",
+      "S2",
+      "D5",
+      "D3",
+      "DA",
+      "D2",
+      "H2",
+      "H3",
+      "H8",
+      "H6",
+      "D8",
+      "D4",
+      "C5",
+      "D7",
+      "H9",
+      "H4",
+      "H7"
+    ],
+    "model_card": "H5",
+    "rule_card": "HT",
+    "actual_deal_dds_best": [
+      "HT"
+    ],
+    "model_top3": [
+      {
+        "card": "H5",
+        "probability": 0.651922881603241
+      },
+      {
+        "card": "HT",
+        "probability": 0.34807711839675903
+      }
+    ],
+    "behavior": [
+      "declines_available_current_trick",
+      "fourth_hand"
+    ],
+    "single_move_interventions": [
+      {
+        "room": 0,
+        "ply": 19,
+        "role": "defender",
+        "original_card": "H5",
+        "alternative": "HT",
+        "source": "dds",
+        "behavior": [
+          "declines_available_current_trick",
+          "fourth_hand"
+        ],
+        "dds_original_regret": {
+          "card": "H5",
+          "future_team_tricks": 0,
+          "trick_regret": 2,
+          "team_score_regret": 1610,
+          "dds_declarer_total": 13,
+          "crosses_contract_threshold": true
+        },
+        "original_declarer_tricks": 13,
+        "patched_declarer_tricks": 12,
+        "model_team_score_gain": 1560,
+        "paired_imps_before": -17,
+        "paired_imps_after": -2,
+        "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+      }
+    ],
+    "scope": "selected regression from tracking boards; actual-deal DDS labels are not public-information optimality certificates; training on these consumes rating-board independence"
+  },
+  {
+    "case_id": "real-41-room0-ply7",
+    "board": {
+      "id": "85219481991524ed521c7a8b02da12d602c1fe2f40f45e0631e2aa0a74978a40",
+      "owners": [
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        2,
+        3,
+        3,
+        2,
+        1,
+        1,
+        1,
+        3,
+        3,
+        2,
+        1,
+        0,
+        1,
+        2,
+        2,
+        0,
+        0,
+        2,
+        3,
+        2,
+        0,
+        3,
+        0,
+        2,
+        3,
+        0,
+        3,
+        2,
+        2,
+        3,
+        0,
+        3,
+        1,
+        2,
+        1,
+        3,
+        0,
+        3,
+        1,
+        2,
+        3
+      ],
+      "auction": [
+        0,
+        0,
+        10,
+        12,
+        0,
+        13,
+        0,
+        14,
+        0,
+        17,
+        0,
+        0,
+        0
+      ],
+      "dealer": "N",
+      "vulnerable": [
+        false,
+        false
+      ],
+      "system_id": 1
+    },
+    "prefix": [
+      "CJ",
+      "C4",
+      "CK",
+      "CA",
+      "C5",
+      "C2",
+      "C6"
+    ],
+    "model_card": "C3",
+    "rule_card": "C7",
+    "actual_deal_dds_best": [
+      "C7",
+      "C8",
+      "C9"
+    ],
+    "model_top3": [
+      {
+        "card": "C3",
+        "probability": 0.5179198520892617
+      },
+      {
+        "card": "C7",
+        "probability": 0.442487856236316
+      },
+      {
+        "card": "C8",
+        "probability": 0.03736534010707527
+      }
+    ],
+    "behavior": [
+      "declines_available_current_trick",
+      "fourth_hand"
+    ],
+    "single_move_interventions": [
+      {
+        "room": 0,
+        "ply": 7,
+        "role": "defender",
+        "original_card": "C3",
+        "alternative": "C7",
+        "source": "dds",
+        "behavior": [
+          "declines_available_current_trick",
+          "fourth_hand"
+        ],
+        "dds_original_regret": {
+          "card": "C3",
+          "future_team_tricks": 2,
+          "trick_regret": 1,
+          "team_score_regret": 30,
+          "dds_declarer_total": 11,
+          "crosses_contract_threshold": false
+        },
+        "original_declarer_tricks": 10,
+        "patched_declarer_tricks": 8,
+        "model_team_score_gain": 480,
+        "paired_imps_before": -12,
+        "paired_imps_after": -4,
+        "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+      }
+    ],
+    "scope": "selected regression from tracking boards; actual-deal DDS labels are not public-information optimality certificates; training on these consumes rating-board independence"
+  },
+  {
+    "case_id": "real-37-room1-ply23",
+    "board": {
+      "id": "98b550bd3f7306eca542f0b969832957f8e584e14d67fa49f8256d9d3222ee22",
+      "owners": [
+        0,
+        2,
+        3,
+        0,
+        0,
+        0,
+        2,
+        3,
+        2,
+        3,
+        3,
+        1,
+        2,
+        1,
+        2,
+        3,
+        1,
+        0,
+        1,
+        3,
+        3,
+        2,
+        2,
+        1,
+        3,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        3,
+        0,
+        2,
+        1,
+        3,
+        0,
+        3,
+        3,
+        1
+      ],
+      "auction": [
+        0,
+        0,
+        0,
+        6,
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      "dealer": "N",
+      "vulnerable": [
+        false,
+        false
+      ],
+      "system_id": 1
+    },
+    "prefix": [
+      "C4",
+      "C7",
+      "CK",
+      "C6",
+      "D3",
+      "DQ",
+      "DK",
+      "DA",
+      "D4",
+      "D6",
+      "D5",
+      "D2",
+      "C2",
+      "C9",
+      "CJ",
+      "C8",
+      "H3",
+      "H2",
+      "H8",
+      "H6",
+      "S2",
+      "S4",
+      "S9"
+    ],
+    "model_card": "S3",
+    "rule_card": "SQ",
+    "actual_deal_dds_best": [
+      "SQ",
+      "SK"
+    ],
+    "model_top3": [
+      {
+        "card": "S3",
+        "probability": 0.6974109203394974
+      },
+      {
+        "card": "SQ",
+        "probability": 0.2642089049753873
+      },
+      {
+        "card": "S5",
+        "probability": 0.02118175972456456
+      }
+    ],
+    "behavior": [
+      "declines_available_current_trick",
+      "fourth_hand"
+    ],
+    "single_move_interventions": [
+      {
+        "room": 1,
+        "ply": 23,
+        "role": "declarer",
+        "original_card": "S3",
+        "alternative": "SQ",
+        "source": "dds",
+        "behavior": [
+          "declines_available_current_trick",
+          "fourth_hand"
+        ],
+        "dds_original_regret": {
+          "card": "S3",
+          "future_team_tricks": 5,
+          "trick_regret": 3,
+          "team_score_regret": 200,
+          "dds_declarer_total": 6,
+          "crosses_contract_threshold": true
+        },
+        "original_declarer_tricks": 5,
+        "patched_declarer_tricks": 8,
+        "model_team_score_gain": 220,
+        "paired_imps_before": -5,
+        "paired_imps_after": 1,
+        "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+      }
+    ],
+    "scope": "selected regression from tracking boards; actual-deal DDS labels are not public-information optimality certificates; training on these consumes rating-board independence"
+  },
+  {
+    "case_id": "real-51-room0-ply35",
+    "board": {
+      "id": "4cfcff895565d88551ac69df8c0bc1ed820c1e3c9a30e59761799e4b8316d27f",
+      "owners": [
+        3,
+        2,
+        3,
+        1,
+        1,
+        3,
+        1,
+        0,
+        0,
+        3,
+        1,
+        1,
+        0,
+        0,
+        3,
+        3,
+        1,
+        0,
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        1,
+        2,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        1,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "auction": [
+        4,
+        0,
+        5,
+        1,
+        6,
+        0,
+        0,
+        0
+      ],
+      "dealer": "N",
+      "vulnerable": [
+        false,
+        false
+      ],
+      "system_id": 1
+    },
+    "prefix": [
+      "C3",
+      "C7",
+      "CQ",
+      "C4",
+      "C2",
+      "C5",
+      "C6",
+      "CJ",
+      "S6",
+      "ST",
+      "SK",
+      "S2",
+      "HQ",
+      "HK",
+      "H6",
+      "H2",
+      "C8",
+      "S7",
+      "CK",
+      "HA",
+      "HJ",
+      "H5",
+      "D5",
+      "H3",
+      "HT",
+      "S5",
+      "D7",
+      "H4",
+      "D3",
+      "D8",
+      "D9",
+      "D2",
+      "C9",
+      "DT",
+      "CA"
+    ],
+    "model_card": "D6",
+    "rule_card": "S3",
+    "actual_deal_dds_best": [
+      "S3",
+      "S8",
+      "SJ"
+    ],
+    "model_top3": [
+      {
+        "card": "D6",
+        "probability": 0.5544084568698172
+      },
+      {
+        "card": "S3",
+        "probability": 0.22294613267044222
+      },
+      {
+        "card": "DQ",
+        "probability": 0.13823006200744128
+      }
+    ],
+    "behavior": [
+      "declines_available_current_trick",
+      "fourth_hand"
+    ],
+    "single_move_interventions": [
+      {
+        "room": 0,
+        "ply": 35,
+        "role": "declarer",
+        "original_card": "D6",
+        "alternative": "S3",
+        "source": "dds",
+        "behavior": [
+          "declines_available_current_trick",
+          "fourth_hand"
+        ],
+        "dds_original_regret": {
+          "card": "D6",
+          "future_team_tricks": 2,
+          "trick_regret": 1,
+          "team_score_regret": 130,
+          "dds_declarer_total": 6,
+          "crosses_contract_threshold": true
+        },
+        "original_declarer_tricks": 5,
+        "patched_declarer_tricks": 7,
+        "model_team_score_gain": 180,
+        "paired_imps_before": -5,
+        "paired_imps_after": 0,
+        "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+      }
+    ],
+    "scope": "selected regression from tracking boards; actual-deal DDS labels are not public-information optimality certificates; training on these consumes rating-board independence"
+  },
+  {
+    "case_id": "real-51-room0-ply12",
+    "board": {
+      "id": "4cfcff895565d88551ac69df8c0bc1ed820c1e3c9a30e59761799e4b8316d27f",
+      "owners": [
+        3,
+        2,
+        3,
+        1,
+        1,
+        3,
+        1,
+        0,
+        0,
+        3,
+        1,
+        1,
+        0,
+        0,
+        3,
+        3,
+        1,
+        0,
+        2,
+        2,
+        2,
+        0,
+        1,
+        2,
+        1,
+        0,
+        2,
+        0,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        3,
+        2,
+        1,
+        2,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        1,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "auction": [
+        4,
+        0,
+        5,
+        1,
+        6,
+        0,
+        0,
+        0
+      ],
+      "dealer": "N",
+      "vulnerable": [
+        false,
+        false
+      ],
+      "system_id": 1
+    },
+    "prefix": [
+      "C3",
+      "C7",
+      "CQ",
+      "C4",
+      "C2",
+      "C5",
+      "C6",
+      "CJ",
+      "S6",
+      "ST",
+      "SK",
+      "S2"
+    ],
+    "model_card": "HQ",
+    "rule_card": "D5",
+    "actual_deal_dds_best": [
+      "D5",
+      "D6",
+      "D7",
+      "D8",
+      "DQ"
+    ],
+    "model_top3": [
+      {
+        "card": "HQ",
+        "probability": 0.30631220198091025
+      },
+      {
+        "card": "HA",
+        "probability": 0.19622012881459608
+      },
+      {
+        "card": "D5",
+        "probability": 0.12384346814899022
+      }
+    ],
+    "behavior": [
+      "lead"
+    ],
+    "single_move_interventions": [
+      {
+        "room": 0,
+        "ply": 12,
+        "role": "declarer",
+        "original_card": "HQ",
+        "alternative": "D5",
+        "source": "dds",
+        "behavior": [
+          "lead"
+        ],
+        "dds_original_regret": {
+          "card": "HQ",
+          "future_team_tricks": 4,
+          "trick_regret": 1,
+          "team_score_regret": 130,
+          "dds_declarer_total": 6,
+          "crosses_contract_threshold": true
+        },
+        "original_declarer_tricks": 5,
+        "patched_declarer_tricks": 7,
+        "model_team_score_gain": 180,
+        "paired_imps_before": -5,
+        "paired_imps_after": 0,
+        "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+      }
+    ],
+    "scope": "selected regression from tracking boards; actual-deal DDS labels are not public-information optimality certificates; training on these consumes rating-board independence"
+  }
+]

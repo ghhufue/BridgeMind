@@ -1,0 +1,81 @@
+{
+  "state": "completed",
+  "phase": "saved",
+  "process_id": 27056,
+  "started_at_utc": "2026-10-26T06:00:45.050650+00:00",
+  "expected_finish_utc": "2026-10-26T06:02:15.050659+00:00",
+  "time_budget_seconds": 90.0,
+  "run": "D:\\code\\BridgeMind\\runs\\play-sl-v2-smoke-20261026",
+  "device": "cuda",
+  "step": 100,
+  "protocol_sha256": "839a34a291268e8066f0b0521301754eddef212542ba2ea451eb32de74f0c5b8",
+  "training_mix": {
+    "real": 48,
+    "curriculum": 16
+  },
+  "elapsed_seconds": 15.69046359999993,
+  "updated_at_utc": "2026-10-26T06:00:51.656110+00:00",
+  "train": {
+    "loss": 0.9430963397026062,
+    "real_nll": 0.8751150965690613,
+    "curriculum_nll": 0.5772349834442139,
+    "belief_loss": 0.7084757685661316,
+    "value_loss": 0.007560707163065672,
+    "real_accuracy": 0.6875,
+    "curriculum_accuracy": 0.75,
+    "gradient_norm": 2.8297336101531982
+  },
+  "finished_at_utc": "2026-10-26T06:01:00.741110+00:00",
+  "stop_reason": "step_limit",
+  "best_step": 100,
+  "best_curriculum_step": 100,
+  "best_model_sha256": "7aa3db6acb418d9ae2e858fdad9a31bbb708a1895955ff8e0cb40c59064cbf1b",
+  "last_model_sha256": "3b7b9182bf92b4467256c6b34c39153e9c6b5298413e933020c9855a444fe7d5",
+  "validation": {
+    "real_canonical": {
+      "nll": 0.7227944247424603,
+      "accuracy": 0.708984375,
+      "states": 4096,
+      "by_family": {}
+    },
+    "real_augmented": {
+      "nll": 0.7829053290188313,
+      "accuracy": 0.68115234375,
+      "states": 4096,
+      "by_family": {}
+    },
+    "curriculum": {
+      "nll": 0.3945506059310653,
+      "accuracy": 0.845407196969697,
+      "states": 4224,
+      "by_family": {
+        "win_now_keep_lead": 1.0,
+        "fourth_hand_take_trick": 1.0,
+        "preserve_partner_entry": 1.0,
+        "cheapest_winning_honor": 0.8125,
+        "cash_master_before_loser": 0.7430555555555556,
+        "discard_loser_keep_master": 0.9392361111111112,
+        "small_ruff_preserve_master": 0.6006944444444444,
+        "overruff_not_undertrump": 0.7083333333333334
+      },
+      "macro_accuracy": 0.8504774305555556
+    },
+    "duplicate_vs_initial": {
+      "boards": 128,
+      "mean_imps": 0.171875,
+      "bootstrap_95_ci": [
+        -0.75,
+        1.140625
+      ],
+      "standard_error": 0.4809497574261859,
+      "wins": 46,
+      "ties": 32,
+      "losses": 50,
+      "seed": 20261026,
+      "action_selection": "greedy_for_neural",
+      "evaluation_model": "played_out",
+      "contract_source": "fixed_recorded_auction"
+    },
+    "scope": "validation for selection; not independent final strength evidence"
+  }
+}

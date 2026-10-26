@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "id": "sl-v2-20261026",
+  "suite": "cardplay-foundations-v1",
+  "created_at_utc": "2026-10-26T08:37:12.137741+00:00",
+  "identity": {
+    "suite_sha256": "4cefb9688c3f8a6a3925eb57c4cc63e48ea2f82fb547cec13252c0ad06fd1c49",
+    "implementation_sha256": "dbda5d60af6edfae60959751b35c0dad811a0ad9cde874a42936321a3b00bd8d",
+    "policy": "neural",
+    "model_sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+    "device": "cuda",
+    "batch_size": 64,
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4"
+  },
+  "predictions_sha256": "53333db282458925f8bbde851654fb4f230536fc44fe67f0d52e5b208ce67c55",
+  "summary": {
+    "canonical_basic_percent": 100.0,
+    "all_suits_basic_percent": 100.0,
+    "worst_suit_basic_percent": 100.0,
+    "best_suit_basic_percent": 100.0,
+    "suit_accuracy_gap_points": 0.0,
+    "suit_distribution_equivariance_percent": 99.92435668097107,
+    "exact_suit_choice_agreement_percent": 100.0,
+    "all_suits_pass_position_percent": 100.0,
+    "seat_rotation_choice_consistency_percent": 100.0,
+    "legal_choice_percent": 100.0,
+    "evaluated_variants": 8064,
+    "tactical_base_positions": 66,
+    "families": {
+      "cash_master_before_loser": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": false
+      },
+      "cheapest_winning_honor": {
+        "base_positions": 6,
+        "canonical_correct": 6,
+        "canonical_percent": 100.0,
+        "transformed_correct": 576,
+        "transformed_total": 576,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": false
+      },
+      "discard_loser_keep_master": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": false
+      },
+      "equivalent_winning_honors": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": true
+      },
+      "forced_follow_suit": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": true
+      },
+      "fourth_hand_take_trick": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": false
+      },
+      "overruff_not_undertrump": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": false
+      },
+      "preserve_partner_entry": {
+        "base_positions": 6,
+        "canonical_correct": 6,
+        "canonical_percent": 100.0,
+        "transformed_correct": 576,
+        "transformed_total": 576,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": false
+      },
+      "small_ruff_preserve_master": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": false
+      },
+      "win_now_keep_lead": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": false
+      }
+    },
+    "by_role_basic_percent": {
+      "declarer": 100.0,
+      "dummy": 100.0,
+      "defender": 100.0
+    },
+    "by_permutation_basic_percent": {
+      "CDHS": 100.0,
+      "CDSH": 100.0,
+      "CHDS": 100.0,
+      "CHSD": 100.0,
+      "CSDH": 100.0,
+      "CSHD": 100.0,
+      "DCHS": 100.0,
+      "DCSH": 100.0,
+      "DHCS": 100.0,
+      "DHSC": 100.0,
+      "DSCH": 100.0,
+      "DSHC": 100.0,
+      "HCDS": 100.0,
+      "HCSD": 100.0,
+      "HDCS": 100.0,
+      "HDSC": 100.0,
+      "HSCD": 100.0,
+      "HSDC": 100.0,
+      "SCDH": 100.0,
+      "SCHD": 100.0,
+      "SDCH": 100.0,
+      "SDHC": 100.0,
+      "SHCD": 100.0,
+      "SHDC": 100.0
+    },
+    "interpretation": "Correctness and invariance are separate; consistent wrong answers do not imply basic competence. Equivalent accepted moves are never graded wrong.",
+    "statistical_scope": "Correlated template/rank/role/permutation variants; no IID confidence interval or human-level rating"
+  },
+  "representative_failures": [],
+  "limits": [
+    "8 tactical templates plus follow-suit and multiple-answer controls; not all bridge knowledge",
+    "2-4 trick endings embedded in legal complete games; synthetic development variants",
+    "No common optimum or no public continuation witness => ungraded",
+    "Template, role, seed and permutation variants are correlated, not independent test deals",
+    "Basic skill percentages are separate from random=0/DDS=100 match ratings"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-25T20:42:30.270382+00:00",
+  "selected_indices": [
+    34,
+    41,
+    37,
+    51,
+    1,
+    79
+  ],
+  "selection_reasons": [
+    "largest recorded loss",
+    "large notrump loss",
+    "typical 1NT loss",
+    "typical suit-contract loss",
+    "tie control",
+    "winning control"
+  ],
+  "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+  "diagnostic_implementation_sha256": "d45f3eb5bdadadf358ef6358eb6063bc02b05b289df6ec4f951998ae20372733",
+  "rating_protocol_sha256": "cc129d87676d06b8e5b19a72e9135ad637690d79c3a64652c229986a18898e9e",
+  "solver": {
+    "solver_version": "3.1.0",
+    "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951"
+  },
+  "device": "cuda",
+  "seed": 20261026,
+  "selection_scope": "four selected losses, one tie and one win; exploratory, not representative sampling"
+}

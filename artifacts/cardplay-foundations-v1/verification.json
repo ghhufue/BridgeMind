@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-26",
+  "suite_sha256": "4cefb9688c3f8a6a3925eb57c4cc63e48ea2f82fb547cec13252c0ad06fd1c49",
+  "implementation_sha256": "dbda5d60af6edfae60959751b35c0dad811a0ad9cde874a42936321a3b00bd8d",
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest -q",
+    "passed": 257,
+    "new_foundation_tests": 47,
+    "seconds": 22.65
+  },
+  "candidate_positions": 90,
+  "certified_tactical_positions": 66,
+  "control_positions": 18,
+  "ungraded_positions": 6,
+  "variants_per_model": 8064,
+  "suit_permutations": 24,
+  "seat_rotations": 4,
+  "certified_move_witnesses": 84,
+  "feasible_worlds_across_base_candidates": 693,
+  "every_accepted_action_has_public_witness": true,
+  "policy_request_ids_opaque": true,
+  "independent_prediction_recomputations": [
+    {
+      "id": "ppo-pilot-last",
+      "prediction_records": 8064,
+      "macro_recomputed": 71.6724537037037,
+      "distribution_equivariance_recomputed": 88.71445022278085
+    },
+    {
+      "id": "public-master",
+      "prediction_records": 8064,
+      "macro_recomputed": 100.0,
+      "distribution_equivariance_recomputed": 100.0
+    },
+    {
+      "id": "random",
+      "prediction_records": 8064,
+      "macro_recomputed": 45.79716435185185,
+      "distribution_equivariance_recomputed": 100.0
+    },
+    {
+      "id": "rule-basic",
+      "prediction_records": 8064,
+      "macro_recomputed": 87.5,
+      "distribution_equivariance_recomputed": 100.0
+    },
+    {
+      "id": "sl-long-42",
+      "prediction_records": 8064,
+      "macro_recomputed": 57.92824074074075,
+      "distribution_equivariance_recomputed": 82.90420003964256
+    },
+    {
+      "id": "sl-pilot",
+      "prediction_records": 8064,
+      "macro_recomputed": 71.875,
+      "distribution_equivariance_recomputed": 88.19719486442982
+    }
+  ],
+  "representative_failure_full_game_replays_checked": 4,
+  "offline_install_and_assessment_verified": true,
+  "original_rating_implementation_and_long_sl_weights_unchanged": true,
+  "dedicated_solver_port": 18766,
+  "dedicated_solver_cleaned_up": true,
+  "artifact_sha256": {
+    "manifest.json": "c5bbbfb75581110bacdbb0fad03f126c6a16a4f765089f4a5df426e10a11534a",
+    "report.md": "5545d0d4f490bded340c90322966b701e54da3d44b104a0e349831897e18d6f0",
+    "reports\\ppo-pilot-last.json": "da856ea43c1e0dc9e20bf8043f09e23bfa8514d86f2d71ccda87b31607e8a9a4",
+    "reports\\public-master.json": "b2f382e55512f58adf23e1e3dc2029b3e1a2182b7d23a5c6caa280813080a7f0",
+    "reports\\random.json": "5e6688d435f0470c340abdbfcf10fa13b97455cc0daf53bb71fe56c6e4fd8c96",
+    "reports\\rule-basic.json": "7df86848e5ccaadd778748bfe61bb1ef255fab6c7a21f48f3d9cb84e4ad4efd9",
+    "reports\\sl-long-42.json": "f39402041e9c24dcac1fa511e835fc163a96e992be62acf5450b9160c5d353c9",
+    "reports\\sl-pilot.json": "c9eaf87180fbb629abfde2c6f3f8e38e82462f2b0a99596f254e469af8bf1bed",
+    "suite.json": "7989891b6590e78f8e0b2ad8066fc42b2483277e307aa13621de0aea5cde60ff"
+  },
+  "limits": [
+    "Synthetic development templates, not IID 8064 real deals",
+    "Certified coverage is conservative and limited to available public continuation recipes",
+    "Skill and symmetry percentages do not replace paired IMP ratings",
+    "Training on these cases consumes their evaluation independence"
+  ]
+}

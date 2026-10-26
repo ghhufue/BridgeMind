@@ -1,0 +1,53 @@
+{
+  "snapshot_at_utc": "2026-10-26T06:02:47.596356+00:00",
+  "state_at_snapshot": "running",
+  "scope": "launch evidence only; read run/status.json for current state",
+  "run": "D:\\code\\BridgeMind\\runs\\play-sl-v2-20261026-2h",
+  "status_at_snapshot": {
+    "state": "running",
+    "phase": "training",
+    "process_id": 29224,
+    "started_at_utc": "2026-10-26T06:01:23.013007+00:00",
+    "expected_finish_utc": "2026-10-26T08:01:23.013015+00:00",
+    "time_budget_seconds": 7200.0,
+    "run": "D:\\code\\BridgeMind\\runs\\play-sl-v2-20261026-2h",
+    "device": "cuda",
+    "step": 2335,
+    "protocol_sha256": "839a34a291268e8066f0b0521301754eddef212542ba2ea451eb32de74f0c5b8",
+    "training_mix": {
+      "real": 48,
+      "curriculum": 16
+    },
+    "elapsed_seconds": 66.5381526000001,
+    "updated_at_utc": "2026-10-26T06:02:29.551156+00:00",
+    "train": {
+      "loss": 0.5536980628967285,
+      "real_nll": 0.5337545871734619,
+      "curriculum_nll": 0.04368164390325546,
+      "belief_loss": 0.7117882370948792,
+      "value_loss": 0.0010406700894236565,
+      "real_accuracy": 0.8125,
+      "curriculum_accuracy": 1.0,
+      "gradient_norm": 1.990376353263855
+    }
+  },
+  "protocol_sha256": "839a34a291268e8066f0b0521301754eddef212542ba2ea451eb32de74f0c5b8",
+  "initial_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+  "tests": {
+    "passed": 270,
+    "duration_seconds": 25.51,
+    "log": ".build/sl-v2-tests.log"
+  },
+  "cuda_smoke": {
+    "run": "D:\\code\\BridgeMind\\runs\\play-sl-v2-smoke-20261026",
+    "steps": 100,
+    "changed_parameter_tensors": 68,
+    "source_checkpoint": "original frozen long SL; smoke weights not used to initialize formal run"
+  },
+  "implementation_files": {
+    "src\\bridgemind\\sl_v2\\data.py": "5790a6906926df917e2ce767c25c7f6a77f75104e1a6fc1df84be9493ba99b30",
+    "src\\bridgemind\\sl_v2\\training.py": "2c98ca4b7abc052d29bd9484edd32ab187e2bb47c6deb82e8fc3763095566763",
+    "src\\bridgemind\\sl_v2\\__init__.py": "75799d28a5d67c0deb21bd4016e1e1fa2f5140ce835fed05a533ef0f56d0a8a1",
+    "src\\bridgemind\\sl_v2\\__main__.py": "72b4fb6b638798d52816e82e2fdaeda99a1b860c6b70cb69657f1534035f5a4d"
+  }
+}

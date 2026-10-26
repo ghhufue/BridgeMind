@@ -1,0 +1,48 @@
+{
+  "protocol_sha256": "3cc30117c9b38f492907fdf71692195df049509674c6d49e24264245afe6f56b",
+  "data_audit": {
+    "boards": 2048,
+    "states": 106496,
+    "fingerprint": "8bc04fb6fdd3acf9326da8143281cdd0cd0ab224c6f4f2b64b59659c3c2c6bb5",
+    "board_ids_sha256": "bd686a520cba9ab735999991a81eaccb370bb7f7da7a28fc72c68d8c8cc31a7e",
+    "prior_id_intersection": 0,
+    "prior_orbit_intersection": 0,
+    "exclusion_audit_sha256": "23b538894d7e8d80a4459b84d9a5ff4423f834403ee39e42a540b042c9f41c10"
+  },
+  "results": {
+    "sl-long-42": {
+      "mean_imps": 3.25390625,
+      "boards": 2048,
+      "bootstrap_95_ci": [
+        3.01805419921875,
+        3.49755859375
+      ],
+      "primary_97_5_ci": [
+        2.98291015625,
+        3.52880859375
+      ],
+      "wins": 1285,
+      "ties": 469,
+      "losses": 294
+    },
+    "rule-basic": {
+      "mean_imps": 3.181640625,
+      "boards": 2048,
+      "bootstrap_95_ci": [
+        2.931640625,
+        3.4384765625
+      ],
+      "primary_97_5_ci": [
+        2.89306640625,
+        3.4736328125
+      ],
+      "wins": 1300,
+      "ties": 388,
+      "losses": 360
+    }
+  },
+  "both_primary_lower_bounds_positive": true,
+  "scope": "One training seed; WBridge5 SAYC, north dealer, neither vulnerable; not human rank or bidding strength",
+  "seconds": 140.86843500000032,
+  "finished_at_utc": "2026-10-26T08:41:55.280786+00:00"
+}

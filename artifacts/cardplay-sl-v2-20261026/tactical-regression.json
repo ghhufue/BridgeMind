@@ -1,0 +1,514 @@
+{
+  "identity": {
+    "model_sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+    "suite_sha256": "4b08a72af7e31b6f0232d0d0b1a190371ae5e16711d237f55307934913719a52",
+    "evaluator_sha256": "d45f3eb5bdadadf358ef6358eb6063bc02b05b289df6ec4f951998ae20372733",
+    "device": "cuda"
+  },
+  "created_at_utc": "2026-10-26T08:39:57.487491+00:00",
+  "solver": {
+    "solver_version": "3.1.0",
+    "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951"
+  },
+  "families": {
+    "win_now_keep_lead": {
+      "correct": 8,
+      "variants": 8
+    },
+    "fourth_hand_take_trick": {
+      "correct": 8,
+      "variants": 8
+    },
+    "preserve_partner_entry": {
+      "correct": 8,
+      "variants": 8
+    },
+    "cheapest_winning_honor": {
+      "correct": 8,
+      "variants": 8
+    }
+  },
+  "cases": [
+    {
+      "case_id": "win_now_keep_lead-s0-h1",
+      "family": "win_now_keep_lead",
+      "model_card": "HA",
+      "rule_card": "HA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 3,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 2,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "win_now_keep_lead-s0-h2",
+      "family": "win_now_keep_lead",
+      "model_card": "HA",
+      "rule_card": "HA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 3,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 2,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "win_now_keep_lead-s1-h1",
+      "family": "win_now_keep_lead",
+      "model_card": "SA",
+      "rule_card": "SA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 3,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 2,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "win_now_keep_lead-s1-h2",
+      "family": "win_now_keep_lead",
+      "model_card": "SA",
+      "rule_card": "SA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 3,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 2,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "win_now_keep_lead-s2-h1",
+      "family": "win_now_keep_lead",
+      "model_card": "CA",
+      "rule_card": "CA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 3,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 2,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "win_now_keep_lead-s2-h2",
+      "family": "win_now_keep_lead",
+      "model_card": "CA",
+      "rule_card": "CA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 3,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 2,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "win_now_keep_lead-s3-h1",
+      "family": "win_now_keep_lead",
+      "model_card": "DA",
+      "rule_card": "DA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 3,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 2,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "win_now_keep_lead-s3-h2",
+      "family": "win_now_keep_lead",
+      "model_card": "DA",
+      "rule_card": "DA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 3,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 2,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "fourth_hand_take_trick-s0-h1",
+      "family": "fourth_hand_take_trick",
+      "model_card": "HA",
+      "rule_card": "HA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 6,
+        "minimum_good_minus_bad_dd_tricks": 2,
+        "maximum_good_minus_bad_dd_tricks": 3,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "fourth_hand_take_trick-s0-h2",
+      "family": "fourth_hand_take_trick",
+      "model_card": "HA",
+      "rule_card": "HA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 6,
+        "minimum_good_minus_bad_dd_tricks": 2,
+        "maximum_good_minus_bad_dd_tricks": 3,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "fourth_hand_take_trick-s1-h1",
+      "family": "fourth_hand_take_trick",
+      "model_card": "SA",
+      "rule_card": "SA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 6,
+        "minimum_good_minus_bad_dd_tricks": 2,
+        "maximum_good_minus_bad_dd_tricks": 3,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "fourth_hand_take_trick-s1-h2",
+      "family": "fourth_hand_take_trick",
+      "model_card": "SA",
+      "rule_card": "SA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 6,
+        "minimum_good_minus_bad_dd_tricks": 2,
+        "maximum_good_minus_bad_dd_tricks": 3,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "fourth_hand_take_trick-s2-h1",
+      "family": "fourth_hand_take_trick",
+      "model_card": "CA",
+      "rule_card": "CA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 6,
+        "minimum_good_minus_bad_dd_tricks": 2,
+        "maximum_good_minus_bad_dd_tricks": 3,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "fourth_hand_take_trick-s2-h2",
+      "family": "fourth_hand_take_trick",
+      "model_card": "CA",
+      "rule_card": "CA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 6,
+        "minimum_good_minus_bad_dd_tricks": 2,
+        "maximum_good_minus_bad_dd_tricks": 3,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "fourth_hand_take_trick-s3-h1",
+      "family": "fourth_hand_take_trick",
+      "model_card": "DA",
+      "rule_card": "DA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 6,
+        "minimum_good_minus_bad_dd_tricks": 2,
+        "maximum_good_minus_bad_dd_tricks": 3,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "fourth_hand_take_trick-s3-h2",
+      "family": "fourth_hand_take_trick",
+      "model_card": "DA",
+      "rule_card": "DA",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 6,
+        "minimum_good_minus_bad_dd_tricks": 2,
+        "maximum_good_minus_bad_dd_tricks": 3,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "preserve_partner_entry-s0-h1",
+      "family": "preserve_partner_entry",
+      "model_card": "H2",
+      "rule_card": "H2",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 35,
+        "minimum_good_minus_bad_dd_tricks": 0,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": false,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "preserve_partner_entry-s0-h2",
+      "family": "preserve_partner_entry",
+      "model_card": "H2",
+      "rule_card": "H2",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 35,
+        "minimum_good_minus_bad_dd_tricks": 0,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": false,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "preserve_partner_entry-s1-h1",
+      "family": "preserve_partner_entry",
+      "model_card": "S2",
+      "rule_card": "S2",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 35,
+        "minimum_good_minus_bad_dd_tricks": 0,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": false,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "preserve_partner_entry-s1-h2",
+      "family": "preserve_partner_entry",
+      "model_card": "S2",
+      "rule_card": "S2",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 35,
+        "minimum_good_minus_bad_dd_tricks": 0,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": false,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "preserve_partner_entry-s2-h1",
+      "family": "preserve_partner_entry",
+      "model_card": "C2",
+      "rule_card": "C2",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 35,
+        "minimum_good_minus_bad_dd_tricks": 0,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": false,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "preserve_partner_entry-s2-h2",
+      "family": "preserve_partner_entry",
+      "model_card": "C2",
+      "rule_card": "C2",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 35,
+        "minimum_good_minus_bad_dd_tricks": 0,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": false,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "preserve_partner_entry-s3-h1",
+      "family": "preserve_partner_entry",
+      "model_card": "D2",
+      "rule_card": "D2",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 35,
+        "minimum_good_minus_bad_dd_tricks": 0,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": false,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "preserve_partner_entry-s3-h2",
+      "family": "preserve_partner_entry",
+      "model_card": "D2",
+      "rule_card": "D2",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 35,
+        "minimum_good_minus_bad_dd_tricks": 0,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": false,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "cheapest_winning_honor-s0-h1",
+      "family": "cheapest_winning_honor",
+      "model_card": "HQ",
+      "rule_card": "HQ",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 20,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "cheapest_winning_honor-s0-h2",
+      "family": "cheapest_winning_honor",
+      "model_card": "HQ",
+      "rule_card": "HQ",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 20,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "cheapest_winning_honor-s1-h1",
+      "family": "cheapest_winning_honor",
+      "model_card": "SQ",
+      "rule_card": "SQ",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 20,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "cheapest_winning_honor-s1-h2",
+      "family": "cheapest_winning_honor",
+      "model_card": "SQ",
+      "rule_card": "SQ",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 20,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "cheapest_winning_honor-s2-h1",
+      "family": "cheapest_winning_honor",
+      "model_card": "CQ",
+      "rule_card": "CQ",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 20,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "cheapest_winning_honor-s2-h2",
+      "family": "cheapest_winning_honor",
+      "model_card": "CQ",
+      "rule_card": "CQ",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 20,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "cheapest_winning_honor-s3-h1",
+      "family": "cheapest_winning_honor",
+      "model_card": "DQ",
+      "rule_card": "DQ",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 20,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    },
+    {
+      "case_id": "cheapest_winning_honor-s3-h2",
+      "family": "cheapest_winning_honor",
+      "model_card": "DQ",
+      "rule_card": "DQ",
+      "model_dds_regret": 0,
+      "hidden_world_audit": {
+        "worlds": 20,
+        "minimum_good_minus_bad_dd_tricks": 1,
+        "maximum_good_minus_bad_dd_tricks": 1,
+        "good_never_worse": true,
+        "good_strictly_better_in_all_worlds": true,
+        "scope": "full-information continuation in every public-constraint-compatible world; not an imperfect-information optimality proof"
+      }
+    }
+  ],
+  "scope": "diagnostic template variants; not a new strength rating or independent final test"
+}

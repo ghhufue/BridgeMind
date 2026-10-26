@@ -13,6 +13,10 @@
 | [cardplay-long-sl-evaluation.md](cardplay-long-sl-evaluation.md) | 20 分钟 SL、全新 2,048 副对战、条件种子确认和独立搜索对照 |
 | [cardplay-search-selection.md](cardplay-search-selection.md) | 空闲设备下的搜索/时延验证网格、冻结选型和新 1,024 副独立确认 |
 | [cardplay-rating.md](cardplay-rating.md) | 随机0/全知DDS100的出牌评分器、固定标尺、对手登记、自动对战和榜单 |
+| [cardplay-diagnostics.md](cardplay-diagnostics.md) | 长训SL六副双室复现、单步反事实分析、32个基础战术变体与新模型回归入口 |
+| [cardplay-foundations.md](cardplay-foundations.md) | 可见信息证书、8项基础战术、全部24花色/4座位变换、独立能力与一致性体检 |
+| [cardplay-sl-v2.md](cardplay-sl-v2.md) | 花色增强、基础课程与真实对局混合的两小时 SL v2、冻结协议、实时状态与恢复 |
+| [cardplay-sl-v2-evaluation.md](cardplay-sl-v2-evaluation.md) | SL v2的62.54牌力分、全新2,048副双室确认、基础体检及独立重算 |
 | [dds-interface-design.md](dds-interface-design.md) | DDS 独立服务的接口与调度设计 |
 | [dds-validation.md](dds-validation.md) | DDS 封装轮次的正确性、并发验证与小样本吞吐 |
 | [DDS 构建说明](../artifacts/dds/windows-x64/README.md) | Windows 原生库构建和产物来源 |

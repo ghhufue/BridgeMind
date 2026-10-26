@@ -1,0 +1,821 @@
+{
+  "boards": [
+    {
+      "index": 34,
+      "board_id": "256e6ee50e53100e54a9c619b232a58b2d1c77fd96514164fdeb724ae521262c",
+      "contract": {
+        "level": 7,
+        "strain": "S",
+        "declarer": "E",
+        "double_status": 0
+      },
+      "model_imps": -17,
+      "single_move_interventions": [
+        {
+          "room": 0,
+          "ply": 19,
+          "role": "defender",
+          "original_card": "H5",
+          "alternative": "HT",
+          "source": "dds",
+          "behavior": [
+            "declines_available_current_trick",
+            "fourth_hand"
+          ],
+          "dds_original_regret": {
+            "card": "H5",
+            "future_team_tricks": 0,
+            "trick_regret": 2,
+            "team_score_regret": 1610,
+            "dds_declarer_total": 13,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 13,
+          "patched_declarer_tricks": 12,
+          "model_team_score_gain": 1560,
+          "paired_imps_before": -17,
+          "paired_imps_after": -2,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 0,
+          "ply": 15,
+          "role": "defender",
+          "original_card": "D7",
+          "alternative": "DT",
+          "source": "dds",
+          "behavior": [
+            "declines_available_current_trick",
+            "fourth_hand"
+          ],
+          "dds_original_regret": {
+            "card": "D7",
+            "future_team_tricks": 0,
+            "trick_regret": 1,
+            "team_score_regret": 1560,
+            "dds_declarer_total": 13,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 13,
+          "patched_declarer_tricks": 12,
+          "model_team_score_gain": 1560,
+          "paired_imps_before": -17,
+          "paired_imps_after": -2,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 30,
+          "role": "declarer",
+          "original_card": "H9",
+          "alternative": "S7",
+          "source": "dds",
+          "behavior": [
+            "declines_available_current_trick"
+          ],
+          "dds_original_regret": {
+            "card": "H9",
+            "future_team_tricks": 5,
+            "trick_regret": 1,
+            "team_score_regret": 1560,
+            "dds_declarer_total": 12,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 11,
+          "patched_declarer_tricks": 11,
+          "model_team_score_gain": 0,
+          "paired_imps_before": -17,
+          "paired_imps_after": -17,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 35,
+          "role": "declarer",
+          "original_card": "H7",
+          "alternative": "S9",
+          "source": "dds",
+          "behavior": [
+            "declines_available_current_trick",
+            "fourth_hand"
+          ],
+          "dds_original_regret": {
+            "card": "H7",
+            "future_team_tricks": 4,
+            "trick_regret": 1,
+            "team_score_regret": 50,
+            "dds_declarer_total": 11,
+            "crosses_contract_threshold": false
+          },
+          "original_declarer_tricks": 11,
+          "patched_declarer_tricks": 11,
+          "model_team_score_gain": 0,
+          "paired_imps_before": -17,
+          "paired_imps_after": -17,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "board_id": "85219481991524ed521c7a8b02da12d602c1fe2f40f45e0631e2aa0a74978a40",
+      "contract": {
+        "level": 3,
+        "strain": "NT",
+        "declarer": "W",
+        "double_status": 0
+      },
+      "model_imps": -12,
+      "single_move_interventions": [
+        {
+          "room": 0,
+          "ply": 0,
+          "role": "defender",
+          "original_card": "CJ",
+          "alternative": "D2",
+          "source": "dds",
+          "behavior": [
+            "opening_lead"
+          ],
+          "dds_original_regret": {
+            "card": "CJ",
+            "future_team_tricks": 2,
+            "trick_regret": 1,
+            "team_score_regret": 30,
+            "dds_declarer_total": 11,
+            "crosses_contract_threshold": false
+          },
+          "original_declarer_tricks": 10,
+          "patched_declarer_tricks": 10,
+          "model_team_score_gain": 0,
+          "paired_imps_before": -12,
+          "paired_imps_after": -12,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 0,
+          "ply": 7,
+          "role": "defender",
+          "original_card": "C3",
+          "alternative": "C7",
+          "source": "dds",
+          "behavior": [
+            "declines_available_current_trick",
+            "fourth_hand"
+          ],
+          "dds_original_regret": {
+            "card": "C3",
+            "future_team_tricks": 2,
+            "trick_regret": 1,
+            "team_score_regret": 30,
+            "dds_declarer_total": 11,
+            "crosses_contract_threshold": false
+          },
+          "original_declarer_tricks": 10,
+          "patched_declarer_tricks": 8,
+          "model_team_score_gain": 480,
+          "paired_imps_before": -12,
+          "paired_imps_after": -4,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 20,
+          "role": "declarer",
+          "original_card": "D9",
+          "alternative": "S6",
+          "source": "dds",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "D9",
+            "future_team_tricks": 5,
+            "trick_regret": 1,
+            "team_score_regret": 450,
+            "dds_declarer_total": 8,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 5,
+          "patched_declarer_tricks": 6,
+          "model_team_score_gain": 50,
+          "paired_imps_before": -12,
+          "paired_imps_after": -11,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 20,
+          "role": "declarer",
+          "original_card": "D9",
+          "alternative": "CT",
+          "source": "rule",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "D9",
+            "future_team_tricks": 5,
+            "trick_regret": 1,
+            "team_score_regret": 450,
+            "dds_declarer_total": 8,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 5,
+          "patched_declarer_tricks": 6,
+          "model_team_score_gain": 50,
+          "paired_imps_before": -12,
+          "paired_imps_after": -11,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 29,
+          "role": "declarer",
+          "original_card": "S3",
+          "alternative": "SQ",
+          "source": "dds",
+          "behavior": [],
+          "dds_original_regret": {
+            "card": "S3",
+            "future_team_tricks": 4,
+            "trick_regret": 1,
+            "team_score_regret": 450,
+            "dds_declarer_total": 8,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 5,
+          "patched_declarer_tricks": 6,
+          "model_team_score_gain": 50,
+          "paired_imps_before": -12,
+          "paired_imps_after": -11,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "board_id": "98b550bd3f7306eca542f0b969832957f8e584e14d67fa49f8256d9d3222ee22",
+      "contract": {
+        "level": 1,
+        "strain": "NT",
+        "declarer": "E",
+        "double_status": 0
+      },
+      "model_imps": -5,
+      "single_move_interventions": [
+        {
+          "room": 0,
+          "ply": 16,
+          "role": "defender",
+          "original_card": "H3",
+          "alternative": "C4",
+          "source": "dds",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "H3",
+            "future_team_tricks": 2,
+            "trick_regret": 2,
+            "team_score_regret": 60,
+            "dds_declarer_total": 10,
+            "crosses_contract_threshold": false
+          },
+          "original_declarer_tricks": 7,
+          "patched_declarer_tricks": 7,
+          "model_team_score_gain": 0,
+          "paired_imps_before": -5,
+          "paired_imps_after": -5,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 0,
+          "ply": 0,
+          "role": "defender",
+          "original_card": "SJ",
+          "alternative": "C4",
+          "source": "dds",
+          "behavior": [
+            "opening_lead"
+          ],
+          "dds_original_regret": {
+            "card": "SJ",
+            "future_team_tricks": 3,
+            "trick_regret": 1,
+            "team_score_regret": 30,
+            "dds_declarer_total": 10,
+            "crosses_contract_threshold": false
+          },
+          "original_declarer_tricks": 7,
+          "patched_declarer_tricks": 7,
+          "model_team_score_gain": 0,
+          "paired_imps_before": -5,
+          "paired_imps_after": -5,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 36,
+          "role": "declarer",
+          "original_card": "HT",
+          "alternative": "SA",
+          "source": "dds",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "HT",
+            "future_team_tricks": 1,
+            "trick_regret": 3,
+            "team_score_regret": 220,
+            "dds_declarer_total": 5,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 5,
+          "patched_declarer_tricks": 6,
+          "model_team_score_gain": 50,
+          "paired_imps_before": -5,
+          "paired_imps_after": -4,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 36,
+          "role": "declarer",
+          "original_card": "HT",
+          "alternative": "S7",
+          "source": "rule",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "HT",
+            "future_team_tricks": 1,
+            "trick_regret": 3,
+            "team_score_regret": 220,
+            "dds_declarer_total": 5,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 5,
+          "patched_declarer_tricks": 6,
+          "model_team_score_gain": 50,
+          "paired_imps_before": -5,
+          "paired_imps_after": -4,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 23,
+          "role": "declarer",
+          "original_card": "S3",
+          "alternative": "SQ",
+          "source": "dds",
+          "behavior": [
+            "declines_available_current_trick",
+            "fourth_hand"
+          ],
+          "dds_original_regret": {
+            "card": "S3",
+            "future_team_tricks": 5,
+            "trick_regret": 3,
+            "team_score_regret": 200,
+            "dds_declarer_total": 6,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 5,
+          "patched_declarer_tricks": 8,
+          "model_team_score_gain": 220,
+          "paired_imps_before": -5,
+          "paired_imps_after": 1,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "board_id": "4cfcff895565d88551ac69df8c0bc1ed820c1e3c9a30e59761799e4b8316d27f",
+      "contract": {
+        "level": 1,
+        "strain": "S",
+        "declarer": "N",
+        "double_status": 0
+      },
+      "model_imps": -5,
+      "single_move_interventions": [
+        {
+          "room": 0,
+          "ply": 12,
+          "role": "declarer",
+          "original_card": "HQ",
+          "alternative": "D5",
+          "source": "dds",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "HQ",
+            "future_team_tricks": 4,
+            "trick_regret": 1,
+            "team_score_regret": 130,
+            "dds_declarer_total": 6,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 5,
+          "patched_declarer_tricks": 7,
+          "model_team_score_gain": 180,
+          "paired_imps_before": -5,
+          "paired_imps_after": 0,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 0,
+          "ply": 35,
+          "role": "declarer",
+          "original_card": "D6",
+          "alternative": "S3",
+          "source": "dds",
+          "behavior": [
+            "declines_available_current_trick",
+            "fourth_hand"
+          ],
+          "dds_original_regret": {
+            "card": "D6",
+            "future_team_tricks": 2,
+            "trick_regret": 1,
+            "team_score_regret": 130,
+            "dds_declarer_total": 6,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 5,
+          "patched_declarer_tricks": 7,
+          "model_team_score_gain": 180,
+          "paired_imps_before": -5,
+          "paired_imps_after": 0,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 8,
+          "role": "defender",
+          "original_card": "CK",
+          "alternative": "H2",
+          "source": "dds",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "CK",
+            "future_team_tricks": 4,
+            "trick_regret": 1,
+            "team_score_regret": 130,
+            "dds_declarer_total": 7,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 7,
+          "patched_declarer_tricks": 6,
+          "model_team_score_gain": 130,
+          "paired_imps_before": -5,
+          "paired_imps_after": -2,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 8,
+          "role": "defender",
+          "original_card": "CK",
+          "alternative": "D3",
+          "source": "rule",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "CK",
+            "future_team_tricks": 4,
+            "trick_regret": 1,
+            "team_score_regret": 130,
+            "dds_declarer_total": 7,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 7,
+          "patched_declarer_tricks": 6,
+          "model_team_score_gain": 130,
+          "paired_imps_before": -5,
+          "paired_imps_after": -2,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 16,
+          "role": "defender",
+          "original_card": "C2",
+          "alternative": "D3",
+          "source": "dds",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "C2",
+            "future_team_tricks": 3,
+            "trick_regret": 1,
+            "team_score_regret": 130,
+            "dds_declarer_total": 7,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 7,
+          "patched_declarer_tricks": 7,
+          "model_team_score_gain": 0,
+          "paired_imps_before": -5,
+          "paired_imps_after": -5,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "board_id": "9aa0458c08490aa197768622bcd430febe68796f4f6632ed5712f1f3bfb8dfef",
+      "contract": {
+        "level": 6,
+        "strain": "H",
+        "declarer": "E",
+        "double_status": 0
+      },
+      "model_imps": 0,
+      "single_move_interventions": [
+        {
+          "room": 1,
+          "ply": 9,
+          "role": "declarer",
+          "original_card": "C2",
+          "alternative": "CQ",
+          "source": "dds",
+          "behavior": [
+            "declines_available_current_trick"
+          ],
+          "dds_original_regret": {
+            "card": "C2",
+            "future_team_tricks": 10,
+            "trick_regret": 1,
+            "team_score_regret": 1030,
+            "dds_declarer_total": 11,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 11,
+          "patched_declarer_tricks": 12,
+          "model_team_score_gain": 1030,
+          "paired_imps_before": 0,
+          "paired_imps_after": 14,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 9,
+          "role": "declarer",
+          "original_card": "C2",
+          "alternative": "C8",
+          "source": "rule",
+          "behavior": [
+            "declines_available_current_trick"
+          ],
+          "dds_original_regret": {
+            "card": "C2",
+            "future_team_tricks": 10,
+            "trick_regret": 1,
+            "team_score_regret": 1030,
+            "dds_declarer_total": 11,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 11,
+          "patched_declarer_tricks": 11,
+          "model_team_score_gain": 0,
+          "paired_imps_before": 0,
+          "paired_imps_after": 0,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "board_id": "4e33f7ec52677a33d45ee1d7f918e372510f27b51cd2e858533b991bfdc5a574",
+      "contract": {
+        "level": 4,
+        "strain": "H",
+        "declarer": "S",
+        "double_status": 0
+      },
+      "model_imps": 11,
+      "single_move_interventions": [
+        {
+          "room": 0,
+          "ply": 1,
+          "role": "declarer",
+          "original_card": "CA",
+          "alternative": "C5",
+          "source": "dds",
+          "behavior": [
+            "spends_higher_current_winner"
+          ],
+          "dds_original_regret": {
+            "card": "CA",
+            "future_team_tricks": 10,
+            "trick_regret": 1,
+            "team_score_regret": 30,
+            "dds_declarer_total": 10,
+            "crosses_contract_threshold": false
+          },
+          "original_declarer_tricks": 11,
+          "patched_declarer_tricks": 11,
+          "model_team_score_gain": 0,
+          "paired_imps_before": 11,
+          "paired_imps_after": 11,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 0,
+          "ply": 1,
+          "role": "declarer",
+          "original_card": "CA",
+          "alternative": "CJ",
+          "source": "rule",
+          "behavior": [
+            "spends_higher_current_winner"
+          ],
+          "dds_original_regret": {
+            "card": "CA",
+            "future_team_tricks": 10,
+            "trick_regret": 1,
+            "team_score_regret": 30,
+            "dds_declarer_total": 10,
+            "crosses_contract_threshold": false
+          },
+          "original_declarer_tricks": 11,
+          "patched_declarer_tricks": 9,
+          "model_team_score_gain": -500,
+          "paired_imps_before": 11,
+          "paired_imps_after": 2,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 24,
+          "role": "defender",
+          "original_card": "CT",
+          "alternative": "D6",
+          "source": "dds",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "CT",
+            "future_team_tricks": 0,
+            "trick_regret": 1,
+            "team_score_regret": 470,
+            "dds_declarer_total": 10,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 8,
+          "patched_declarer_tricks": 9,
+          "model_team_score_gain": -50,
+          "paired_imps_before": 11,
+          "paired_imps_after": 11,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 24,
+          "role": "defender",
+          "original_card": "CT",
+          "alternative": "C6",
+          "source": "rule",
+          "behavior": [
+            "lead"
+          ],
+          "dds_original_regret": {
+            "card": "CT",
+            "future_team_tricks": 0,
+            "trick_regret": 1,
+            "team_score_regret": 470,
+            "dds_declarer_total": 10,
+            "crosses_contract_threshold": true
+          },
+          "original_declarer_tricks": 8,
+          "patched_declarer_tricks": 8,
+          "model_team_score_gain": 0,
+          "paired_imps_before": 11,
+          "paired_imps_after": 11,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        },
+        {
+          "room": 1,
+          "ply": 5,
+          "role": "defender",
+          "original_card": "D8",
+          "alternative": "DA",
+          "source": "dds",
+          "behavior": [],
+          "dds_original_regret": {
+            "card": "D8",
+            "future_team_tricks": 2,
+            "trick_regret": 1,
+            "team_score_regret": 30,
+            "dds_declarer_total": 11,
+            "crosses_contract_threshold": false
+          },
+          "original_declarer_tricks": 8,
+          "patched_declarer_tricks": 10,
+          "model_team_score_gain": -520,
+          "paired_imps_before": 11,
+          "paired_imps_after": 1,
+          "scope": "one move changed; all later decisions recomputed by original information-limited policies"
+        }
+      ]
+    }
+  ],
+  "nonforced_diagnostics": {
+    "model": {
+      "decisions": 244,
+      "dds_positive_regret": 38,
+      "sum_dds_trick_regret": 50,
+      "behavior_counts": {
+        "opening_lead": 6,
+        "declines_available_current_trick": 40,
+        "fourth_hand": 62,
+        "lead": 59,
+        "spends_higher_current_winner": 17,
+        "overtakes_currently_winning_partner": 7
+      },
+      "by_phase": {
+        "fourth_hand": {
+          "decisions": 62,
+          "positive_dds_regret": 14
+        },
+        "lead": {
+          "decisions": 65,
+          "positive_dds_regret": 11
+        },
+        "second_third": {
+          "decisions": 117,
+          "positive_dds_regret": 13
+        }
+      }
+    },
+    "rule": {
+      "decisions": 243,
+      "dds_positive_regret": 32,
+      "sum_dds_trick_regret": 42,
+      "behavior_counts": {
+        "fourth_hand": 53,
+        "lead": 73,
+        "overtakes_currently_winning_partner": 14,
+        "opening_lead": 6
+      },
+      "by_phase": {
+        "fourth_hand": {
+          "decisions": 53,
+          "positive_dds_regret": 0
+        },
+        "lead": {
+          "decisions": 79,
+          "positive_dds_regret": 25
+        },
+        "second_third": {
+          "decisions": 111,
+          "positive_dds_regret": 7
+        }
+      }
+    }
+  },
+  "tactical_families": {
+    "win_now_keep_lead": {
+      "variants": 8,
+      "model_dds_optimal": 6,
+      "rule_dds_optimal": 8,
+      "strict_public_world_dominance_cases": 8
+    },
+    "fourth_hand_take_trick": {
+      "variants": 8,
+      "model_dds_optimal": 4,
+      "rule_dds_optimal": 8,
+      "strict_public_world_dominance_cases": 8
+    },
+    "preserve_partner_entry": {
+      "variants": 8,
+      "model_dds_optimal": 8,
+      "rule_dds_optimal": 8,
+      "strict_public_world_dominance_cases": 0
+    },
+    "cheapest_winning_honor": {
+      "variants": 8,
+      "model_dds_optimal": 6,
+      "rule_dds_optimal": 8,
+      "strict_public_world_dominance_cases": 8
+    }
+  },
+  "limits": [
+    "four selected losses, one tie and one win; exploratory, not representative sampling",
+    "DDS regret can depend on hidden information and is not automatically a policy error",
+    "Single-move patches use original policies for subsequent actions; outcomes conditional on those policies",
+    "32 tactical variants of 4 templates, not independent real deals",
+    "No training, weight changes or changes to the frozen rating benchmark"
+  ]
+}

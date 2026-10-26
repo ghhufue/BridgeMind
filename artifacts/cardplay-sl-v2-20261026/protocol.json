@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "kind": "play_sl_v2",
+  "created_at_utc": "2026-10-26T05:58:50.089393+00:00",
+  "implementation_sha256": "47473f2eba3c94c1982833343edb3b77e83a41e68b59d322f22b2fde77e0cfc5",
+  "environment": {
+    "device": "cuda",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4",
+    "open_spiel": "2.0.2",
+    "python": "3.13.10",
+    "cpu_threads": 1
+  },
+  "initial_source": "D:\\code\\BridgeMind\\runs\\play-sl-long-20261025\\best.pt",
+  "initial_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+  "train": {
+    "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\train",
+    "fingerprint": "5f336dd18f10ba84513c1073daf15552271cde53c6b0af7d764f695a7fb2408a"
+  },
+  "valid": {
+    "path": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\valid",
+    "fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9"
+  },
+  "curriculum_sha256": "d6c2912a6c9ccc2542779aea894a3a717b34a9730bac136eaa5b0be55651f9c3",
+  "curriculum_audit": {
+    "valid": {
+      "cases": 176,
+      "distinct_deal_orbits": 64,
+      "rejected": {
+        "oracle_agreement_without_a_public_continuation_witness": 8,
+        "no_action_optimal_in_every_publicly_feasible_world": 8
+      },
+      "seeds": [
+        270001,
+        270002,
+        270003,
+        270004,
+        270005,
+        270006,
+        270007,
+        270008
+      ]
+    },
+    "train": {
+      "cases": 704,
+      "distinct_deal_orbits": 256,
+      "rejected": {
+        "oracle_agreement_without_a_public_continuation_witness": 32,
+        "no_action_optimal_in_every_publicly_feasible_world": 32
+      },
+      "seeds": [
+        260001,
+        260002,
+        260003,
+        260004,
+        260005,
+        260006,
+        260007,
+        260008,
+        260009,
+        260010,
+        260011,
+        260012,
+        260013,
+        260014,
+        260015,
+        260016,
+        260017,
+        260018,
+        260019,
+        260020,
+        260021,
+        260022,
+        260023,
+        260024,
+        260025,
+        260026,
+        260027,
+        260028,
+        260029,
+        260030,
+        260031,
+        260032
+      ]
+    }
+  },
+  "orbit_audit": {
+    "real_train_orbits": 10000,
+    "real_valid_orbits": 1024,
+    "published_orbits": 166,
+    "train_valid_orbit_intersection": 0,
+    "training_published_orbit_intersection": 0
+  },
+  "seed": 20261026,
+  "lr": 1e-05,
+  "batch_size": 64,
+  "curriculum_fraction": 0.25,
+  "real_samples_per_batch": 48,
+  "eval_states": 4096,
+  "eval_boards": 128,
+  "eval_interval_seconds": 300.0,
+  "save_interval_seconds": 120.0,
+  "solver_for_curriculum": {
+    "solver_version": "3.1.0",
+    "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951"
+  },
+  "loss": "set-valued policy likelihood on all rows; belief*.2/value*.1 on real rows only",
+  "augmentation": "real rows: half original recorded views, half uniform-24 transformed play with legal synthetic contract summary/system=unknown; curriculum: uniform-24; masks, ownership and score targets transformed",
+  "selection": "best validation IMP vs frozen initial model, provided curriculum macro does not fall below initialization; ties: curriculum then real augmented NLL",
+  "limits": [
+    "Published foundation templates are development tasks; new-seed splits are variant-held-out, not unseen templates",
+    "No independent test or rating boards are used for training/checkpoint selection",
+    "Real validation is reused historical validation, not a new final test"
+  ]
+}

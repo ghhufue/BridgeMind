@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-26",
+  "tests": {
+    "passed": 210,
+    "new_diagnostic_tests": 41,
+    "seconds": 19.77,
+    "command": ".venv/Scripts/python.exe -m pytest -q"
+  },
+  "replayed_deals": 6,
+  "replayed_rooms": 12,
+  "legal_card_actions": 624,
+  "frozen_match_results_reproduced": true,
+  "single_move_interventions": 26,
+  "counterfactual_future_actions_recomputed": true,
+  "synthetic_cases": 32,
+  "templates": 4,
+  "model_optimal_choices": 24,
+  "rule_optimal_choices": 32,
+  "public_constraint_world_combinations": 512,
+  "all_good_vs_bad_world_comparisons_nonnegative": true,
+  "exact_full_game_suit_permutation_tested": true,
+  "second_entrypoint_choices_match": true,
+  "rating_implementation_and_model_hashes_unchanged": true,
+  "rating_implementation_sha256": "4da923d3e59983b317c894abaa2dfda213f98bd8eec6fc88917da3b2ef296819",
+  "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+  "artifact_sha256": {
+    "games\\board-001.json": "0973d315fed96591c2d6d58d6b69da0a0327bc9184196cebbb10683f7cb35bc2",
+    "games\\board-034.json": "630b9957640a681514a6b799673738a42c23a73eca6e4f71ee5b1ef5bcff0e51",
+    "games\\board-037.json": "6d047640e0f15ff9c5078d07896c63a62613633c8f72ddc1da8cdf4b40c2018f",
+    "games\\board-041.json": "07ef8fafc5e691b933e939e5758df670e9e345dd6ae0effde461920fe8025e2e",
+    "games\\board-051.json": "1bc58d8e52ef1bcceba47c3a5ad86e9e44697d0c61f2477340dac7284fb1f364",
+    "games\\board-079.json": "ef7b5b3496c9184e9416e965c239912ae05ae1f95feb3b468f4b8930d5176526",
+    "protocol.json": "b1cbd83471aa836869a962b9a59ecfe037710a47f27175e7f9e744644b6a7eef",
+    "real-regression-cases.json": "386d96e03a2c86975f2e84b8692a4cfc3c242b611e116a57d58905401cb35f94",
+    "report.md": "4bb8947fec4ab8b33b5a7a814e324735fb02e5348d428a8f7fe090834efbbd98",
+    "summary.json": "1cf6dea1f7b602ac7a1107803afadaebb17b70d102dd85936658e9b6b765bb99",
+    "tactical-cases.json": "4b08a72af7e31b6f0232d0d0b1a190371ae5e16711d237f55307934913719a52"
+  },
+  "limits": [
+    "Selected diagnostic examples, not a new rating",
+    "Variants of four templates, not 32 independent real boards",
+    "DD continuation is privileged; actual policy continuation can behave differently",
+    "Real regression examples consume tracking-board independence if used for training"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "verified_at_utc": "2026-10-26T08:42:32.667106+00:00",
+  "model_sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+  "foundation": {
+    "variants": 8064,
+    "basic_macro_percent": 100.0,
+    "distribution_equivariance_percent": 99.92435668097107,
+    "prediction_sha256": "53333db282458925f8bbde851654fb4f230536fc44fe67f0d52e5b208ce67c55",
+    "independently_recomputed": true
+  },
+  "confirmation": {
+    "sl-long-42": {
+      "verified_raw_scores_and_imps": 2048,
+      "mean_imps": 3.25390625,
+      "primary_97_5_ci": [
+        2.98291015625,
+        3.52880859375
+      ]
+    },
+    "rule-basic": {
+      "verified_raw_scores_and_imps": 2048,
+      "mean_imps": 3.181640625,
+      "primary_97_5_ci": [
+        2.89306640625,
+        3.4736328125
+      ]
+    }
+  },
+  "rating": {
+    "rating": 62.54243681629574,
+    "gain_over_sl_long_42": 30.378473532000505,
+    "gain_joint_bootstrap_95_ci": [
+      24.412447042874092,
+      36.800858992226324
+    ],
+    "scope": "tracking panel; shared seed rows and deal columns; not an independent final test"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "cardplay-sl-v2-confirmation-v1",
+  "boards": 2048,
+  "seed": 20261029,
+  "batch_size": 32,
+  "device": "cuda",
+  "primary_opponents": [
+    "sl-long-42",
+    "rule-basic"
+  ],
+  "candidate": {
+    "path": "D:\\code\\BridgeMind\\runs\\play-sl-v2-20261026-2h\\best.pt",
+    "sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+    "step": 248419
+  },
+  "initial": {
+    "path": "D:\\code\\BridgeMind\\runs\\play-sl-v2-20261026-2h\\init.pt",
+    "sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360"
+  },
+  "implementation_sha256": "4da923d3e59983b317c894abaa2dfda213f98bd8eec6fc88917da3b2ef296819",
+  "script_sha256": "f3e7bcb3e72ac8ef5e596c35361e31263ce1d6a5c1cb0f853b39069a5aa7fd16",
+  "runtime": {
+    "device": "cuda",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4",
+    "open_spiel": "2.0.2",
+    "python": "3.13.10",
+    "cpu_threads": 1
+  },
+  "training_protocol_sha256": "ca41da27de82d02a9131e8834ccd2573f3c3f3669f80733bf6d7f33f075548b6",
+  "curriculum_sha256": "dd42f2d919ec9ac969338acad06c0a58e0c33b9fd7618cce2d56ced2769e82ee",
+  "exclusion": "All declared data ID/exclusion snapshots and historical report IDs, plus suit/seat orbits of known played datasets, curriculum and published fixtures",
+  "design": "Same full deal and recorded auction; candidate plays both partnerships in paired rooms; greedy neural; actual 52-card play",
+  "bootstrap": {
+    "draws": 10000,
+    "unit": "distinct full deal",
+    "seed": 20261029,
+    "primary_interval": "97.5% per comparison; Bonferroni family coverage >=95% for two comparisons"
+  },
+  "decision": "Claim improvement over both only if both primary 97.5% lower bounds >0; report failures equally",
+  "selection": "Candidate fixed before importing confirmation deals; no checkpoint selection or training based on these results",
+  "scope": "One training seed; WBridge5 SAYC, north dealer, neither vulnerable; not human rank or bidding strength"
+}

@@ -48,6 +48,12 @@
     "records": 384
   },
   {
+    "path": "matches\\lowest--sl-v2-20261026.json",
+    "file_sha256": "1f6820bd37f9362b11d92de51232614efdb38478081c5ef87bc8390c25e3da62",
+    "signature": "ebf09c01d623e1894ccdc1b8d4c5e6d2cd05e40102b15002d16adb530f5a5612",
+    "records": 384
+  },
+  {
     "path": "matches\\oracle--oracle.json",
     "file_sha256": "45ebb2e2e6ceaf62e8907d82616a0e435bdb1d6cbba5e86b75f4f6c1d70203fb",
     "signature": "a0e0901cd45aeda7747abebbba049d0c7d984deb77ba3e45df90d1b5decca141",
@@ -87,6 +93,12 @@
     "path": "matches\\oracle--sl-pilot.json",
     "file_sha256": "21bcd9703b186904db33b8a8eb481121949017120a5c90b68cb40184fdf6fc78",
     "signature": "4b667487108029ecb2c6028f036c908c5470761afe82c1667d1572552b9614f2",
+    "records": 384
+  },
+  {
+    "path": "matches\\oracle--sl-v2-20261026.json",
+    "file_sha256": "b4452c1f53668c2be3cd2c1dd347a27d81f5e333953b98f2a2287ee4c6e8e64c",
+    "signature": "64af8cedc84ef5aa275e8195bd0f80bb183dd86b28a15cdbc0dddeed478874ba",
     "records": 384
   },
   {
@@ -132,6 +144,12 @@
     "records": 384
   },
   {
+    "path": "matches\\random--sl-v2-20261026.json",
+    "file_sha256": "72df37b7cb17ce2a2b61966abb2060ce1883a1c2835529d8db18f4a5a0f36e70",
+    "signature": "9dd8285740b3ade973c5f05b6c9a7779c27d9c9f5966957e29c042b87d97ef3e",
+    "records": 384
+  },
+  {
     "path": "matches\\rule-basic--rule-basic.json",
     "file_sha256": "8b9cc820bd2acb520450a2030d48382a9790777837633f067b3b019cb1c74c5f",
     "signature": "482277a1369e920de6222d211ebd4cfdfe5bcedab7933229f069275bc16fdb6f",
@@ -147,6 +165,12 @@
     "path": "matches\\rule-basic--sl-pilot.json",
     "file_sha256": "9b67af87e5f8560d65305c7c4b97fb48a48e738e56c8f5d78ae208402e477506",
     "signature": "33f4b80f740e0de583ad25aec69f048821e63c643047d8f9bebb471642d523fa",
+    "records": 384
+  },
+  {
+    "path": "matches\\rule-basic--sl-v2-20261026.json",
+    "file_sha256": "a9bc6b15b5c65b35cb27b41743ebf6fbd0731982e53d4c0801d00854167e0f93",
+    "signature": "89a16f0133897cc78a4ec2f8492d1b8db01e2203ebd10d735ecd0cdf2a4869f0",
     "records": 384
   }
 ]

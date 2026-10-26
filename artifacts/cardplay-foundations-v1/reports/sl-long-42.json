@@ -1,0 +1,5118 @@
+{
+  "schema_version": 1,
+  "id": "sl-long-42",
+  "suite": "cardplay-foundations-v1",
+  "created_at_utc": "2026-10-26T05:32:12.438794+00:00",
+  "identity": {
+    "suite_sha256": "4cefb9688c3f8a6a3925eb57c4cc63e48ea2f82fb547cec13252c0ad06fd1c49",
+    "implementation_sha256": "dbda5d60af6edfae60959751b35c0dad811a0ad9cde874a42936321a3b00bd8d",
+    "policy": "neural",
+    "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+    "device": "cuda",
+    "batch_size": 64,
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4"
+  },
+  "predictions_sha256": "46d07c08ab5f1784c4a689e385a30fb17f964beb857634998dc9d8cdad660dfc",
+  "summary": {
+    "canonical_basic_percent": 61.80555555555556,
+    "all_suits_basic_percent": 57.92824074074074,
+    "worst_suit_basic_percent": 48.611111111111114,
+    "best_suit_basic_percent": 72.91666666666666,
+    "suit_accuracy_gap_points": 24.305555555555543,
+    "suit_distribution_equivariance_percent": 82.90420003964256,
+    "exact_suit_choice_agreement_percent": 70.02635046113306,
+    "all_suits_pass_position_percent": 16.666666666666664,
+    "seat_rotation_choice_consistency_percent": 100.0,
+    "legal_choice_percent": 100.0,
+    "evaluated_variants": 8064,
+    "tactical_base_positions": 66,
+    "families": {
+      "cash_master_before_loser": {
+        "base_positions": 9,
+        "canonical_correct": 4,
+        "canonical_percent": 44.44444444444444,
+        "transformed_correct": 424,
+        "transformed_total": 864,
+        "transformed_percent": 49.074074074074076,
+        "excluded_from_basic_macro": false
+      },
+      "cheapest_winning_honor": {
+        "base_positions": 6,
+        "canonical_correct": 3,
+        "canonical_percent": 50.0,
+        "transformed_correct": 292,
+        "transformed_total": 576,
+        "transformed_percent": 50.69444444444444,
+        "excluded_from_basic_macro": false
+      },
+      "discard_loser_keep_master": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 816,
+        "transformed_total": 864,
+        "transformed_percent": 94.44444444444444,
+        "excluded_from_basic_macro": false
+      },
+      "equivalent_winning_honors": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": true
+      },
+      "forced_follow_suit": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 864,
+        "transformed_total": 864,
+        "transformed_percent": 100.0,
+        "excluded_from_basic_macro": true
+      },
+      "fourth_hand_take_trick": {
+        "base_positions": 9,
+        "canonical_correct": 9,
+        "canonical_percent": 100.0,
+        "transformed_correct": 540,
+        "transformed_total": 864,
+        "transformed_percent": 62.5,
+        "excluded_from_basic_macro": false
+      },
+      "overruff_not_undertrump": {
+        "base_positions": 9,
+        "canonical_correct": 0,
+        "canonical_percent": 0.0,
+        "transformed_correct": 244,
+        "transformed_total": 864,
+        "transformed_percent": 28.24074074074074,
+        "excluded_from_basic_macro": false
+      },
+      "preserve_partner_entry": {
+        "base_positions": 6,
+        "canonical_correct": 6,
+        "canonical_percent": 100.0,
+        "transformed_correct": 540,
+        "transformed_total": 576,
+        "transformed_percent": 93.75,
+        "excluded_from_basic_macro": false
+      },
+      "small_ruff_preserve_master": {
+        "base_positions": 9,
+        "canonical_correct": 4,
+        "canonical_percent": 44.44444444444444,
+        "transformed_correct": 280,
+        "transformed_total": 864,
+        "transformed_percent": 32.407407407407405,
+        "excluded_from_basic_macro": false
+      },
+      "win_now_keep_lead": {
+        "base_positions": 9,
+        "canonical_correct": 5,
+        "canonical_percent": 55.55555555555556,
+        "transformed_correct": 452,
+        "transformed_total": 864,
+        "transformed_percent": 52.31481481481482,
+        "excluded_from_basic_macro": false
+      }
+    },
+    "by_role_basic_percent": {
+      "declarer": 57.291666666666664,
+      "dummy": 68.05555555555556,
+      "defender": 40.50925925925926
+    },
+    "by_permutation_basic_percent": {
+      "CDHS": 61.80555555555556,
+      "CDSH": 48.611111111111114,
+      "CHDS": 52.77777777777778,
+      "CHSD": 53.472222222222214,
+      "CSDH": 52.77777777777778,
+      "CSHD": 66.66666666666667,
+      "DCHS": 59.72222222222223,
+      "DCSH": 56.94444444444444,
+      "DHCS": 54.861111111111114,
+      "DHSC": 59.72222222222222,
+      "DSCH": 53.47222222222223,
+      "DSHC": 72.91666666666666,
+      "HCDS": 53.472222222222214,
+      "HCSD": 59.72222222222223,
+      "HDCS": 57.638888888888886,
+      "HDSC": 58.333333333333336,
+      "HSCD": 53.47222222222223,
+      "HSDC": 59.72222222222222,
+      "SCDH": 55.55555555555556,
+      "SCHD": 68.75,
+      "SDCH": 52.08333333333333,
+      "SDHC": 70.83333333333334,
+      "SHCD": 50.69444444444444,
+      "SHDC": 56.25
+    },
+    "interpretation": "Correctness and invariance are separate; consistent wrong answers do not imply basic competence. Equivalent accepted moves are never graded wrong.",
+    "statistical_scope": "Correlated template/rank/role/permutation variants; no IID confidence interval or human-level rating"
+  },
+  "representative_failures": [
+    {
+      "prediction": {
+        "base_id": "fourth_hand_take_trick-declarer-1701",
+        "family": "fourth_hand_take_trick",
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "permutation": "HCSD",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.277152955532074,
+        "canonical_probabilities": {
+          "HQ": 0.722847044467926,
+          "HA": 0.277152955532074
+        },
+        "worst_feasible_world_trick_regret": 3
+      },
+      "case": {
+        "id": "fourth_hand_take_trick-declarer-1701",
+        "family": "fourth_hand_take_trick",
+        "seed": 1701,
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "e834166eb2ef52f2e6b9d25d74fef11a84f2686f707ad9d5b58d39a13134ce30",
+          "owners": [
+            1,
+            3,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            0,
+            0,
+            3,
+            1,
+            1,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            3,
+            2,
+            1,
+            1,
+            0,
+            3,
+            2,
+            3,
+            0,
+            0,
+            3,
+            2,
+            1,
+            1,
+            1,
+            2,
+            3,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 2,
+            "strain": "NT",
+            "declarer": "S",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "2NT"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "D5",
+          "D6",
+          "D3",
+          "D4",
+          "H3",
+          "H7",
+          "H5",
+          "H6",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "D9",
+          "DT",
+          "D7",
+          "D8",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "S2",
+          "S6",
+          "S3",
+          "S5",
+          "S9",
+          "SJ",
+          "ST",
+          "S8",
+          "DK",
+          "DA",
+          "DJ",
+          "DQ",
+          "C5",
+          "C6",
+          "C3",
+          "C4",
+          "H8",
+          "H9",
+          "HT",
+          "HJ",
+          "S4",
+          "S7",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 3,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "HCSD",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "fourth_hand_take_trick-declarer-1701",
+          "suit_permutation": "HCSD",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "fourth_hand_take_trick-dummy-1723",
+        "family": "fourth_hand_take_trick",
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "permutation": "HDSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.28405672311782837,
+        "canonical_probabilities": {
+          "HQ": 0.7159432768821716,
+          "HA": 0.28405672311782837
+        },
+        "worst_feasible_world_trick_regret": 3
+      },
+      "case": {
+        "id": "fourth_hand_take_trick-dummy-1723",
+        "family": "fourth_hand_take_trick",
+        "seed": 1723,
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "5256aa744a8b461fdf77a5fd41a8f2a30a9119c9604cb40719ed4cf9d6c0ab34",
+          "owners": [
+            0,
+            0,
+            1,
+            0,
+            3,
+            1,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            2,
+            3,
+            1,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            2,
+            3,
+            3,
+            2,
+            0,
+            0,
+            1,
+            3,
+            3,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            2,
+            3,
+            3,
+            3,
+            1,
+            2,
+            2,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 2,
+            "strain": "NT",
+            "declarer": "N",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "2NT"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "H2",
+          "H4",
+          "H5",
+          "H7",
+          "D7",
+          "DT",
+          "D8",
+          "D9",
+          "DQ",
+          "DA",
+          "DK",
+          "DJ",
+          "C5",
+          "C6",
+          "C2",
+          "C4",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "H8",
+          "HJ",
+          "H9",
+          "HT",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "D5",
+          "D6",
+          "D2",
+          "D4",
+          "ST",
+          "SJ",
+          "S7",
+          "S8",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S9",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 3,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "HDSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "fourth_hand_take_trick-dummy-1723",
+          "suit_permutation": "HDSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "fourth_hand_take_trick-dummy-1701",
+        "family": "fourth_hand_take_trick",
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "permutation": "HDSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.29494808346342544,
+        "canonical_probabilities": {
+          "HQ": 0.7050519165365746,
+          "HA": 0.29494808346342544
+        },
+        "worst_feasible_world_trick_regret": 3
+      },
+      "case": {
+        "id": "fourth_hand_take_trick-dummy-1701",
+        "family": "fourth_hand_take_trick",
+        "seed": 1701,
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "02f7ced7f9e70324d1f2858b5ce7043c4e5f17665ba22b32c3da23046f028804",
+          "owners": [
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            0,
+            0,
+            3,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            2,
+            3,
+            1,
+            1,
+            3,
+            0,
+            2,
+            3,
+            0,
+            0,
+            3,
+            2,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            1,
+            3,
+            2,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 2,
+            "strain": "NT",
+            "declarer": "N",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "2NT"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "H3",
+          "H7",
+          "H5",
+          "H6",
+          "DQ",
+          "DA",
+          "DK",
+          "DJ",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "D9",
+          "DT",
+          "D7",
+          "D8",
+          "S2",
+          "S6",
+          "S3",
+          "S5",
+          "S9",
+          "SJ",
+          "ST",
+          "S8",
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "D5",
+          "D6",
+          "D3",
+          "D4",
+          "H8",
+          "H9",
+          "HT",
+          "HJ",
+          "S4",
+          "S7",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 3,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "HDSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "fourth_hand_take_trick-dummy-1701",
+          "suit_permutation": "HDSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "fourth_hand_take_trick-dummy-1709",
+        "family": "fourth_hand_take_trick",
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "permutation": "HDSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.4046115279197693,
+        "canonical_probabilities": {
+          "HQ": 0.5953884720802307,
+          "HA": 0.4046115279197693
+        },
+        "worst_feasible_world_trick_regret": 3
+      },
+      "case": {
+        "id": "fourth_hand_take_trick-dummy-1709",
+        "family": "fourth_hand_take_trick",
+        "seed": 1709,
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "74a0df9042e7aeb9763bfa8b5d2b4651e35a3f4c4684ca10dd4a6c3085b85718",
+          "owners": [
+            3,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            2,
+            1,
+            3,
+            2,
+            3,
+            2,
+            3,
+            3,
+            0,
+            3,
+            2,
+            1,
+            1,
+            2,
+            0,
+            2,
+            2,
+            0,
+            2,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            2,
+            3,
+            0,
+            0,
+            3,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2,
+            3,
+            3,
+            1,
+            3,
+            1,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 2,
+            "strain": "NT",
+            "declarer": "N",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "2NT"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "DJ",
+          "DA",
+          "DQ",
+          "DK",
+          "S3",
+          "S6",
+          "S4",
+          "S2",
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "S7",
+          "SJ",
+          "S8",
+          "ST",
+          "H4",
+          "H7",
+          "H6",
+          "H3",
+          "HT",
+          "HJ",
+          "H8",
+          "H9",
+          "D9",
+          "DT",
+          "D7",
+          "D8",
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "S5",
+          "S9",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 3,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "HDSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "fourth_hand_take_trick-dummy-1709",
+          "suit_permutation": "HDSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "fourth_hand_take_trick-declarer-1723",
+        "family": "fourth_hand_take_trick",
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "permutation": "SDCH",
+        "rotation": 0,
+        "chosen": "CQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.4172006845474243,
+        "canonical_probabilities": {
+          "HQ": 0.5827993154525757,
+          "HA": 0.4172006845474243
+        },
+        "worst_feasible_world_trick_regret": 3
+      },
+      "case": {
+        "id": "fourth_hand_take_trick-declarer-1723",
+        "family": "fourth_hand_take_trick",
+        "seed": 1723,
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "a1f469b3869d54d94e64b9ccbb793c649c9ab15e4c3687847ad22e921ae86889",
+          "owners": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            3,
+            0,
+            2,
+            1,
+            1,
+            2,
+            3,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2,
+            2,
+            2,
+            0,
+            0,
+            3,
+            3,
+            2,
+            3,
+            1,
+            0,
+            3,
+            0,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            2,
+            2,
+            2,
+            0
+          ],
+          "contract": {
+            "level": 2,
+            "strain": "NT",
+            "declarer": "S",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "2NT"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "S5",
+          "S7",
+          "S2",
+          "S4",
+          "D7",
+          "DT",
+          "D8",
+          "D9",
+          "DQ",
+          "DA",
+          "DK",
+          "DJ",
+          "H5",
+          "H6",
+          "H2",
+          "H4",
+          "H9",
+          "HT",
+          "H7",
+          "H8",
+          "S8",
+          "SJ",
+          "S9",
+          "ST",
+          "HQ",
+          "HA",
+          "HK",
+          "HJ",
+          "D5",
+          "D6",
+          "D2",
+          "D4",
+          "CT",
+          "CJ",
+          "C7",
+          "C8",
+          "C2",
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "C9",
+          "CK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "CA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "CQ": 3,
+            "CA": 0
+          },
+          "witness": {
+            "first_card": "CA",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "CA": {
+              "first_card": "CA",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "SDCH",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "fourth_hand_take_trick-declarer-1723",
+          "suit_permutation": "SDCH",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "fourth_hand_take_trick-declarer-1709",
+        "family": "fourth_hand_take_trick",
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "permutation": "HCSD",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.4294874668121338,
+        "canonical_probabilities": {
+          "HQ": 0.5705125331878662,
+          "HA": 0.4294874668121338
+        },
+        "worst_feasible_world_trick_regret": 3
+      },
+      "case": {
+        "id": "fourth_hand_take_trick-declarer-1709",
+        "family": "fourth_hand_take_trick",
+        "seed": 1709,
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "1ce5904120899344b1540cf0d11c6dec504229f98311da9d3d63071db176c7c9",
+          "owners": [
+            1,
+            3,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            3,
+            3,
+            2,
+            2,
+            3,
+            0,
+            3,
+            3,
+            2,
+            1,
+            1,
+            2,
+            0,
+            2,
+            2,
+            0,
+            2,
+            3,
+            3,
+            1,
+            0,
+            0,
+            0,
+            2,
+            3,
+            0,
+            0,
+            3,
+            1,
+            2,
+            1,
+            1,
+            2,
+            3,
+            2,
+            3,
+            1,
+            1,
+            3,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 2,
+            "strain": "NT",
+            "declarer": "S",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "2NT"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "C5",
+          "C6",
+          "C3",
+          "C4",
+          "CJ",
+          "CA",
+          "CQ",
+          "CK",
+          "S3",
+          "S6",
+          "S4",
+          "S2",
+          "DK",
+          "DA",
+          "DJ",
+          "DQ",
+          "D9",
+          "DT",
+          "D7",
+          "D8",
+          "S7",
+          "SJ",
+          "S8",
+          "ST",
+          "H4",
+          "H7",
+          "H6",
+          "H3",
+          "HT",
+          "HJ",
+          "H8",
+          "H9",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "S5",
+          "S9",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 3,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "HCSD",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "fourth_hand_take_trick-declarer-1709",
+          "suit_permutation": "HCSD",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "cash_master_before_loser-defender-1701",
+        "family": "cash_master_before_loser",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DCSH",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.00926301409304651,
+        "canonical_probabilities": {
+          "HQ": 0.9907369859069535,
+          "HA": 0.00926301409304651
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "cash_master_before_loser-defender-1701",
+        "family": "cash_master_before_loser",
+        "seed": 1701,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "95f1e7b7c67907d535a2bf7215001584677b15056425c8f15ad7f743f8a4efac",
+          "owners": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            1,
+            2,
+            0,
+            1,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            0,
+            1,
+            2,
+            0,
+            1,
+            3,
+            3,
+            1,
+            3,
+            2,
+            1,
+            2,
+            2,
+            3,
+            2,
+            3,
+            0,
+            0,
+            3,
+            0,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            2,
+            3,
+            1,
+            3,
+            1,
+            2,
+            0,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1NT"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "S9",
+          "ST",
+          "SJ",
+          "S8",
+          "H2",
+          "H5",
+          "H3",
+          "H4",
+          "D3",
+          "D5",
+          "D4",
+          "D2",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "H9",
+          "HT",
+          "H6",
+          "H8",
+          "C2",
+          "C6",
+          "C3",
+          "C5",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "S6",
+          "S7",
+          "S3",
+          "S5",
+          "HK",
+          "HA",
+          "HJ",
+          "HQ",
+          "DT",
+          "DK",
+          "DJ",
+          "DQ",
+          "D7",
+          "D9",
+          "D8",
+          "D6"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "rule-basic",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "rule-basic",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DCSH",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "cash_master_before_loser-defender-1701",
+          "suit_permutation": "DCSH",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "cash_master_before_loser-defender-1723",
+        "family": "cash_master_before_loser",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DHSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.019846865079760967,
+        "canonical_probabilities": {
+          "HQ": 0.980153134920239,
+          "HA": 0.019846865079760967
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "cash_master_before_loser-defender-1723",
+        "family": "cash_master_before_loser",
+        "seed": 1723,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "f115c04c25db91fcc0e04e07549de6182a7cf1cf10ced0a7bcbcd3259abac8a9",
+          "owners": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            1,
+            0,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            2,
+            3,
+            0,
+            1,
+            1,
+            3,
+            1,
+            2,
+            1,
+            1,
+            2,
+            3,
+            2,
+            1,
+            3,
+            0,
+            3,
+            2,
+            3,
+            0,
+            0,
+            3,
+            0,
+            1,
+            0,
+            0,
+            1,
+            2,
+            1,
+            2,
+            3,
+            3,
+            3,
+            1,
+            2,
+            0,
+            2,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1NT"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "S9",
+          "ST",
+          "SJ",
+          "S8",
+          "D2",
+          "D5",
+          "D3",
+          "D4",
+          "H3",
+          "H5",
+          "H4",
+          "H2",
+          "DQ",
+          "DK",
+          "DT",
+          "DJ",
+          "H9",
+          "HT",
+          "H7",
+          "H8",
+          "C2",
+          "C5",
+          "C3",
+          "C4",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "C8",
+          "CT",
+          "C6",
+          "C7",
+          "D8",
+          "D9",
+          "D6",
+          "D7",
+          "S2",
+          "S7",
+          "S4",
+          "S5",
+          "HQ",
+          "HA",
+          "HK",
+          "HJ"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "rule-basic",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "rule-basic",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DHSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "cash_master_before_loser-defender-1723",
+          "suit_permutation": "DHSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "small_ruff_preserve_master-dummy-1701",
+        "family": "small_ruff_preserve_master",
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DHCS",
+        "rotation": 0,
+        "chosen": "C4",
+        "canonical_chosen": "H4",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "S2"
+        ],
+        "accepted_probability": 0.030797847244602227,
+        "canonical_probabilities": {
+          "S2": 0.030797847244602227,
+          "H4": 0.9580369208049144,
+          "SA": 0.01116523195048331
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "small_ruff_preserve_master-dummy-1701",
+        "family": "small_ruff_preserve_master",
+        "seed": 1701,
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "058a79aa7abd52275dd6a21d4db88266aab5fa3c4c51d74d19f5bd57b96681b3",
+          "owners": [
+            1,
+            0,
+            1,
+            2,
+            2,
+            1,
+            0,
+            0,
+            2,
+            3,
+            2,
+            0,
+            3,
+            2,
+            3,
+            0,
+            0,
+            3,
+            1,
+            2,
+            1,
+            1,
+            0,
+            3,
+            2,
+            2,
+            1,
+            3,
+            3,
+            0,
+            3,
+            1,
+            0,
+            3,
+            2,
+            0,
+            0,
+            3,
+            0,
+            1,
+            1,
+            1,
+            1,
+            3,
+            2,
+            1,
+            2,
+            2,
+            3,
+            0,
+            3,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "S",
+            "declarer": "N",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "1S"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "C2",
+          "C3",
+          "C5",
+          "C6",
+          "S3",
+          "S9",
+          "S6",
+          "S7",
+          "SJ",
+          "SK",
+          "SQ",
+          "ST",
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "H3",
+          "H6",
+          "H4",
+          "H5",
+          "H8",
+          "HT",
+          "H9",
+          "H7",
+          "HK",
+          "HA",
+          "HJ",
+          "HQ",
+          "DT",
+          "DA",
+          "D7",
+          "D8",
+          "D2",
+          "D3",
+          "D5",
+          "D6",
+          "D4",
+          "D9",
+          "DK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "S2"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "S2": 0,
+            "C4": 2,
+            "SA": 1
+          },
+          "witness": {
+            "first_card": "S2",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "S2": {
+              "first_card": "S2",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DHCS",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "small_ruff_preserve_master-dummy-1701",
+          "suit_permutation": "DHCS",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "cash_master_before_loser-defender-1709",
+        "family": "cash_master_before_loser",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DHSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.03185169446247361,
+        "canonical_probabilities": {
+          "HQ": 0.9681483055375264,
+          "HA": 0.03185169446247361
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "cash_master_before_loser-defender-1709",
+        "family": "cash_master_before_loser",
+        "seed": 1709,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "fe2e710b2fea8fb692e927f41b39ecd3e6509127c012d8bd1d6c9c33854ee731",
+          "owners": [
+            1,
+            0,
+            1,
+            0,
+            2,
+            1,
+            2,
+            0,
+            3,
+            3,
+            3,
+            2,
+            0,
+            2,
+            1,
+            3,
+            0,
+            0,
+            0,
+            3,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            2,
+            0,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            3,
+            0,
+            2,
+            0,
+            2,
+            1,
+            3,
+            1,
+            2,
+            2,
+            0,
+            3,
+            1,
+            3,
+            0,
+            2,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1NT"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "DJ",
+          "DQ",
+          "DK",
+          "DT",
+          "H7",
+          "HT",
+          "H8",
+          "H9",
+          "HQ",
+          "HA",
+          "HK",
+          "HJ",
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "C4",
+          "C5",
+          "C2",
+          "C3",
+          "S3",
+          "S7",
+          "S4",
+          "S6",
+          "D3",
+          "D5",
+          "D4",
+          "D2",
+          "D8",
+          "D9",
+          "D6",
+          "D7",
+          "H4",
+          "H6",
+          "H2",
+          "H3",
+          "C6",
+          "CT",
+          "C7",
+          "C8",
+          "S9",
+          "SJ",
+          "ST",
+          "S8"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "rule-basic",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "rule-basic",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DHSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "cash_master_before_loser-defender-1709",
+          "suit_permutation": "DHSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "small_ruff_preserve_master-defender-1709",
+        "family": "small_ruff_preserve_master",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "SDCH",
+        "rotation": 0,
+        "chosen": "C4",
+        "canonical_chosen": "H4",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "S2"
+        ],
+        "accepted_probability": 0.038006898440497726,
+        "canonical_probabilities": {
+          "S2": 0.038006898440497726,
+          "H4": 0.8988083701447588,
+          "SA": 0.0631847314147435
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "small_ruff_preserve_master-defender-1709",
+        "family": "small_ruff_preserve_master",
+        "seed": 1709,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "d6fa4130beb8d42762af4f13ce4adc3b32fde52baa1841c069e3fe4bed0fdb22",
+          "owners": [
+            0,
+            1,
+            2,
+            0,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            0,
+            3,
+            3,
+            3,
+            2,
+            2,
+            2,
+            0,
+            3,
+            3,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            3,
+            2,
+            2,
+            2,
+            0,
+            0,
+            3,
+            3,
+            0,
+            3,
+            0,
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            3,
+            3,
+            1,
+            1,
+            2,
+            1,
+            2,
+            0
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "H",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1H"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "D4",
+          "D5",
+          "D6",
+          "D3",
+          "DJ",
+          "DA",
+          "DQ",
+          "DK",
+          "C3",
+          "C6",
+          "C5",
+          "C2",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "H6",
+          "H9",
+          "H3",
+          "H5",
+          "HT",
+          "HK",
+          "HJ",
+          "HQ",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "S5",
+          "S6",
+          "S2",
+          "S3",
+          "ST",
+          "SA",
+          "S7",
+          "S8",
+          "D7",
+          "D8",
+          "D9",
+          "DT",
+          "S4",
+          "S9",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "H2"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "H2": 0,
+            "C4": 2,
+            "HA": 2
+          },
+          "witness": {
+            "first_card": "H2",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "H2": {
+              "first_card": "H2",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "SDCH",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "small_ruff_preserve_master-defender-1709",
+          "suit_permutation": "SDCH",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "small_ruff_preserve_master-defender-1723",
+        "family": "small_ruff_preserve_master",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "SDCH",
+        "rotation": 0,
+        "chosen": "C4",
+        "canonical_chosen": "H4",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "S2"
+        ],
+        "accepted_probability": 0.05497946115248909,
+        "canonical_probabilities": {
+          "S2": 0.05497946115248909,
+          "H4": 0.883465988869481,
+          "SA": 0.061554549978029914
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "small_ruff_preserve_master-defender-1723",
+        "family": "small_ruff_preserve_master",
+        "seed": 1723,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "4da1f3a6d3edd81d61876940497eaf693a38b23c30dce2b70d2a83c1b7613395",
+          "owners": [
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            0,
+            2,
+            2,
+            1,
+            0,
+            3,
+            3,
+            2,
+            0,
+            3,
+            2,
+            3,
+            2,
+            1,
+            0,
+            0,
+            3,
+            1,
+            1,
+            1,
+            3,
+            2,
+            2,
+            3,
+            1,
+            0,
+            3,
+            2,
+            0,
+            3,
+            1,
+            1,
+            1,
+            3,
+            2,
+            2,
+            2,
+            1,
+            3,
+            3,
+            3,
+            1,
+            0,
+            0,
+            2,
+            0
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "H",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1H"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "CQ",
+          "CK",
+          "CA",
+          "CJ",
+          "S2",
+          "S6",
+          "S3",
+          "S5",
+          "D8",
+          "DT",
+          "D9",
+          "D7",
+          "D5",
+          "D6",
+          "D3",
+          "D4",
+          "DK",
+          "DA",
+          "DJ",
+          "DQ",
+          "H3",
+          "H9",
+          "H6",
+          "H8",
+          "C3",
+          "C6",
+          "C5",
+          "C2",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "ST",
+          "SA",
+          "S7",
+          "S8",
+          "HT",
+          "HJ",
+          "HQ",
+          "HK",
+          "S4",
+          "S9",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "H2"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "H2": 0,
+            "C4": 2,
+            "HA": 2
+          },
+          "witness": {
+            "first_card": "H2",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "H2": {
+              "first_card": "H2",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "SDCH",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "small_ruff_preserve_master-defender-1723",
+          "suit_permutation": "SDCH",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "small_ruff_preserve_master-defender-1701",
+        "family": "small_ruff_preserve_master",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "SDCH",
+        "rotation": 0,
+        "chosen": "C4",
+        "canonical_chosen": "H4",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "S2"
+        ],
+        "accepted_probability": 0.055664423030994545,
+        "canonical_probabilities": {
+          "S2": 0.055664423030994545,
+          "H4": 0.9074568625703308,
+          "SA": 0.03687871439867467
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "small_ruff_preserve_master-defender-1701",
+        "family": "small_ruff_preserve_master",
+        "seed": 1701,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "a360da098aee807026da0738d23d19676c9e405f220d553928cbf63fd619ba05",
+          "owners": [
+            1,
+            1,
+            2,
+            0,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            3,
+            3,
+            3,
+            0,
+            2,
+            0,
+            1,
+            2,
+            3,
+            1,
+            0,
+            3,
+            1,
+            2,
+            1,
+            3,
+            2,
+            3,
+            3,
+            1,
+            0,
+            0,
+            2,
+            0,
+            3,
+            0,
+            0,
+            1,
+            3,
+            1,
+            1,
+            3,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            3,
+            2,
+            0
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "H",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1H"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "C3",
+          "C5",
+          "C6",
+          "C2",
+          "H3",
+          "H9",
+          "H6",
+          "H7",
+          "HJ",
+          "HK",
+          "HQ",
+          "HT",
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "D3",
+          "D6",
+          "D4",
+          "D5",
+          "D8",
+          "DT",
+          "D9",
+          "D7",
+          "DK",
+          "DA",
+          "DJ",
+          "DQ",
+          "ST",
+          "SA",
+          "S7",
+          "S8",
+          "S2",
+          "S3",
+          "S5",
+          "S6",
+          "S4",
+          "S9",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "H2"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "H2": 0,
+            "C4": 2,
+            "HA": 2
+          },
+          "witness": {
+            "first_card": "H2",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "H2": {
+              "first_card": "H2",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "SDCH",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "small_ruff_preserve_master-defender-1701",
+          "suit_permutation": "SDCH",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "win_now_keep_lead-defender-1709",
+        "family": "win_now_keep_lead",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DHSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.09963835550448663,
+        "canonical_probabilities": {
+          "HQ": 0.9003616444955134,
+          "HA": 0.09963835550448663
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "win_now_keep_lead-defender-1709",
+        "family": "win_now_keep_lead",
+        "seed": 1709,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "10b80ae69c681955ac91b05516901558d0d84f954faa192ebf8f16d330014f39",
+          "owners": [
+            1,
+            0,
+            1,
+            0,
+            2,
+            1,
+            2,
+            0,
+            3,
+            3,
+            3,
+            2,
+            0,
+            2,
+            1,
+            3,
+            0,
+            0,
+            0,
+            3,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            2,
+            1,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            3,
+            0,
+            2,
+            0,
+            0,
+            1,
+            3,
+            1,
+            2,
+            2,
+            0,
+            3,
+            1,
+            3,
+            0,
+            2,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1NT"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "DJ",
+          "DQ",
+          "DK",
+          "DT",
+          "H7",
+          "HT",
+          "H8",
+          "H9",
+          "HQ",
+          "HA",
+          "HK",
+          "HJ",
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "C4",
+          "C5",
+          "C2",
+          "C3",
+          "S3",
+          "S7",
+          "S4",
+          "S6",
+          "D3",
+          "D5",
+          "D4",
+          "D2",
+          "D8",
+          "D9",
+          "D6",
+          "D7",
+          "H4",
+          "H6",
+          "H2",
+          "H3",
+          "C6",
+          "CT",
+          "C7",
+          "C8",
+          "S8",
+          "S9",
+          "ST",
+          "SJ",
+          "S2",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 2,
+          "worst_world_trick_regret": {
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "rule-basic",
+            "verified_worlds": 2,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "rule-basic",
+              "verified_worlds": 2,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DHSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "win_now_keep_lead-defender-1709",
+          "suit_permutation": "DHSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "small_ruff_preserve_master-dummy-1709",
+        "family": "small_ruff_preserve_master",
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "permutation": "CHDS",
+        "rotation": 0,
+        "chosen": "D4",
+        "canonical_chosen": "H4",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "S2"
+        ],
+        "accepted_probability": 0.11172824852443852,
+        "canonical_probabilities": {
+          "S2": 0.11172824852443852,
+          "H4": 0.8463341376036765,
+          "SA": 0.041937613871884966
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "small_ruff_preserve_master-dummy-1709",
+        "family": "small_ruff_preserve_master",
+        "seed": 1709,
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "a8e10cf30029a5a7014927dada8b31875985e6e95cd80238ef9bd0e6fc0d50f1",
+          "owners": [
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            3,
+            2,
+            2,
+            0,
+            2,
+            3,
+            3,
+            2,
+            3,
+            2,
+            0,
+            3,
+            1,
+            0,
+            0,
+            0,
+            2,
+            1,
+            1,
+            3,
+            0,
+            2,
+            2,
+            0,
+            3,
+            3,
+            3,
+            0,
+            3,
+            0,
+            0,
+            2,
+            1,
+            1,
+            2,
+            3,
+            1,
+            3,
+            3,
+            1,
+            0,
+            2,
+            1,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "S",
+            "declarer": "N",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "1S"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "H3",
+          "H4",
+          "H5",
+          "H6",
+          "HJ",
+          "HA",
+          "HQ",
+          "HK",
+          "D3",
+          "D6",
+          "D5",
+          "D2",
+          "D9",
+          "DT",
+          "D7",
+          "D8",
+          "S6",
+          "S9",
+          "S3",
+          "S5",
+          "ST",
+          "SK",
+          "SJ",
+          "SQ",
+          "DQ",
+          "DA",
+          "DK",
+          "DJ",
+          "C5",
+          "C6",
+          "C2",
+          "C3",
+          "CT",
+          "CA",
+          "C7",
+          "C8",
+          "H7",
+          "H8",
+          "H9",
+          "HT",
+          "C4",
+          "C9",
+          "CK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "S2"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "S2": 0,
+            "D4": 2,
+            "SA": 1
+          },
+          "witness": {
+            "first_card": "S2",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "S2": {
+              "first_card": "S2",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "CHDS",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "small_ruff_preserve_master-dummy-1709",
+          "suit_permutation": "CHDS",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "win_now_keep_lead-defender-1723",
+        "family": "win_now_keep_lead",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DHSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.12421580778909302,
+        "canonical_probabilities": {
+          "HQ": 0.875784192210907,
+          "HA": 0.12421580778909302
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "win_now_keep_lead-defender-1723",
+        "family": "win_now_keep_lead",
+        "seed": 1723,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "ae12498f192212dbb64d305fade88266e8f7ed61f7942642a8fcc509e04dc421",
+          "owners": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            1,
+            0,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            2,
+            3,
+            0,
+            1,
+            1,
+            3,
+            1,
+            2,
+            1,
+            1,
+            2,
+            3,
+            2,
+            1,
+            3,
+            0,
+            3,
+            2,
+            3,
+            0,
+            0,
+            3,
+            0,
+            1,
+            1,
+            0,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            1,
+            2,
+            0,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1NT"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "S9",
+          "ST",
+          "SJ",
+          "S8",
+          "D2",
+          "D5",
+          "D3",
+          "D4",
+          "H3",
+          "H5",
+          "H4",
+          "H2",
+          "DQ",
+          "DK",
+          "DT",
+          "DJ",
+          "H9",
+          "HT",
+          "H7",
+          "H8",
+          "C2",
+          "C5",
+          "C3",
+          "C4",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "C8",
+          "CT",
+          "C6",
+          "C7",
+          "D8",
+          "D9",
+          "D6",
+          "D7",
+          "S2",
+          "S7",
+          "S4",
+          "S5",
+          "HJ",
+          "HQ",
+          "HK",
+          "HA",
+          "S3",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 2,
+          "worst_world_trick_regret": {
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "rule-basic",
+            "verified_worlds": 2,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "rule-basic",
+              "verified_worlds": 2,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DHSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "win_now_keep_lead-defender-1723",
+          "suit_permutation": "DHSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "small_ruff_preserve_master-dummy-1723",
+        "family": "small_ruff_preserve_master",
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DHCS",
+        "rotation": 0,
+        "chosen": "C4",
+        "canonical_chosen": "H4",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "S2"
+        ],
+        "accepted_probability": 0.13100879577593186,
+        "canonical_probabilities": {
+          "S2": 0.13100879577593186,
+          "H4": 0.773436050221714,
+          "SA": 0.09555515400235413
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "small_ruff_preserve_master-dummy-1723",
+        "family": "small_ruff_preserve_master",
+        "seed": 1723,
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "f24498d5b037e28ef1f18f4662eddb15454a7176eba55cc2f7f27f6095dda11d",
+          "owners": [
+            0,
+            0,
+            1,
+            2,
+            1,
+            2,
+            0,
+            0,
+            2,
+            3,
+            1,
+            0,
+            3,
+            3,
+            2,
+            0,
+            2,
+            1,
+            3,
+            2,
+            0,
+            1,
+            0,
+            3,
+            1,
+            2,
+            1,
+            3,
+            2,
+            0,
+            3,
+            1,
+            3,
+            3,
+            2,
+            0,
+            1,
+            3,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2,
+            3,
+            1,
+            3,
+            3,
+            0,
+            0,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "S",
+            "declarer": "N",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "1S"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "CJ",
+          "CQ",
+          "CK",
+          "CA",
+          "D2",
+          "D6",
+          "D3",
+          "D5",
+          "H8",
+          "HT",
+          "H9",
+          "H7",
+          "H5",
+          "H6",
+          "H3",
+          "H4",
+          "HK",
+          "HA",
+          "HJ",
+          "HQ",
+          "S3",
+          "S9",
+          "S6",
+          "S8",
+          "C3",
+          "C6",
+          "C5",
+          "C2",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "DT",
+          "DA",
+          "D7",
+          "D8",
+          "ST",
+          "SJ",
+          "SQ",
+          "SK",
+          "D4",
+          "D9",
+          "DK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "S2"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "S2": 0,
+            "C4": 2,
+            "SA": 1
+          },
+          "witness": {
+            "first_card": "S2",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "S2": {
+              "first_card": "S2",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DHCS",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "small_ruff_preserve_master-dummy-1723",
+          "suit_permutation": "DHCS",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "win_now_keep_lead-defender-1701",
+        "family": "win_now_keep_lead",
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DCSH",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.13978831678313489,
+        "canonical_probabilities": {
+          "HQ": 0.8602116832168651,
+          "HA": 0.13978831678313489
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "win_now_keep_lead-defender-1701",
+        "family": "win_now_keep_lead",
+        "seed": 1701,
+        "role": "defender",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "6bd204b5d3b91dcb432850bd6bce2360634e31790843e71334fc4ba1fc8e0762",
+          "owners": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            1,
+            2,
+            0,
+            1,
+            3,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            0,
+            2,
+            3,
+            3,
+            1,
+            3,
+            2,
+            1,
+            2,
+            0,
+            3,
+            2,
+            3,
+            0,
+            0,
+            3,
+            0,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            2,
+            3,
+            1,
+            3,
+            1,
+            2,
+            0,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "E",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "1NT"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "S9",
+          "ST",
+          "SJ",
+          "S8",
+          "H2",
+          "H5",
+          "H3",
+          "H4",
+          "D3",
+          "D5",
+          "D4",
+          "D2",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "H9",
+          "HT",
+          "H6",
+          "H8",
+          "C2",
+          "C6",
+          "C3",
+          "C5",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "S6",
+          "S7",
+          "S3",
+          "S5",
+          "HK",
+          "HA",
+          "HJ",
+          "HQ",
+          "DT",
+          "DK",
+          "DJ",
+          "DQ",
+          "D6",
+          "D7",
+          "D8",
+          "D9",
+          "S2",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 2,
+          "worst_world_trick_regret": {
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "rule-basic",
+            "verified_worlds": 2,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "rule-basic",
+              "verified_worlds": 2,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DCSH",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "win_now_keep_lead-defender-1701",
+          "suit_permutation": "DCSH",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "cash_master_before_loser-declarer-1701",
+        "family": "cash_master_before_loser",
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DHSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.1683725815041412,
+        "canonical_probabilities": {
+          "HQ": 0.8316274184958589,
+          "HA": 0.1683725815041412
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "cash_master_before_loser-declarer-1701",
+        "family": "cash_master_before_loser",
+        "seed": 1701,
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "1112e620c0e380c7ea7958cf4a691e2fcec7e596e3e8fd0636fd4805a9d0842e",
+          "owners": [
+            0,
+            0,
+            0,
+            0,
+            2,
+            1,
+            2,
+            0,
+            3,
+            3,
+            1,
+            3,
+            1,
+            2,
+            3,
+            1,
+            1,
+            0,
+            1,
+            2,
+            3,
+            1,
+            0,
+            3,
+            2,
+            3,
+            1,
+            1,
+            3,
+            2,
+            2,
+            2,
+            0,
+            0,
+            3,
+            3,
+            1,
+            2,
+            0,
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            3,
+            1,
+            0,
+            0,
+            2,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "S",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "1NT"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "ST",
+          "SJ",
+          "S8",
+          "S9",
+          "C2",
+          "C5",
+          "C3",
+          "C4",
+          "D3",
+          "D5",
+          "D4",
+          "D2",
+          "H9",
+          "HT",
+          "H7",
+          "H8",
+          "C9",
+          "CT",
+          "C6",
+          "C8",
+          "H2",
+          "H6",
+          "H3",
+          "H5",
+          "HQ",
+          "HA",
+          "HK",
+          "HJ",
+          "S6",
+          "S7",
+          "S3",
+          "S5",
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "DT",
+          "DK",
+          "DJ",
+          "DQ",
+          "D7",
+          "D9",
+          "D8",
+          "D6"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "rule-basic",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "rule-basic",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DHSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "cash_master_before_loser-declarer-1701",
+          "suit_permutation": "DHSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "win_now_keep_lead-dummy-1709",
+        "family": "win_now_keep_lead",
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "permutation": "DHSC",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.17168879508972168,
+        "canonical_probabilities": {
+          "HQ": 0.8283112049102783,
+          "HA": 0.17168879508972168
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "win_now_keep_lead-dummy-1709",
+        "family": "win_now_keep_lead",
+        "seed": 1709,
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "10b80ae69c681955ac91b05516901558d0d84f954faa192ebf8f16d330014f39",
+          "owners": [
+            1,
+            0,
+            1,
+            0,
+            2,
+            1,
+            2,
+            0,
+            3,
+            3,
+            3,
+            2,
+            0,
+            2,
+            1,
+            3,
+            0,
+            0,
+            0,
+            3,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            2,
+            1,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            3,
+            0,
+            2,
+            0,
+            0,
+            1,
+            3,
+            1,
+            2,
+            2,
+            0,
+            3,
+            1,
+            3,
+            0,
+            2,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "N",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "1NT"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "DT",
+          "DJ",
+          "DQ",
+          "DK",
+          "H7",
+          "HT",
+          "H8",
+          "H9",
+          "HQ",
+          "HA",
+          "HK",
+          "HJ",
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "C4",
+          "C5",
+          "C2",
+          "C3",
+          "S3",
+          "S7",
+          "S4",
+          "S6",
+          "D3",
+          "D5",
+          "D4",
+          "D2",
+          "D8",
+          "D9",
+          "D6",
+          "D7",
+          "H4",
+          "H6",
+          "H2",
+          "H3",
+          "C6",
+          "CT",
+          "C7",
+          "C8",
+          "S8",
+          "S9",
+          "ST",
+          "SJ",
+          "S2",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 3,
+          "worst_world_trick_regret": {
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "rule-basic",
+            "verified_worlds": 3,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "rule-basic",
+              "verified_worlds": 3,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "DHSC",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "win_now_keep_lead-dummy-1709",
+          "suit_permutation": "DHSC",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "overruff_not_undertrump-declarer-1701",
+        "family": "overruff_not_undertrump",
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "permutation": "HDCS",
+        "rotation": 0,
+        "chosen": "SQ",
+        "canonical_chosen": "SQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "SA"
+        ],
+        "accepted_probability": 0.1894531548023224,
+        "canonical_probabilities": {
+          "H4": 0.36115509271621704,
+          "SQ": 0.44939175248146057,
+          "SA": 0.1894531548023224
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "overruff_not_undertrump-declarer-1701",
+        "family": "overruff_not_undertrump",
+        "seed": 1701,
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "a38df0af1cbe614c1ff3d88e5b1243fa411bd87baa780db68d624ee2a129531b",
+          "owners": [
+            0,
+            1,
+            0,
+            3,
+            2,
+            1,
+            0,
+            0,
+            2,
+            2,
+            3,
+            1,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            3,
+            2,
+            0,
+            1,
+            0,
+            3,
+            1,
+            2,
+            1,
+            0,
+            3,
+            3,
+            0,
+            1,
+            2,
+            0,
+            1,
+            2,
+            1,
+            0,
+            2,
+            3,
+            2,
+            1,
+            3,
+            2,
+            3,
+            3,
+            3,
+            1,
+            0,
+            2,
+            0,
+            2
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "S",
+            "declarer": "S",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "1S"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "CK",
+          "CA",
+          "CJ",
+          "CQ",
+          "H3",
+          "H8",
+          "H5",
+          "H6",
+          "DQ",
+          "DA",
+          "DK",
+          "DJ",
+          "S6",
+          "S7",
+          "S3",
+          "S5",
+          "D9",
+          "DT",
+          "D7",
+          "D8",
+          "C2",
+          "C6",
+          "C3",
+          "C5",
+          "C8",
+          "CT",
+          "C9",
+          "C7",
+          "ST",
+          "SJ",
+          "S8",
+          "S9",
+          "D5",
+          "D6",
+          "D3",
+          "D4",
+          "H9",
+          "HT",
+          "HJ",
+          "HQ",
+          "H4",
+          "H7",
+          "SK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "SA"
+          ],
+          "worlds": 3,
+          "worst_world_trick_regret": {
+            "C4": 1,
+            "SQ": 2,
+            "SA": 0
+          },
+          "witness": {
+            "first_card": "SA",
+            "continuation": "cash-public-master",
+            "verified_worlds": 3,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "SA": {
+              "first_card": "SA",
+              "continuation": "cash-public-master",
+              "verified_worlds": 3,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "HDCS",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "overruff_not_undertrump-declarer-1701",
+          "suit_permutation": "HDCS",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "win_now_keep_lead-dummy-1701",
+        "family": "win_now_keep_lead",
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "permutation": "SHCD",
+        "rotation": 0,
+        "chosen": "CQ",
+        "canonical_chosen": "HQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "HA"
+        ],
+        "accepted_probability": 0.2017509579136682,
+        "canonical_probabilities": {
+          "HQ": 0.7982490420863317,
+          "HA": 0.2017509579136682
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "win_now_keep_lead-dummy-1701",
+        "family": "win_now_keep_lead",
+        "seed": 1701,
+        "role": "dummy",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "5d517c0b085af311a842727e0c7f62a8dfe20b4068b7f065645cdf5adbdf0341",
+          "owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            1,
+            3,
+            3,
+            1,
+            3,
+            1,
+            1,
+            3,
+            2,
+            2,
+            1,
+            1,
+            1,
+            3,
+            3,
+            0,
+            2,
+            1,
+            2,
+            1,
+            3,
+            2,
+            3,
+            2,
+            0,
+            3,
+            0,
+            3,
+            0,
+            0,
+            1,
+            0,
+            2,
+            2,
+            2,
+            1,
+            3,
+            1,
+            3,
+            3,
+            1,
+            2,
+            0,
+            2,
+            0
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "NT",
+            "declarer": "N",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "1NT"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "P"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "C8",
+          "C9",
+          "CT",
+          "CJ",
+          "D2",
+          "D5",
+          "D3",
+          "D4",
+          "S3",
+          "S5",
+          "S4",
+          "S2",
+          "H9",
+          "HT",
+          "H7",
+          "H8",
+          "D9",
+          "DT",
+          "D6",
+          "D8",
+          "H2",
+          "H6",
+          "H3",
+          "H5",
+          "HQ",
+          "HA",
+          "HK",
+          "HJ",
+          "C6",
+          "C7",
+          "C3",
+          "C5",
+          "DK",
+          "DA",
+          "DJ",
+          "DQ",
+          "ST",
+          "SK",
+          "SJ",
+          "SQ",
+          "S6",
+          "S7",
+          "S8",
+          "S9",
+          "C2",
+          "CK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "CA"
+          ],
+          "worlds": 3,
+          "worst_world_trick_regret": {
+            "CQ": 2,
+            "CA": 0
+          },
+          "witness": {
+            "first_card": "CA",
+            "continuation": "rule-basic",
+            "verified_worlds": 3,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "CA": {
+              "first_card": "CA",
+              "continuation": "rule-basic",
+              "verified_worlds": 3,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "SHCD",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "win_now_keep_lead-dummy-1701",
+          "suit_permutation": "SHCD",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "overruff_not_undertrump-declarer-1723",
+        "family": "overruff_not_undertrump",
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "permutation": "SCHD",
+        "rotation": 0,
+        "chosen": "DQ",
+        "canonical_chosen": "SQ",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "SA"
+        ],
+        "accepted_probability": 0.22465385161856039,
+        "canonical_probabilities": {
+          "H6": 0.3859261812876734,
+          "SQ": 0.38941996709376625,
+          "SA": 0.22465385161856039
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "overruff_not_undertrump-declarer-1723",
+        "family": "overruff_not_undertrump",
+        "seed": 1723,
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "0e7c5e99d654fa8c94fa56f43f0d93927ee1063a7aa345a918e296a52f58343f",
+          "owners": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            3,
+            1,
+            0,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            1,
+            2,
+            3,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            2,
+            0,
+            3,
+            1,
+            3,
+            0,
+            1,
+            3,
+            0,
+            2,
+            0,
+            2,
+            0,
+            3,
+            1,
+            2,
+            1,
+            1,
+            3,
+            1,
+            2,
+            3,
+            2,
+            2,
+            3,
+            0
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "D",
+            "declarer": "S",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "1D"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "S5",
+          "S7",
+          "S2",
+          "S4",
+          "C7",
+          "CT",
+          "C8",
+          "C9",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "HK",
+          "HA",
+          "HJ",
+          "HQ",
+          "D5",
+          "D7",
+          "D2",
+          "D4",
+          "S8",
+          "SQ",
+          "ST",
+          "SJ",
+          "D9",
+          "DJ",
+          "DT",
+          "D8",
+          "C5",
+          "C6",
+          "C2",
+          "C4",
+          "H9",
+          "HT",
+          "H7",
+          "H8",
+          "H2",
+          "H3",
+          "H4",
+          "H5",
+          "S6",
+          "S9",
+          "DK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "DA"
+          ],
+          "worlds": 3,
+          "worst_world_trick_regret": {
+            "H6": 1,
+            "DQ": 2,
+            "DA": 0
+          },
+          "witness": {
+            "first_card": "DA",
+            "continuation": "cash-public-master",
+            "verified_worlds": 3,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "DA": {
+              "first_card": "DA",
+              "continuation": "cash-public-master",
+              "verified_worlds": 3,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "SCHD",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "overruff_not_undertrump-declarer-1723",
+          "suit_permutation": "SCHD",
+          "seat_rotation": 0
+        }
+      }
+    },
+    {
+      "prediction": {
+        "base_id": "small_ruff_preserve_master-declarer-1709",
+        "family": "small_ruff_preserve_master",
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "permutation": "HSCD",
+        "rotation": 0,
+        "chosen": "C4",
+        "canonical_chosen": "H4",
+        "legal": true,
+        "correct": false,
+        "accepted_canonical": [
+          "S2"
+        ],
+        "accepted_probability": 0.23136147167201424,
+        "canonical_probabilities": {
+          "S2": 0.23136147167201424,
+          "H4": 0.4693310716947594,
+          "SA": 0.2993074566332264
+        },
+        "worst_feasible_world_trick_regret": 2
+      },
+      "case": {
+        "id": "small_ruff_preserve_master-declarer-1709",
+        "family": "small_ruff_preserve_master",
+        "seed": 1709,
+        "role": "declarer",
+        "mechanical": false,
+        "control": false,
+        "board": {
+          "id": "2a38259692c431d8c45c757c351ee79b756f9653f7c210c725f27ee544666c19",
+          "owners": [
+            0,
+            2,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            0,
+            3,
+            2,
+            3,
+            2,
+            2,
+            3,
+            2,
+            3,
+            3,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            3,
+            2,
+            1,
+            2,
+            0,
+            0,
+            2,
+            3,
+            0,
+            3,
+            3,
+            0,
+            2,
+            3,
+            0,
+            1,
+            3,
+            1,
+            2,
+            3,
+            1,
+            1,
+            3,
+            2,
+            2,
+            0,
+            1
+          ],
+          "contract": {
+            "level": 1,
+            "strain": "D",
+            "declarer": "S",
+            "double_status": 0
+          },
+          "auction": [
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            },
+            {
+              "seat": "S",
+              "call": "1D"
+            },
+            {
+              "seat": "W",
+              "call": "P"
+            },
+            {
+              "seat": "N",
+              "call": "P"
+            },
+            {
+              "seat": "E",
+              "call": "P"
+            }
+          ],
+          "auction_source": "synthetic_contract",
+          "system_id": 0,
+          "dealer": "N",
+          "vulnerable": [
+            false,
+            false
+          ]
+        },
+        "prefix": [
+          "S5",
+          "S6",
+          "S3",
+          "S4",
+          "SJ",
+          "SA",
+          "SQ",
+          "SK",
+          "C3",
+          "C6",
+          "C5",
+          "C2",
+          "C9",
+          "CT",
+          "C7",
+          "C8",
+          "D6",
+          "D9",
+          "D3",
+          "D5",
+          "DT",
+          "DK",
+          "DJ",
+          "DQ",
+          "CQ",
+          "CA",
+          "CK",
+          "CJ",
+          "H5",
+          "H6",
+          "H2",
+          "H3",
+          "HT",
+          "HA",
+          "H7",
+          "H8",
+          "S7",
+          "S8",
+          "S9",
+          "ST",
+          "H4",
+          "H9",
+          "HK"
+        ],
+        "certificate": {
+          "status": "certified",
+          "accepted_cards": [
+            "D2"
+          ],
+          "worlds": 6,
+          "worst_world_trick_regret": {
+            "D2": 0,
+            "C4": 2,
+            "DA": 1
+          },
+          "witness": {
+            "first_card": "D2",
+            "continuation": "cash-public-master",
+            "verified_worlds": 6,
+            "adversary": "omniscient, all legal continuations enumerated"
+          },
+          "witnesses": {
+            "D2": {
+              "first_card": "D2",
+              "continuation": "cash-public-master",
+              "verified_worlds": 6,
+              "adversary": "omniscient, all legal continuations enumerated"
+            }
+          },
+          "scope": "each accepted move has universal hidden-world DDS optimality and one implementable public team continuation; ignores auction priors, conservative not exhaustive",
+          "transport": {
+            "suit_permutation": "HSCD",
+            "seat_rotation": 0,
+            "rule": "inverse-transform the public observation, run canonical witness, transform its action back"
+          }
+        },
+        "certificate_transport": {
+          "base_id": "small_ruff_preserve_master-declarer-1709",
+          "suit_permutation": "HSCD",
+          "seat_rotation": 0
+        }
+      }
+    }
+  ],
+  "limits": [
+    "8 tactical templates plus follow-suit and multiple-answer controls; not all bridge knowledge",
+    "2-4 trick endings embedded in legal complete games; synthetic development variants",
+    "No common optimum or no public continuation witness => ungraded",
+    "Template, role, seed and permutation variants are correlated, not independent test deals",
+    "Basic skill percentages are separate from random=0/DDS=100 match ratings"
+  ]
+}

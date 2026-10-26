@@ -4,7 +4,7 @@
   "benchmark": "cardplay-rating-v1",
   "protocol_sha256": "cc129d87676d06b8e5b19a72e9135ad637690d79c3a64652c229986a18898e9e",
   "opponent_sha256": "1489a7051dabeeea32b529b70bdb2710ab4343c8631892004795ae60a637799a",
-  "created_at_utc": "2026-10-25T20:07:39.853633+00:00",
+  "created_at_utc": "2026-10-26T08:41:49.822038+00:00",
   "purpose": "tracking",
   "score": {
     "rating": 100.0,

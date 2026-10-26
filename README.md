@@ -21,6 +21,10 @@
 
 已有独立的[出牌牌力评分器](docs/cardplay-rating.md)：随机合法出牌固定0分、全知 DDS 固定100分；规则、采样 DDS 和历史模型通过同一固定面板的双室 IMP 校准评分，附95%区间。入口为 `python -m bridgemind.rating`，本机旧模型登记与新评分牌准备见 `examples/cardplay_rating_setup.py`。
 
+另有[基础能力与花色一致性体检](docs/cardplay-foundations.md)：对明确可证明的基础选择单独验收，覆盖8项战术、全部24种花色置换及4种座位轮换；正确率与对称性分开报告。入口为 `python -m bridgemind.foundation`，使用已认证题库评估新模型时无需DDS服务。
+
+2026-10-26 两小时[混合 SL v2](docs/cardplay-sl-v2.md)已完成：75% 真实出牌决策与 25% 认证基础课程，加花色增强。[训练后验收](docs/cardplay-sl-v2-evaluation.md)已完成：固定标尺 **62.54分**，全新2,048副确认牌对原长训SL **+3.254 IMP/副**、对基础规则 **+3.182 IMP/副**，基础体检全通过。训练报告在 `runs/play-sl-v2-20261026-2h/report.json`，验收报告在 `artifacts/cardplay-sl-v2-20261026/`。
+
 本机已准备出牌训练 1,000 副，验证和测试各 128 副。已有环境和数据可直接运行：
 
 ```powershell
