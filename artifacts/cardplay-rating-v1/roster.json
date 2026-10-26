@@ -261,5 +261,31 @@
       "training_cases": 704,
       "training_deals": 256
     }
+  },
+  {
+    "id": "sl-v3-20261026",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-sl-v3-experiment-20261026\\candidate.pt",
+    "checkpoint_sha256": "db64de659ed5ce32b8f6ae60db3c2cb44e32b184665abe530339b33debbab93e",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-sl-v3-50k\\train",
+        "fingerprint": "84446c8e9aeef2b31cfec42eb9d177c7d62313fd18123658851984ed01f69696"
+      }
+    ],
+    "training_audit": "known_local_training_ids",
+    "declared_curricula": [
+      {
+        "path": "D:\\code\\BridgeMind\\runs\\sl-v3-common-20261026\\curriculum.json",
+        "sha256": "f9eb9d8335e9f672c044e2ddec55a6ecac9614192386975986d137f3340afc96",
+        "training_cases": 1984
+      },
+      {
+        "path": "D:\\code\\BridgeMind\\runs\\play-sl-v2-20261026-2h\\curriculum.json",
+        "sha256": "dd42f2d919ec9ac969338acad06c0a58e0c33b9fd7618cce2d56ced2769e82ee",
+        "training_cases": 704
+      }
+    ]
   }
 ]

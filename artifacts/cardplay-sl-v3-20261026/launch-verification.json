@@ -1,0 +1,223 @@
+{
+  "checked_at_utc": "2026-10-26T10:55:36.525195+00:00",
+  "training_status": {
+    "state": "running",
+    "phase": "training",
+    "process_id": 9188,
+    "started_at_utc": "2026-10-26T10:52:39.204813+00:00",
+    "expected_finish_utc": "2026-10-26T12:52:39.204822+00:00",
+    "time_budget_seconds": 7200.0,
+    "run": "D:\\code\\BridgeMind\\runs\\play-sl-v3-20261026-2h",
+    "device": "cuda",
+    "step": 5667,
+    "protocol_sha256": "a67b8ba0f7d2d4a76c2b06383adfbe26262893f8ca9f4aa499a463c5f8932852",
+    "training_mix": {
+      "real": 56,
+      "curriculum": 8
+    },
+    "elapsed_seconds": 157.3151657999988,
+    "updated_at_utc": "2026-10-26T10:55:16.519975+00:00",
+    "train": {
+      "loss": 0.7669754028320312,
+      "real_nll": 0.7319265604019165,
+      "curriculum_nll": 0.005850885063409805,
+      "belief_loss": 0.6285097002983093,
+      "value_loss": 0.0010637867962941527,
+      "real_accuracy": 0.7678571939468384,
+      "curriculum_accuracy": 1.0,
+      "gradient_norm": 4.891600131988525
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 5070, 65 %, 2599 MiB, 12227 MiB",
+  "pipeline_process_id": 596,
+  "empty_error_logs": true,
+  "initial_weights_hash_verified": true,
+  "coordinator_code_hash_verified": true,
+  "all_recorded_numbers_finite": true,
+  "checkpoints": {
+    "best-curriculum.pt": {
+      "bytes": 13685717,
+      "modified_utc": "2026-10-26T10:52:45.872597+00:00"
+    },
+    "best.pt": {
+      "bytes": 13684305,
+      "modified_utc": "2026-10-26T10:52:45.861241+00:00"
+    },
+    "init.pt": {
+      "bytes": 13683857,
+      "modified_utc": "2026-10-26T10:52:34.951201+00:00"
+    },
+    "last.pt": {
+      "bytes": 41054235,
+      "modified_utc": "2026-10-26T10:54:46.110502+00:00"
+    }
+  },
+  "pilot_summary": [
+    {
+      "run": "pilot-125",
+      "final_step": 2000,
+      "selected_step": 0,
+      "validation": {
+        "real_canonical": {
+          "nll": 0.5498448740690947,
+          "accuracy": 0.789794921875,
+          "states": 4096,
+          "by_family": {},
+          "belief_nll": 0.6653655494487132,
+          "belief_brier": 0.465289078261895,
+          "belief_accuracy": 0.5925538473034316,
+          "unknown_cards": 53531,
+          "value_mse": 0.0009647865226725116
+        },
+        "real_augmented": {
+          "nll": 0.570999501273036,
+          "accuracy": 0.773681640625,
+          "states": 4096,
+          "by_family": {},
+          "belief_nll": 0.6658616831416171,
+          "belief_brier": 0.46576740343066403,
+          "belief_accuracy": 0.5914703629672526,
+          "unknown_cards": 53531,
+          "value_mse": 0.0009186475908791181
+        },
+        "curriculum": {
+          "nll": 0.01583686838382154,
+          "accuracy": 1.0,
+          "states": 5952,
+          "by_family": {
+            "win_now_keep_lead": 1.0,
+            "fourth_hand_take_trick": 1.0,
+            "preserve_partner_entry": 1.0,
+            "cheapest_winning_honor": 1.0,
+            "cash_master_before_loser": 1.0,
+            "discard_loser_keep_master": 1.0,
+            "small_ruff_preserve_master": 1.0,
+            "overruff_not_undertrump": 1.0,
+            "unblock_discard_short_ace": 1.0,
+            "draw_trumps_before_cash": 1.0,
+            "unblock_before_crossing": 1.0,
+            "preserve_friendly_trump_entry": 1.0
+          },
+          "macro_accuracy": 1.0,
+          "old_macro_accuracy": 1.0,
+          "novel_macro_accuracy": 1.0
+        },
+        "duplicate_vs_initial": {
+          "boards": 128,
+          "mean_imps": -0.2890625,
+          "bootstrap_95_ci": [
+            -1.1251953125,
+            0.546875
+          ],
+          "standard_error": 0.427026252407077,
+          "wins": 30,
+          "ties": 62,
+          "losses": 36,
+          "seed": 20261026,
+          "action_selection": "greedy_for_neural",
+          "evaluation_model": "played_out",
+          "contract_source": "fixed_recorded_auction"
+        },
+        "scope": "validation for selection; not independent final strength evidence"
+      }
+    },
+    {
+      "run": "pilot-250",
+      "final_step": 2000,
+      "selected_step": 0,
+      "validation": {
+        "real_canonical": {
+          "nll": 0.5521530602127314,
+          "accuracy": 0.7841796875,
+          "states": 4096,
+          "by_family": {},
+          "belief_nll": 0.6651592959770828,
+          "belief_brier": 0.4650974499224165,
+          "belief_accuracy": 0.592964824120603,
+          "unknown_cards": 53531,
+          "value_mse": 0.0009666275855124695
+        },
+        "real_augmented": {
+          "nll": 0.5712675200775266,
+          "accuracy": 0.7744140625,
+          "states": 4096,
+          "by_family": {},
+          "belief_nll": 0.6658257354401684,
+          "belief_brier": 0.46576606143483157,
+          "belief_accuracy": 0.592497805010181,
+          "unknown_cards": 53531,
+          "value_mse": 0.000909608272195328
+        },
+        "curriculum": {
+          "nll": 0.008135725083130022,
+          "accuracy": 1.0,
+          "states": 5952,
+          "by_family": {
+            "win_now_keep_lead": 1.0,
+            "fourth_hand_take_trick": 1.0,
+            "preserve_partner_entry": 1.0,
+            "cheapest_winning_honor": 1.0,
+            "cash_master_before_loser": 1.0,
+            "discard_loser_keep_master": 1.0,
+            "small_ruff_preserve_master": 1.0,
+            "overruff_not_undertrump": 1.0,
+            "unblock_discard_short_ace": 1.0,
+            "draw_trumps_before_cash": 1.0,
+            "unblock_before_crossing": 1.0,
+            "preserve_friendly_trump_entry": 1.0
+          },
+          "macro_accuracy": 1.0,
+          "old_macro_accuracy": 1.0,
+          "novel_macro_accuracy": 1.0
+        },
+        "duplicate_vs_initial": {
+          "boards": 128,
+          "mean_imps": -0.09375,
+          "bootstrap_95_ci": [
+            -0.9298828125,
+            0.75
+          ],
+          "standard_error": 0.4339262785956913,
+          "wins": 35,
+          "ties": 58,
+          "losses": 35,
+          "seed": 20261026,
+          "action_selection": "greedy_for_neural",
+          "evaluation_model": "played_out",
+          "contract_source": "fixed_recorded_auction"
+        },
+        "scope": "validation for selection; not independent final strength evidence"
+      }
+    }
+  ],
+  "search": {
+    "verified_paired_deals": 448,
+    "all_terminal_scores_and_imps_recomputed": true,
+    "all_bootstrap_intervals_recomputed": true,
+    "selected": {
+      "id": "hybrid-32",
+      "kind": "hybrid",
+      "samples": 32
+    },
+    "confirmation_mean_imps": 3.8671875,
+    "confirmation_95_ci": [
+      3.0388671875,
+      4.71875
+    ],
+    "distillation_candidate_gate": true,
+    "teacher_tested_against": "SL v2 only; not yet against final SL v3",
+    "frozen_code_and_initialization_verified": true,
+    "python_tests": {
+      "full_suite_passed": 316,
+      "full_suite_seconds": 54.7,
+      "additional_pipeline_tests_passed": 3
+    }
+  },
+  "tests": {
+    "full_suite": 316,
+    "additional_pipeline": 3
+  },
+  "expected_finish_beijing": "2026-10-26T20:52:39.204822+08:00",
+  "deployed_model": "SL v2; no automatic deployment",
+  "automatic_next_stage": "independent 1024-deal dual-room evaluation vs SL v2 and basic rule; foundation and rating"
+}

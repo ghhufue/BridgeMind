@@ -1,0 +1,23 @@
+{
+  "verified_paired_deals": 448,
+  "all_terminal_scores_and_imps_recomputed": true,
+  "all_bootstrap_intervals_recomputed": true,
+  "selected": {
+    "id": "hybrid-32",
+    "kind": "hybrid",
+    "samples": 32
+  },
+  "confirmation_mean_imps": 3.8671875,
+  "confirmation_95_ci": [
+    3.0388671875,
+    4.71875
+  ],
+  "distillation_candidate_gate": true,
+  "teacher_tested_against": "SL v2 only; not yet against final SL v3",
+  "frozen_code_and_initialization_verified": true,
+  "python_tests": {
+    "full_suite_passed": 316,
+    "full_suite_seconds": 54.7,
+    "additional_pipeline_tests_passed": 3
+  }
+}

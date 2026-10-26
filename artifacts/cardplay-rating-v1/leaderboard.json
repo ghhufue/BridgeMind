@@ -31,6 +31,33 @@
       "clipped": false
     },
     {
+      "id": "sl-v3-20261026",
+      "rating": 73.14849742235636,
+      "rating_95_ci": [
+        68.69414836100017,
+        77.43792988814877
+      ],
+      "status": "calibrated",
+      "panel_mean_imps": 4.526041666666667,
+      "random_panel_mean_imps": -3.048828125,
+      "oracle_panel_mean_imps": 7.306640625,
+      "anchor_gap_imps": 10.35546875,
+      "anchor_gap_95_ci": [
+        9.718717447916667,
+        10.981201171874998
+      ],
+      "gain_over_random_95_ci": [
+        6.960921223958334,
+        8.174625651041666
+      ],
+      "boards": 128,
+      "random_replicates": 3,
+      "bootstrap_draws": 2000,
+      "bootstrap": "joint shared board columns and replicate seed rows; percentile 95%; estimated anchors included",
+      "interval_scope": "fixed policies and benchmark distribution, not training-seed or human-level uncertainty",
+      "clipped": false
+    },
+    {
       "id": "sl-v2-20261026",
       "rating": 62.54243681629574,
       "rating_95_ci": [

@@ -1,0 +1,35 @@
+{
+  "config": {
+    "id": "hybrid-32",
+    "kind": "hybrid",
+    "samples": 32
+  },
+  "validation_mean_imps": 6.078125,
+  "validation_nonforced_latency": {
+    "count": 2657,
+    "mean_ms": 42.54694023336165,
+    "p50_ms": 24.341199998161756,
+    "p95_ms": 127.74606000093625,
+    "max_ms": 1236.423400001513
+  },
+  "eligible_config_ids": [
+    "hybrid-32",
+    "uniform-32",
+    "uniform-8",
+    "hybrid-8"
+  ],
+  "reason": "Fastest eligible search variant within the predeclared mean-IMP tie band",
+  "rule": {
+    "mean_budget_ms": 100.0,
+    "p95_budget_ms": 250.0,
+    "tie_band_imps": 0.25
+  },
+  "validation_result_sha256": {
+    "neural": "7a2e2633323972c302eb19120d11668c23ac6972a48dd143ee031aaf9f70d48d",
+    "hybrid-32": "d2af338def793c5534b15cf2021187989d5b52c5c5e2f22e3c479e2a6273364f",
+    "uniform-32": "ba6aeae437ff0e677a878d05836fa083bb09b2327c7a83a22dd31659eb8fb440",
+    "uniform-8": "8c37fa2bd86cd16596a0566e8be2a8e939fb96cd33d9f398a9d054fd29bf84bd",
+    "hybrid-8": "be6d7d365c599ed52746d80bf205864a49b36a2627140132909b2354688d4b17"
+  },
+  "protocol_sha256": "69aad498383f6a53c48a39dbdad3cc7f05182e9925c702a8cf1bbc12566413fb"
+}

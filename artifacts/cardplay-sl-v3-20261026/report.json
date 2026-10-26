@@ -1,0 +1,203 @@
+{
+  "search": {
+    "selected": {
+      "config": {
+        "id": "hybrid-32",
+        "kind": "hybrid",
+        "samples": 32
+      },
+      "validation_mean_imps": 6.078125,
+      "validation_nonforced_latency": {
+        "count": 2657,
+        "mean_ms": 42.54694023336165,
+        "p50_ms": 24.341199998161756,
+        "p95_ms": 127.74606000093625,
+        "max_ms": 1236.423400001513
+      },
+      "eligible_config_ids": [
+        "hybrid-32",
+        "uniform-32",
+        "uniform-8",
+        "hybrid-8"
+      ],
+      "reason": "Fastest eligible search variant within the predeclared mean-IMP tie band",
+      "rule": {
+        "mean_budget_ms": 100.0,
+        "p95_budget_ms": 250.0,
+        "tie_band_imps": 0.25
+      },
+      "validation_result_sha256": {
+        "neural": "7a2e2633323972c302eb19120d11668c23ac6972a48dd143ee031aaf9f70d48d",
+        "hybrid-32": "d2af338def793c5534b15cf2021187989d5b52c5c5e2f22e3c479e2a6273364f",
+        "uniform-32": "ba6aeae437ff0e677a878d05836fa083bb09b2327c7a83a22dd31659eb8fb440",
+        "uniform-8": "8c37fa2bd86cd16596a0566e8be2a8e939fb96cd33d9f398a9d054fd29bf84bd",
+        "hybrid-8": "be6d7d365c599ed52746d80bf205864a49b36a2627140132909b2354688d4b17"
+      },
+      "protocol_sha256": "69aad498383f6a53c48a39dbdad3cc7f05182e9925c702a8cf1bbc12566413fb"
+    },
+    "confirmation": {
+      "config": {
+        "id": "hybrid-32",
+        "kind": "hybrid",
+        "samples": 32
+      },
+      "boards": 128,
+      "seed": 20261031,
+      "mean_imps": 3.8671875,
+      "bootstrap_95_ci": [
+        3.0388671875,
+        4.71875
+      ],
+      "standard_error": 0.43150006924976175,
+      "wins": 96,
+      "ties": 23,
+      "losses": 9,
+      "seconds": 266.72506090000024,
+      "latency": {
+        "all": {
+          "count": 6656,
+          "mean_ms": 36.9831708684103,
+          "p50_ms": 27.040049997594906,
+          "p95_ms": 104.51747499882913,
+          "max_ms": 1688.783900000999
+        },
+        "nonforced": {
+          "count": 5321,
+          "mean_ms": 45.418603439226146,
+          "p50_ms": 30.254299999796785,
+          "p95_ms": 121.34330000117188,
+          "max_ms": 1688.783900000999
+        },
+        "forced": {
+          "count": 1335,
+          "mean_ms": 3.361495430724066,
+          "p50_ms": 3.278100000898121,
+          "p95_ms": 4.604299999482464,
+          "max_ms": 6.514999997307314
+        },
+        "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+      },
+      "model_sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+      "dataset_fingerprint": "e2549accbd28fa7d6460b388ad0a889a5a3e63ec36a191babbd72587d8d2d33e",
+      "runtime_before_trial": {
+        "gpu": "NVIDIA GeForce RTX 5070, 2 %, 1762 MiB",
+        "compute_processes": "2384, [Insufficient Permissions]\n12732, C:\\Windows\\System32\\ShellHost.exe\n13104, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n12536, C:\\Windows\\explorer.exe\n13932, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n13900, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n13028, C:\\Windows\\SystemApps\\Microsoft.LockApp_cw5n1h2txyewy\\LockApp.exe\n11684, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n16096, [Insufficient Permissions]\n18688, D:\\ToDesk\\ToDesk.exe\n20864, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22100, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n23708, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n25840, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n18228, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n18452, C:\\Windows\\System32\\ApplicationFrameHost.exe\n9660, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n23364, D:\\Feishu\\app\\Feishu.exe\n7764, D:\\Steam\\bin\\cef\\cef.win64\\steamwebhelper.exe\n23440, D:\\CloudMusic\\cloudmusic.exe\n3672, D:\\Microsoft VS Code\\Code.exe\n20504, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n25336, D:\\Python313\\python.exe",
+        "other_python_CUDA_processes": []
+      },
+      "evaluation_model": "played_out",
+      "opponent": "frozen neural, greedy, batch=1",
+      "solver": {
+        "schema_version": 1,
+        "solver_version": "3.1.0",
+        "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+        "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+        "service_instance_id": "0a8dd20ee1914e47bf3ac0e699e4400c",
+        "process_id": 32416,
+        "operations": [
+          "table",
+          "position"
+        ],
+        "worker_count": 4,
+        "max_batch_items": 256,
+        "tt_default_mb": 64,
+        "tt_max_mb": 128,
+        "max_queued_tasks": 1024,
+        "hard_cancellation": false
+      },
+      "solver_stats": {
+        "submitted": 170272,
+        "succeeded": 170272,
+        "native_calls": 129521,
+        "coalesced": 40751,
+        "cache_hits": 0,
+        "queued": 0,
+        "running": 0,
+        "retained_jobs": 4096,
+        "cache_entries": 67429,
+        "cache_serialized_bytes": 33553947,
+        "closed": false,
+        "queue_ms_p95": 1.403299997036811,
+        "queue_ms_p99": 1.9159000003128313,
+        "solve_ms_p95": 0.7596000032208394,
+        "latency_sample_count": 2048
+      }
+    },
+    "distillation_gate_passed": true,
+    "rl_authorized_by_this_result": false,
+    "scope": "Search teacher validated against SL v2; must compare with final SL v3 before distilling into SL v3"
+  },
+  "selected_training": {
+    "fraction": 0.125,
+    "mean_imps": 0.0,
+    "novel_accuracy": 0.39453125,
+    "augmented_nll": 0.573610357940197,
+    "best_step": 0,
+    "checkpoint_sha256": "6b3254518d36d372e524105858b658e77bfeb2207c26ccf3444feecc7c491c80"
+  },
+  "acceptance": {
+    "candidate_sha256": "db64de659ed5ce32b8f6ae60db3c2cb44e32b184665abe530339b33debbab93e",
+    "results": {
+      "sl-v2": {
+        "mean_imps": 1.5009765625,
+        "bootstrap_95_ci": [
+          1.189453125,
+          1.8095703125
+        ],
+        "primary_97_5_ci": [
+          1.138671875,
+          1.8525512695312507
+        ],
+        "wins": 464,
+        "ties": 352,
+        "losses": 208
+      },
+      "rule-basic": {
+        "mean_imps": 5.0,
+        "bootstrap_95_ci": [
+          4.639599609375,
+          5.3535400390625
+        ],
+        "primary_97_5_ci": [
+          4.58690185546875,
+          5.407263183593752
+        ],
+        "wins": 772,
+        "ties": 141,
+        "losses": 111
+      }
+    },
+    "rating": {
+      "rating": 73.14849742235636,
+      "rating_95_ci": [
+        68.69414836100017,
+        77.43792988814877
+      ],
+      "status": "calibrated",
+      "panel_mean_imps": 4.526041666666667,
+      "random_panel_mean_imps": -3.048828125,
+      "oracle_panel_mean_imps": 7.306640625,
+      "anchor_gap_imps": 10.35546875,
+      "anchor_gap_95_ci": [
+        9.718717447916667,
+        10.981201171874998
+      ],
+      "gain_over_random_95_ci": [
+        6.960921223958334,
+        8.174625651041666
+      ],
+      "boards": 128,
+      "random_replicates": 3,
+      "bootstrap_draws": 2000,
+      "bootstrap": "joint shared board columns and replicate seed rows; percentile 95%; estimated anchors included",
+      "interval_scope": "fixed policies and benchmark distribution, not training-seed or human-level uncertainty",
+      "clipped": false
+    },
+    "foundation_basic_percent": 100.0,
+    "promotion_gate_passed": true,
+    "scope": "single training seed, fixed WBridge5 SAYC recorded contracts; no human rank, no new-template test",
+    "finished_at_utc": "2026-10-26T12:59:26.551245+00:00"
+  },
+  "automatic_distillation_started": false,
+  "automatic_rl_started": false,
+  "next_decision": "Compare selected search teacher against frozen SL v3 on validation before another training stage"
+}

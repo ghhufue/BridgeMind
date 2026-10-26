@@ -1,0 +1,97 @@
+{
+  "state": "completed",
+  "phase": "saved",
+  "process_id": 4848,
+  "started_at_utc": "2026-10-26T10:50:10.301638+00:00",
+  "expected_finish_utc": "2026-10-26T11:05:10.301648+00:00",
+  "time_budget_seconds": 900.0,
+  "run": "D:\\code\\BridgeMind\\runs\\cardplay-sl-v3-experiment-20261026\\pilot-125",
+  "device": "cuda",
+  "step": 2000,
+  "protocol_sha256": "a67b8ba0f7d2d4a76c2b06383adfbe26262893f8ca9f4aa499a463c5f8932852",
+  "training_mix": {
+    "real": 56,
+    "curriculum": 8
+  },
+  "elapsed_seconds": 69.43017099999997,
+  "updated_at_utc": "2026-10-26T10:50:47.318835+00:00",
+  "train": {
+    "loss": 0.7241803407669067,
+    "real_nll": 0.6547864079475403,
+    "curriculum_nll": 0.09124621748924255,
+    "belief_loss": 0.6987981796264648,
+    "value_loss": 0.0007680999697186053,
+    "real_accuracy": 0.7500000596046448,
+    "curriculum_accuracy": 1.0,
+    "gradient_norm": 3.9599485397338867
+  },
+  "finished_at_utc": "2026-10-26T10:51:19.731805+00:00",
+  "stop_reason": "step_limit",
+  "best_step": 0,
+  "best_curriculum_step": 2000,
+  "best_model_sha256": "6b3254518d36d372e524105858b658e77bfeb2207c26ccf3444feecc7c491c80",
+  "last_model_sha256": "e0c91c393a2aaa9ddfaaf260392895c3b99f29d360c74b5feffc4f7b2d2f9796",
+  "validation": {
+    "real_canonical": {
+      "nll": 0.5498448740690947,
+      "accuracy": 0.789794921875,
+      "states": 4096,
+      "by_family": {},
+      "belief_nll": 0.6653655494487132,
+      "belief_brier": 0.465289078261895,
+      "belief_accuracy": 0.5925538473034316,
+      "unknown_cards": 53531,
+      "value_mse": 0.0009647865226725116
+    },
+    "real_augmented": {
+      "nll": 0.570999501273036,
+      "accuracy": 0.773681640625,
+      "states": 4096,
+      "by_family": {},
+      "belief_nll": 0.6658616831416171,
+      "belief_brier": 0.46576740343066403,
+      "belief_accuracy": 0.5914703629672526,
+      "unknown_cards": 53531,
+      "value_mse": 0.0009186475908791181
+    },
+    "curriculum": {
+      "nll": 0.01583686838382154,
+      "accuracy": 1.0,
+      "states": 5952,
+      "by_family": {
+        "win_now_keep_lead": 1.0,
+        "fourth_hand_take_trick": 1.0,
+        "preserve_partner_entry": 1.0,
+        "cheapest_winning_honor": 1.0,
+        "cash_master_before_loser": 1.0,
+        "discard_loser_keep_master": 1.0,
+        "small_ruff_preserve_master": 1.0,
+        "overruff_not_undertrump": 1.0,
+        "unblock_discard_short_ace": 1.0,
+        "draw_trumps_before_cash": 1.0,
+        "unblock_before_crossing": 1.0,
+        "preserve_friendly_trump_entry": 1.0
+      },
+      "macro_accuracy": 1.0,
+      "old_macro_accuracy": 1.0,
+      "novel_macro_accuracy": 1.0
+    },
+    "duplicate_vs_initial": {
+      "boards": 128,
+      "mean_imps": -0.2890625,
+      "bootstrap_95_ci": [
+        -1.1251953125,
+        0.546875
+      ],
+      "standard_error": 0.427026252407077,
+      "wins": 30,
+      "ties": 62,
+      "losses": 36,
+      "seed": 20261026,
+      "action_selection": "greedy_for_neural",
+      "evaluation_model": "played_out",
+      "contract_source": "fixed_recorded_auction"
+    },
+    "scope": "validation for selection; not independent final strength evidence"
+  }
+}

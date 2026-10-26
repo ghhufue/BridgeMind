@@ -1,0 +1,785 @@
+{
+  "protocol": {
+    "name": "cardplay-search-selection-v1",
+    "date": "2026-10-25",
+    "configs": [
+      {
+        "id": "neural",
+        "kind": "neural",
+        "samples": 0
+      },
+      {
+        "id": "uniform-8",
+        "kind": "uniform",
+        "samples": 8
+      },
+      {
+        "id": "uniform-16",
+        "kind": "uniform",
+        "samples": 16
+      },
+      {
+        "id": "uniform-32",
+        "kind": "uniform",
+        "samples": 32
+      },
+      {
+        "id": "hybrid-8",
+        "kind": "hybrid",
+        "samples": 8
+      },
+      {
+        "id": "hybrid-16",
+        "kind": "hybrid",
+        "samples": 16
+      },
+      {
+        "id": "hybrid-32",
+        "kind": "hybrid",
+        "samples": 32
+      }
+    ],
+    "model_selection": "Lowest validation NLL among the three long-SL frozen checkpoints; no test-based seed choice",
+    "validation_boards": 128,
+    "validation_seed": 20261030,
+    "selection": {
+      "mean_budget_ms": 100.0,
+      "p95_budget_ms": 250.0,
+      "tie_band_imps": 0.25
+    },
+    "selection_rule": "Filter by nonforced latency budgets; among positive search means within 0.25 IMP of best, choose lowest mean nonforced latency. Otherwise retain neural",
+    "confirmation_boards": 1024,
+    "confirmation_seed": 20261031,
+    "confirmation": "Freeze one configuration before test; compare only that configuration to the fixed neural baseline",
+    "runtime": {
+      "device": "cuda",
+      "cpu_threads": 1,
+      "DDS_workers": 4,
+      "fresh_DDS_service_per_trial": true,
+      "NN_batch": 1,
+      "inference": "greedy neural",
+      "NN_warmup": "3 forwards on a validation board outside the tuning panel; excluded from timing",
+      "no_concurrent_training": true,
+      "search_utility": "expected sampled raw duplicate score"
+    },
+    "uncertainty": "2000 full-deal bootstrap draws; validation intervals are exploratory after configuration selection",
+    "limits": "Single frozen SL seed and fixed recorded auction; no strength rating against humans or full WBridge5 engine"
+  },
+  "provenance": {
+    "git_commit": "091b8c32575f13a5a6a791412e910403c24c8f2b",
+    "git_dirty": true,
+    "python": "3.13.10",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4",
+    "open_spiel": "2.0.2"
+  },
+  "selected": {
+    "config": {
+      "id": "hybrid-8",
+      "kind": "hybrid",
+      "samples": 8
+    },
+    "validation_mean_imps": 8.109375,
+    "validation_nonforced_latency": {
+      "count": 5392,
+      "mean_ms": 21.414717340489954,
+      "p50_ms": 15.123700000913232,
+      "p95_ms": 56.61549500146064,
+      "max_ms": 665.9643999992113
+    },
+    "eligible_config_ids": [
+      "hybrid-32",
+      "uniform-16",
+      "hybrid-16",
+      "hybrid-8",
+      "uniform-8",
+      "uniform-32"
+    ],
+    "reason": "Fastest eligible search variant within the predeclared mean-IMP tie band",
+    "rule": {
+      "mean_budget_ms": 100.0,
+      "p95_budget_ms": 250.0,
+      "tie_band_imps": 0.25
+    },
+    "protocol_sha256": "45dd49b5fd8053ad4f859edfddab5808413ed22bf001adb2b3ebca8d13373579",
+    "baseline_sha256": "55f91fb82c92fd62937aa6866aff5818b710f0f1c19401d350a9f87eb4bae73d",
+    "validation_result_sha256": {
+      "neural": "3c7cc90da472add0e2e453fb9bc9dbaa53a20386e6a1aa51f473a63d4f141a13",
+      "hybrid-32": "a6e451d936acb52cb0e0d46ee9059643cf98cdf0568ff55f064082fc93278ce5",
+      "uniform-16": "917ce60300ff0ad143a437749ec7e937ab0cafa8636bea181d049fd7ec687bdf",
+      "hybrid-16": "7536322b08f8819ee2a573d24ec68cd24bdeb406a7e4f56c0943c452d666bc30",
+      "hybrid-8": "030d4b3abddd9674324c916e0bd28de05e80477c702565cff9d2d7b8c2eb24cd",
+      "uniform-8": "e754f81e748d4000f16ac4dbaccf1e8c0501a3dc1cd21732c85e3a5975a7380d",
+      "uniform-32": "4b3dc61e3e061423eaf3d292e663063d39ed3b49559d15fce499fda25b83215c"
+    }
+  },
+  "validation": {
+    "neural": {
+      "config": {
+        "id": "neural",
+        "kind": "neural",
+        "samples": 0
+      },
+      "boards": 128,
+      "seed": 20261030,
+      "mean_imps": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "standard_error": 0.0,
+      "wins": 0,
+      "ties": 128,
+      "losses": 0,
+      "seconds": 45.139400200001546,
+      "latency": {
+        "all": {
+          "count": 6656,
+          "mean_ms": 3.3133283804344362,
+          "p50_ms": 2.913200001785299,
+          "p95_ms": 5.211250000684231,
+          "max_ms": 8.848899997246917
+        },
+        "nonforced": {
+          "count": 5283,
+          "mean_ms": 3.3052017225114145,
+          "p50_ms": 2.9118000020389445,
+          "p95_ms": 5.206659999748808,
+          "max_ms": 8.848899997246917
+        },
+        "forced": {
+          "count": 1373,
+          "mean_ms": 3.344597960774802,
+          "p50_ms": 2.9162999999243766,
+          "p95_ms": 5.237059998762561,
+          "max_ms": 7.444200000463752
+        },
+        "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+      "runtime_before_trial": {
+        "gpu": "NVIDIA GeForce RTX 5070, 5 %, 1616 MiB",
+        "compute_processes": "2460, [Insufficient Permissions]\n13644, C:\\Windows\\System32\\ShellHost.exe\n13820, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13580, C:\\Windows\\explorer.exe\n14880, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n14856, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n16608, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n17040, D:\\ToDesk\\ToDesk.exe\n18532, [Insufficient Permissions]\n19704, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20776, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22940, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n25488, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n22052, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20652, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n11896, C:\\Windows\\System32\\ApplicationFrameHost.exe\n18848, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24612, D:\\Weixin\\Weixin.exe\n18760, C:\\Users\\yht\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe\n12504, D:\\Weixin\\Weixin.exe\n3316, D:\\Microsoft VS Code\\Code.exe\n29064, D:\\CloudMusic\\cloudmusic.exe\n28984, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "other_python_CUDA_processes": []
+      },
+      "evaluation_model": "played_out",
+      "opponent": "frozen neural, greedy, batch=1"
+    },
+    "uniform-8": {
+      "config": {
+        "id": "uniform-8",
+        "kind": "uniform",
+        "samples": 8
+      },
+      "boards": 128,
+      "seed": 20261030,
+      "mean_imps": 7.3125,
+      "bootstrap_95_ci": [
+        6.4685546875,
+        8.141015624999998
+      ],
+      "standard_error": 0.42941058990715336,
+      "wins": 112,
+      "ties": 16,
+      "losses": 0,
+      "seconds": 119.34374720000051,
+      "latency": {
+        "all": {
+          "count": 6656,
+          "mean_ms": 14.629766015638905,
+          "p50_ms": 9.22309999987192,
+          "p95_ms": 42.52554999948188,
+          "max_ms": 1165.9925999992993
+        },
+        "nonforced": {
+          "count": 5331,
+          "mean_ms": 18.265631663856627,
+          "p50_ms": 10.804300000017975,
+          "p95_ms": 53.314400000090245,
+          "max_ms": 1165.9925999992993
+        },
+        "forced": {
+          "count": 1325,
+          "mean_ms": 0.001237886847449326,
+          "p50_ms": 0.0013000026228837669,
+          "p95_ms": 0.0021000014385208488,
+          "max_ms": 0.005799996870337054
+        },
+        "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+      "runtime_before_trial": {
+        "gpu": "NVIDIA GeForce RTX 5070, 0 %, 1703 MiB",
+        "compute_processes": "2460, [Insufficient Permissions]\n13644, C:\\Windows\\System32\\ShellHost.exe\n13820, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13580, C:\\Windows\\explorer.exe\n14880, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n14856, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n16608, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n17040, D:\\ToDesk\\ToDesk.exe\n18532, [Insufficient Permissions]\n19704, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20776, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22940, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n25488, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n22052, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20652, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n11896, C:\\Windows\\System32\\ApplicationFrameHost.exe\n18848, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24612, D:\\Weixin\\Weixin.exe\n18760, C:\\Users\\yht\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe\n12504, D:\\Weixin\\Weixin.exe\n3316, D:\\Microsoft VS Code\\Code.exe\n29064, D:\\CloudMusic\\cloudmusic.exe\n28984, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n15320, D:\\Python313\\python.exe",
+        "other_python_CUDA_processes": []
+      },
+      "evaluation_model": "played_out",
+      "opponent": "frozen neural, greedy, batch=1",
+      "solver": {
+        "schema_version": 1,
+        "solver_version": "3.1.0",
+        "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+        "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+        "service_instance_id": "f863362fdeea4086a2e30b82b5226131",
+        "process_id": 31708,
+        "operations": [
+          "table",
+          "position"
+        ],
+        "worker_count": 4,
+        "max_batch_items": 256,
+        "tt_default_mb": 64,
+        "tt_max_mb": 128,
+        "max_queued_tasks": 1024,
+        "hard_cancellation": false
+      },
+      "solver_stats": {
+        "submitted": 42648,
+        "succeeded": 42648,
+        "native_calls": 37440,
+        "coalesced": 5208,
+        "cache_hits": 0,
+        "queued": 0,
+        "running": 0,
+        "retained_jobs": 4096,
+        "cache_entries": 37440,
+        "cache_serialized_bytes": 17988695,
+        "closed": false,
+        "queue_ms_p95": 1.6509000015503261,
+        "queue_ms_p99": 4.11290000192821,
+        "solve_ms_p95": 2.4382000010518823,
+        "latency_sample_count": 2048
+      }
+    },
+    "uniform-16": {
+      "config": {
+        "id": "uniform-16",
+        "kind": "uniform",
+        "samples": 16
+      },
+      "boards": 128,
+      "seed": 20261030,
+      "mean_imps": 7.9609375,
+      "bootstrap_95_ci": [
+        7.1873046875,
+        8.71875
+      ],
+      "standard_error": 0.40790695462404103,
+      "wins": 118,
+      "ties": 9,
+      "losses": 1,
+      "seconds": 174.8655628000015,
+      "latency": {
+        "all": {
+          "count": 6656,
+          "mean_ms": 22.965043269279086,
+          "p50_ms": 15.3731999998854,
+          "p95_ms": 70.33409999985452,
+          "max_ms": 776.0877000000619
+        },
+        "nonforced": {
+          "count": 5359,
+          "mean_ms": 28.522800597183778,
+          "p50_ms": 17.730400002619717,
+          "p95_ms": 84.93584000098032,
+          "max_ms": 776.0877000000619
+        },
+        "forced": {
+          "count": 1297,
+          "mean_ms": 0.0012641480445119344,
+          "p50_ms": 0.0013000026228837669,
+          "p95_ms": 0.0022000021999701858,
+          "max_ms": 0.021899999410379678
+        },
+        "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+      "runtime_before_trial": {
+        "gpu": "NVIDIA GeForce RTX 5070, 16 %, 1971 MiB",
+        "compute_processes": "2460, [Insufficient Permissions]\n13644, C:\\Windows\\System32\\ShellHost.exe\n13820, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13580, C:\\Windows\\explorer.exe\n14880, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n14856, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n16608, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n17040, D:\\ToDesk\\ToDesk.exe\n18532, [Insufficient Permissions]\n19704, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20776, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22940, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n25488, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n22052, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20652, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n11896, C:\\Windows\\System32\\ApplicationFrameHost.exe\n18848, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24612, D:\\Weixin\\Weixin.exe\n18760, C:\\Users\\yht\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe\n12504, D:\\Weixin\\Weixin.exe\n3316, D:\\Microsoft VS Code\\Code.exe\n29064, D:\\CloudMusic\\cloudmusic.exe\n28984, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n15320, D:\\Python313\\python.exe",
+        "other_python_CUDA_processes": []
+      },
+      "evaluation_model": "played_out",
+      "opponent": "frozen neural, greedy, batch=1",
+      "solver": {
+        "schema_version": 1,
+        "solver_version": "3.1.0",
+        "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+        "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+        "service_instance_id": "21f7c47d3ccd4fef90754ead069a10cc",
+        "process_id": 31668,
+        "operations": [
+          "table",
+          "position"
+        ],
+        "worker_count": 4,
+        "max_batch_items": 256,
+        "tt_default_mb": 64,
+        "tt_max_mb": 128,
+        "max_queued_tasks": 1024,
+        "hard_cancellation": false
+      },
+      "solver_stats": {
+        "submitted": 85744,
+        "succeeded": 85744,
+        "native_calls": 71788,
+        "coalesced": 13956,
+        "cache_hits": 0,
+        "queued": 0,
+        "running": 0,
+        "retained_jobs": 4096,
+        "cache_entries": 69062,
+        "cache_serialized_bytes": 33554327,
+        "closed": false,
+        "queue_ms_p95": 1.8648000004759524,
+        "queue_ms_p99": 2.202300001954427,
+        "solve_ms_p95": 0.6894999969517812,
+        "latency_sample_count": 2048
+      }
+    },
+    "uniform-32": {
+      "config": {
+        "id": "uniform-32",
+        "kind": "uniform",
+        "samples": 32
+      },
+      "boards": 128,
+      "seed": 20261030,
+      "mean_imps": 7.328125,
+      "bootstrap_95_ci": [
+        6.4763671875,
+        8.125195312499999
+      ],
+      "standard_error": 0.44160885162066715,
+      "wins": 115,
+      "ties": 9,
+      "losses": 4,
+      "seconds": 292.4882193000012,
+      "latency": {
+        "all": {
+          "count": 6656,
+          "mean_ms": 40.5441604417268,
+          "p50_ms": 26.030200002423953,
+          "p95_ms": 125.94829999852664,
+          "max_ms": 1714.0056999996887
+        },
+        "nonforced": {
+          "count": 5354,
+          "mean_ms": 50.40348901756419,
+          "p50_ms": 30.288500000096974,
+          "p95_ms": 149.65612500091063,
+          "max_ms": 1714.0056999996887
+        },
+        "forced": {
+          "count": 1302,
+          "mean_ms": 0.0012685868624834195,
+          "p50_ms": 0.0013999997463542968,
+          "p95_ms": 0.0022999993234407157,
+          "max_ms": 0.005900001269765198
+        },
+        "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+      "runtime_before_trial": {
+        "gpu": "NVIDIA GeForce RTX 5070, 0 %, 1702 MiB",
+        "compute_processes": "2460, [Insufficient Permissions]\n13644, C:\\Windows\\System32\\ShellHost.exe\n13820, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13580, C:\\Windows\\explorer.exe\n14880, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n14856, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n16608, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n17040, D:\\ToDesk\\ToDesk.exe\n18532, [Insufficient Permissions]\n19704, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20776, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22940, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n25488, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n22052, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20652, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n11896, C:\\Windows\\System32\\ApplicationFrameHost.exe\n18848, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24612, D:\\Weixin\\Weixin.exe\n18760, C:\\Users\\yht\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe\n12504, D:\\Weixin\\Weixin.exe\n3316, D:\\Microsoft VS Code\\Code.exe\n29064, D:\\CloudMusic\\cloudmusic.exe\n28984, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n15320, D:\\Python313\\python.exe",
+        "other_python_CUDA_processes": []
+      },
+      "evaluation_model": "played_out",
+      "opponent": "frozen neural, greedy, batch=1",
+      "solver": {
+        "schema_version": 1,
+        "solver_version": "3.1.0",
+        "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+        "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+        "service_instance_id": "2e06f4f75ea34576aa825e1d4da2a48a",
+        "process_id": 31580,
+        "operations": [
+          "table",
+          "position"
+        ],
+        "worker_count": 4,
+        "max_batch_items": 256,
+        "tt_default_mb": 64,
+        "tt_max_mb": 128,
+        "max_queued_tasks": 1024,
+        "hard_cancellation": false
+      },
+      "solver_stats": {
+        "submitted": 171328,
+        "succeeded": 171328,
+        "native_calls": 136012,
+        "coalesced": 35316,
+        "cache_hits": 0,
+        "queued": 0,
+        "running": 0,
+        "retained_jobs": 4096,
+        "cache_entries": 68179,
+        "cache_serialized_bytes": 33554103,
+        "closed": false,
+        "queue_ms_p95": 1.5009999988251366,
+        "queue_ms_p99": 2.142400000593625,
+        "solve_ms_p95": 0.7579999983136076,
+        "latency_sample_count": 2048
+      }
+    },
+    "hybrid-8": {
+      "config": {
+        "id": "hybrid-8",
+        "kind": "hybrid",
+        "samples": 8
+      },
+      "boards": 128,
+      "seed": 20261030,
+      "mean_imps": 8.109375,
+      "bootstrap_95_ci": [
+        7.359375,
+        8.8671875
+      ],
+      "standard_error": 0.39656410260561115,
+      "wins": 120,
+      "ties": 6,
+      "losses": 2,
+      "seconds": 142.2014049999998,
+      "latency": {
+        "all": {
+          "count": 6656,
+          "mean_ms": 18.04067447415583,
+          "p50_ms": 13.503700000001118,
+          "p95_ms": 45.31390000101965,
+          "max_ms": 665.9643999992113
+        },
+        "nonforced": {
+          "count": 5392,
+          "mean_ms": 21.414717340489954,
+          "p50_ms": 15.123700000913232,
+          "p95_ms": 56.61549500146064,
+          "max_ms": 665.9643999992113
+        },
+        "forced": {
+          "count": 1264,
+          "mean_ms": 3.64760553802165,
+          "p50_ms": 3.3243999987462303,
+          "p95_ms": 5.578065001827781,
+          "max_ms": 6.410300000425195
+        },
+        "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+      "runtime_before_trial": {
+        "gpu": "NVIDIA GeForce RTX 5070, 13 %, 1703 MiB",
+        "compute_processes": "2460, [Insufficient Permissions]\n13644, C:\\Windows\\System32\\ShellHost.exe\n13820, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13580, C:\\Windows\\explorer.exe\n14880, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n14856, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n16608, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n17040, D:\\ToDesk\\ToDesk.exe\n18532, [Insufficient Permissions]\n19704, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20776, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22940, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n25488, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n22052, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20652, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n11896, C:\\Windows\\System32\\ApplicationFrameHost.exe\n18848, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24612, D:\\Weixin\\Weixin.exe\n18760, C:\\Users\\yht\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe\n12504, D:\\Weixin\\Weixin.exe\n3316, D:\\Microsoft VS Code\\Code.exe\n29064, D:\\CloudMusic\\cloudmusic.exe\n28984, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n15320, D:\\Python313\\python.exe",
+        "other_python_CUDA_processes": []
+      },
+      "evaluation_model": "played_out",
+      "opponent": "frozen neural, greedy, batch=1",
+      "solver": {
+        "schema_version": 1,
+        "solver_version": "3.1.0",
+        "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+        "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+        "service_instance_id": "2842627ecb8841d48eb932c2a2dcaedb",
+        "process_id": 32160,
+        "operations": [
+          "table",
+          "position"
+        ],
+        "worker_count": 4,
+        "max_batch_items": 256,
+        "tt_default_mb": 64,
+        "tt_max_mb": 128,
+        "max_queued_tasks": 1024,
+        "hard_cancellation": false
+      },
+      "solver_stats": {
+        "submitted": 43136,
+        "succeeded": 43136,
+        "native_calls": 37894,
+        "coalesced": 5242,
+        "cache_hits": 0,
+        "queued": 0,
+        "running": 0,
+        "retained_jobs": 4096,
+        "cache_entries": 37894,
+        "cache_serialized_bytes": 18258264,
+        "closed": false,
+        "queue_ms_p95": 1.6462999992654659,
+        "queue_ms_p99": 3.3364999981131405,
+        "solve_ms_p95": 2.285800001118332,
+        "latency_sample_count": 2048
+      }
+    },
+    "hybrid-16": {
+      "config": {
+        "id": "hybrid-16",
+        "kind": "hybrid",
+        "samples": 16
+      },
+      "boards": 128,
+      "seed": 20261030,
+      "mean_imps": 7.6640625,
+      "bootstrap_95_ci": [
+        6.8203125,
+        8.4140625
+      ],
+      "standard_error": 0.41919339020843227,
+      "wins": 117,
+      "ties": 9,
+      "losses": 2,
+      "seconds": 199.94367749999947,
+      "latency": {
+        "all": {
+          "count": 6656,
+          "mean_ms": 26.700560456757326,
+          "p50_ms": 19.241199999669334,
+          "p95_ms": 73.77455000096234,
+          "max_ms": 2299.937100000534
+        },
+        "nonforced": {
+          "count": 5378,
+          "mean_ms": 32.17746178879615,
+          "p50_ms": 21.75945000089996,
+          "p95_ms": 90.46748999899134,
+          "max_ms": 2299.937100000534
+        },
+        "forced": {
+          "count": 1278,
+          "mean_ms": 3.6530053990853486,
+          "p50_ms": 3.3241500004805857,
+          "p95_ms": 5.770090000260096,
+          "max_ms": 6.487599999672966
+        },
+        "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+      "runtime_before_trial": {
+        "gpu": "NVIDIA GeForce RTX 5070, 10 %, 1702 MiB",
+        "compute_processes": "2460, [Insufficient Permissions]\n13644, C:\\Windows\\System32\\ShellHost.exe\n13820, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13580, C:\\Windows\\explorer.exe\n14880, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n14856, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n16608, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n17040, D:\\ToDesk\\ToDesk.exe\n18532, [Insufficient Permissions]\n19704, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20776, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22940, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n25488, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n22052, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20652, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n11896, C:\\Windows\\System32\\ApplicationFrameHost.exe\n18848, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24612, D:\\Weixin\\Weixin.exe\n18760, C:\\Users\\yht\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe\n12504, D:\\Weixin\\Weixin.exe\n3316, D:\\Microsoft VS Code\\Code.exe\n29064, D:\\CloudMusic\\cloudmusic.exe\n28984, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n15320, D:\\Python313\\python.exe",
+        "other_python_CUDA_processes": []
+      },
+      "evaluation_model": "played_out",
+      "opponent": "frozen neural, greedy, batch=1",
+      "solver": {
+        "schema_version": 1,
+        "solver_version": "3.1.0",
+        "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+        "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+        "service_instance_id": "fdd26fba880548de92464ece07c68bb9",
+        "process_id": 27112,
+        "operations": [
+          "table",
+          "position"
+        ],
+        "worker_count": 4,
+        "max_batch_items": 256,
+        "tt_default_mb": 64,
+        "tt_max_mb": 128,
+        "max_queued_tasks": 1024,
+        "hard_cancellation": false
+      },
+      "solver_stats": {
+        "submitted": 86048,
+        "succeeded": 86048,
+        "native_calls": 71038,
+        "coalesced": 15010,
+        "cache_hits": 0,
+        "queued": 0,
+        "running": 0,
+        "retained_jobs": 4096,
+        "cache_entries": 68806,
+        "cache_serialized_bytes": 33554155,
+        "closed": false,
+        "queue_ms_p95": 1.8176999983552378,
+        "queue_ms_p99": 2.25739999950747,
+        "solve_ms_p95": 0.7345999983954243,
+        "latency_sample_count": 2048
+      }
+    },
+    "hybrid-32": {
+      "config": {
+        "id": "hybrid-32",
+        "kind": "hybrid",
+        "samples": 32
+      },
+      "boards": 128,
+      "seed": 20261030,
+      "mean_imps": 7.8203125,
+      "bootstrap_95_ci": [
+        7.0544921875,
+        8.593945312499999
+      ],
+      "standard_error": 0.4247558344697486,
+      "wins": 118,
+      "ties": 8,
+      "losses": 2,
+      "seconds": 316.45831169999656,
+      "latency": {
+        "all": {
+          "count": 6656,
+          "mean_ms": 44.212974849739446,
+          "p50_ms": 30.04759999930684,
+          "p95_ms": 131.25097500051197,
+          "max_ms": 2266.531199999008
+        },
+        "nonforced": {
+          "count": 5365,
+          "mean_ms": 53.97548672878368,
+          "p50_ms": 34.253800000442425,
+          "p95_ms": 153.21317999914766,
+          "max_ms": 2266.531199999008
+        },
+        "forced": {
+          "count": 1291,
+          "mean_ms": 3.6429700231923805,
+          "p50_ms": 3.371700000570854,
+          "p95_ms": 5.753800000093179,
+          "max_ms": 6.398500001523644
+        },
+        "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+      },
+      "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "dataset_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+      "runtime_before_trial": {
+        "gpu": "NVIDIA GeForce RTX 5070, 15 %, 1867 MiB",
+        "compute_processes": "2460, [Insufficient Permissions]\n13644, C:\\Windows\\System32\\ShellHost.exe\n13820, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13580, C:\\Windows\\explorer.exe\n14880, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n14856, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n16608, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n17040, D:\\ToDesk\\ToDesk.exe\n18532, [Insufficient Permissions]\n19704, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20776, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22940, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n25488, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n22052, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20652, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n11896, C:\\Windows\\System32\\ApplicationFrameHost.exe\n18848, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24612, D:\\Weixin\\Weixin.exe\n18760, C:\\Users\\yht\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe\n12504, D:\\Weixin\\Weixin.exe\n3316, D:\\Microsoft VS Code\\Code.exe\n29064, D:\\CloudMusic\\cloudmusic.exe\n28984, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n15320, D:\\Python313\\python.exe",
+        "other_python_CUDA_processes": []
+      },
+      "evaluation_model": "played_out",
+      "opponent": "frozen neural, greedy, batch=1",
+      "solver": {
+        "schema_version": 1,
+        "solver_version": "3.1.0",
+        "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+        "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+        "service_instance_id": "f980ca56a33c49e3bc10533d9fc0181c",
+        "process_id": 30812,
+        "operations": [
+          "table",
+          "position"
+        ],
+        "worker_count": 4,
+        "max_batch_items": 256,
+        "tt_default_mb": 64,
+        "tt_max_mb": 128,
+        "max_queued_tasks": 1024,
+        "hard_cancellation": false
+      },
+      "solver_stats": {
+        "submitted": 171680,
+        "succeeded": 171680,
+        "native_calls": 134404,
+        "coalesced": 37276,
+        "cache_hits": 0,
+        "queued": 0,
+        "running": 0,
+        "retained_jobs": 4096,
+        "cache_entries": 68175,
+        "cache_serialized_bytes": 33554179,
+        "closed": false,
+        "queue_ms_p95": 1.6727000001992565,
+        "queue_ms_p99": 2.156700000341516,
+        "solve_ms_p95": 0.7346999991568737,
+        "latency_sample_count": 2048
+      }
+    }
+  },
+  "confirmation": {
+    "config": {
+      "id": "hybrid-8",
+      "kind": "hybrid",
+      "samples": 8
+    },
+    "boards": 1024,
+    "seed": 20261031,
+    "mean_imps": 7.0458984375,
+    "bootstrap_95_ci": [
+      6.739111328125,
+      7.33984375
+    ],
+    "standard_error": 0.1473252830419712,
+    "wins": 939,
+    "ties": 71,
+    "losses": 14,
+    "seconds": 1659.2837666000014,
+    "latency": {
+      "all": {
+        "count": 53248,
+        "mean_ms": 27.315618808219465,
+        "p50_ms": 22.36214999720687,
+        "p95_ms": 63.823275000868215,
+        "max_ms": 1493.648799998482
+      },
+      "nonforced": {
+        "count": 43130,
+        "mean_ms": 32.779352881979506,
+        "p50_ms": 23.97190000192495,
+        "p95_ms": 76.35492000172222,
+        "max_ms": 1493.648799998482
+      },
+      "forced": {
+        "count": 10118,
+        "mean_ms": 4.025358816000583,
+        "p50_ms": 3.601700002036523,
+        "p95_ms": 6.086705001871451,
+        "max_ms": 8.418800000072224
+      },
+      "timing": "batch=1 observation-to-decision; includes sampling/RPC and synchronous CPU action output"
+    },
+    "model_sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+    "dataset_fingerprint": "e082b38702045d3f535db192773259f86260fc812100ab44bd733054d8cc537f",
+    "runtime_before_trial": {
+      "gpu": "NVIDIA GeForce RTX 5070, 5 %, 1788 MiB",
+      "compute_processes": "2460, [Insufficient Permissions]\n13644, C:\\Windows\\System32\\ShellHost.exe\n13820, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe\n13580, C:\\Windows\\explorer.exe\n14880, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe\n14856, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe\n16608, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\155.0.4283.62\\msedgewebview2.exe\n17040, D:\\ToDesk\\ToDesk.exe\n18532, [Insufficient Permissions]\n19704, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20776, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe\n22940, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n25488, C:\\Users\\yht\\AppData\\Local\\OpenAI\\Codex\\runtimes\\cua_node\\1fb7137c46617d50\\bin\\node_modules\\@oai\\sky\\bin\\windows\\swift\\x64\\codex-computer-use-swift.exe\n22052, D:\\WindowsApps\\OpenAI.Codex_26.1021.3705.0_x64__2p2nqsd0c76g0\\app\\ChatGPT.exe\n20652, D:\\Steam\\steamapps\\common\\wallpaper_engine\\wallpaper64.exe\n11896, C:\\Windows\\System32\\ApplicationFrameHost.exe\n18848, C:\\Windows\\ImmersiveControlPanel\\SystemSettings.exe\n24612, D:\\Weixin\\Weixin.exe\n18760, C:\\Users\\yht\\AppData\\Roaming\\Tencent\\xwechat\\XPlugin\\Plugins\\RadiumWMPF\\WeChatAppEx.exe\n12504, D:\\Weixin\\Weixin.exe\n3316, D:\\Microsoft VS Code\\Code.exe\n29064, D:\\CloudMusic\\cloudmusic.exe\n28984, C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\n15320, D:\\Python313\\python.exe",
+      "other_python_CUDA_processes": []
+    },
+    "evaluation_model": "played_out",
+    "opponent": "frozen neural, greedy, batch=1",
+    "solver": {
+      "schema_version": 1,
+      "solver_version": "3.1.0",
+      "solver_commit": "fe6a6581a13535779eda5d9141aa704b3f6c8965",
+      "solver_identity": "94110b6be57504d8c09b2096d800860b180b11ca8e4e7d3015b0876e47c8e951",
+      "service_instance_id": "a18d6d2baa724352a2053b2cbfcb3296",
+      "process_id": 27636,
+      "operations": [
+        "table",
+        "position"
+      ],
+      "worker_count": 4,
+      "max_batch_items": 256,
+      "tt_default_mb": 64,
+      "tt_max_mb": 128,
+      "max_queued_tasks": 1024,
+      "hard_cancellation": false
+    },
+    "solver_stats": {
+      "submitted": 345040,
+      "succeeded": 345040,
+      "native_calls": 300864,
+      "coalesced": 44176,
+      "cache_hits": 0,
+      "queued": 0,
+      "running": 0,
+      "retained_jobs": 4096,
+      "cache_entries": 69214,
+      "cache_serialized_bytes": 33554014,
+      "closed": false,
+      "queue_ms_p95": 1.6039000001910608,
+      "queue_ms_p99": 3.3387000003131106,
+      "solve_ms_p95": 1.8196000019088387,
+      "latency_sample_count": 2048
+    }
+  },
+  "limits": [
+    "Only the validation-selected search recipe receives the final 1024-board test",
+    "Single frozen SL seed; search randomness uses one held-out seed",
+    "No distillation, new PPO training or human-level rating in this experiment",
+    "This holdout is consumed; future tuning requires another holdout"
+  ]
+}

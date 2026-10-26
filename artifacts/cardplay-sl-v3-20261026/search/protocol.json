@@ -1,0 +1,45 @@
+{
+  "candidate_sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+  "configs": [
+    {
+      "id": "neural",
+      "kind": "neural",
+      "samples": 0
+    },
+    {
+      "id": "uniform-8",
+      "kind": "uniform",
+      "samples": 8
+    },
+    {
+      "id": "uniform-32",
+      "kind": "uniform",
+      "samples": 32
+    },
+    {
+      "id": "hybrid-8",
+      "kind": "hybrid",
+      "samples": 8
+    },
+    {
+      "id": "hybrid-32",
+      "kind": "hybrid",
+      "samples": 32
+    }
+  ],
+  "validation_boards": 64,
+  "confirmation_boards": 128,
+  "validation_seed": 20261030,
+  "confirmation_seed": 20261031,
+  "selection": {
+    "mean_budget_ms": 100.0,
+    "p95_budget_ms": 250.0,
+    "tie_band_imps": 0.25
+  },
+  "gate": "distillation candidate only if held-out IMP 95% lower bound >0; no automatic RL",
+  "runtime": "CUDA batch=1, one CPU torch thread, fresh 4-worker DDS per trial; no concurrent training",
+  "implementation_sha256": "4da923d3e59983b317c894abaa2dfda213f98bd8eec6fc88917da3b2ef296819",
+  "script_sha256": "63e3c4cc5663e3bd215f57bd20b596c04216898ffb08616b9c5a834fdb9e13b6",
+  "engine_sha256": "cac90a86fef684e578ba4320a95f77375dfdfcfc87ef5cd15de9ddcd5e5e0285",
+  "limits": "PIMC strategy fusion; single SL v2 seed; validation selection is exploratory"
+}

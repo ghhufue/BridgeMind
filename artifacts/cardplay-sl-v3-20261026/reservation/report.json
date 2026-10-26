@@ -1,0 +1,16 @@
+{
+  "search": {
+    "path": "D:\\code\\BridgeMind\\data\\cardplay-sl-v3-search-confirm-v1",
+    "boards": 128,
+    "fingerprint": "e2549accbd28fa7d6460b388ad0a889a5a3e63ec36a191babbd72587d8d2d33e"
+  },
+  "sl": {
+    "path": "D:\\code\\BridgeMind\\data\\cardplay-sl-v3-confirm-v1",
+    "boards": 1024,
+    "fingerprint": "407519ca13cec46d33acd4b497677b9bcb17c9d781320eccbfd5834b9503e67d"
+  },
+  "between_splits_intersection": 0,
+  "historical_ids_and_orbits_intersection": 0,
+  "exclusion_audit_sha256": "f2bd13c7c4ed9d7092906383f05ae82279ba3e6196bfefe598570dd69dcf64a7",
+  "remaining_unused_pool_after_reservation": 496
+}

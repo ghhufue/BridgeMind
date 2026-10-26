@@ -1,0 +1,10 @@
+{
+  "boards": 50000,
+  "states": 2600000,
+  "source_sha256": "59b0fb726b8887271a51f97af6e4bab425a54c0b712bf83e544df5ede95d4bbb",
+  "dataset_fingerprint": "84446c8e9aeef2b31cfec42eb9d177c7d62313fd18123658851984ed01f69696",
+  "board_ids_sha256": "78bc708765e352cf40c1fd9e0b1eb66735524492f997e20e36fe12fe2fc15ed3",
+  "validation_test_id_intersection": 0,
+  "retained_v2_training_deals": 10000,
+  "source_pool": "data/supervised/train only; no independent evaluation fold used as training"
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "id": "sl-v3-20261026",
+  "benchmark": "cardplay-rating-v1",
+  "protocol_sha256": "cc129d87676d06b8e5b19a72e9135ad637690d79c3a64652c229986a18898e9e",
+  "opponent_sha256": "5663ee68bf69489898f04a3640fa721e5e6353eac8eeec8907acd8cf2c7772f0",
+  "created_at_utc": "2026-10-26T12:59:26.292146+00:00",
+  "purpose": "tracking",
+  "score": {
+    "rating": 73.14849742235636,
+    "rating_95_ci": [
+      68.69414836100017,
+      77.43792988814877
+    ],
+    "status": "calibrated",
+    "panel_mean_imps": 4.526041666666667,
+    "random_panel_mean_imps": -3.048828125,
+    "oracle_panel_mean_imps": 7.306640625,
+    "anchor_gap_imps": 10.35546875,
+    "anchor_gap_95_ci": [
+      9.718717447916667,
+      10.981201171874998
+    ],
+    "gain_over_random_95_ci": [
+      6.960921223958334,
+      8.174625651041666
+    ],
+    "boards": 128,
+    "random_replicates": 3,
+    "bootstrap_draws": 2000,
+    "bootstrap": "joint shared board columns and replicate seed rows; percentile 95%; estimated anchors included",
+    "interval_scope": "fixed policies and benchmark distribution, not training-seed or human-level uncertainty",
+    "clipped": false
+  },
+  "versus": {
+    "random": {
+      "mean_imps": 8.893229166666666,
+      "bootstrap_95_ci": [
+        8.184830729166666,
+        9.627669270833332
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 375,
+      "ties": 7,
+      "losses": 2,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "0d08a7711016fca781af85c6ea471b260e41c7256162b4d0d1cdeb165992b1cc"
+    },
+    "lowest": {
+      "mean_imps": 8.984375,
+      "bootstrap_95_ci": [
+        8.3125,
+        9.6953125
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 378,
+      "ties": 6,
+      "losses": 0,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "9cbf71d6be78f960efd4dd54ef1767ec4f7a570e0412f63f6136d944241dda4d"
+    },
+    "rule-basic": {
+      "mean_imps": 4.96875,
+      "bootstrap_95_ci": [
+        3.96875,
+        5.90625
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 282,
+      "ties": 75,
+      "losses": 27,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "235c4d08d31f4b80a2b8e526d9b47b5e037e3f1cc7dcbfe3370c20c1df3a8f40"
+    },
+    "oracle": {
+      "mean_imps": -4.7421875,
+      "bootstrap_95_ci": [
+        -5.5548828125,
+        -3.952929687500001
+      ],
+      "boards": 128,
+      "replicates": 3,
+      "wins": 0,
+      "ties": 87,
+      "losses": 297,
+      "counts_scope": "seed-board outcomes, not distinct independent deals",
+      "match_signature": "2b98bbb75e58018317a59940446b7cd45293fc0a9781193f785a8dfbb219c0a2"
+    }
+  },
+  "policy": {
+    "id": "sl-v3-20261026",
+    "kind": "neural",
+    "policy_version": 1,
+    "checkpoint": "D:\\code\\BridgeMind\\runs\\cardplay-sl-v3-experiment-20261026\\candidate.pt",
+    "checkpoint_sha256": "db64de659ed5ce32b8f6ae60db3c2cb44e32b184665abe530339b33debbab93e",
+    "declared_training_data": [
+      {
+        "path": "D:\\code\\BridgeMind\\data\\cardplay-sl-v3-50k\\train",
+        "fingerprint": "84446c8e9aeef2b31cfec42eb9d177c7d62313fd18123658851984ed01f69696"
+      }
+    ],
+    "training_audit": "known_local_training_ids",
+    "declared_curricula": [
+      {
+        "path": "D:\\code\\BridgeMind\\runs\\sl-v3-common-20261026\\curriculum.json",
+        "sha256": "f9eb9d8335e9f672c044e2ddec55a6ecac9614192386975986d137f3340afc96",
+        "training_cases": 1984
+      },
+      {
+        "path": "D:\\code\\BridgeMind\\runs\\play-sl-v2-20261026-2h\\curriculum.json",
+        "sha256": "dd42f2d919ec9ac969338acad06c0a58e0c33b9fd7618cce2d56ced2769e82ee",
+        "training_cases": 704
+      }
+    ]
+  },
+  "limits": [
+    "Repeated tracking/model selection consumes test independence; reserve a separate confirmation suite",
+    "Oracle has privileged information; 100 is a reference, not a hard ceiling",
+    "Public pretraining history cannot be fully audited"
+  ]
+}

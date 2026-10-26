@@ -1,0 +1,17 @@
+{
+  "name": "cardplay-sl-v3-20261026",
+  "script_sha256": "34b8788d352495a15c02119310541b50936919b66de47e7fce3bce888cb7993c",
+  "common_protocol_sha256": "1322f86f6c0664f94bf6bbf477f9434f198c49f5f6b41493c37d8f4b0d553e14",
+  "initial_sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+  "pilot_fractions": [
+    0.125,
+    0.25
+  ],
+  "pilot_steps": 2000,
+  "pilot_max_seconds": 900,
+  "pilot_selection": "within 0.25 IMP of best validation: highest novel accuracy, then lowest augmented NLL, then lower fraction",
+  "formal_seconds": 7200,
+  "formal_initialization": "original SL v2; no pilot weight continuation",
+  "final_evaluation": "reserved 1024 deals vs SL v2 and rule; frozen foundation/rating; no automatic deployment",
+  "next_stage": "only consider distillation if search passes its separate holdout; compare teacher to final SL v3 first; RL deferred"
+}

@@ -1,0 +1,13 @@
+{
+  "candidate_sha256": "db64de659ed5ce32b8f6ae60db3c2cb44e32b184665abe530339b33debbab93e",
+  "initial_sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+  "data_fingerprint": "407519ca13cec46d33acd4b497677b9bcb17c9d781320eccbfd5834b9503e67d",
+  "boards": 1024,
+  "seed": 20261102,
+  "primary_opponents": [
+    "sl-v2",
+    "rule-basic"
+  ],
+  "decision": "both 97.5% deal-bootstrap lower bounds >0 and foundation basic score does not regress",
+  "selection": "one checkpoint fixed before reading this confirmation; do not reselect afterward"
+}

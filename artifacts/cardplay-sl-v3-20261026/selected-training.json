@@ -1,0 +1,29 @@
+{
+  "pilots": [
+    {
+      "fraction": 0.125,
+      "mean_imps": 0.0,
+      "novel_accuracy": 0.39453125,
+      "augmented_nll": 0.573610357940197,
+      "best_step": 0,
+      "checkpoint_sha256": "6b3254518d36d372e524105858b658e77bfeb2207c26ccf3444feecc7c491c80"
+    },
+    {
+      "fraction": 0.25,
+      "mean_imps": 0.0,
+      "novel_accuracy": 0.39453125,
+      "augmented_nll": 0.573610357940197,
+      "best_step": 0,
+      "checkpoint_sha256": "1e0091ee92d164a7936cad46f61ccf6e5dd9d2d848b1380ced9d1485bd8ad6c1"
+    }
+  ],
+  "selected": {
+    "fraction": 0.125,
+    "mean_imps": 0.0,
+    "novel_accuracy": 0.39453125,
+    "augmented_nll": 0.573610357940197,
+    "best_step": 0,
+    "checkpoint_sha256": "6b3254518d36d372e524105858b658e77bfeb2207c26ccf3444feecc7c491c80"
+  },
+  "selection_scope": "validation only; no independent confirmation outcomes read"
+}
