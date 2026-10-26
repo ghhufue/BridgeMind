@@ -1,0 +1,13 @@
+{
+  "root": "/root/autodl-tmp/BridgeMind",
+  "control": "/root/autodl-tmp/BridgeMind/.build/jobs/sl-v3-rules-3h-20261027",
+  "backup": "/root/autodl-tmp/bridgemind-cloud-backup",
+  "run": "runs/sl-v3-rules-3h-20261027",
+  "data": "data/rule-sl-v3-3h-20261027",
+  "branch": "codex/sl-v3-rules-3h-20261027",
+  "bootstrap_archive": "/root/autodl-tmp/bridgemind-setup/server-data.tar.gz",
+  "training_seconds": 10800,
+  "teacher_seconds": 600,
+  "hard_deadline_epoch": 1793063322.0,
+  "requested_epoch": 1793049042.0
+}

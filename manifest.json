@@ -1,0 +1,82 @@
+{
+  "phase": "preflight",
+  "created_epoch": 1793049591.002215,
+  "run": "runs/sl-v3-rules-3h-20261027",
+  "branch": "codex/sl-v3-rules-3h-20261027",
+  "training_seconds": 10800,
+  "hard_deadline_epoch": 1793063322.0,
+  "files": {
+    "assets/bootstrap.tar.gz.assembly.json": {
+      "bytes": 969,
+      "sha256": "f7ae999bee16803c8644c5909bd34a733b5f3ec2c560e7ff871eb37d9e1b234b"
+    },
+    "assets/bootstrap.tar.gz.part000": {
+      "bytes": 33554432,
+      "sha256": "4842afa8f4cc70166eeca3cc946b19e7e9fd5d8b1fc9fe817336b5048695cac5"
+    },
+    "assets/bootstrap.tar.gz.part001": {
+      "bytes": 33554432,
+      "sha256": "6238e0e95c6a56f7d9a60d3d1b53d05ba1bc6371ed5d9040ced09436a00d2bd0"
+    },
+    "assets/bootstrap.tar.gz.part002": {
+      "bytes": 33554432,
+      "sha256": "27e74b4b0888a64bc634587397e202909fbcb5b6a3a0052e591c2da83da28077"
+    },
+    "assets/bootstrap.tar.gz.part003": {
+      "bytes": 33554432,
+      "sha256": "c2331d3a169f11d43b7377268f1a4c1f622034a4a06c7b9573e720d65a563ad9"
+    },
+    "assets/bootstrap.tar.gz.part004": {
+      "bytes": 29496085,
+      "sha256": "cdcf0b69b4c9d8a4e8508d879fb8a097b92b67aaca1e1ba65006235930e1d0a7"
+    },
+    "assets/source.tar.gz.assembly.json": {
+      "bytes": 306,
+      "sha256": "4aef1efd87b420c7e7fdac7ded7e5c1f72048b8d49d865d24527b04c84b24bc9"
+    },
+    "assets/source.tar.gz.part000": {
+      "bytes": 374417,
+      "sha256": "9800e827a7bcb499350c8be0b86e7c5c19d8347aa6155f1368b221c5352769a4"
+    },
+    "logs/guard.log": {
+      "bytes": 111,
+      "sha256": "ecf5d18c75e23009733e7ffb0ba58d613d3e5fda2900701e3c5c698b76357d3f"
+    },
+    "logs/worker.log": {
+      "bytes": 109,
+      "sha256": "a484d433fb1736d7e0158bd5c611e675f88a70b231f754846a39b2199cbb658d"
+    },
+    "job/MainThread-status.json": {
+      "bytes": 120,
+      "sha256": "ed08d4fd0333688e2e496add3118013088788d641efe849869d4ef7a5b2e1da2"
+    },
+    "job/config.json": {
+      "bytes": 514,
+      "sha256": "fdc84a4c4f059324b7f912527f3361b4d8f6cf8ad414b7091932c302248600c4"
+    },
+    "job/events.jsonl": {
+      "bytes": 220,
+      "sha256": "af37d93c90acd2035914efbd8ef5ec6b3982dbcf31d15044c629775dfbfb9764"
+    },
+    "job/hardware.txt": {
+      "bytes": 1689,
+      "sha256": "facf2d08539f8ba2a03d9348a8a28bb231ed29cbe0ebd5121ad0ac5c05b88dc8"
+    },
+    "job/requirements-freeze.txt": {
+      "bytes": 5022,
+      "sha256": "6176d80d4f8f74bedabbebf2916dd056467f3db43934c1fb60f470895fc06cc5"
+    },
+    "job/runtime.json": {
+      "bytes": 154,
+      "sha256": "acc3094d405e2b3746dc62b87b39e95f892ed93edbe17b3bc80927310d2facd7"
+    },
+    "README.md": {
+      "bytes": 355,
+      "sha256": "edc27924b5b7e90a7dae4a4d7995f6977579eef8897116c730bb486b87a57e6e"
+    },
+    "restore.py": {
+      "bytes": 2350,
+      "sha256": "39554dcd8906e4a77001cb5bbd9dc2d52cd5d86612df97785ce6e9b9759904d2"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "archive": "source.tar.gz",
+  "bytes": 374417,
+  "sha256": "9800e827a7bcb499350c8be0b86e7c5c19d8347aa6155f1368b221c5352769a4",
+  "parts": [
+    {
+      "name": "source.tar.gz.part000",
+      "bytes": 374417,
+      "sha256": "9800e827a7bcb499350c8be0b86e7c5c19d8347aa6155f1368b221c5352769a4"
+    }
+  ]
+}

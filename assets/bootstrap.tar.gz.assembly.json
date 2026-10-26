@@ -1,0 +1,32 @@
+{
+  "archive": "bootstrap.tar.gz",
+  "bytes": 163713813,
+  "sha256": "47b7c3464e7f51f94db4117899ada24d8dbca4ff81bdf3a9a938e12da9e571c4",
+  "parts": [
+    {
+      "name": "bootstrap.tar.gz.part000",
+      "bytes": 33554432,
+      "sha256": "4842afa8f4cc70166eeca3cc946b19e7e9fd5d8b1fc9fe817336b5048695cac5"
+    },
+    {
+      "name": "bootstrap.tar.gz.part001",
+      "bytes": 33554432,
+      "sha256": "6238e0e95c6a56f7d9a60d3d1b53d05ba1bc6371ed5d9040ced09436a00d2bd0"
+    },
+    {
+      "name": "bootstrap.tar.gz.part002",
+      "bytes": 33554432,
+      "sha256": "27e74b4b0888a64bc634587397e202909fbcb5b6a3a0052e591c2da83da28077"
+    },
+    {
+      "name": "bootstrap.tar.gz.part003",
+      "bytes": 33554432,
+      "sha256": "c2331d3a169f11d43b7377268f1a4c1f622034a4a06c7b9573e720d65a563ad9"
+    },
+    {
+      "name": "bootstrap.tar.gz.part004",
+      "bytes": 29496085,
+      "sha256": "cdcf0b69b4c9d8a4e8508d879fb8a097b92b67aaca1e1ba65006235930e1d0a7"
+    }
+  ]
+}
