@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-26",
+  "scope": "Unified desktop/mobile table and real LAN analysis",
+  "web_url": "http://192.168.5.118:8000/",
+  "pc_ipv4": "192.168.5.118",
+  "phone_ipv4": "192.168.5.126",
+  "phone": {"serial": "8e8b9998", "model": "25113PN0EC", "android_api": 36},
+  "frontend_tests_passed": 90,
+  "python_tests_passed": 156,
+  "new_web_gateway_tests_passed": 60,
+  "typescript_build": "passed",
+  "android_build": "passed",
+  "apk": {
+    "path": ".build/frontend/BridgeMind-debug.apk",
+    "sha256": "39ef1615a1a83df1e2bdec0a167c3cab11c7fe794647ba34a7e7935ad997d474",
+    "signature_verified": true,
+    "signer": "Android Debug",
+    "adb_update_install": "Success",
+    "default_analysis_url": "http://192.168.5.118:8000",
+    "latest_native_ui_inspected": false,
+    "native_ui_note": "User opted to try later; did not unlock or interact with the locked phone."
+  },
+  "ai": {
+    "checkpoint": "runs/play-sl-long-20261025/best.pt",
+    "sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+    "device": "cpu",
+    "mode": "pure neural policy, no hybrid search",
+    "information": "controller hand, revealed dummy and public history only",
+    "automatic_opponents": "unchanged local rule opponents"
+  },
+  "dds": {"version": "3.1.0", "rpc_bind": "127.0.0.1:18765", "workers": 2},
+  "desktop_browser": {
+    "layout": "same table interactions as phone, enlarged desktop controls",
+    "connection_test": "AI ready and DDS ready",
+    "actual_ai_result": {"toPlay": "S", "bestCards": ["H2"], "model": "play-sl-long-20261025 · 纯网络", "displayed_ms": 28},
+    "actual_dds_result": {"toPlay": "S", "bestCards": ["CJ", "CK", "D2", "D3", "D4", "D9", "DQ", "H2", "H5", "H6", "S5", "SJ", "SK"], "tricks": 11, "displayed_ms": 15},
+    "screenshots": [".build/frontend/unified-table-lan.jpg", ".build/frontend/unified-table-analysis.jpg"]
+  },
+  "pc_real_endpoint_smoke": [
+    {"case": "ai-opening", "bestCards": ["HA"], "ms": 30.7},
+    {"case": "ai-dummy", "bestCards": ["S2"], "ms": 5.4},
+    {"case": "ai-request", "bestCards": ["HQ"], "ms": 5.9},
+    {"case": "dds-request", "bestCards": ["HQ", "HK", "HA"], "ms": 3.8}
+  ],
+  "phone_wifi_http": {
+    "transport": "phone /system/bin/curl over WLAN, adb used only to invoke shell",
+    "adb_reverse_used": false,
+    "health": "ready",
+    "origin": "http://localhost",
+    "ai": {"source": "ai", "bestCards": ["HQ"], "candidate_probabilities_approx": {"HQ": 0.728, "HK": 0.1745, "HA": 0.0974}},
+    "dds": {"source": "dds", "bestCards": ["HQ", "HK", "HA"], "tricks_each": 3},
+    "after_persistent_start_health": "ready"
+  },
+  "startup": {
+    "command": ".\\scripts\\start-lan.ps1",
+    "idempotent_reuse_checked": true,
+    "background_services_left_running": true,
+    "automatic_boot_start_configured": false,
+    "firewall_modified": false,
+    "logs": ".build/lan/",
+    "fixture_generator": "frontend/scripts/analysis-smoke-fixtures.mjs"
+  },
+  "limitations": [
+    "No new iPhone Safari or native iOS validation.",
+    "LAN analysis advises play; it does not synchronize separate games or replace rule opponents with the model.",
+    "Computer must remain running; local IP may change with the network."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "catalog": {
+    "protocol": "bridgemind.models.v1",
+    "play": [
+      {
+        "id": "default",
+        "name": "SL v2（当前）",
+        "available": true
+      },
+      {
+        "id": "sl-long",
+        "name": "长训 SL",
+        "available": true
+      },
+      {
+        "id": "sl-pilot",
+        "name": "SL 早期模型",
+        "available": true
+      },
+      {
+        "id": "ppo-pilot",
+        "name": "PPO 试验模型",
+        "available": true
+      },
+      {
+        "id": "dds",
+        "name": "DDS 全知求解",
+        "available": true
+      }
+    ],
+    "bidding": [
+      {
+        "id": "default",
+        "name": "SL 叫牌（当前）",
+        "available": true
+      },
+      {
+        "id": "ppo-pilot",
+        "name": "PPO 叫牌试验模型",
+        "available": true
+      }
+    ]
+  },
+  "play": [
+    {
+      "id": "default",
+      "model": "play-sl-v2-20261026-2h · 纯网络",
+      "sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+      "card": "H3",
+      "diagnosticHeadsVerified": true
+    },
+    {
+      "id": "sl-long",
+      "model": "长训 SL",
+      "sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+      "card": "HA",
+      "diagnosticHeadsVerified": true
+    },
+    {
+      "id": "sl-pilot",
+      "model": "SL 早期模型",
+      "sha256": "11f23c31087d2129baf957b460d758d51557c4a4a54fbb492b2943dab4b84282",
+      "card": "H3",
+      "diagnosticHeadsVerified": true
+    },
+    {
+      "id": "ppo-pilot",
+      "model": "PPO 试验模型",
+      "sha256": "abb41f71bffe87c0325950450354de9de1de41cbd58d6824b2a6666cfbe2fd3b",
+      "card": "H3",
+      "diagnosticHeadsVerified": true
+    }
+  ],
+  "bidding": [
+    {
+      "id": "default",
+      "model": "sl-pilot",
+      "call": "5C"
+    },
+    {
+      "id": "ppo-pilot",
+      "model": "PPO 叫牌试验模型",
+      "call": "5C"
+    }
+  ]
+}

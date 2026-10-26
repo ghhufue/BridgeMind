@@ -1,0 +1,166 @@
+{
+  "url": "http://192.168.5.118:8000",
+  "model_sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+  "play_checks": [
+    {
+      "declarer": "N",
+      "steps": 0,
+      "action_cards": 13,
+      "unknown_cards": 39,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "N",
+      "steps": 1,
+      "action_cards": 13,
+      "unknown_cards": 25,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "N",
+      "steps": 9,
+      "action_cards": 11,
+      "unknown_cards": 21,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "N",
+      "steps": 48,
+      "action_cards": 1,
+      "unknown_cards": 2,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "E",
+      "steps": 0,
+      "action_cards": 13,
+      "unknown_cards": 39,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "E",
+      "steps": 1,
+      "action_cards": 13,
+      "unknown_cards": 25,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "E",
+      "steps": 9,
+      "action_cards": 11,
+      "unknown_cards": 21,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "E",
+      "steps": 48,
+      "action_cards": 1,
+      "unknown_cards": 2,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "S",
+      "steps": 0,
+      "action_cards": 13,
+      "unknown_cards": 39,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "S",
+      "steps": 1,
+      "action_cards": 13,
+      "unknown_cards": 25,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "S",
+      "steps": 9,
+      "action_cards": 11,
+      "unknown_cards": 21,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "S",
+      "steps": 48,
+      "action_cards": 1,
+      "unknown_cards": 2,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "W",
+      "steps": 0,
+      "action_cards": 13,
+      "unknown_cards": 39,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "W",
+      "steps": 1,
+      "action_cards": 13,
+      "unknown_cards": 25,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "W",
+      "steps": 9,
+      "action_cards": 11,
+      "unknown_cards": 21,
+      "all_heads_match_local_model": true
+    },
+    {
+      "declarer": "W",
+      "steps": 48,
+      "action_cards": 1,
+      "unknown_cards": 2,
+      "all_heads_match_local_model": true
+    }
+  ],
+  "bidding_checks": 4,
+  "all_model_heads_match": true,
+  "frozen_rating_and_foundation_implementations_unchanged": true,
+  "frontend_tests": 108,
+  "python_tests": 298,
+  "python_test_seconds": 26.43,
+  "web_build": "passed",
+  "android_build": "passed",
+  "android_device_connected": false,
+  "responsive_viewport": {
+    "width": 844,
+    "height": 390,
+    "horizontal_overflow": false
+  },
+  "browser_verified": [
+    "home_modes",
+    "model_auction",
+    "human_south_bidding",
+    "human_south_play",
+    "human_north_play",
+    "full_action_probabilities",
+    "zero_probability_illegal_cards",
+    "ownership_truth_local_only",
+    "score_value",
+    "dds_analysis",
+    "pause_and_shared_position"
+  ],
+  "apk": {
+    "path": "D:\\code\\BridgeMind\\.build\\frontend\\BridgeMind-debug.apk",
+    "bytes": 4516119,
+    "sha256": "73924548324fe49c79f016c5ef7a2b4bba606912234fc5270037260788ce02ed",
+    "installed_on_device": false
+  },
+  "source_files_sha256": {
+    "src\\bridgemind\\web\\analysis.py": "50dc2ed5852dc1b5b7c448c729453982e5d3af70975e5ba6863eb5231f2dc672",
+    "src\\bridgemind\\web\\bidding.py": "d9f553e8aee3570fe0be37ee62ee3211f737f332ebd0430a1336982b58b0afd0",
+    "src\\bridgemind\\web\\server.py": "f2ebfa1e2a26cf0cf3cb6479e1b748eae8727caed7df3e8dfb47b7840577295d",
+    "src\\bridgemind\\web\\__init__.py": "7daa69f1d76a73347525618490a80f1ce94921ace88d8f3b3cf81618fb0f4084",
+    "frontend\\src\\components\\AnalysisPanel.test.tsx": "59bdbab59d153f50a320f7455e0e2f1d7c835ee5fd009da49dae70c5a1c53bf6",
+    "frontend\\src\\components\\AnalysisPanel.tsx": "aa54d14c50d23634923a3b123e5a6bd545a7bafb93a9514700baa3de9edfb982",
+    "frontend\\src\\components\\DebugWorkspace.tsx": "d0ba77ffb1c7954c9ed4adc94184d1cf85207d8ddb11fd1352b92d2a35063106",
+    "frontend\\src\\components\\HomeScreen.tsx": "6a1a7342cb4bc6fccc2d69a4f3a71d6398436257eeadbea9f4a3eca1086fdc80",
+    "frontend\\src\\components\\MobileTable.test.tsx": "95992d3ccd2c317e3c7fd1e7741b694dedf763cc37396b64246e05b8a17a42ef",
+    "frontend\\src\\components\\MobileTable.tsx": "dc243e577a153c10530c7b76fac431d328384d3f80eeef39e3fc6e59df16cf40",
+    "frontend\\src\\components\\ModelDiagnostics.test.tsx": "ee33b1d559c509f11edbb212b6367928276626f9bd81bc6677b231946d34601d",
+    "frontend\\src\\components\\ModelDiagnostics.tsx": "45b76edbfb45296bce4f65b4f3eaa013604d1414de6548a23707e6db87904340",
+    "frontend\\src\\components\\PlayingCard.tsx": "70dbf39bd9e45fce84db1baef1811de35d0705ed99d9bf26067cb642aa5a237c"
+  }
+}

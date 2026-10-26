@@ -1,0 +1,8 @@
+.update-settings { margin: 20px 0; padding: 16px 0; border-top: 1px solid #dce2d6; border-bottom: 1px solid #dce2d6; }
+.update-settings .section-heading { display: flex; justify-content: space-between; gap: 12px; }
+.update-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.update-notes { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+.update-notice { position: fixed; z-index: 100; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); width: min(520px, calc(100vw - 32px)); padding: 18px; border: 1px solid #c8d7c5; border-radius: 14px; background: #fffff8; color: #174f42; box-shadow: 0 8px 32px #12392d33; }
+.update-notice p { margin: 6px 0; font-size: 12px; line-height: 1.5; }
+.update-notice > .text-button { margin-top: 10px; }
+@media (max-height: 450px) { .update-notice { padding: 12px; max-width: 420px; } }

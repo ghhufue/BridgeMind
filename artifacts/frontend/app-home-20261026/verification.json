@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-26",
+  "release": {
+    "protocol": "bridgemind.update.v1",
+    "applicationId": "com.bridgemind.app",
+    "versionCode": 4,
+    "versionName": "1.1.2",
+    "size": 4391405,
+    "sha256": "00caaadfd35dd628badb319f6e9d717e88d56b53b65e685aa7c67fd8552a570d",
+    "apkPath": "/updates/android/00caaadfd35dd628badb319f6e9d717e88d56b53b65e685aa7c67fd8552a570d.apk",
+    "notes": "首页改为 App 单屏布局，横屏完整显示人机对战与模型调试入口，不再上下翻页。\n电脑网页与手机共用界面，适配横屏与窄竖屏，保留当前牌局并可快速打开设置。\n"
+  },
+  "installedVersion": {
+    "versionCode": 4,
+    "versionName": "1.1.2"
+  },
+  "updateTransport": "actual Wi-Fi; LAN gateway",
+  "trigger": "restart existing 1.1.1 App; automatic startup check and download",
+  "appInstallerOpened": true,
+  "userConfirmedInstallation": true,
+  "usedAdbInstall": false,
+  "newAppReportsNoUpdate": true,
+  "frontendTests": 115,
+  "publicationTests": 2,
+  "webBuildPassed": true,
+  "androidBuildPassed": true,
+  "layoutSizes": [
+    [
+      844,
+      390
+    ],
+    [
+      796,
+      366
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      360,
+      640
+    ]
+  ],
+  "homeHasNoPageScroll": true,
+  "navigationAndSettingsVerified": true
+}

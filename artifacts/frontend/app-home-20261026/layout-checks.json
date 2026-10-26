@@ -1,0 +1,162 @@
+[
+  {
+    "cards": [
+      {
+        "actionBottom": 317.6000061035156,
+        "actionTop": 281.6000061035156,
+        "bottom": 332.40000915527344,
+        "content": 204,
+        "height": 204,
+        "paragraphBottom": 263.1500053405762
+      },
+      {
+        "actionBottom": 317.6000061035156,
+        "actionTop": 281.6000061035156,
+        "bottom": 332.40000915527344,
+        "content": 204,
+        "height": 204,
+        "paragraphBottom": 263.1500053405762
+      }
+    ],
+    "home": [
+      366,
+      366
+    ],
+    "root": [
+      796,
+      366
+    ],
+    "viewport": [
+      796,
+      366
+    ]
+  },
+  {
+    "cards": [
+      {
+        "actionBottom": 641.2875366210938,
+        "actionTop": 597.2875366210938,
+        "bottom": 668,
+        "content": 493,
+        "height": 493,
+        "paragraphBottom": 388.2124938964844
+      },
+      {
+        "actionBottom": 641.2875366210938,
+        "actionTop": 597.2875366210938,
+        "bottom": 668,
+        "content": 493,
+        "height": 493,
+        "paragraphBottom": 388.2124938964844
+      }
+    ],
+    "home": [
+      720,
+      720
+    ],
+    "root": [
+      1280,
+      720
+    ],
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  {
+    "cards": [
+      {
+        "actionBottom": 983.2000122070312,
+        "actionTop": 939.2000122070312,
+        "bottom": 1022,
+        "content": 835,
+        "height": 835,
+        "paragraphBottom": 428.3000183105469
+      },
+      {
+        "actionBottom": 983.2000122070312,
+        "actionTop": 939.2000122070312,
+        "bottom": 1022,
+        "content": 835,
+        "height": 835,
+        "paragraphBottom": 428.3000183105469
+      }
+    ],
+    "home": [
+      1080,
+      1080
+    ],
+    "root": [
+      1920,
+      1080
+    ],
+    "viewport": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "cards": [
+      {
+        "actionBottom": 446.2000122070313,
+        "actionTop": 402.2000122070313,
+        "bottom": 467,
+        "content": 311,
+        "height": 311,
+        "paragraphBottom": 309.7500190734863
+      },
+      {
+        "actionBottom": 773.2000122070312,
+        "actionTop": 729.2000122070312,
+        "bottom": 794,
+        "content": 311,
+        "height": 311,
+        "paragraphBottom": 636.7499885559082
+      }
+    ],
+    "home": [
+      844,
+      844
+    ],
+    "root": [
+      390,
+      844
+    ],
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "cards": [
+      {
+        "actionBottom": 347.20001220703125,
+        "actionTop": 303.20001220703125,
+        "bottom": 362,
+        "content": 218,
+        "height": 218,
+        "paragraphBottom": 271.2000045776367
+      },
+      {
+        "actionBottom": 581.2000122070312,
+        "actionTop": 537.2000122070312,
+        "bottom": 596,
+        "content": 218,
+        "height": 218,
+        "paragraphBottom": 505.2000198364258
+      }
+    ],
+    "home": [
+      640,
+      640
+    ],
+    "root": [
+      360,
+      640
+    ],
+    "viewport": [
+      360,
+      640
+    ]
+  }
+]

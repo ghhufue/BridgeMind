@@ -5,6 +5,14 @@
 | 文档 | 用途 |
 |---|---|
 | [HANDOFF.md](HANDOFF.md) | 当前功能、用户目标、代码入口、本机产物、已知限制、未实现设计、接手步骤与维护规则 |
+| [前端应用](../frontend/README.md) | React / TypeScript / Vite 桥牌练习桌、局域网启动、功能与验证 |
+| [前端设计规范](../frontend/DESIGN.md) | App页面优先、网页/手机共用、一屏布局与验收要求 |
+| [模型对局观战](../frontend/MODEL-DEBUG.md) | 四家模型配置、共享牌桌、播放控制与信息抽屉 |
+| [Android 调试应用](../frontend/ANDROID.md) | Capacitor 打包、ADB 安装与真机调试 |
+| [Android 应用内更新](../frontend/UPDATES.md) | 自动检查/下载、系统确认安装、版本发布与真机验证 |
+| [GitHub Releases](../frontend/RELEASING.md) | 公开仓库、签名Release构建、发布脚本、更新源与密钥保管 |
+| [局域网使用说明](../frontend/LAN.md) | 一键启动网页、真实模型和 DDS，手机连接、地址更新与日志 |
+| [前端分析接口 v1](frontend-analysis-api.md) | AI 可见信息与 DDS 全知请求、响应校验、电脑端 HTTP 网关约定 |
 | [training.md](training.md) | 叫牌数据准备、模型、SL/PPO、续训、评估与推理的详细操作 |
 | [training-validation.md](training-validation.md) | 叫牌训练实现轮次的测试、短实验和效果边界 |
 | [cardplay.md](cardplay.md) | 完整出牌环境、Transformer、约束 DDS 搜索、数据、SL/蒸馏/PPO 和推理 |
@@ -17,6 +25,7 @@
 | [cardplay-foundations.md](cardplay-foundations.md) | 可见信息证书、8项基础战术、全部24花色/4座位变换、独立能力与一致性体检 |
 | [cardplay-sl-v2.md](cardplay-sl-v2.md) | 花色增强、基础课程与真实对局混合的两小时 SL v2、冻结协议、实时状态与恢复 |
 | [cardplay-sl-v2-evaluation.md](cardplay-sl-v2-evaluation.md) | SL v2的62.54牌力分、全新2,048副双室确认、基础体检及独立重算 |
+| [cardplay-sl-v3-experiment.md](cardplay-sl-v3-experiment.md) | 50k真实牌、12类认证课程、SL v2搜索比较、配比短测、两小时SL v3与独立自动验收 |
 | [dds-interface-design.md](dds-interface-design.md) | DDS 独立服务的接口与调度设计 |
 | [dds-validation.md](dds-validation.md) | DDS 封装轮次的正确性、并发验证与小样本吞吐 |
 | [DDS 构建说明](../artifacts/dds/windows-x64/README.md) | Windows 原生库构建和产物来源 |

@@ -1,0 +1,74 @@
+/* Shared App home: app bar, viewport-sized workspace, persistent status. */
+.home-screen {
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: clamp(12px, 2.5vh, 24px);
+  padding: max(12px, env(safe-area-inset-top)) max(clamp(18px, 5vw, 80px), env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(clamp(18px, 5vw, 80px), env(safe-area-inset-left));
+  color: #183e34;
+  background: radial-gradient(ellipse at 25% 15%, #fcfbf4, #f0f1e6);
+}
+.home-header { display: flex; align-items: center; justify-content: space-between; min-height: 52px; gap: 16px; border-bottom: 1px solid #d7dfd0; padding-bottom: 10px; }
+.home-brand { display: flex; align-items: center; gap: 9px; color: #184d3d; font-weight: 750; font-size: 23px; letter-spacing: -.7px; }
+.home-header button { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 9px 14px; border: 1px solid #cdd6ca; border-radius: 12px; background: #ffffff70; color: #345548; font-size: 13px; }
+.home-intro { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.home-intro h1 { margin: 0; font-size: clamp(24px, 3.2vw, 36px); font-weight: 650; letter-spacing: -.7px; line-height: 1.25; }
+.home-intro p { margin-top: 6px; color: #73816e; font-size: 13px; }
+.home-board { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border: 1px solid #d9dfd1; border-radius: 12px; background: #fffef77d; white-space: nowrap; }
+.home-board > span { font-size: 11px; color: #7a8773; }
+.home-board strong { font-size: 14px; font-weight: 600; }
+.home-options { min-height: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2.4vw, 28px); }
+.home-option { min-width: 0; min-height: 0; display: flex; flex-direction: column; align-items: stretch; text-align: left; padding: clamp(18px, 3.6vh, 38px) clamp(20px, 3.6vw, 46px); border: 1px solid #d7dfcf; border-radius: 22px; color: #214b3d; background: #fffef8; box-shadow: 0 4px 18px #1c4b3610; }
+.home-option.play { background: linear-gradient(140deg, #235d48, #174b3b); color: #f6f2dc; border-color: #1b5140; }
+.home-option-top { display: flex; align-items: center; gap: 14px; }
+.home-option-icon { display: flex; align-items: center; justify-content: center; flex-shrink: 0; height: clamp(38px, 7vh, 58px); width: clamp(38px, 7vh, 58px); border: 1px solid #dbe3d2; border-radius: 14px; background: #edf2e440; }
+.play .home-option-icon { color: #e5cf91; border-color: #78967b70; background: #ffffff07; }
+.home-option small { font-size: 10px; letter-spacing: 1.5px; opacity: .7; }
+.home-option h2 { margin: clamp(14px, 3vh, 30px) 0 10px; font-size: clamp(25px, 3.4vw, 42px); font-weight: 600; line-height: 1.25; }
+.home-option p { font-size: clamp(12px, 1.2vw, 15px); line-height: 1.8; opacity: .75; }
+.home-option-link { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 14px; border-top: 1px solid #b5c5ac50; font-size: 14px; min-height: 44px; }
+.home-screen footer { min-height: 24px; display: flex; align-items: center; gap: 7px; color: #7b8c75; font-size: 11px; }
+.home-session-dot { width: 5px; height: 5px; border-radius: 50%; background: #558665; }
+.home-footer-detail { margin-left: auto; }
+@media (hover: hover) { .home-option:hover { box-shadow: 0 6px 24px #16483222; border-color: #9caf95; } }
+@media (max-height: 500px) and (orientation: landscape) {
+  .home-screen { gap: 10px; padding-top: max(8px, env(safe-area-inset-top)); padding-bottom: max(6px, env(safe-area-inset-bottom)); }
+  .home-header { min-height: 44px; padding-bottom: 6px; }
+  .home-brand { font-size: 19px; }
+  .home-header button { padding: 6px 12px; }
+  .home-intro h1 { font-size: 23px; }
+  .home-intro p { margin-top: 3px; font-size: 11px; }
+  .home-board { padding: 8px 12px; }
+  .home-option { padding: 14px 22px; border-radius: 17px; }
+  .home-option-icon { width: 36px; height: 36px; border-radius: 10px; }
+  .home-option h2 { font-size: 26px; margin: 10px 0 7px; }
+  .home-option p { font-size: 11px; line-height: 1.65; }
+  .home-option-link { padding-top: 8px; min-height: 36px; font-size: 12px; }
+  .home-screen footer { font-size: 10px; min-height: 18px; }
+}
+@media (orientation: portrait) {
+  .home-screen { padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); gap: 16px; }
+  .home-options { grid-template-columns: minmax(0, 1fr); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .home-option { padding: 20px 24px; }
+  .home-option-top { gap: 12px; }
+  .home-option-icon { width: 38px; height: 38px; border-radius: 11px; }
+  .home-option h2 { font-size: 27px; margin: 12px 0 8px; }
+  .home-option p { font-size: 12px; }
+  .home-option-link { padding-top: 8px; }
+  .home-board { gap: 6px; padding: 9px 10px; }
+  .home-board > span { display: none; }
+  .home-brand { font-size: 20px; }
+  .home-header button { font-size: 12px; padding: 8px 10px; }
+  .home-footer-detail { display: none; }
+}
+@media (orientation: portrait) and (max-height: 700px) {
+  .home-screen { gap: 10px; }
+  .home-option { padding: 14px 20px; }
+  .home-option h2 { margin: 8px 0 6px; font-size: 24px; }
+  .home-option-icon { width: 32px; height: 32px; }
+  .home-option p { line-height: 1.6; }
+}

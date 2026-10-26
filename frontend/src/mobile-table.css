@@ -1,0 +1,1650 @@
+html.table-app,
+.table-app body,
+.table-app #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: #103a31;
+}
+.table-app .mobile-shell {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.mobile-table-app {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  color: #eae5ce;
+  isolation: isolate;
+  user-select: none;
+  -webkit-user-select: none;
+  background: radial-gradient(
+    ellipse at 50% 44%,
+    #286b52 0%,
+    #1b5543 45%,
+    #103e33 86%
+  );
+}
+.mobile-table-app::before {
+  content: "";
+  position: absolute;
+  inset: 64px 10% 76px;
+  border-radius: 48%;
+  border: 1px solid #c9d4a91c;
+  box-shadow:
+    0 0 0 8px #d3d7ab04,
+    inset 0 0 60px #082e261c;
+  z-index: -1;
+  pointer-events: none;
+}
+.mobile-table-app::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.2;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.18' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.m-hud {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: absolute;
+  z-index: 8;
+  top: env(safe-area-inset-top, 0px);
+  left: max(14px, env(safe-area-inset-left, 0px));
+  right: max(14px, env(safe-area-inset-right, 0px));
+  border-bottom: 1px solid #d1d9b618;
+}
+.m-brand {
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  color: #e8d5a4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+}
+.m-board-info {
+  border-left: 1px solid #c5d0a728;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.m-board-info b {
+  font-weight: 500;
+  font-size: 11px;
+  color: #d5dbc6;
+}
+.m-board-info > span {
+  font-size: 8px;
+  color: #a7bea3;
+}
+.m-scoreboard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+.m-contract {
+  font-size: 17px;
+  font-weight: 600;
+  color: #e8d5a0;
+  white-space: nowrap;
+}
+.m-contract small {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 9px;
+  font-weight: 400;
+  color: #abc3ad;
+}
+.m-score-pair {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 11px;
+  background: #0b302633;
+  border: 1px solid #ced8b51b;
+  border-radius: 20px;
+}
+.m-score-pair small {
+  font-size: 8px;
+  color: #95b49c;
+}
+.m-score-pair b {
+  font-size: 16px;
+  font-weight: 550;
+  color: #e2d6ad;
+}
+.m-score-pair i {
+  font-size: 11px;
+  font-style: normal;
+  color: #799e84;
+}
+.m-hud nav {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.m-hud nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 32px;
+  min-height: 34px;
+  padding: 4px 7px;
+  border: 0;
+  background: none;
+  border-radius: 7px;
+  color: #bdd0b7;
+  font-size: 10px;
+}
+.m-hud nav button:first-child {
+  color: #e8d5a5;
+  background: #e4d29813;
+  border: 1px solid #e4d29829;
+  padding: 5px 9px;
+}
+.m-hud nav button:hover {
+  background: #cdd8b51a;
+}
+.m-table-mark {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #a6c39312;
+  z-index: -1;
+}
+.m-table-mark svg {
+  width: 60px;
+  height: 60px;
+}
+.m-table-mark span {
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+.m-seat {
+  position: absolute;
+  z-index: 4;
+  min-width: 80px;
+}
+.m-seat-N {
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 52vw;
+}
+.m-seat-W {
+  left: max(16px, env(safe-area-inset-left, 0px));
+  top: 41%;
+}
+.m-seat-E {
+  right: max(16px, env(safe-area-inset-right, 0px));
+  top: 41%;
+  text-align: right;
+}
+.m-player {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid transparent;
+  padding: 5px 7px 5px 4px;
+  border-radius: 9px;
+  min-width: 88px;
+}
+.m-seat-E .m-player {
+  flex-direction: row-reverse;
+  padding: 5px 4px 5px 7px;
+}
+.m-player strong,
+.m-south-identity strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #e0e4cf;
+}
+.m-player small,
+.m-south-identity small {
+  display: block;
+  margin-top: 3px;
+  font-size: 8px;
+  color: #9dba9e;
+  white-space: nowrap;
+}
+.m-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d1d6b34a;
+  background: #d1d6b30a;
+  color: #d5d7af;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+.m-active .m-player {
+  border-color: #e0cd8e70;
+  background: #d7cd8e10;
+  box-shadow: 0 0 15px #cece8a09;
+}
+.m-active .m-avatar {
+  color: #26543d;
+  background: #e2cfa2;
+  border-color: #e2cfa2;
+}
+.m-player > i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e3c87c;
+  margin-left: 2px;
+}
+.m-backed-hand {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding-left: 9px;
+}
+.m-backed-hand > i {
+  width: 22px;
+  height: 31px;
+  margin-left: -9px;
+  border: 1px solid #d3d0ab;
+  border-radius: 3px;
+  background: repeating-linear-gradient(
+    45deg,
+    #53755c 0,
+    #53755c 2px,
+    #365b48 2px,
+    #365b48 4px
+  );
+  box-shadow: 0 2px 5px #0c332b33;
+}
+.m-backed-hand small {
+  align-self: flex-end;
+  font-size: 8px;
+  margin: 0 0 -2px -3px;
+  padding: 2px 5px;
+  border: 1px solid #9db39466;
+  border-radius: 8px;
+  background: #204e3e;
+  color: #c7d6b8;
+}
+.m-seat-E .m-backed-hand {
+  justify-content: flex-end;
+}
+.m-seat-N .m-backed-hand {
+  margin-top: 0;
+}
+.m-seat-N .m-backed-hand > i {
+  height: 26px;
+  width: 19px;
+  margin-left: -8px;
+}
+.m-call-bubble {
+  position: absolute;
+  left: 100%;
+  top: 5px;
+  margin-left: 9px;
+  padding: 5px 9px;
+  border: 1px solid #c9d2ae3d;
+  border-radius: 6px;
+  background: #d2d3b112;
+  font-size: 12px;
+  color: #dfdfc5;
+  white-space: nowrap;
+}
+.m-seat-E .m-call-bubble {
+  left: auto;
+  right: 100%;
+  margin-right: 9px;
+}
+.m-seat-N .m-call-bubble {
+  top: 100%;
+  left: 50%;
+  margin: 4px 0 0;
+  transform: translateX(-50%);
+  font-size: 10px;
+  padding: 3px 9px;
+}
+.m-exposed-hand {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 9px;
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: #0b34293d;
+  border: 1px solid #a7c09512;
+  border-radius: 6px;
+  max-width: 160px;
+  text-align: left;
+}
+.m-exposed-hand > span {
+  font-size: 10px;
+  white-space: nowrap;
+  color: #e2e6d3;
+}
+.m-exposed-hand b {
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #c1d0b0;
+}
+.m-exposed-hand > .red {
+  color: #f0b39c !important;
+}
+.m-exposed-hand > .red b {
+  color: inherit;
+}
+.m-seat-N .m-exposed-hand {
+  max-width: 270px;
+  margin: 0;
+  padding: 5px 7px;
+  gap: 4px 9px;
+}
+.m-seat-W .m-exposed-hand,
+.m-seat-E .m-exposed-hand {
+  grid-template-columns: 1fr 1fr;
+  max-width: 160px;
+  gap: 4px;
+}
+.m-auction-layout {
+  position: absolute;
+  left: 19%;
+  right: 18%;
+  top: 104px;
+  bottom: 138px;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  align-items: center;
+  gap: 24px;
+  z-index: 5;
+}
+.m-auction-history {
+  min-width: 0;
+  align-self: stretch;
+  max-height: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 9px 0;
+}
+.m-auction-history > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  color: #a6bfa4;
+  font-size: 9px;
+}
+.m-auction-history > div:first-child button {
+  border: 0;
+  background: none;
+  color: #91b599;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 8px;
+  padding: 3px 0;
+}
+.m-auction-history .auction-table {
+  overflow: auto;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #76916a44 transparent;
+}
+.m-auction-history .auction-table-body > span {
+  height: 25px;
+  font-size: 12px;
+}
+.m-auction-history .auction-table-body .pass-call {
+  font-size: 10px;
+}
+.m-auction-history .auction-table-head {
+  padding-bottom: 6px;
+  font-size: 9px;
+}
+.m-bidding-box {
+  padding: 11px 12px;
+  background: #0b3029bf;
+  border: 1px solid #bbcc9b3b;
+  border-radius: 11px;
+  box-shadow: 0 10px 35px #06251d22;
+  min-width: 0;
+  backdrop-filter: blur(8px);
+}
+.m-bid-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #c2d2b2;
+  margin-bottom: 8px;
+}
+.m-bid-title i {
+  width: 5px;
+  height: 5px;
+  background: #819983;
+  border-radius: 50%;
+}
+.m-bid-title i.is-yours {
+  background: #e0c585;
+  box-shadow: 0 0 0 3px #dfcb8820;
+}
+.m-bid-levels {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 7px;
+}
+.m-bid-levels button {
+  flex: 1;
+  min-width: 0;
+  height: 27px;
+  border-radius: 4px;
+  background: #c3d5ad0c;
+  color: #a3b697;
+  border: 1px solid #afc2941c;
+  font-size: 11px;
+  padding: 0;
+}
+.m-bid-levels .selected {
+  background: #dfcf9f;
+  color: #234d37;
+  border-color: #dfcf9f;
+  font-weight: 650;
+}
+.m-bid-strains {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+.m-bid-strains button {
+  flex: 1;
+  min-width: 0;
+  min-height: 33px;
+  background: #fcf6e5;
+  color: #294c3a;
+  border: 1px solid #e1dec5;
+  border-radius: 5px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 3px;
+}
+.m-bid-strains b {
+  font-size: 17px;
+  font-weight: 500;
+}
+.m-bid-strains button:last-child b {
+  font-size: 11px;
+}
+.m-bid-specials {
+  display: flex;
+  gap: 5px;
+}
+.m-bid-specials button {
+  flex: 1;
+  min-height: 28px;
+  border: 1px solid #a7be9170;
+  border-radius: 5px;
+  background: #355d43;
+  color: #cfdbb9;
+  font-size: 11px;
+  padding: 3px;
+}
+.m-bid-specials .m-pass {
+  flex: 2;
+  background: #d4bb80;
+  color: #2e4730;
+  border-color: #d4bb80;
+  font-weight: 650;
+}
+.m-bidding-box button:disabled {
+  opacity: 0.3 !important;
+}
+.m-south-identity {
+  position: absolute;
+  left: max(180px, calc(50% - min(30vw, 280px)));
+  bottom: 110px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  z-index: 7;
+}
+.m-south-identity .m-avatar {
+  width: 29px;
+  height: 29px;
+}
+.m-turn-message {
+  position: absolute;
+  bottom: 111px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #b5c9ab;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  z-index: 6;
+}
+.m-turn-message.m-your-turn {
+  color: #e7d59d;
+}
+.m-hand-deck {
+  position: absolute;
+  bottom: max(7px, env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(71vw, 650px);
+  height: 92px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  container-type: inline-size;
+  --card-width: clamp(48px, 7.5vw, 70px);
+  padding: 0 0 3px;
+  z-index: 7;
+}
+.m-hand-slot {
+  width: var(--card-width);
+  flex: 0 0 var(--card-width);
+  position: relative;
+  transform: translateY(var(--drop)) rotate(var(--angle));
+  transform-origin: 50% 100%;
+  transition: transform 0.18s;
+}
+.m-hand-slot + .m-hand-slot {
+  margin-left: min(-12px, calc((100cqw - 13 * var(--card-width)) / 12));
+}
+.m-hand-slot.m-picked {
+  transform: translateY(-15px);
+  z-index: 2;
+}
+.m-hand-deck .playing-card {
+  width: 100%;
+  height: 91px;
+  border-radius: 6px;
+  background: #fff9e9;
+  border-color: #dddfc7;
+  box-shadow: -2px 3px 10px #082e2640;
+  transform: none;
+}
+.m-hand-deck .playing-card:disabled {
+  opacity: 1;
+  color: #79907a;
+  background: #e9e7d7;
+  border-color: #c8ccba;
+}
+.m-hand-deck .playing-card.red:disabled {
+  color: #b88170 !important;
+}
+.m-hand-deck .card-corner {
+  top: 6px;
+  left: 6px;
+  font-size: 18px;
+}
+.m-hand-deck .card-corner span {
+  font-size: 12px;
+}
+.m-hand-deck .card-corner.bottom {
+  top: auto;
+  left: auto;
+  right: 6px;
+  bottom: 6px;
+}
+.m-hand-deck .card-pip {
+  font-size: 32px;
+  left: 55%;
+  top: 55%;
+}
+.m-hand-slot.m-picked .playing-card {
+  border-color: #dec17f;
+  box-shadow:
+    0 0 0 2px #dfc37c,
+    0 0 18px #dac58c20;
+}
+.m-hand-deck .recommended::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 4px;
+  background: #cda652;
+}
+.m-left-actions {
+  position: absolute;
+  left: max(19px, env(safe-area-inset-left, 0px));
+  bottom: 16px;
+  display: flex;
+  gap: 7px;
+  z-index: 8;
+}
+.m-left-actions button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 33px;
+  height: 40px;
+  border: 0;
+  background: none;
+  color: #abc4a8;
+  border-radius: 5px;
+  font-size: 8px;
+}
+.m-left-actions button:hover {
+  background: #b4c89e12;
+}
+.m-right-actions {
+  position: absolute;
+  right: max(18px, env(safe-area-inset-right, 0px));
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  z-index: 8;
+}
+.m-right-actions > div {
+  display: flex;
+  gap: 8px;
+}
+.m-right-actions > div button {
+  width: 30px;
+  height: 29px;
+  background: #a7c18d10;
+  border: 1px solid #b9cea032;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bdcca9;
+}
+.m-play-button {
+  min-width: 71px;
+  min-height: 49px;
+  border-radius: 9px;
+  border: 1px solid #e9d69d;
+  background: #ddc18c;
+  color: #25462e;
+  padding: 6px 10px;
+  font-size: 12px;
+  box-shadow: 0 3px 0 #ae925e;
+}
+.m-play-button b {
+  display: block;
+  font-size: 13px;
+  font-weight: 650;
+  margin-top: 3px;
+}
+.m-play-button:disabled {
+  background: #63806045;
+  color: #c8d2b78c;
+  border-color: #9eb68b44;
+  box-shadow: none;
+  opacity: 0.65 !important;
+}
+.m-mode-label {
+  position: absolute;
+  left: 20px;
+  bottom: 3px;
+  font-size: 6px;
+  letter-spacing: 1px;
+  color: #86a78c66;
+}
+.m-play-center {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: calc(50% - 14px);
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 144px;
+}
+.m-trick-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 52px;
+  font-size: 8px;
+  color: #c3d2b444;
+  white-space: nowrap;
+}
+.m-compass {
+  width: 62px;
+  height: 62px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #bcd2a41c;
+  border-radius: 50%;
+  color: #bad0a929;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+.m-compass span {
+  font-size: 6px;
+}
+.m-compass span:nth-child(1) {
+  grid-area: 1/2;
+}
+.m-compass span:nth-child(2) {
+  grid-area: 2/1;
+}
+.m-compass svg {
+  grid-area: 2/2;
+  width: 20px;
+}
+.m-compass span:nth-child(4) {
+  grid-area: 2/3;
+}
+.m-compass span:nth-child(5) {
+  grid-area: 3/2;
+}
+.m-lead-hint {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  white-space: nowrap;
+  color: #b2c6a577;
+}
+.m-play-center .table-card {
+  width: 54px;
+  height: 74px;
+}
+.m-play-center .table-card .playing-card {
+  width: 54px;
+  height: 74px;
+  opacity: 1;
+}
+.m-play-center .table-card .card-corner {
+  font-size: 12px;
+  top: 5px;
+  left: 5px;
+}
+.m-play-center .table-card .card-corner span {
+  font-size: 10px;
+}
+.m-play-center .table-card .card-corner.bottom {
+  top: auto;
+  left: auto;
+  right: 5px;
+  bottom: 5px;
+}
+.m-play-center .table-card .card-pip {
+  font-size: 24px;
+}
+.m-play-center .table-card-N {
+  top: 0;
+  left: 88px;
+}
+.m-play-center .table-card-S {
+  bottom: 0;
+  left: 88px;
+}
+.m-play-center .table-card-W {
+  top: 46px;
+  left: 5px;
+}
+.m-play-center .table-card-E {
+  top: 46px;
+  right: 5px;
+}
+.m-result {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 420px;
+  padding: 19px 24px;
+  border: 1px solid #d0cb9155;
+  border-radius: 12px;
+  background: #0c362ad4;
+  box-shadow: 0 10px 35px #082e2644;
+  color: #e6d099;
+}
+.m-result > div > span {
+  font-size: 9px;
+  color: #b0c3a3;
+}
+.m-result h1 {
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.m-final-score {
+  border-left: 1px solid #e3d39b20;
+  padding-left: 18px;
+  margin-left: auto;
+}
+.m-final-score small {
+  display: block;
+  font-size: 8px;
+  color: #afc3a4;
+}
+.m-final-score b {
+  display: block;
+  font-size: 29px;
+  font-weight: 500;
+}
+.m-result > button {
+  border: 0;
+  background: #deca95;
+  border-radius: 7px;
+  color: #2a4f35;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.m-rotate-hint {
+  display: none;
+}
+.table-app .modal {
+  max-height: calc(100dvh - 24px);
+  padding: 18px 22px;
+  border-radius: 12px;
+  font-size: 12px;
+  overscroll-behavior: contain;
+}
+.table-app .modal-heading {
+  margin-bottom: 14px;
+}
+.table-app .modal-heading h2 {
+  font-size: 17px;
+}
+.table-app .modal-heading .eyebrow {
+  display: none;
+}
+.table-app .modal .guide-list section {
+  margin-bottom: 14px;
+}
+.table-app .modal .guide-list p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.table-app .modal .full-width {
+  margin-top: 15px;
+}
+.table-app .modal .field-help,
+.table-app .modal .settings-footnote,
+.table-app .modal .endpoint-preview {
+  font-size: 9px;
+}
+.table-app .modal .toggle-row {
+  padding: 12px 0;
+}
+.table-app .modal.m-sheet {
+  margin: 0 0 0 auto;
+  height: 100dvh;
+  max-height: 100dvh;
+  width: min(370px, 78vw);
+  border-radius: 14px 0 0 14px;
+  padding: 16px;
+  border: 0;
+  border-left: 1px solid #d0d7bd;
+  box-shadow: -15px 0 50px #061e2344;
+  animation: m-slide-in 0.2s ease-out;
+}
+.m-sheet .modal-heading {
+  position: sticky;
+  top: -16px;
+  background: #fffef9;
+  padding: 5px 0 9px;
+  z-index: 3;
+  border-bottom: 1px solid #e8ebde;
+}
+.m-sheet .analysis-content,
+.m-sheet .records-content {
+  padding: 5px 0 15px;
+  display: block;
+}
+.m-sheet .section-heading {
+  display: none;
+}
+.m-sheet .panel-intro {
+  margin: 0 0 12px;
+  font-size: 10px;
+}
+.m-sheet .advice-card {
+  margin-top: 12px;
+}
+.m-sheet .empty-advice {
+  min-height: 80px;
+}
+.m-sheet .analysis-note p {
+  font-size: 9px;
+}
+.m-sheet .connection-strip {
+  margin-top: 15px;
+}
+.m-sheet .record-title {
+  margin-top: 12px;
+}
+.m-sheet .advice-action {
+  min-height: 36px;
+}
+@keyframes m-slide-in {
+  from {
+    transform: translateX(35px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media (max-height: 360px) and (orientation: landscape) {
+  .m-seat-W,
+  .m-seat-E {
+    top: 33%;
+  }
+  .m-hud {
+    height: 39px;
+  }
+  .m-seat-N {
+    top: 43px;
+  }
+  .m-avatar {
+    width: 26px;
+    height: 26px;
+  }
+  .m-hand-deck {
+    height: 80px;
+  }
+  .m-hand-deck .playing-card {
+    height: 79px;
+  }
+  .m-hand-deck .card-corner {
+    font-size: 16px;
+  }
+  .m-hand-deck .card-pip {
+    font-size: 28px;
+  }
+  .m-south-identity {
+    bottom: 95px;
+  }
+  .m-turn-message {
+    bottom: 96px;
+  }
+  .m-auction-layout {
+    top: 88px;
+    bottom: 116px;
+    gap: 18px;
+  }
+  .m-bidding-box {
+    padding: 8px 10px;
+  }
+  .m-bid-title {
+    margin-bottom: 6px;
+  }
+  .m-bid-levels button {
+    height: 23px;
+  }
+  .m-bid-strains button {
+    min-height: 28px;
+  }
+  .m-bid-specials button {
+    min-height: 25px;
+  }
+  .m-play-center {
+    height: 126px;
+    top: calc(50% - 15px);
+  }
+  .m-play-center .table-card {
+    width: 48px;
+    height: 65px;
+  }
+  .m-play-center .table-card .playing-card {
+    width: 48px;
+    height: 65px;
+  }
+  .m-play-center .table-card-N,
+  .m-play-center .table-card-S {
+    left: 91px;
+  }
+  .m-play-center .table-card-W,
+  .m-play-center .table-card-E {
+    top: 40px;
+  }
+  .m-play-center .table-card .card-corner {
+    font-size: 10px;
+  }
+  .m-play-center .table-card .card-corner span {
+    font-size: 8px;
+  }
+  .m-play-center .table-card .card-pip {
+    font-size: 21px;
+  }
+}
+@media (max-width: 780px) and (orientation: landscape) {
+  .m-hud {
+    gap: 9px;
+  }
+  .m-brand span {
+    font-size: 13px;
+  }
+  .m-board-info {
+    padding-left: 9px;
+  }
+  .m-scoreboard {
+    gap: 9px;
+  }
+  .m-score-pair {
+    gap: 5px;
+    padding: 4px 7px;
+  }
+  .m-hud nav {
+    gap: 0;
+  }
+  .m-hud nav button {
+    min-width: 30px;
+    padding: 4px 6px;
+  }
+  .m-contract small {
+    display: none;
+  }
+  .m-auction-layout {
+    left: 17%;
+    right: 17%;
+    gap: 16px;
+  }
+  .m-player {
+    min-width: 78px;
+    gap: 5px;
+  }
+  .m-player strong {
+    font-size: 10px;
+  }
+  .m-player small {
+    font-size: 7px;
+  }
+  .m-exposed-hand > span {
+    font-size: 8px;
+  }
+  .m-exposed-hand b {
+    font-size: 10px;
+  }
+  .m-seat-W .m-exposed-hand,
+  .m-seat-E .m-exposed-hand {
+    max-width: 135px;
+  }
+  .m-seat-N .m-exposed-hand {
+    max-width: 220px;
+  }
+  .m-south-identity {
+    gap: 5px;
+  }
+  .m-south-identity strong {
+    font-size: 10px;
+  }
+  .m-south-identity small {
+    font-size: 7px;
+  }
+  .m-hand-deck {
+    width: 70vw;
+  }
+  .m-left-actions {
+    gap: 2px;
+    left: 12px;
+  }
+  .m-right-actions {
+    right: 13px;
+  }
+  .m-play-button {
+    min-width: 63px;
+    padding: 5px 8px;
+  }
+  .m-right-actions > div {
+    gap: 4px;
+  }
+}
+@media (orientation: portrait) {
+  .m-rotate-hint {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    background: #123f34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 24px;
+    text-align: center;
+    color: #ddc997;
+  }
+  .m-rotate-hint > svg {
+    transform: rotate(90deg);
+  }
+  .m-rotate-hint h2 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .m-rotate-hint p {
+    color: #a6be9e;
+    font-size: 12px;
+    line-height: 2;
+  }
+}
+
+.m-analysis-tabs {
+  display: flex;
+  padding: 3px;
+  background: #edf1e6;
+  border: 1px solid #e1e7d7;
+  border-radius: 8px;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.m-analysis-tabs button {
+  flex: 1;
+  min-height: 33px;
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  color: #8b9c7c;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.m-analysis-tabs button[aria-selected="true"] {
+  background: #fffef9;
+  color: #376346;
+  box-shadow: 0 1px 4px #32452312;
+  font-weight: 550;
+}
+.m-sheet .compact-analysis .panel-intro {
+  display: none;
+}
+.m-sheet .compact-analysis .advice-card {
+  margin-top: 0;
+}
+.m-sheet .compact-analysis .analysis-note {
+  margin-top: 13px;
+}
+.m-sheet .compact-analysis .empty-advice {
+  min-height: 64px;
+}
+.m-sheet .compact-analysis .connection-strip {
+  margin-top: 12px;
+}
+
+.connection-test-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.connection-test-actions .secondary-button {
+  min-height: 35px;
+  padding: 7px 12px;
+  font-size: 11px;
+}
+.service-health {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 12px;
+  border: 1px solid #dbe5cf;
+  border-radius: 8px;
+  padding: 11px;
+  background: #f3f7ec;
+  font-size: 10px;
+  color: #8b997a;
+}
+.service-health strong {
+  color: #3f6d48;
+  font-weight: 550;
+  font-size: 11px;
+}
+.service-health .service-ready {
+  color: #5c8451;
+}
+
+/* The same card-table interaction scales up for desktop and tablet screens. */
+@media (min-width: 1000px) and (min-height: 500px) {
+  .m-hud {
+    height: 60px;
+    left: 28px;
+    right: 28px;
+    gap: 22px;
+  }
+  .m-brand {
+    font-size: 22px;
+    gap: 10px;
+  }
+  .m-brand svg {
+    width: 25px;
+    height: 25px;
+  }
+  .m-board-info {
+    padding-left: 20px;
+    gap: 4px;
+  }
+  .m-board-info b {
+    font-size: 14px;
+  }
+  .m-board-info > span {
+    font-size: 11px;
+  }
+  .m-contract {
+    font-size: 25px;
+  }
+  .m-contract small {
+    font-size: 12px;
+    margin-left: 9px;
+  }
+  .m-scoreboard {
+    gap: 24px;
+  }
+  .m-score-pair {
+    padding: 6px 16px;
+    gap: 12px;
+  }
+  .m-score-pair b {
+    font-size: 23px;
+  }
+  .m-score-pair small {
+    font-size: 11px;
+  }
+  .m-hud nav {
+    gap: 6px;
+  }
+  .m-hud nav button {
+    min-width: 40px;
+    min-height: 43px;
+    padding: 7px 10px;
+    font-size: 13px;
+    gap: 7px;
+  }
+  .m-hud nav svg {
+    width: 21px;
+    height: 21px;
+  }
+  .mobile-table-app::before {
+    inset: 96px 9% 130px;
+  }
+  .m-seat-N {
+    top: 78px;
+    gap: 18px;
+  }
+  .m-seat-W,
+  .m-seat-E {
+    top: 38%;
+  }
+  .m-seat-W {
+    left: 36px;
+  }
+  .m-seat-E {
+    right: 36px;
+  }
+  .m-player {
+    padding: 8px 11px;
+    gap: 11px;
+    min-width: 130px;
+  }
+  .m-seat-E .m-player {
+    padding: 8px 11px;
+  }
+  .m-avatar {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+  .m-player strong {
+    font-size: 15px;
+  }
+  .m-player small {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+  .m-backed-hand {
+    margin-top: 15px;
+  }
+  .m-backed-hand > i {
+    width: 32px;
+    height: 46px;
+    margin-left: -11px;
+  }
+  .m-backed-hand small {
+    font-size: 10px;
+  }
+  .m-seat-N .m-backed-hand > i {
+    width: 28px;
+    height: 37px;
+  }
+  .m-call-bubble {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+  .m-seat-N .m-call-bubble {
+    font-size: 12px;
+  }
+  .m-exposed-hand > span {
+    font-size: 12px;
+  }
+  .m-exposed-hand b {
+    font-size: 15px;
+  }
+  .m-seat-N .m-exposed-hand {
+    max-width: 340px;
+    gap: 8px 14px;
+    padding: 8px 12px;
+  }
+  .m-seat-W .m-exposed-hand,
+  .m-seat-E .m-exposed-hand {
+    max-width: 190px;
+    gap: 9px;
+  }
+  .m-auction-layout {
+    left: 22%;
+    right: 21%;
+    top: 150px;
+    bottom: 235px;
+    gap: 35px;
+  }
+  .m-auction-history {
+    max-height: 270px;
+  }
+  .m-auction-history > div:first-child {
+    font-size: 13px;
+    padding-bottom: 14px;
+  }
+  .m-auction-history > div:first-child button {
+    font-size: 11px;
+  }
+  .m-auction-history .auction-table-head {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+  .m-auction-history .auction-table-body > span {
+    font-size: 16px;
+    height: 34px;
+  }
+  .m-auction-history .auction-table-body .pass-call {
+    font-size: 13px;
+  }
+  .m-bidding-box {
+    padding: 18px;
+    border-radius: 14px;
+  }
+  .m-bid-title {
+    font-size: 14px;
+    margin-bottom: 13px;
+  }
+  .m-bid-levels {
+    gap: 7px;
+    margin-bottom: 10px;
+  }
+  .m-bid-levels button {
+    height: 37px;
+    font-size: 15px;
+  }
+  .m-bid-strains {
+    gap: 7px;
+    margin-bottom: 9px;
+  }
+  .m-bid-strains button {
+    min-height: 47px;
+    font-size: 16px;
+  }
+  .m-bid-strains b {
+    font-size: 25px;
+  }
+  .m-bid-strains button:last-child b {
+    font-size: 15px;
+  }
+  .m-bid-specials {
+    gap: 7px;
+  }
+  .m-bid-specials button {
+    min-height: 38px;
+    font-size: 15px;
+  }
+  .m-hand-deck {
+    width: min(76vw, 1100px);
+    height: 151px;
+    --card-width: clamp(78px, 8vw, 106px);
+    bottom: 12px;
+  }
+  .m-hand-deck .playing-card {
+    height: 145px;
+    border-radius: 9px;
+  }
+  .m-hand-deck .card-corner {
+    font-size: 26px;
+    top: 9px;
+    left: 9px;
+  }
+  .m-hand-deck .card-corner span {
+    font-size: 19px;
+  }
+  .m-hand-deck .card-corner.bottom {
+    right: 9px;
+    bottom: 9px;
+  }
+  .m-hand-deck .card-pip {
+    font-size: 47px;
+  }
+  .m-hand-slot.m-picked {
+    transform: translateY(-22px);
+  }
+  .m-south-identity {
+    bottom: 185px;
+    left: max(230px, calc(50% - 380px));
+    gap: 11px;
+  }
+  .m-south-identity .m-avatar {
+    width: 39px;
+    height: 39px;
+  }
+  .m-south-identity strong {
+    font-size: 14px;
+  }
+  .m-south-identity small {
+    font-size: 11px;
+  }
+  .m-turn-message {
+    bottom: 186px;
+    font-size: 13px;
+  }
+  .m-left-actions {
+    left: 34px;
+    bottom: 35px;
+    gap: 15px;
+  }
+  .m-left-actions button {
+    width: 43px;
+    height: 57px;
+    font-size: 11px;
+    gap: 7px;
+  }
+  .m-left-actions svg {
+    width: 21px;
+    height: 21px;
+  }
+  .m-mode-label {
+    left: 35px;
+    bottom: 14px;
+    font-size: 9px;
+  }
+  .m-right-actions {
+    right: 31px;
+    bottom: 29px;
+    gap: 13px;
+  }
+  .m-right-actions > div {
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .m-right-actions > div button {
+    width: 43px;
+    height: 39px;
+  }
+  .m-right-actions > div svg {
+    width: 19px;
+    height: 19px;
+  }
+  .m-play-button {
+    min-width: 98px;
+    min-height: 70px;
+    font-size: 17px;
+  }
+  .m-play-button b {
+    font-size: 18px;
+  }
+  .m-play-center {
+    width: 340px;
+    height: 250px;
+    top: 43%;
+  }
+  .m-play-center .table-card,
+  .m-play-center .table-card .playing-card {
+    width: 79px;
+    height: 108px;
+  }
+  .m-play-center .table-card-N,
+  .m-play-center .table-card-S {
+    left: 130px;
+  }
+  .m-play-center .table-card-W,
+  .m-play-center .table-card-E {
+    top: 70px;
+  }
+  .m-play-center .table-card-W {
+    left: 7px;
+  }
+  .m-play-center .table-card-E {
+    right: 7px;
+  }
+  .m-play-center .table-card .card-corner {
+    font-size: 18px;
+    top: 7px;
+    left: 7px;
+  }
+  .m-play-center .table-card .card-corner span {
+    font-size: 13px;
+  }
+  .m-play-center .table-card .card-corner.bottom {
+    right: 7px;
+    bottom: 7px;
+  }
+  .m-play-center .table-card .card-pip {
+    font-size: 36px;
+  }
+  .m-compass {
+    width: 85px;
+    height: 85px;
+  }
+  .m-compass svg {
+    width: 29px;
+  }
+  .m-compass span {
+    font-size: 8px;
+  }
+  .m-trick-number {
+    font-size: 11px;
+    padding-top: 70px;
+  }
+  .m-lead-hint {
+    font-size: 12px;
+  }
+  .m-result {
+    padding: 27px 32px;
+    min-width: 570px;
+    gap: 27px;
+  }
+  .m-result h1 {
+    font-size: 27px;
+  }
+  .m-result > div > span {
+    font-size: 13px;
+  }
+  .m-final-score b {
+    font-size: 40px;
+  }
+  .m-final-score small {
+    font-size: 11px;
+  }
+  .m-result > button {
+    padding: 13px 18px;
+    font-size: 14px;
+  }
+  .table-app .modal.m-sheet {
+    width: 420px;
+    padding: 22px;
+  }
+  .m-sheet .modal-heading {
+    top: -22px;
+  }
+  .m-sheet .advice-title h3 {
+    font-size: 15px;
+  }
+  .m-sheet .advice-title > div > span {
+    font-size: 11px;
+  }
+  .m-sheet .empty-advice p {
+    font-size: 12px;
+  }
+  .m-sheet .compact-analysis .empty-advice {
+    min-height: 100px;
+  }
+  .m-sheet .advice-action {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .m-sheet .analysis-note p {
+    font-size: 11px;
+  }
+  .m-sheet .connection-strip > span {
+    font-size: 12px;
+  }
+  .m-sheet .connection-strip small {
+    font-size: 10px;
+  }
+}

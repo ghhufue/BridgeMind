@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-26",
+  "release": {
+    "protocol": "bridgemind.update.v1",
+    "applicationId": "com.bridgemind.app",
+    "versionCode": 5,
+    "versionName": "1.2.0",
+    "size": 4395593,
+    "sha256": "7f768ea07156ba73a4502d3a72ae121531d7a5ab9453cf7c6cf8ca330b12f38e",
+    "apkPath": "/updates/android/7f768ea07156ba73a4502d3a72ae121531d7a5ab9453cf7c6cf8ca330b12f38e.apk",
+    "notes": "模型调试改为与人机对战共用的 App 牌桌。\n开局可分别选择四家的叫牌与出牌模型；自动播放完整对局，支持0.5×/1×/2×/4×速度、暂停、单步和撤销。\n支持全知观战/南家视角，点击“信息”或“记录”呼出抽屉，打开时暂停。\n可查看上一步真实动作概率、牌张归属和得分预测；支持当前局面的模型/DDS分析。\n"
+  },
+  "installedVersion": {
+    "versionCode": 5,
+    "versionName": "1.2.0"
+  },
+  "installedVersionEvidence": "successful dumpsys package check at 20:28; native-final.png shows new observer running",
+  "deviceDisconnectedAfterVerification": true,
+  "usedAdbInstall": false,
+  "realLanUpdate": true,
+  "appInstallerOpened": true,
+  "nativeObserverRunning": true,
+  "frontendTests": 123,
+  "releaseScriptTests": 2,
+  "gatewayTests": 118,
+  "webBuildPassed": true,
+  "androidBuildPassed": true,
+  "realWeightsVerified": {
+    "catalog": {
+      "protocol": "bridgemind.models.v1",
+      "play": [
+        {
+          "id": "default",
+          "name": "SL v2（当前）",
+          "available": true
+        },
+        {
+          "id": "sl-long",
+          "name": "长训 SL",
+          "available": true
+        },
+        {
+          "id": "sl-pilot",
+          "name": "SL 早期模型",
+          "available": true
+        },
+        {
+          "id": "ppo-pilot",
+          "name": "PPO 试验模型",
+          "available": true
+        },
+        {
+          "id": "dds",
+          "name": "DDS 全知求解",
+          "available": true
+        }
+      ],
+      "bidding": [
+        {
+          "id": "default",
+          "name": "SL 叫牌（当前）",
+          "available": true
+        },
+        {
+          "id": "ppo-pilot",
+          "name": "PPO 叫牌试验模型",
+          "available": true
+        }
+      ]
+    },
+    "play": [
+      {
+        "id": "default",
+        "model": "play-sl-v2-20261026-2h · 纯网络",
+        "sha256": "5e224aba09ce56812aa38efc26b194e727358bbdcfbbbd43df0f2fdfa453cd11",
+        "card": "H3",
+        "diagnosticHeadsVerified": true
+      },
+      {
+        "id": "sl-long",
+        "model": "长训 SL",
+        "sha256": "156bd1cdf1418d68e9558f97d8d0a1e720584f1ed82a3f38b80504d59d0c4360",
+        "card": "HA",
+        "diagnosticHeadsVerified": true
+      },
+      {
+        "id": "sl-pilot",
+        "model": "SL 早期模型",
+        "sha256": "11f23c31087d2129baf957b460d758d51557c4a4a54fbb492b2943dab4b84282",
+        "card": "H3",
+        "diagnosticHeadsVerified": true
+      },
+      {
+        "id": "ppo-pilot",
+        "model": "PPO 试验模型",
+        "sha256": "abb41f71bffe87c0325950450354de9de1de41cbd58d6824b2a6666cfbe2fd3b",
+        "card": "H3",
+        "diagnosticHeadsVerified": true
+      }
+    ],
+    "bidding": [
+      {
+        "id": "default",
+        "model": "sl-pilot",
+        "call": "5C"
+      },
+      {
+        "id": "ppo-pilot",
+        "model": "PPO 叫牌试验模型",
+        "call": "5C"
+      }
+    ]
+  },
+  "layoutChecks": [
+    {
+      "cardBottom": 305.6000061035156,
+      "footerTop": 324.20001220703125,
+      "root": [
+        844,
+        390
+      ],
+      "viewport": [
+        844,
+        390
+      ]
+    },
+    {
+      "cardBottom": 295.00000762939453,
+      "footerTop": 300.20001220703125,
+      "root": [
+        796,
+        366
+      ],
+      "viewport": [
+        796,
+        366
+      ]
+    },
+    {
+      "cardBottom": 520.8000183105469,
+      "footerTop": 635.2000122070312,
+      "root": [
+        1280,
+        720
+      ],
+      "viewport": [
+        1280,
+        720
+      ]
+    },
+    {
+      "cardBottom": 629.75,
+      "footerTop": 701.2000122070312,
+      "root": [
+        390,
+        844
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "cardBottom": 487.2000122070313,
+      "footerTop": 519.7999877929688,
+      "root": [
+        360,
+        640
+      ],
+      "viewport": [
+        360,
+        640
+      ]
+    }
+  ],
+  "realBrowserFullGame": {
+    "tricks": 13,
+    "northSouthTricks": 4,
+    "eastWestTricks": 9,
+    "contract": "6D E",
+    "northSouthScore": 150
+  },
+  "manualStepInformationAndPerspectiveVerified": true
+}

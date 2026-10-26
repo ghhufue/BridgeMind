@@ -1,8 +1,28 @@
 # BridgeMind
 
+源码公开在[GitHub](https://github.com/ghhufue/BridgeMind)，Android安装包与版本记录见[Releases](https://github.com/ghhufue/BridgeMind/releases)。版本发布按[Release维护说明](frontend/RELEASING.md)执行，签名文件、模型权重和训练数据不进入Git仓库。
+
 当前已实现独立的 DDS v3.1.0 求解服务、Python 客户端、完整叫牌与出牌环境，以及 PyTorch 监督学习和 PPO 自对弈训练。出牌包含动态历史 Transformer、隐藏牌推断、受约束采样 DDS 搜索和搜索蒸馏。长训 SL 已在三个训练种子和全新 2,048 副确认牌上复现对旧模型的提升，详见 [长训 SL 评估](docs/cardplay-long-sl-evaluation.md)。
 
 接手项目请先读 [项目交接与当前进度](docs/HANDOFF.md)。完整文档入口及维护约定见 [docs 文档索引](docs/README.md)。
+
+## 桥牌前端
+
+Android 已支持[应用内更新](frontend/UPDATES.md)：启动和回到前台自动检查、默认自动下载、点击后交给系统确认安装；`npm run android:publish` 发布到现有电脑网关。当前1.2.0已通过实际Wi-Fi与App内更新完成安装，未使用ADB覆盖安装。首页与模型观战采用App排布，网页与手机共用，后续开发遵循[前端设计规范](frontend/DESIGN.md)。
+
+`frontend/` 已实现 React + TypeScript + Vite 的完整本地桥牌练习桌：叫牌、13 墩出牌与计分、明手控制、练习对手、动画音效、对局记录，以及 AI / DDS 独立分析面板。
+
+主界面可选择人机对战或[模型调试观战](frontend/MODEL-DEBUG.md)。人机对战中你叫南家的牌并操作南北两手；模型调试先分别选择四家的叫牌/出牌模型，再在相同牌桌上观察完整自动对局，支持播放速度、暂停/单步、全知观战，以及按钮呼出的信息与记录抽屉。信息显示所选模型的真实动作概率、隐藏牌归属与终局得分预测，支持客户端真值对照和JSON导出。当前模型没有胜率头，界面明确标注不可用。
+
+```powershell
+cd frontend
+npm ci
+npm run dev
+```
+
+开发页面打开 `http://localhost:5173/`。电脑与手机现在共用横屏牌桌交互，分析和记录通过按钮打开。真实模型与 DDS 已在电脑通过 HTTP 网关接入，前端不执行推理。
+
+日常使用在仓库根目录运行 `.\scripts\start-lan.ps1`，即可构建网页并启动分析服务；本次入口是 `http://192.168.5.118:8000/`，Android 新版已写入该分析地址并通过 ADB 安装。重启电脑后重新执行该脚本即可。详见 [局域网使用说明](frontend/LAN.md)、[前端说明](frontend/README.md) 和 [分析接口 v1](docs/frontend-analysis-api.md)。
 
 ## 叫牌训练
 
@@ -15,7 +35,7 @@
 
 已准备 10 万训练牌表、1 万验证牌表、2 万测试牌表，以及约 110 万条监督叫牌决策。完整安装、数据重建、训练和评估命令见 [训练说明](docs/training.md)，已跑实验与效果限制见 [验证记录](docs/training-validation.md)。本轮短训练证明流程可运行，尚不能证明模型棋力提升。
 
-本地 Git 使用 `main`，DDS 与 OpenSpiel 源码作为固定提交的子模块管理。克隆后使用 `git submodule update --init` 取得源码；数据、模型、训练输出和虚拟环境不提交到 Git。当前没有配置远端仓库。
+Git使用`main`，公开远端为`ghhufue/BridgeMind`。DDS与OpenSpiel源码作为固定提交的子模块管理，克隆后使用`git submodule update --init`取得源码；数据、模型、训练输出和虚拟环境不提交到Git。Android APK通过GitHub Releases分发。
 
 ## 出牌训练与完整对局
 
@@ -24,6 +44,8 @@
 另有[基础能力与花色一致性体检](docs/cardplay-foundations.md)：对明确可证明的基础选择单独验收，覆盖8项战术、全部24种花色置换及4种座位轮换；正确率与对称性分开报告。入口为 `python -m bridgemind.foundation`，使用已认证题库评估新模型时无需DDS服务。
 
 2026-10-26 两小时[混合 SL v2](docs/cardplay-sl-v2.md)已完成：75% 真实出牌决策与 25% 认证基础课程，加花色增强。[训练后验收](docs/cardplay-sl-v2-evaluation.md)已完成：固定标尺 **62.54分**，全新2,048副确认牌对原长训SL **+3.254 IMP/副**、对基础规则 **+3.182 IMP/副**，基础体检全通过。训练报告在 `runs/play-sl-v2-20261026-2h/report.json`，验收报告在 `artifacts/cardplay-sl-v2-20261026/`。
+
+后续[SL v3实验流水线](docs/cardplay-sl-v3-experiment.md)已启动：真实训练扩至50,000副，基础课程扩至12类；先比较SL v2搜索和课程配比，再进行约两小时主训练，结束后自动独立验收。进度见 `runs/cardplay-sl-v3-experiment-20261026/status.json`，运行中的结果不代表已提升。
 
 本机已准备出牌训练 1,000 副，验证和测试各 128 副。已有环境和数据可直接运行：
 

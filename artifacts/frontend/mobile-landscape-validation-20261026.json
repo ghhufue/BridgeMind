@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-26",
+  "app_id": "com.bridgemind.app",
+  "variant": "debug",
+  "layout": "immersive_landscape_card_table",
+  "frontend_tests": 87,
+  "typescript_and_web_build": "passed",
+  "android_build": "passed",
+  "signature_verification": "passed",
+  "adb_install": "success",
+  "manifest_screen_orientation": "sensorLandscape",
+  "browser_viewports": [
+    [
+      844,
+      390
+    ],
+    [
+      796,
+      366
+    ]
+  ],
+  "browser_checks": [
+    "desktop_layout_preserved",
+    "landscape_table_no_page_scroll",
+    "card_selection_requires_confirmation",
+    "dummy_hand_switch",
+    "analysis_drawer_ai_dds_tabs",
+    "records_drawer"
+  ],
+  "final_device_visual_check": "not_performed_user_requested_later_self_testing",
+  "size_bytes": 4513825,
+  "sha256": "8131a98817221d28bc8f7fae3a063b736a323b7856aa5ba6f0539a0e715d4ebd"
+}

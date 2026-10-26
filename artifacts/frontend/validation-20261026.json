@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-26",
+  "reference": "Existing BridgeMind Python / OpenSpiel 2.0.2 backend",
+  "boards": 64,
+  "passed_out": 12,
+  "auction_decisions": 626,
+  "doubles": 48,
+  "redoubles": 27,
+  "card_decisions": 2704,
+  "score_cases": 2940,
+  "status": "passed"
+}

@@ -9,3 +9,13 @@
 /runs/
 /models/
 
+# Local configuration and signing material never belong in a public repository.
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bridgemind_green">#164F40</color>
+    <color name="bridgemind_paper">#F5F5F0</color>
+    <color name="colorPrimary">#164F40</color>
+    <color name="colorPrimaryDark">#113F37</color>
+    <color name="colorAccent">#D1AF6D</color>
+</resources>

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-26",
+  "platform": "Android",
+  "device_android_version": "16",
+  "device_api": 36,
+  "app_id": "com.bridgemind.app",
+  "version_name": "1.0",
+  "variant": "debug",
+  "capacitor": "8.5.3",
+  "build": "passed",
+  "adb_install": "success",
+  "launch": "success",
+  "observed_screen": "cardplay",
+  "size_bytes": 4356693,
+  "sha256": "96935d90178bbe21726932dfefc62fa7d20f8558c80f839928eee150acfbff7e",
+  "app_fatal_or_uncaught_error_count": 0,
+  "frontend_tests": 81,
+  "notes": [
+    "Bundled web assets; no Vite server needed",
+    "AI/DDS HTTP gateway not implemented",
+    "Native export/share not implemented"
+  ]
+}

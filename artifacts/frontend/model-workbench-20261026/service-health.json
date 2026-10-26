@@ -1,0 +1,20 @@
+{
+  "protocol": "bridgemind.analysis.v1",
+  "service": "BridgeMind LAN",
+  "status": "ready",
+  "services": {
+    "ai": {
+      "ready": true,
+      "model": "play-sl-v2-20261026-2h · 纯网络"
+    },
+    "bidding": {
+      "ready": true,
+      "model": "sl-pilot"
+    },
+    "dds": {
+      "ready": true,
+      "version": "3.1.0"
+    }
+  },
+  "processId": 15644
+}
