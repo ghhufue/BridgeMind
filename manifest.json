@@ -1,6 +1,6 @@
 {
-  "phase": "preflight",
-  "created_epoch": 1793049591.002215,
+  "phase": "final",
+  "created_epoch": 1793050457.2412097,
   "run": "runs/sl-v3-rules-3h-20261027",
   "branch": "codex/sl-v3-rules-3h-20261027",
   "training_seconds": 10800,
@@ -38,25 +38,45 @@
       "bytes": 374417,
       "sha256": "9800e827a7bcb499350c8be0b86e7c5c19d8347aa6155f1368b221c5352769a4"
     },
+    "assets/support.tar.gz.assembly.json": {
+      "bytes": 306,
+      "sha256": "236b490930e9c3b7e74ba9dff80f79895a95ab0a15a3de593ce6bedb32f627ae"
+    },
+    "assets/support.tar.gz.part000": {
+      "bytes": 62288,
+      "sha256": "938d4e7092f528ceaf49ad01aa8d91a50726cb427dfdb1283d863ba5d7f2197e"
+    },
+    "logs/data.log": {
+      "bytes": 10953,
+      "sha256": "fa728383596417e6429f29ee7d778d793f3ca78a0d630ee7e52c51980a8bb680"
+    },
+    "logs/fallback-guard.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
     "logs/guard.log": {
       "bytes": 111,
       "sha256": "ecf5d18c75e23009733e7ffb0ba58d613d3e5fda2900701e3c5c698b76357d3f"
     },
+    "logs/recovery-check.log": {
+      "bytes": 93,
+      "sha256": "82c56f6987fdf622c90fe45ce8f330946915ad2828f3dcb2ebd77e4b68390cad"
+    },
     "logs/worker.log": {
-      "bytes": 109,
-      "sha256": "a484d433fb1736d7e0158bd5c611e675f88a70b231f754846a39b2199cbb658d"
+      "bytes": 757,
+      "sha256": "0e69960c2b3948c51cb475be8f25c2c2443b1efe9155e6f87de321926a27f383"
     },
     "job/MainThread-status.json": {
-      "bytes": 120,
-      "sha256": "ed08d4fd0333688e2e496add3118013088788d641efe849869d4ef7a5b2e1da2"
+      "bytes": 162,
+      "sha256": "d21ac0c0c0f7dca3a0a2039230d66a193b2cb28353bdce70ceaed614dc7d3037"
     },
     "job/config.json": {
       "bytes": 514,
       "sha256": "fdc84a4c4f059324b7f912527f3361b4d8f6cf8ad414b7091932c302248600c4"
     },
     "job/events.jsonl": {
-      "bytes": 220,
-      "sha256": "af37d93c90acd2035914efbd8ef5ec6b3982dbcf31d15044c629775dfbfb9764"
+      "bytes": 868,
+      "sha256": "10dc94c313ab420b3cc4216affbd0d798a31cf909f342a9063f8f4f28f5d6c14"
     },
     "job/hardware.txt": {
       "bytes": 1689,

@@ -1,0 +1,145 @@
+{"boards": 32, "rows": 1664, "search_labels": 352, "search_failures": 0}
+{"boards": 64, "rows": 3328, "search_labels": 709, "search_failures": 0}
+{"boards": 96, "rows": 4992, "search_labels": 1044, "search_failures": 0}
+{"boards": 128, "rows": 6656, "search_labels": 1394, "search_failures": 0}
+{"boards": 160, "rows": 8320, "search_labels": 1748, "search_failures": 0}
+{"boards": 192, "rows": 9984, "search_labels": 2095, "search_failures": 0}
+{"boards": 224, "rows": 11648, "search_labels": 2444, "search_failures": 0}
+{"boards": 256, "rows": 13312, "search_labels": 2786, "search_failures": 0}
+{"boards": 288, "rows": 14976, "search_labels": 3138, "search_failures": 0}
+{"boards": 320, "rows": 16640, "search_labels": 3479, "search_failures": 0}
+{"boards": 352, "rows": 18304, "search_labels": 3830, "search_failures": 0}
+{"boards": 384, "rows": 19968, "search_labels": 4170, "search_failures": 0}
+{"boards": 416, "rows": 21632, "search_labels": 4516, "search_failures": 0}
+{"boards": 448, "rows": 23296, "search_labels": 4863, "search_failures": 0}
+{"boards": 480, "rows": 24960, "search_labels": 5220, "search_failures": 0}
+{"boards": 512, "rows": 26624, "search_labels": 5582, "search_failures": 0}
+{"boards": 544, "rows": 28288, "search_labels": 5928, "search_failures": 0}
+{"boards": 576, "rows": 29952, "search_labels": 6273, "search_failures": 0}
+{"boards": 608, "rows": 31616, "search_labels": 6620, "search_failures": 0}
+{"boards": 640, "rows": 33280, "search_labels": 6969, "search_failures": 0}
+{"boards": 672, "rows": 34944, "search_labels": 7323, "search_failures": 0}
+{"boards": 704, "rows": 36608, "search_labels": 7674, "search_failures": 0}
+{"boards": 736, "rows": 38272, "search_labels": 8021, "search_failures": 0}
+{"boards": 768, "rows": 39936, "search_labels": 8367, "search_failures": 0}
+{"boards": 800, "rows": 41600, "search_labels": 8706, "search_failures": 0}
+{"boards": 832, "rows": 43264, "search_labels": 9052, "search_failures": 0}
+{"boards": 864, "rows": 44928, "search_labels": 9407, "search_failures": 0}
+{"boards": 896, "rows": 46592, "search_labels": 9750, "search_failures": 0}
+{"boards": 928, "rows": 48256, "search_labels": 10099, "search_failures": 0}
+{"boards": 960, "rows": 49920, "search_labels": 10444, "search_failures": 0}
+{"boards": 992, "rows": 51584, "search_labels": 10797, "search_failures": 0}
+{"boards": 1024, "rows": 53248, "search_labels": 11146, "search_failures": 0}
+{"boards": 1056, "rows": 54912, "search_labels": 11495, "search_failures": 0}
+{"boards": 1088, "rows": 56576, "search_labels": 11837, "search_failures": 0}
+{"boards": 1120, "rows": 58240, "search_labels": 11837, "search_failures": 0}
+{"boards": 1152, "rows": 59904, "search_labels": 11837, "search_failures": 0}
+{"boards": 1184, "rows": 61568, "search_labels": 11837, "search_failures": 0}
+{"boards": 1216, "rows": 63232, "search_labels": 11837, "search_failures": 0}
+{"boards": 1248, "rows": 64896, "search_labels": 11837, "search_failures": 0}
+{"boards": 1280, "rows": 66560, "search_labels": 11837, "search_failures": 0}
+{"boards": 1312, "rows": 68224, "search_labels": 11837, "search_failures": 0}
+{"boards": 1344, "rows": 69888, "search_labels": 11837, "search_failures": 0}
+{"boards": 1376, "rows": 71552, "search_labels": 11837, "search_failures": 0}
+{"boards": 1408, "rows": 73216, "search_labels": 11837, "search_failures": 0}
+{"boards": 1440, "rows": 74880, "search_labels": 11837, "search_failures": 0}
+{"boards": 1472, "rows": 76544, "search_labels": 11837, "search_failures": 0}
+{"boards": 1504, "rows": 78208, "search_labels": 11837, "search_failures": 0}
+{"boards": 1536, "rows": 79872, "search_labels": 11837, "search_failures": 0}
+{"boards": 1568, "rows": 81536, "search_labels": 11837, "search_failures": 0}
+{"boards": 1600, "rows": 83200, "search_labels": 11837, "search_failures": 0}
+{"boards": 1632, "rows": 84864, "search_labels": 11837, "search_failures": 0}
+{"boards": 1664, "rows": 86528, "search_labels": 11837, "search_failures": 0}
+{"boards": 1696, "rows": 88192, "search_labels": 11837, "search_failures": 0}
+{"boards": 1728, "rows": 89856, "search_labels": 11837, "search_failures": 0}
+{"boards": 1760, "rows": 91520, "search_labels": 11837, "search_failures": 0}
+{"boards": 1792, "rows": 93184, "search_labels": 11837, "search_failures": 0}
+{"boards": 1824, "rows": 94848, "search_labels": 11837, "search_failures": 0}
+{"boards": 1856, "rows": 96512, "search_labels": 11837, "search_failures": 0}
+{"boards": 1888, "rows": 98176, "search_labels": 11837, "search_failures": 0}
+{"boards": 1920, "rows": 99840, "search_labels": 11837, "search_failures": 0}
+{"boards": 1952, "rows": 101504, "search_labels": 11837, "search_failures": 0}
+{"boards": 1984, "rows": 103168, "search_labels": 11837, "search_failures": 0}
+{"boards": 2016, "rows": 104832, "search_labels": 11837, "search_failures": 0}
+{"boards": 2048, "rows": 106496, "search_labels": 11837, "search_failures": 0}
+{"boards": 2080, "rows": 108160, "search_labels": 11837, "search_failures": 0}
+{"boards": 2112, "rows": 109824, "search_labels": 11837, "search_failures": 0}
+{"boards": 2144, "rows": 111488, "search_labels": 11837, "search_failures": 0}
+{"boards": 2176, "rows": 113152, "search_labels": 11837, "search_failures": 0}
+{"boards": 2208, "rows": 114816, "search_labels": 11837, "search_failures": 0}
+{"boards": 2240, "rows": 116480, "search_labels": 11837, "search_failures": 0}
+{"boards": 2272, "rows": 118144, "search_labels": 11837, "search_failures": 0}
+{"boards": 2304, "rows": 119808, "search_labels": 11837, "search_failures": 0}
+{"boards": 2336, "rows": 121472, "search_labels": 11837, "search_failures": 0}
+{"boards": 2368, "rows": 123136, "search_labels": 11837, "search_failures": 0}
+{"boards": 2400, "rows": 124800, "search_labels": 11837, "search_failures": 0}
+{"boards": 2432, "rows": 126464, "search_labels": 11837, "search_failures": 0}
+{"boards": 2464, "rows": 128128, "search_labels": 11837, "search_failures": 0}
+{"boards": 2496, "rows": 129792, "search_labels": 11837, "search_failures": 0}
+{"boards": 2528, "rows": 131456, "search_labels": 11837, "search_failures": 0}
+{"boards": 2560, "rows": 133120, "search_labels": 11837, "search_failures": 0}
+{"boards": 2592, "rows": 134784, "search_labels": 11837, "search_failures": 0}
+{"boards": 2624, "rows": 136448, "search_labels": 11837, "search_failures": 0}
+{"boards": 2656, "rows": 138112, "search_labels": 11837, "search_failures": 0}
+{"boards": 2688, "rows": 139776, "search_labels": 11837, "search_failures": 0}
+{"boards": 2720, "rows": 141440, "search_labels": 11837, "search_failures": 0}
+{"boards": 2752, "rows": 143104, "search_labels": 11837, "search_failures": 0}
+{"boards": 2784, "rows": 144768, "search_labels": 11837, "search_failures": 0}
+{"boards": 2816, "rows": 146432, "search_labels": 11837, "search_failures": 0}
+{"boards": 2848, "rows": 148096, "search_labels": 11837, "search_failures": 0}
+{"boards": 2880, "rows": 149760, "search_labels": 11837, "search_failures": 0}
+{"boards": 2912, "rows": 151424, "search_labels": 11837, "search_failures": 0}
+{"boards": 2944, "rows": 153088, "search_labels": 11837, "search_failures": 0}
+{"boards": 2976, "rows": 154752, "search_labels": 11837, "search_failures": 0}
+{"boards": 3008, "rows": 156416, "search_labels": 11837, "search_failures": 0}
+{"boards": 3040, "rows": 158080, "search_labels": 11837, "search_failures": 0}
+{"boards": 3072, "rows": 159744, "search_labels": 11837, "search_failures": 0}
+{"boards": 3104, "rows": 161408, "search_labels": 11837, "search_failures": 0}
+{"boards": 3136, "rows": 163072, "search_labels": 11837, "search_failures": 0}
+{"boards": 3168, "rows": 164736, "search_labels": 11837, "search_failures": 0}
+{"boards": 3200, "rows": 166400, "search_labels": 11837, "search_failures": 0}
+{"boards": 3232, "rows": 168064, "search_labels": 11837, "search_failures": 0}
+{"boards": 3264, "rows": 169728, "search_labels": 11837, "search_failures": 0}
+{"boards": 3296, "rows": 171392, "search_labels": 11837, "search_failures": 0}
+{"boards": 3328, "rows": 173056, "search_labels": 11837, "search_failures": 0}
+{"boards": 3360, "rows": 174720, "search_labels": 11837, "search_failures": 0}
+{"boards": 3392, "rows": 176384, "search_labels": 11837, "search_failures": 0}
+{"boards": 3424, "rows": 178048, "search_labels": 11837, "search_failures": 0}
+{"boards": 3456, "rows": 179712, "search_labels": 11837, "search_failures": 0}
+{"boards": 3488, "rows": 181376, "search_labels": 11837, "search_failures": 0}
+{"boards": 3520, "rows": 183040, "search_labels": 11837, "search_failures": 0}
+{"boards": 3552, "rows": 184704, "search_labels": 11837, "search_failures": 0}
+{"boards": 3584, "rows": 186368, "search_labels": 11837, "search_failures": 0}
+{"boards": 3616, "rows": 188032, "search_labels": 11837, "search_failures": 0}
+{"boards": 3648, "rows": 189696, "search_labels": 11837, "search_failures": 0}
+{"boards": 3680, "rows": 191360, "search_labels": 11837, "search_failures": 0}
+{"boards": 3712, "rows": 193024, "search_labels": 11837, "search_failures": 0}
+{"boards": 3744, "rows": 194688, "search_labels": 11837, "search_failures": 0}
+{"boards": 3776, "rows": 196352, "search_labels": 11837, "search_failures": 0}
+{"boards": 3808, "rows": 198016, "search_labels": 11837, "search_failures": 0}
+{"boards": 3840, "rows": 199680, "search_labels": 11837, "search_failures": 0}
+{"boards": 3872, "rows": 201344, "search_labels": 11837, "search_failures": 0}
+{"boards": 3904, "rows": 203008, "search_labels": 11837, "search_failures": 0}
+{"boards": 3936, "rows": 204672, "search_labels": 11837, "search_failures": 0}
+{"boards": 3968, "rows": 206336, "search_labels": 11837, "search_failures": 0}
+{"boards": 4000, "rows": 208000, "search_labels": 11837, "search_failures": 0}
+{"boards": 4032, "rows": 209664, "search_labels": 11837, "search_failures": 0}
+{"boards": 4064, "rows": 211328, "search_labels": 11837, "search_failures": 0}
+{"boards": 4096, "rows": 212992, "search_labels": 11837, "search_failures": 0}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/autodl-tmp/BridgeMind/src/bridgemind/sl_v3/rule_training.py", line 316, in <module>
+    main()
+  File "/root/autodl-tmp/BridgeMind/src/bridgemind/sl_v3/rule_training.py", line 307, in main
+    report = prepare_data(args)
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/BridgeMind/src/bridgemind/sl_v3/rule_training.py", line 101, in prepare_data
+    report["solver"] = solver.get_info()
+                       ^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/BridgeMind/src/bridgemind/dds/client.py", line 109, in get_info
+    return self._rpc("get_info")
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/BridgeMind/src/bridgemind/dds/client.py", line 74, in _rpc
+    raise SolverError("SERVICE_UNAVAILABLE", "DDS client is closed", retryable=True)
+bridgemind.dds.errors.SolverError: DDS client is closed
