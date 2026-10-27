@@ -1,0 +1,19 @@
+{
+  "time_utc": "2026-10-27T08:28:33.249967+00:00",
+  "state": "running",
+  "phase": "training",
+  "pid": 29252,
+  "step": 185702,
+  "elapsed_seconds": 3404.8073363000003,
+  "precision": "bf16",
+  "train": {
+    "loss": 0.5739834308624268,
+    "real_nll": 0.5049845576286316,
+    "curriculum_nll": 0.0009807711467146873,
+    "belief_loss": 0.6597018837928772,
+    "value_loss": 0.0005903409910388291,
+    "real_accuracy": 0.8214285969734192,
+    "curriculum_accuracy": 1.0,
+    "gradient_norm": 4.1046857833862305
+  }
+}
