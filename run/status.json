@@ -1,19 +1,19 @@
 {
-  "time_utc": "2026-10-27T08:31:03.366325+00:00",
+  "time_utc": "2026-10-27T13:43:13.580981+00:00",
   "state": "running",
   "phase": "training",
-  "pid": 29252,
-  "step": 194567,
-  "elapsed_seconds": 3554.9236987000004,
+  "pid": 32424,
+  "step": 259218,
+  "elapsed_seconds": 4740.347484799997,
   "precision": "bf16",
   "train": {
-    "loss": 0.6328561305999756,
-    "real_nll": 0.5734562277793884,
-    "curriculum_nll": 0.0009123822674155235,
-    "belief_loss": 0.654613733291626,
-    "value_loss": 0.0004515544278547168,
+    "loss": 0.645903468132019,
+    "real_nll": 0.5841187238693237,
+    "curriculum_nll": 0.00046887993812561035,
+    "belief_loss": 0.6732218861579895,
+    "value_loss": 0.0009656707406975329,
     "real_accuracy": 0.8214285969734192,
     "curriculum_accuracy": 1.0,
-    "gradient_norm": 2.751105546951294
+    "gradient_norm": 3.7090682983398438
   }
 }
