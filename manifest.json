@@ -1,6 +1,6 @@
 {
-  "phase": "prepared_inputs",
-  "created_epoch": 1793108617.036271,
+  "phase": "periodic_checkpoint",
+  "created_epoch": 1793110280.8123531,
   "run": "runs/sl-v3-rules-local-3h-20261027",
   "branch": "codex/sl-v3-rules-local-3h-20261027",
   "training_seconds": 10800,
@@ -60,19 +60,19 @@
     },
     "run/last.pt": {
       "bytes": 41055003,
-      "sha256": "450454f6c2f54bcf2b192be1e68ade4946c96974a4234855af7faad2f95e2441"
+      "sha256": "f1b8ba8ecb4151bceeb20b1b675fa4f0c1a235e9a8b34329f64696ecf8d58d0f"
     },
     "run/metrics.jsonl": {
-      "bytes": 84871,
-      "sha256": "8b17f7d3413d70751dc2c1ee4c052bde4181c3599506bc3a58ffc0a2ef2fd080"
+      "bytes": 113376,
+      "sha256": "0c2fe1a05173b65a0b229d586b38d2f9872cf88d9250f476e999995b4a3bd9b5"
     },
     "run/protocol.json": {
       "bytes": 1779,
       "sha256": "d3f87e054f49e9e153b9fef8bee6d9c4e5728c4c9bac11725c8500a9554ec990"
     },
     "run/status.json": {
-      "bytes": 536,
-      "sha256": "5712d3d31da8b7b58e833262d324810fc74af1cceb0c3535c11ab2433cc8260f"
+      "bytes": 535,
+      "sha256": "eab45c84d709caf6e935789f31690d76ec2b065263bb99b0492b3522028fc523"
     },
     "logs/data.log": {
       "bytes": 11933,
@@ -95,28 +95,28 @@
       "sha256": "ad13cddcd10db184891a134732ed4578e68532a6948d6af8d4073a939ea5a0ca"
     },
     "logs/training.log": {
-      "bytes": 84871,
-      "sha256": "8b17f7d3413d70751dc2c1ee4c052bde4181c3599506bc3a58ffc0a2ef2fd080"
+      "bytes": 113376,
+      "sha256": "0c2fe1a05173b65a0b229d586b38d2f9872cf88d9250f476e999995b4a3bd9b5"
     },
     "logs/worker.log": {
-      "bytes": 1972,
-      "sha256": "ead817eb692ff87bf1247fb2ee282a49c2e2bf9d527809cd55a70cf6d9f3d31b"
+      "bytes": 2342,
+      "sha256": "1f463c11adb2009f2023fb69a0f76bbf6a1bc5906d850213cb8fda7729d22efe"
     },
     "logs/worker.stderr.log": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "job/backup-status.json": {
-      "bytes": 412,
-      "sha256": "635f04c58576a96a79d94250fd970d96f1bed931890875df47dcb4bf4602b472"
+      "bytes": 418,
+      "sha256": "b8f13fecdafdcb39aec27cfebdc239c007491434092335f75b13e71810dd061d"
     },
     "job/config.json": {
       "bytes": 652,
       "sha256": "43d65040ff2b6e4e0b7369bcf86556ce7f207461b41fd79637b7cdd4996080d2"
     },
     "job/events.jsonl": {
-      "bytes": 1972,
-      "sha256": "ead817eb692ff87bf1247fb2ee282a49c2e2bf9d527809cd55a70cf6d9f3d31b"
+      "bytes": 2342,
+      "sha256": "1f463c11adb2009f2023fb69a0f76bbf6a1bc5906d850213cb8fda7729d22efe"
     },
     "job/hardware.txt": {
       "bytes": 3197,
