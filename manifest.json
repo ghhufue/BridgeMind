@@ -1,14 +1,14 @@
 {
-  "phase": "manual_preflight",
-  "created_epoch": 1793062725.7543523,
-  "run": "runs/sl-v3-rules-3h-20261027",
-  "branch": "codex/sl-v3-rules-3h-20261027",
+  "phase": "preflight",
+  "created_epoch": 1793085322.5782738,
+  "run": "runs/sl-v3-rules-local-3h-20261027",
+  "branch": "codex/sl-v3-rules-local-3h-20261027",
   "training_seconds": 10800,
-  "hard_deadline_epoch": 1793063322.0,
+  "hard_deadline_epoch": null,
   "files": {
     "assets/bootstrap.tar.gz.assembly.json": {
-      "bytes": 969,
-      "sha256": "f7ae999bee16803c8644c5909bd34a733b5f3ec2c560e7ff871eb37d9e1b234b"
+      "bytes": 1000,
+      "sha256": "56483a356290b15edea4d2d81271b72e3673e3b9ca26af6928cdaca4ac3b51ca"
     },
     "assets/bootstrap.tar.gz.part000": {
       "bytes": 33554432,
@@ -31,80 +31,44 @@
       "sha256": "cdcf0b69b4c9d8a4e8508d879fb8a097b92b67aaca1e1ba65006235930e1d0a7"
     },
     "assets/source.tar.gz.assembly.json": {
-      "bytes": 306,
-      "sha256": "4aef1efd87b420c7e7fdac7ded7e5c1f72048b8d49d865d24527b04c84b24bc9"
+      "bytes": 317,
+      "sha256": "73e812627295f6795e6eb07a67c85ed743472d7dcbb26fc9c4fa75e79f3f6fe1"
     },
     "assets/source.tar.gz.part000": {
-      "bytes": 374417,
-      "sha256": "9800e827a7bcb499350c8be0b86e7c5c19d8347aa6155f1368b221c5352769a4"
-    },
-    "assets/support.tar.gz.assembly.json": {
-      "bytes": 306,
-      "sha256": "236b490930e9c3b7e74ba9dff80f79895a95ab0a15a3de593ce6bedb32f627ae"
-    },
-    "assets/support.tar.gz.part000": {
-      "bytes": 62288,
-      "sha256": "938d4e7092f528ceaf49ad01aa8d91a50726cb427dfdb1283d863ba5d7f2197e"
-    },
-    "logs/data.log": {
-      "bytes": 10953,
-      "sha256": "fa728383596417e6429f29ee7d778d793f3ca78a0d630ee7e52c51980a8bb680"
-    },
-    "logs/emergency-backup.log": {
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    "logs/fallback-guard.log": {
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    "logs/guard.log": {
-      "bytes": 234,
-      "sha256": "bca65bd203955572bc4b3ee94588bb395e6a5dcdbaa1a69832320b1414064b0a"
-    },
-    "logs/recovery-check.log": {
-      "bytes": 93,
-      "sha256": "82c56f6987fdf622c90fe45ce8f330946915ad2828f3dcb2ebd77e4b68390cad"
+      "bytes": 376042,
+      "sha256": "c69f442f5646b5f49b575351d5c083fa04c8b4270b48d13a6f71dc1034663480"
     },
     "logs/worker.log": {
-      "bytes": 757,
-      "sha256": "0e69960c2b3948c51cb475be8f25c2c2443b1efe9155e6f87de321926a27f383"
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
-    "job/MainThread-status.json": {
-      "bytes": 132,
-      "sha256": "e7bbfe07dc48d36e45e3ee8143effd8bb5a9bddc2155f7c1d33adc38bd0a5e4c"
+    "logs/worker.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "job/config.json": {
-      "bytes": 514,
-      "sha256": "fdc84a4c4f059324b7f912527f3361b4d8f6cf8ad414b7091932c302248600c4"
-    },
-    "job/events.jsonl": {
-      "bytes": 991,
-      "sha256": "567714942f682ee1aa01c4702ecab16658589d5af7e767da0714075f38b79abf"
-    },
-    "job/fallback-status.json": {
-      "bytes": 120,
-      "sha256": "bd2aa5621d574737fb84adcb4c81cd5768fa5a8c65dd2f18e65f6febff8791dd"
+      "bytes": 615,
+      "sha256": "fa9bbb3e455080808a1b412bcfa574690c3b36f38fe21fbbea6af2ba3421f273"
     },
     "job/hardware.txt": {
-      "bytes": 1689,
-      "sha256": "facf2d08539f8ba2a03d9348a8a28bb231ed29cbe0ebd5121ad0ac5c05b88dc8"
+      "bytes": 3197,
+      "sha256": "248a6f38700fe712d54a744c250f71e145c8eaffb3c4b32e78a4f0dc982d95e1"
     },
     "job/requirements-freeze.txt": {
-      "bytes": 5022,
-      "sha256": "6176d80d4f8f74bedabbebf2916dd056467f3db43934c1fb60f470895fc06cc5"
-    },
-    "job/runtime.json": {
-      "bytes": 154,
-      "sha256": "acc3094d405e2b3746dc62b87b39e95f892ed93edbe17b3bc80927310d2facd7"
+      "bytes": 508,
+      "sha256": "a551dd5759ba29fb811ee504527b58ccaa6d962f3f6a0147da4e911b18a3e5ed"
     },
     "README.md": {
-      "bytes": 355,
-      "sha256": "edc27924b5b7e90a7dae4a4d7995f6977579eef8897116c730bb486b87a57e6e"
+      "bytes": 361,
+      "sha256": "592275f13c8f7c71c1fc0de6bc71a97cda98a8e368ea058a2ab898d3f1fbade6"
     },
     "restore.py": {
       "bytes": 2350,
       "sha256": "39554dcd8906e4a77001cb5bbd9dc2d52cd5d86612df97785ce6e9b9759904d2"
+    },
+    ".gitattributes": {
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     }
   }
 }
