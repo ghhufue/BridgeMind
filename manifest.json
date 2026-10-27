@@ -1,6 +1,6 @@
 {
-  "phase": "final",
-  "created_epoch": 1793050457.2412097,
+  "phase": "manual_preflight",
+  "created_epoch": 1793062725.7543523,
   "run": "runs/sl-v3-rules-3h-20261027",
   "branch": "codex/sl-v3-rules-3h-20261027",
   "training_seconds": 10800,
@@ -50,13 +50,17 @@
       "bytes": 10953,
       "sha256": "fa728383596417e6429f29ee7d778d793f3ca78a0d630ee7e52c51980a8bb680"
     },
+    "logs/emergency-backup.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
     "logs/fallback-guard.log": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "logs/guard.log": {
-      "bytes": 111,
-      "sha256": "ecf5d18c75e23009733e7ffb0ba58d613d3e5fda2900701e3c5c698b76357d3f"
+      "bytes": 234,
+      "sha256": "bca65bd203955572bc4b3ee94588bb395e6a5dcdbaa1a69832320b1414064b0a"
     },
     "logs/recovery-check.log": {
       "bytes": 93,
@@ -67,16 +71,20 @@
       "sha256": "0e69960c2b3948c51cb475be8f25c2c2443b1efe9155e6f87de321926a27f383"
     },
     "job/MainThread-status.json": {
-      "bytes": 162,
-      "sha256": "d21ac0c0c0f7dca3a0a2039230d66a193b2cb28353bdce70ceaed614dc7d3037"
+      "bytes": 132,
+      "sha256": "e7bbfe07dc48d36e45e3ee8143effd8bb5a9bddc2155f7c1d33adc38bd0a5e4c"
     },
     "job/config.json": {
       "bytes": 514,
       "sha256": "fdc84a4c4f059324b7f912527f3361b4d8f6cf8ad414b7091932c302248600c4"
     },
     "job/events.jsonl": {
-      "bytes": 868,
-      "sha256": "10dc94c313ab420b3cc4216affbd0d798a31cf909f342a9063f8f4f28f5d6c14"
+      "bytes": 991,
+      "sha256": "567714942f682ee1aa01c4702ecab16658589d5af7e767da0714075f38b79abf"
+    },
+    "job/fallback-status.json": {
+      "bytes": 120,
+      "sha256": "bd2aa5621d574737fb84adcb4c81cd5768fa5a8c65dd2f18e65f6febff8791dd"
     },
     "job/hardware.txt": {
       "bytes": 1689,

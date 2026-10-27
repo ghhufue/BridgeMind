@@ -3,3 +3,4 @@
 {"time_utc": "2026-10-26T21:22:32Z", "phase": "cloud_verified", "pid": 2950, "hard_deadline_epoch": 1793063322.0, "receipt": {"commit": "d4222cb6827138d3f7143d7cb3526882e31da191", "branch": "codex/sl-v3-rules-3h-20261027", "phase": "preflight", "verified_epoch": 1793049752.9640868, "files_verified": 18, "manifest_sha256": "8c34efb598ec03b539cf2aff65554208be41c36a36aa14665e4ab849c1851fb2"}}
 {"time_utc": "2026-10-26T21:22:32Z", "phase": "data", "pid": 2950, "hard_deadline_epoch": 1793063322.0}
 {"time_utc": "2026-10-26T21:34:17Z", "phase": "worker_failed", "pid": 2950, "hard_deadline_epoch": 1793063322.0, "error": "data failed; see data.log"}
+{"time_utc": "2026-10-27T00:53:45Z", "phase": "deadline_stop_requested", "pid": 2949, "hard_deadline_epoch": 1793063322.0}
