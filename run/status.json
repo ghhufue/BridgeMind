@@ -1,19 +1,10 @@
 {
-  "time_utc": "2026-10-27T15:09:13.389499+00:00",
-  "state": "running",
-  "phase": "training",
+  "time_utc": "2026-10-27T15:24:20.785947+00:00",
+  "state": "completed",
+  "phase": "saved",
   "pid": 32424,
-  "step": 539871,
-  "elapsed_seconds": 9900.156008599999,
+  "step": 588343,
+  "elapsed_seconds": 10807.552451800002,
   "precision": "bf16",
-  "train": {
-    "loss": 0.5797943472862244,
-    "real_nll": 0.5108761787414551,
-    "curriculum_nll": 0.0004700321005657315,
-    "belief_loss": 0.66314697265625,
-    "value_loss": 0.0008956102537922561,
-    "real_accuracy": 0.8571429252624512,
-    "curriculum_accuracy": 1.0,
-    "gradient_norm": 4.03237247467041
-  }
+  "stop_reason": "time_budget"
 }
