@@ -1,0 +1,40 @@
+{
+  "kind": "sl_v3_rule_training",
+  "created_at_utc": "2026-10-27T07:31:38.472423+00:00",
+  "environment": {
+    "device": "cuda",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.5.4",
+    "open_spiel": "2.0.2",
+    "python": "3.13.10",
+    "cpu_threads": 1
+  },
+  "execution": {
+    "precision": "bf16",
+    "fused_adam": true,
+    "prefetch": true,
+    "eval_batch_size": 64
+  },
+  "implementation_sha256": "969a5b07492ba3a52b4bb00d2ae5e2a6c8429d02c5a9b8b2ee2b26b64a84f814",
+  "bidding_system": "bridgemind-natural-v1",
+  "initial_sha256": "db64de659ed5ce32b8f6ae60db3c2cb44e32b184665abe530339b33debbab93e",
+  "curriculum_sha256": "f9eb9d8335e9f672c044e2ddec55a6ecac9614192386975986d137f3340afc96",
+  "data": "D:\\code\\BridgeMind\\data\\rule-sl-v3-local-3h-20261027",
+  "rule_fingerprint": "a929461e1f9c90d9ca4a7acc179e3678cf54556b5da283f91e1f9366e3d8bd7d",
+  "valid_sha256": "d1e1fa9a1f4298bca8f39eb15d71e0145f75e618d31e304658108a93ad4cf580",
+  "replay": "D:\\code\\BridgeMind\\data\\cardplay-sl-v3-50k\\train",
+  "replay_fingerprint": "84446c8e9aeef2b31cfec42eb9d177c7d62313fd18123658851984ed01f69696",
+  "old_valid": "D:\\code\\BridgeMind\\data\\cardplay-expanded-v1\\valid",
+  "old_valid_fingerprint": "8baba8f6f6557e715e5dc3173f48d00e1989888cbfd1ec77473d833bd23ef6e9",
+  "rule_source_sha256": "72566252edbf00dc586d4c605c2385c11b0d7fffe31449dcca448be4c48063ff",
+  "lr": 1e-06,
+  "seed": 2026102802,
+  "new_per_batch": 16,
+  "replay_per_batch": 40,
+  "course_per_batch": 8,
+  "eval_every": 600.0,
+  "save_every": 120.0,
+  "eval_boards": 128,
+  "selection": "positive rule-validation IMP, old IMP >=-0.25, original per-family tactical guard",
+  "scope": "offline SL/domain adaptation; reused validation, no test or automatic promotion"
+}

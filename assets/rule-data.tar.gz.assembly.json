@@ -1,0 +1,12 @@
+{
+  "archive": "rule-data.tar.gz",
+  "bytes": 16092033,
+  "sha256": "443ac4f3b70d548437f3e777af5cacc0a5f5e576ab5513c713b5f413c15ca594",
+  "parts": [
+    {
+      "name": "rule-data.tar.gz.part000",
+      "bytes": 16092033,
+      "sha256": "443ac4f3b70d548437f3e777af5cacc0a5f5e576ab5513c713b5f413c15ca594"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "phase": "preflight",
-  "created_epoch": 1793085662.5088878,
+  "phase": "prepared_inputs",
+  "created_epoch": 1793086304.2948334,
   "run": "runs/sl-v3-rules-local-3h-20261027",
   "branch": "codex/sl-v3-rules-local-3h-20261027",
   "training_seconds": 10800,
@@ -30,6 +30,14 @@
       "bytes": 29496085,
       "sha256": "cdcf0b69b4c9d8a4e8508d879fb8a097b92b67aaca1e1ba65006235930e1d0a7"
     },
+    "assets/rule-data.tar.gz.assembly.json": {
+      "bytes": 327,
+      "sha256": "3ee050da38ddf93a2834500c043b6b5989d29fe81abfbb3ec3812647f515d640"
+    },
+    "assets/rule-data.tar.gz.part000": {
+      "bytes": 16092033,
+      "sha256": "443ac4f3b70d548437f3e777af5cacc0a5f5e576ab5513c713b5f413c15ca594"
+    },
     "assets/source.tar.gz.assembly.json": {
       "bytes": 317,
       "sha256": "84f0c9f776c0bf84ccc2207df09ba404aac7e38a1c360fef0fe30a8ec150f495"
@@ -38,9 +46,25 @@
       "bytes": 376314,
       "sha256": "90a3e611b8bbb0f1daec0e807f67ea662a2d6096971368190f7a2f58133bfd87"
     },
+    "run/curriculum.json": {
+      "bytes": 7706993,
+      "sha256": "f9eb9d8335e9f672c044e2ddec55a6ecac9614192386975986d137f3340afc96"
+    },
+    "run/init.pt": {
+      "bytes": 13684305,
+      "sha256": "db64de659ed5ce32b8f6ae60db3c2cb44e32b184665abe530339b33debbab93e"
+    },
+    "run/protocol.json": {
+      "bytes": 1779,
+      "sha256": "d3f87e054f49e9e153b9fef8bee6d9c4e5728c4c9bac11725c8500a9554ec990"
+    },
+    "logs/data.log": {
+      "bytes": 11933,
+      "sha256": "5df5ef02262e9b621d0166c91ccd41de513ee863ab3181e2f98bfdca879b40f1"
+    },
     "logs/dds.log": {
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 486,
+      "sha256": "d00af07051ad684232d8f5af38cdc7a01a85d42420c592a797923e089e7dad64"
     },
     "logs/initial-worker.log": {
       "bytes": 0,
@@ -50,29 +74,41 @@
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
+    "logs/prepare.log": {
+      "bytes": 1640,
+      "sha256": "ad13cddcd10db184891a134732ed4578e68532a6948d6af8d4073a939ea5a0ca"
+    },
+    "logs/training.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
     "logs/worker.log": {
-      "bytes": 76,
-      "sha256": "de36a8c2af87feb85fe18bd9415226382b828da6f1c3391d4c7317809e9bb76c"
+      "bytes": 649,
+      "sha256": "58205400709d764ce049f001e6f4ff6f2354659d2621c1ac3ecc66e6f90a5ebf"
     },
     "logs/worker.stderr.log": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "job/backup-status.json": {
+      "bytes": 410,
+      "sha256": "4a92ca5b65e2acb4a977cdb52c5786d46608e5b165c80712df22194263b3888a"
     },
     "job/config.json": {
       "bytes": 615,
       "sha256": "fa9bbb3e455080808a1b412bcfa574690c3b36f38fe21fbbea6af2ba3421f273"
     },
     "job/events.jsonl": {
-      "bytes": 76,
-      "sha256": "de36a8c2af87feb85fe18bd9415226382b828da6f1c3391d4c7317809e9bb76c"
+      "bytes": 649,
+      "sha256": "58205400709d764ce049f001e6f4ff6f2354659d2621c1ac3ecc66e6f90a5ebf"
     },
     "job/hardware.txt": {
       "bytes": 3197,
       "sha256": "248a6f38700fe712d54a744c250f71e145c8eaffb3c4b32e78a4f0dc982d95e1"
     },
     "job/MainThread-status.json": {
-      "bytes": 86,
-      "sha256": "b4aff80b4fb878815bf516e743a9e9b4083f40181ba41f18f560195bf3c74ad6"
+      "bytes": 82,
+      "sha256": "dc1d74cf24e772a789fe64dd18d8a7d78185331432352fb327e2e4dc61e116a8"
     },
     "job/requirements-freeze.txt": {
       "bytes": 508,
