@@ -1,12 +1,12 @@
 {
   "archive": "source.tar.gz",
-  "bytes": 376042,
-  "sha256": "c69f442f5646b5f49b575351d5c083fa04c8b4270b48d13a6f71dc1034663480",
+  "bytes": 376314,
+  "sha256": "90a3e611b8bbb0f1daec0e807f67ea662a2d6096971368190f7a2f58133bfd87",
   "parts": [
     {
       "name": "source.tar.gz.part000",
-      "bytes": 376042,
-      "sha256": "c69f442f5646b5f49b575351d5c083fa04c8b4270b48d13a6f71dc1034663480"
+      "bytes": 376314,
+      "sha256": "90a3e611b8bbb0f1daec0e807f67ea662a2d6096971368190f7a2f58133bfd87"
     }
   ]
 }

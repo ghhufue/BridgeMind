@@ -1,6 +1,6 @@
 {
   "phase": "preflight",
-  "created_epoch": 1793085322.5782738,
+  "created_epoch": 1793085662.5088878,
   "run": "runs/sl-v3-rules-local-3h-20261027",
   "branch": "codex/sl-v3-rules-local-3h-20261027",
   "training_seconds": 10800,
@@ -32,15 +32,27 @@
     },
     "assets/source.tar.gz.assembly.json": {
       "bytes": 317,
-      "sha256": "73e812627295f6795e6eb07a67c85ed743472d7dcbb26fc9c4fa75e79f3f6fe1"
+      "sha256": "84f0c9f776c0bf84ccc2207df09ba404aac7e38a1c360fef0fe30a8ec150f495"
     },
     "assets/source.tar.gz.part000": {
-      "bytes": 376042,
-      "sha256": "c69f442f5646b5f49b575351d5c083fa04c8b4270b48d13a6f71dc1034663480"
+      "bytes": 376314,
+      "sha256": "90a3e611b8bbb0f1daec0e807f67ea662a2d6096971368190f7a2f58133bfd87"
     },
-    "logs/worker.log": {
+    "logs/dds.log": {
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs/initial-worker.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs/initial-worker.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs/worker.log": {
+      "bytes": 76,
+      "sha256": "de36a8c2af87feb85fe18bd9415226382b828da6f1c3391d4c7317809e9bb76c"
     },
     "logs/worker.stderr.log": {
       "bytes": 0,
@@ -50,9 +62,17 @@
       "bytes": 615,
       "sha256": "fa9bbb3e455080808a1b412bcfa574690c3b36f38fe21fbbea6af2ba3421f273"
     },
+    "job/events.jsonl": {
+      "bytes": 76,
+      "sha256": "de36a8c2af87feb85fe18bd9415226382b828da6f1c3391d4c7317809e9bb76c"
+    },
     "job/hardware.txt": {
       "bytes": 3197,
       "sha256": "248a6f38700fe712d54a744c250f71e145c8eaffb3c4b32e78a4f0dc982d95e1"
+    },
+    "job/MainThread-status.json": {
+      "bytes": 86,
+      "sha256": "b4aff80b4fb878815bf516e743a9e9b4083f40181ba41f18f560195bf3c74ad6"
     },
     "job/requirements-freeze.txt": {
       "bytes": 508,
