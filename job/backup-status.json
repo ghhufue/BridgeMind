@@ -1,13 +1,7 @@
 {
-  "time_utc": "2026-10-27T14:01:20Z",
-  "phase": "cloud_verified",
+  "time_utc": "2026-10-27T14:19:43Z",
+  "phase": "periodic_backup_failed",
   "pid": 22372,
-  "receipt": {
-    "commit": "fb4e87029e04641d559589df8d5370e2491009ca",
-    "branch": "codex/sl-v3-rules-local-3h-20261027",
-    "phase": "prepared_inputs",
-    "verified_epoch": 1793109680.4339683,
-    "files_verified": 34,
-    "manifest_sha256": "5fb877cfb24e00396ab2ef67a6120147df9a69718b72ddd583f797056cedd40c"
-  }
+  "phase_attempted": "periodic_checkpoint",
+  "error": "Command failed (128): git --git-dir 'D:\\code\\BridgeMind\\.build\\jobs\\sl-v3-rules-local-3h-20261027\\verify.git' fetch --depth 1 https://github.com/ghhufue/BridgeMind.git refs/heads/codex/sl-v3-rules-local-3h-20261027\nerror: RPC failed; curl 56 schannel: server closed abruptly (missing close_notify)\nerror: 9333 bytes of body are still expected\nfetch-pack: unexpected disconnect while reading sideband packet\nfatal: early EOF\nfatal: unpack-objects failed\n"
 }
