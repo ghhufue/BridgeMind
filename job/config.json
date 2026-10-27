@@ -11,5 +11,6 @@
   "hard_deadline_epoch": null,
   "port": 18767,
   "github_repo": "ghhufue/BridgeMind",
-  "automatic_shutdown": false
+  "automatic_shutdown": false,
+  "transfer_timeout_seconds": 1800
 }
