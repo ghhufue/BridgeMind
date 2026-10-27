@@ -1,19 +1,19 @@
 {
-  "time_utc": "2026-10-27T14:29:15.398810+00:00",
+  "time_utc": "2026-10-27T14:48:58.674508+00:00",
   "state": "running",
   "phase": "training",
   "pid": 32424,
-  "step": 411296,
-  "elapsed_seconds": 7502.165313599999,
+  "step": 474985,
+  "elapsed_seconds": 8685.441011599996,
   "precision": "bf16",
   "train": {
-    "loss": 0.45940881967544556,
-    "real_nll": 0.3839094042778015,
-    "curriculum_nll": 0.0012725284323096275,
-    "belief_loss": 0.6162760257720947,
-    "value_loss": 0.0007385827484540641,
-    "real_accuracy": 0.8928571939468384,
+    "loss": 0.5546038150787354,
+    "real_nll": 0.49107617139816284,
+    "curriculum_nll": 0.0003427080810070038,
+    "belief_loss": 0.6238589882850647,
+    "value_loss": 0.0009751521283760667,
+    "real_accuracy": 0.8214285969734192,
     "curriculum_accuracy": 1.0,
-    "gradient_norm": 2.5967748165130615
+    "gradient_norm": 3.5487403869628906
   }
 }
